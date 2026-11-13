@@ -335,6 +335,92 @@ def matchups(hub):
     return {"nbm.json": f}
 
 
+# arena city, latitude, longitude, hours behind Eastern (straight-line travel distances; LAL and LAC share a city)
+ARENA = {"ATL": ("Atlanta", 33.757, -84.396, 0), "BOS": ("Boston", 42.366, -71.062, 0), "BKN": ("Brooklyn", 40.683, -73.975, 0), "CHA": ("Charlotte", 35.225, -80.839, 0),
+         "CHI": ("Chicago", 41.881, -87.674, 1), "CLE": ("Cleveland", 41.497, -81.688, 0), "DAL": ("Dallas", 32.790, -96.810, 1), "DEN": ("Denver", 39.749, -105.008, 2),
+         "DET": ("Detroit", 42.341, -83.055, 0), "GS": ("San Francisco", 37.768, -122.388, 3), "HOU": ("Houston", 29.751, -95.362, 1), "IND": ("Indianapolis", 39.764, -86.156, 0),
+         "LAC": ("Los Angeles", 33.945, -118.341, 3), "LAL": ("Los Angeles", 34.043, -118.267, 3), "MEM": ("Memphis", 35.138, -90.051, 1), "MIA": ("Miami", 25.781, -80.187, 0),
+         "MIL": ("Milwaukee", 43.045, -87.917, 1), "MIN": ("Minneapolis", 44.980, -93.276, 1), "NO": ("New Orleans", 29.949, -90.082, 1), "NY": ("New York", 40.751, -73.994, 0),
+         "OKC": ("Oklahoma City", 35.463, -97.515, 1), "ORL": ("Orlando", 28.539, -81.384, 0), "PHI": ("Philadelphia", 39.901, -75.172, 0), "PHX": ("Phoenix", 33.446, -112.071, 2),
+         "POR": ("Portland", 45.532, -122.667, 3), "SA": ("San Antonio", 29.427, -98.438, 1), "SAC": ("Sacramento", 38.580, -121.500, 3), "TOR": ("Toronto", 43.643, -79.379, 0),
+         "UTAH": ("Salt Lake City", 40.768, -111.901, 2), "WSH": ("Washington", 38.898, -77.021, 0)}
+
+
+def miles(a, b):
+    """Straight-line miles between two teams' arenas; 0 inside one city, None when a site is unknown."""
+    if a not in ARENA or b not in ARENA:
+        return None
+    if ARENA[a][0] == ARENA[b][0]:
+        return 0
+    la1, lo1, la2, lo2 = map(np.radians, (ARENA[a][1], ARENA[a][2], ARENA[b][1], ARENA[b][2]))
+    h = np.sin((la2 - la1) / 2) ** 2 + np.cos(la1) * np.cos(la2) * np.sin((lo2 - lo1) / 2) ** 2
+    return int(round(3958.8 * 2 * np.arcsin(np.sqrt(h)) / 10) * 10)
+
+
+def travel(tn):
+    """For each of tonight's games, each team's travel and rest: where it played last and how far it came, back-to-backs,
+    games and miles in the last week, the length of the road trip or home stand, and where it goes next.
+    A game's site is the home team's arena; a neutral-site game has no known city, so legs in and out of it carry no distance."""
+    g = pd.read_csv(f"{D}/games.csv", dtype={"game_id": str})
+    g = g[g.stype.isin([2, 3, 5]) & g.home.isin(ARENA) & g.away.isin(ARENA)].sort_values("date")
+    g["day"] = pd.to_datetime(g.date_et)
+    today = pd.Timestamp(tn["date"])
+    g = g[g.day >= today - pd.Timedelta(days=45)]
+    city = lambda site: ARENA[site][0] if site else "a neutral site"
+
+    def team(t):
+        x = g[(g.home == t) | (g.away == t)]
+        rows = [dict(day=r.day, site=None if r.neutral else r.home, ha="N" if r.neutral else ("H" if r.home == t else "A"), opp=r.away if r.home == t else r.home)
+                for _, r in x.iterrows()]
+        i = next((k for k, r in enumerate(rows) if r["day"] == today), None)
+        if i is None:
+            return None
+        cur, past = rows[i], rows[:i]
+        leg = lambda a, b: None if a["site"] is None or b["site"] is None else miles(a["site"], b["site"])
+        out = dict(to=city(cur["site"]), ha=cur["ha"], flags=[])
+        trail, seq = [], past[-5:] + [cur]
+        for k, r in enumerate(seq):
+            prev = seq[k - 1] if k else (past[-6] if len(past) > 5 else None)
+            trail.append([f"{r['day']:%Y-%m-%d}", city(r["site"]), r["ha"], r["opp"], None if prev is None else leg(prev, r), None if prev is None else int((r["day"] - prev["day"]).days)])
+        out["trail"] = trail
+        if past:
+            last = past[-1]
+            gap = int((cur["day"] - last["day"]).days)
+            mi = leg(last, cur)
+            tz = None if last["site"] is None or cur["site"] is None else ARENA[last["site"]][3] - ARENA[cur["site"]][3]  # + = moved east
+            out.update(frm=city(last["site"]), last=f"{last['day']:%Y-%m-%d}", last_opp=last["opp"], last_ha=last["ha"], gap=gap, mi=mi, tz=tz, b2b=gap == 1)
+            if gap == 1:
+                out["flags"].append("Second night of a back-to-back" + ("" if mi is None else ", no travel" if mi == 0 else f", after a {mi:,}-mile trip"))
+            for n, d in ((3, 4), (4, 6), (5, 7)):
+                if len(past) >= n - 1 and (span := (cur["day"] - past[-(n - 1)]["day"]).days + 1) <= d:
+                    out["flags"].append(f"{n}{'rd' if n == 3 else 'th'} game in {span} nights")
+            if tz and abs(tz) >= 2:
+                out["flags"].append(f"{abs(tz)} time zones {'east' if tz > 0 else 'west'} of the last game")
+        # road trip or home stand: consecutive games at the same kind of site, ending tonight
+        n = 1
+        for r in reversed(past):
+            if r["ha"] != cur["ha"]:
+                break
+            n += 1
+        out["run"] = n
+        if cur["ha"] == "A" and n >= 3:
+            out["flags"].append(f"Game {n} of a road trip")
+        wk = [r for r in past if (cur["day"] - r["day"]).days <= 6] + [cur]
+        legs = [leg(a, b) for a, b in zip(wk, wk[1:])]
+        out["g7"] = len(wk)
+        out["mi7"] = int(sum(x for x in legs if x)) if legs else 0
+        out["cities7"] = len({r["site"] for r in wk if r["site"]})
+        if i + 1 < len(rows):
+            nx = rows[i + 1]
+            out["next"] = [f"{nx['day']:%Y-%m-%d}", city(nx["site"]), nx["ha"], nx["opp"], leg(cur, nx), int((nx["day"] - cur["day"]).days)]
+            if out["next"][5] == 1:
+                out["flags"].append("First night of a back-to-back: plays " + ("at home" if nx["ha"] == "H" else f"in {city(nx['site'])}") + " tomorrow")
+        return out
+
+    for gm in tn["games"]:
+        gm["trv"] = {t: team(t) for t in (gm["away"], gm["home"])}
+
+
 def old_games():
     """Final scores from the three seasons before our own data starts, from ESPN team schedules (fetched once, then cached)."""
     f = f"{D}/h2h_old.json"
@@ -464,6 +550,11 @@ def build(hub):
             matchup_history(j["tonight"])
     except Exception as e:  # noqa: BLE001  history is an extra: never block the hub
         print("NBA matchup history skipped:", repr(e))
+    try:
+        if j["tonight"]:
+            travel(j["tonight"])
+    except Exception as e:  # noqa: BLE001  travel is an extra: never block the hub
+        print("NBA travel skipped:", repr(e))
     f = os.path.join(hub, "nba.json")
     json.dump(j, open(f, "w"), separators=(",", ":"), default=lambda x: None if x != x else float(x), allow_nan=False)
     files = {"nba.json": f}

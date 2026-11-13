@@ -98,13 +98,14 @@ rebuild the NBA hub files, commit). Rules:
 - GitHub cannot publish to the Claude artifact link; that copy updates only when a job here runs.
 - The three desktop NBA jobs stay on as a fallback until GitHub's schedule has fired on its own for a week.
 
-## NFL and college on GitHub: built, not switched on (Nov 13, 2026)
+## NFL and college on GitHub (switched on Nov 13, 2026)
 
-`cloud_model.py` and the "football" workflow (in `publish_site.py`) run the NFL and college jobs on GitHub on the same timetable as the
-desktop jobs. Tested in a clean copy here: hub rebuild 40 seconds, Sunday slate run 3 minutes. They are not on GitHub yet because that
-would make the NFL and college code, data and pick records public: `FOOTBALL_PUBLIC = False` in `publish_site.py` holds them back until
-Josh says yes. Flip it to True and publish to switch on. Known limits: no lineup or quarterback news check on GitHub (slate.json and
-cfb/qb.json come from this computer), and the college sim is skipped for a week already forecast when its cache is not on GitHub.
-The score checker now runs only in game hours, every 15 minutes (nightly 7 PM to 2 AM ET, weekend afternoons, two weekday catch-ups).
+`cloud_model.py` and the "football" workflow (written by `publish_site.py`) run the NFL and college jobs on GitHub on the same timetable
+as the desktop jobs. Josh approved making the code, data and pick records public (`FOOTBALL_PUBLIC = True`). First run on GitHub:
+Sunday slate in under 6 minutes, all 1,686 college game files downloaded in 21 seconds. Each run commits `model/logs/football.log`.
+To run a job by hand without a GitHub login: put job names (one per line) in `hub_site/model/run_once.txt` and publish.
+Known limits: no lineup or quarterback news check on GitHub (slate.json and cfb/qb.json come from this computer), and the college sim
+is skipped for a week already forecast when its simulation cache is not on GitHub (so started games keep their original forecasts).
+The score checker runs only in game hours, every 15 minutes (nightly 7 PM to 2 AM ET, weekend afternoons, two weekday catch-ups).
 
 NFL post-game reviews: `nfl_reviews.py` builds `nflrev.json` for every finished game (kept in `output/nfl_reviews.json`, fetched once each).
