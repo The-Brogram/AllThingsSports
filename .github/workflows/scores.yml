@@ -1,7 +1,10 @@
 name: scores
 on:
   schedule:
-    - cron: "*/10 * * * *"
+    # game hours only, every 15 minutes (times are UTC; Eastern is 5 hours behind in winter, 4 in summer)
+    - cron: "*/15 0-6 * * *"      # every night 7 PM to 2 AM ET: NBA, weeknight football
+    - cron: "*/15 17-23 * * 6,0"  # Saturday and Sunday noon to 7 PM ET: college and NFL afternoons
+    - cron: "5 15,20 * * 1-5"     # weekday catch-up at 10 AM and 3 PM ET (holiday or early games)
   workflow_dispatch:
 permissions:
   contents: write
@@ -21,6 +24,5 @@ jobs:
             git config user.email "scores-bot@users.noreply.github.com"
             git add scores.json reviews.json
             git commit -m "scores"
-            git pull --rebase
-            git push
+            for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
           fi

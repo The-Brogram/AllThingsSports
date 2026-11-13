@@ -5,12 +5,10 @@ on:
     - cron: "30 22 * * *"   # 5:30 PM ET: evening sim with later lines and injuries
     - cron: "15 2 * * *"    # 9:15 PM ET: late games rerun
   workflow_dispatch:
-  push:
-    paths: [".github/workflows/nba.yml"]
 permissions:
   contents: write
 concurrency:
-  group: nba
+  group: model
   cancel-in-progress: false
 jobs:
   nba:
@@ -29,9 +27,8 @@ jobs:
         run: |
           git config user.name "nba-bot"
           git config user.email "nba-bot@users.noreply.github.com"
-          git add model/nba/data model/nba/output nba.json nbap.json nbl.json nblh.json nbm.json nbw.json heads.json
+          git add -A
           if ! git diff --cached --quiet; then
             git commit -q -m "nba run"
-            git pull --rebase -q
-            git push -q
+            for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
           fi
