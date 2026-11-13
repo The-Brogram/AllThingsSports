@@ -235,7 +235,7 @@ def push_model():
         if which == "model" and not FOOTBALL_PUBLIC:
             newer[which] = True  # GitHub does not run football yet: this computer's pages are the ones to publish
             continue
-        newer[which] = newest(ROOT, which) > cloud_ran(which) + 1
+        newer[which] = newest(ROOT, which) >= cloud_ran(which) - 1  # in sync counts: pages built here from the same data carry any newer layout
         if newer[which]:
             for d, skip in STATE[which]:
                 mirror(os.path.join(ROOT, d), os.path.join(MODEL, d), skip)
