@@ -1,0 +1,37 @@
+name: nba
+on:
+  schedule:
+    - cron: "45 14 * * *"   # 9:45 AM ET: grade last night, build today's slate
+    - cron: "30 22 * * *"   # 5:30 PM ET: evening sim with later lines and injuries
+    - cron: "15 2 * * *"    # 9:15 PM ET: late games rerun
+  workflow_dispatch:
+  push:
+    paths: [".github/workflows/nba.yml"]
+permissions:
+  contents: write
+concurrency:
+  group: nba
+  cancel-in-progress: false
+jobs:
+  nba:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      TZ: America/New_York
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - run: pip install -q numpy==2.5.4 pandas==3.1.0 pillow==13.0.0
+      - run: python cloud_nba.py
+      - if: always()
+        run: |
+          git config user.name "nba-bot"
+          git config user.email "nba-bot@users.noreply.github.com"
+          git add model/nba/data model/nba/output nba.json nbap.json nbl.json nblh.json nbm.json nbw.json heads.json
+          if ! git diff --cached --quiet; then
+            git commit -q -m "nba run"
+            git pull --rebase -q
+            git push -q
+          fi
