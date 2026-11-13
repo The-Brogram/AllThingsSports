@@ -1,0 +1,175 @@
+date,event,game,kind,player,athlete,market,side,line,price,prob,edge,flagged
+20261108,401873038,CIN@ATL,prop,Kyle Pitts,4360248.0,Total Receiving Yards (incl. overtime),under,43.5,,0.5796941151063382,0.055884591296814334,True
+20261108,401873038,CIN@ATL,prop,Bijan Robinson,4430807.0,Total Receiving Yards (incl. overtime),under,25.5,,0.5499181759147447,0.026108652105220842,True
+20261108,401873038,CIN@ATL,prop,Mike Gesicki,3116164.0,Total Receiving Yards (incl. overtime),under,28.5,,0.5470242085012426,0.023214684691718723,True
+20261108,401873038,CIN@ATL,prop,Chase Brown,4362238.0,Total Rushing Yards (incl. overtime),over,49.5,,0.5457633522206486,0.02195382841112481,False
+20261108,401873038,CIN@ATL,prop,Tee Higgins,4239993.0,Total Receiving Yards (incl. overtime),over,77.5,,0.5364494111675882,0.012639887358064317,False
+20261108,401873038,CIN@ATL,prop,Jahan Dotson,4361409.0,Total Receiving Yards (incl. overtime),over,26.5,,0.5333273475899191,0.00951782378039523,False
+20261108,401873038,CIN@ATL,prop,Drake London,4426502.0,Total Receiving Yards (incl. overtime),over,80.5,,0.5283376547155915,0.004528130906067629,False
+20261108,401873038,CIN@ATL,prop,Michael Penix Jr.,4360423.0,Total Passing Yards (incl. overtime),over,222.5,,0.5276121783992271,0.0038026545897033026,False
+20261108,401873038,CIN@ATL,prop,Ja'Marr Chase,4362628.0,Total Receiving Yards (incl. overtime),under,77.5,,0.5215600242557684,-0.0022494995537554185,False
+20261108,401873038,CIN@ATL,prop,Dohnte Meyers,4384852.0,Total Receiving Yards (incl. overtime),under,16.5,,0.5127000510274852,-0.011109472782038665,False
+20261108,401873038,CIN@ATL,prop,Chase Brown,4362238.0,Total Receiving Yards (incl. overtime),over,23.5,,0.5120105145909213,-0.011799009218602552,False
+20261108,401873038,CIN@ATL,prop,Joe Burrow,3915511.0,Total Passing Yards (incl. overtime),over,277.5,,0.5119755545996629,-0.011833969209860906,False
+20261108,401873038,CIN@ATL,prop,Samaje Perine,3116389.0,Total Rushing Yards (incl. overtime),over,18.5,,0.5,-0.023809523809523836,False
+20261108,401873038,CIN@ATL,prop,Bijan Robinson,4430807.0,Total Rushing Yards (incl. overtime),over,97.5,,0.5,-0.023809523809523836,False
+20261108,401873038,CIN@ATL,game,,,CIN moneyline,,,-170.0,,-0.009497058823529358,True
+20261108,401873040,DAL@IND,prop,Seth McGowan,4686468.0,Total Rushing Yards (incl. overtime),under,25.5,,0.6399868761428633,0.11617735233333948,True
+20261108,401873040,DAL@IND,prop,Tyler Goodson,4429676.0,Total Rushing Yards (incl. overtime),under,19.5,,0.5531335720717669,0.029324048262243108,False
+20261108,401873040,DAL@IND,prop,CeeDee Lamb,4241389.0,Total Receiving Yards (incl. overtime),over,81.5,,0.5430437657744499,0.01923424196492607,False
+20261108,401873040,DAL@IND,prop,Jonathan Taylor,4242335.0,Total Rushing Yards (incl. overtime),under,63.5,,0.5407875072148961,0.016977983405372266,False
+20261108,401873040,DAL@IND,prop,Tyler Warren,4431459.0,Total Receiving Yards (incl. overtime),under,42.5,,0.5377811155784297,0.013971591768905833,True
+20261108,401873040,DAL@IND,prop,Josh Downs,4688813.0,Total Receiving Yards (incl. overtime),under,41.5,,0.5325064839539724,0.00869696014444854,False
+20261108,401873040,DAL@IND,prop,Ryan Flournoy,5083754.0,Total Receiving Yards (incl. overtime),under,37.5,,0.5281530699068984,0.004343546097374529,False
+20261108,401873040,DAL@IND,prop,Daniel Jones,3917792.0,Total Passing Yards (incl. overtime),over,209.5,,0.5246201115792352,0.000810587769711324,False
+20261108,401873040,DAL@IND,prop,Jonathan Taylor,4242335.0,Total Receiving Yards (incl. overtime),under,17.5,,0.5193406590471319,-0.004468864762391944,False
+20261108,401873040,DAL@IND,prop,Dak Prescott,2577417.0,Total Passing Yards (incl. overtime),under,265.5,,0.518257131394246,-0.005552392415277829,False
+20261108,401873040,DAL@IND,prop,George Pickens,4426354.0,Total Receiving Yards (incl. overtime),under,61.5,,0.5131250346517173,-0.01068448915780651,True
+20261108,401873040,DAL@IND,prop,Javonte Williams,4361579.0,Total Rushing Yards (incl. overtime),over,72.5,,0.506723828240722,-0.017085695568801795,False
+20261108,401873040,DAL@IND,prop,Keenan Allen,15818.0,Total Receiving Yards (incl. overtime),over,41.5,,0.5026169626635277,-0.021192561145996103,False
+20261108,401873040,DAL@IND,game,,,DAL moneyline,,,-230.0,,-0.023773913043478256,True
+20261108,401873045,NYJ@KC,prop,Breece Hall,4427366.0,Total Rushing Yards (incl. overtime),under,40.5,,0.5670062769038418,0.04319675309431792,True
+20261108,401873045,NYJ@KC,prop,Kenneth Walker III,4567048.0,Total Receiving Yards (incl. overtime),under,18.5,,0.5503691990307535,0.026559675221229706,True
+20261108,401873045,NYJ@KC,prop,Cyrus Allen,4912218.0,Total Receiving Yards (incl. overtime),under,15.5,,0.547108270059496,0.02329874624997219,True
+20261108,401873045,NYJ@KC,prop,Braelon Allen,4685247.0,Total Rushing Yards (incl. overtime),over,34.5,,0.5392574534269746,0.015447929617450784,False
+20261108,401873045,NYJ@KC,prop,Geno Smith,15864.0,Total Passing Yards (incl. overtime),over,218.5,,0.5322887211091707,0.008479197299646857,False
+20261108,401873045,NYJ@KC,prop,Kenyon Sadiq,5083315.0,Total Receiving Yards (incl. overtime),under,17.5,,0.5308711157125506,0.007061591903026798,False
+20261108,401873045,NYJ@KC,prop,Kenneth Walker III,4567048.0,Total Rushing Yards (incl. overtime),over,92.5,,0.5284523311876302,0.004642807378106406,False
+20261108,401873045,NYJ@KC,prop,Mason Taylor,4808766.0,Total Receiving Yards (incl. overtime),over,25.5,,0.5264066627958802,0.0025971389863563843,False
+20261108,401873045,NYJ@KC,prop,Patrick Mahomes,3139477.0,Total Passing Yards (incl. overtime),over,242.5,,0.5212453109023293,-0.002564212907194552,False
+20261108,401873045,NYJ@KC,prop,Rashee Rice,4428331.0,Total Receiving Yards (incl. overtime),over,58.5,,0.5197497954062481,-0.004059728403275731,False
+20261108,401873045,NYJ@KC,prop,Xavier Worthy,4683062.0,Total Receiving Yards (incl. overtime),over,31.5,,0.5187502008824948,-0.005059322927029042,False
+20261108,401873045,NYJ@KC,prop,Omar Cooper Jr.,4723820.0,Total Receiving Yards (incl. overtime),under,49.5,,0.5133491221705069,-0.010460401639016959,False
+20261108,401873045,NYJ@KC,prop,Breece Hall,4427366.0,Total Receiving Yards (incl. overtime),under,15.5,,0.5122752105662052,-0.011534313243318661,False
+20261108,401873045,NYJ@KC,prop,Adonai Mitchell,4597500.0,Total Receiving Yards (incl. overtime),over,50.5,,0.511125445815409,-0.012684077994114862,False
+20261108,401873045,NYJ@KC,prop,Travis Kelce,15847.0,Total Receiving Yards (incl. overtime),over,48.5,,0.5056763730178611,-0.018133150791662778,False
+20261108,401873045,NYJ@KC,game,,,NYJ moneyline,,,410.0,,0.22731500000000004,False
+20261108,401873042,DET@MIA,prop,Sione Vaki,4912274.0,Total Rushing Yards (incl. overtime),under,20.5,,0.6032282414802883,0.07941871767076447,True
+20261108,401873042,DET@MIA,prop,Malik Willis,4242512.0,Total Rushing Yards (incl. overtime),under,28.5,,0.5886577623004234,0.0648482384908996,True
+20261108,401873042,DET@MIA,prop,Jared Goff,3046779.0,Total Passing Yards (incl. overtime),over,258.5,,0.5539805832587111,0.0301710594491873,False
+20261108,401873042,DET@MIA,prop,Ollie Gordon II,4711533.0,Total Rushing Yards (incl. overtime),under,71.5,,0.5460918965673865,0.022282372757862712,True
+20261108,401873042,DET@MIA,prop,Malik Willis,4242512.0,Total Passing Yards (incl. overtime),over,207.5,,0.541070538119704,0.017261014310180123,False
+20261108,401873042,DET@MIA,prop,Jameson Williams,4426388.0,Total Receiving Yards (incl. overtime),over,49.5,,0.5405285695574817,0.016719045747957906,False
+20261108,401873042,DET@MIA,prop,Isaac TeSlaa,5123663.0,Total Receiving Yards (incl. overtime),over,15.5,,0.5343045148630735,0.010494991053549674,True
+20261108,401873042,DET@MIA,prop,Jahmyr Gibbs,4429795.0,Total Rushing Yards (incl. overtime),under,97.5,,0.5156758429587158,-0.008133680850808012,False
+20261108,401873042,DET@MIA,prop,Chris Bell,4869961.0,Total Receiving Yards (incl. overtime),under,23.5,,0.5134440430299945,-0.010365480779529368,False
+20261108,401873042,DET@MIA,prop,Caleb Douglas,4869645.0,Total Receiving Yards (incl. overtime),over,40.5,,0.5120105145909213,-0.011799009218602552,False
+20261108,401873042,DET@MIA,prop,Jahmyr Gibbs,4429795.0,Total Receiving Yards (incl. overtime),over,34.5,,0.5119575710543711,-0.011851952755152717,False
+20261108,401873042,DET@MIA,prop,Malik Washington,4569603.0,Total Receiving Yards (incl. overtime),over,42.5,,0.5094373088230889,-0.014372214986434928,False
+20261108,401873042,DET@MIA,prop,Amon-Ra St. Brown,4374302.0,Total Receiving Yards (incl. overtime),under,76.5,,0.5069581801082551,-0.01685134370126873,True
+20261108,401873042,DET@MIA,prop,Sam LaPorta,4430027.0,Total Receiving Yards (incl. overtime),over,45.5,,0.5007567451086397,-0.02305277870088418,False
+20261108,401873042,DET@MIA,prop,Greg Dulcich,4367209.0,Total Receiving Yards (incl. overtime),over,38.5,,0.5,-0.023809523809523836,False
+20261108,401873042,DET@MIA,game,,,MIA moneyline,,,260.0,,0.06721999999999995,False
+20261108,401873039,CLE@NO,prop,Quinshon Judkins,4685702.0,Total Rushing Yards (incl. overtime),under,68.5,,0.602868988835808,0.07905946502628414,True
+20261108,401873039,CLE@NO,prop,Alvin Kamara,3054850.0,Total Receiving Yards (incl. overtime),under,17.5,,0.5705941626506859,0.04678463884116202,True
+20261108,401873039,CLE@NO,prop,Alvin Kamara,3054850.0,Total Rushing Yards (incl. overtime),under,25.5,,0.5668955295159885,0.0430860057064647,True
+20261108,401873039,CLE@NO,prop,KC Concepcion,4870653.0,Total Receiving Yards (incl. overtime),under,44.5,,0.5565011708354832,0.03269164702595939,True
+20261108,401873039,CLE@NO,prop,Denzel Boston,4832800.0,Total Receiving Yards (incl. overtime),under,46.5,,0.5512803892624822,0.027470865452958404,True
+20261108,401873039,CLE@NO,prop,Tyler Shough,4360689.0,Total Passing Yards (incl. overtime),under,223.5,,0.5380799651502849,0.014270441340761053,False
+20261108,401873039,CLE@NO,prop,Harold Fannin Jr.,5083076.0,Total Receiving Yards (incl. overtime),under,42.5,,0.523272986909366,-0.000536536900157869,True
+20261108,401873039,CLE@NO,prop,Tyler Shough,4360689.0,Total Rushing Yards (incl. overtime),over,15.5,,0.5135852114042834,-0.010224312405240465,False
+20261108,401873039,CLE@NO,prop,Chris Olave,4361370.0,Total Receiving Yards (incl. overtime),under,72.5,,0.5050736242899841,-0.01873589951953969,False
+20261108,401873039,CLE@NO,prop,Kendre Miller,4599739.0,Total Rushing Yards (incl. overtime),over,38.5,,0.5023713586512839,-0.02143816515823993,True
+20261108,401873039,CLE@NO,game,,,CLE +3,,,-108.0,,0.0011925925925924674,True
+20261108,401873044,NYG@PHI,prop,Malik Nabers,4595348.0,Total Receiving Yards (incl. overtime),under,71.5,,0.5809838981694034,0.0571743743598796,True
+20261108,401873044,NYG@PHI,prop,Malachi Fields,4682648.0,Total Receiving Yards (incl. overtime),over,22.5,,0.5216324005947797,-0.00217712321474417,False
+20261108,401873044,NYG@PHI,prop,Isaiah Likely,4361050.0,Total Receiving Yards (incl. overtime),over,42.5,,0.5201367439319058,-0.0036727798776180487,False
+20261108,401873044,NYG@PHI,prop,J.J. McCarthy,4433970.0,Total Passing Yards (incl. overtime),over,211.5,,0.5190938511598794,-0.004715672649644453,False
+20261108,401873044,NYG@PHI,prop,Saquon Barkley,3929630.0,Total Rushing Yards (incl. overtime),over,57.5,,0.5153772328523105,-0.008432290957213318,True
+20261108,401873044,NYG@PHI,game,,,NYG -3.5,,,-102.0,,0.025744117647058862,True
+20261108,401873043,LA@WAS,prop,Antonio Williams,5081432.0,Total Receiving Yards (incl. overtime),under,43.5,,0.553186247990917,0.029376724181393143,True
+20261108,401873043,LA@WAS,prop,Rachaad White,4697815.0,Total Receiving Yards (incl. overtime),under,15.5,,0.5492986737479555,0.025489149938431654,True
+20261108,401873043,LA@WAS,prop,Puka Nacua,4426515.0,Total Receiving Yards (incl. overtime),over,94.5,,0.5490655000165938,0.025255976207069986,False
+20261108,401873043,LA@WAS,prop,Kyren Williams,4430737.0,Total Receiving Yards (incl. overtime),over,19.5,,0.5344845005646591,0.01067497675513529,False
+20261108,401873043,LA@WAS,prop,Blake Corum,4429096.0,Total Rushing Yards (incl. overtime),under,49.5,,0.5336501468818726,0.009840623072348786,False
+20261108,401873043,LA@WAS,prop,Matthew Stafford,12483.0,Total Passing Yards (incl. overtime),over,247.5,,0.5312556581618456,0.007446134352321776,False
+20261108,401873043,LA@WAS,prop,Stefon Diggs,2976212.0,Total Receiving Yards (incl. overtime),under,46.5,,0.5277625444227537,0.003953020613229885,True
+20261108,401873043,LA@WAS,prop,Kyren Williams,4430737.0,Total Rushing Yards (incl. overtime),over,59.5,,0.5230143504151609,-0.0007951733943629691,False
+20261108,401873043,LA@WAS,prop,Chig Okonkwo,4360635.0,Total Receiving Yards (incl. overtime),under,36.5,,0.513627202226151,-0.010182321583372844,True
+20261108,401873043,LA@WAS,prop,Jayden Daniels,4426348.0,Total Rushing Yards (incl. overtime),under,40.5,,0.513553649561757,-0.01025587424776686,True
+20261108,401873043,LA@WAS,prop,Jayden Daniels,4426348.0,Total Passing Yards (incl. overtime),under,213.5,,0.5121940084093105,-0.011615515400213328,True
+20261108,401873043,LA@WAS,prop,Rachaad White,4697815.0,Total Rushing Yards (incl. overtime),under,42.5,,0.5086849756786491,-0.015124548130874715,True
+20261108,401873043,LA@WAS,game,,,LA -4.5,,,-112.0,,-0.021108928571428542,True
+20261108,401873041,DEN@CAR,prop,Jonah Coleman,4702555.0,Total Rushing Yards (incl. overtime),under,57.5,,0.6165668985331174,0.09275737472359358,True
+20261108,401873041,DEN@CAR,prop,J.K. Dobbins,4241985.0,Total Rushing Yards (incl. overtime),over,25.5,,0.5970965989750817,0.07328707516555788,True
+20261108,401873041,DEN@CAR,prop,Jonah Coleman,4702555.0,Total Receiving Yards (incl. overtime),under,24.5,,0.5870836395314083,0.06327411572188446,True
+20261108,401873041,DEN@CAR,prop,Bo Nix,4426338.0,Total Passing Yards (incl. overtime),under,210.5,,0.5483719770004308,0.024562453190906997,False
+20261108,401873041,DEN@CAR,prop,Tetairoa McMillan,4685472.0,Total Receiving Yards (incl. overtime),over,63.5,,0.5415213129783228,0.017711789168799008,False
+20261108,401873041,DEN@CAR,prop,Tommy Tremble,4372780.0,Total Receiving Yards (incl. overtime),under,17.5,,0.5409232001901167,0.017113676380592913,True
+20261108,401873041,DEN@CAR,prop,Courtland Sutton,3128429.0,Total Receiving Yards (incl. overtime),under,37.5,,0.5341104352500794,0.01030091144055556,True
+20261108,401873041,DEN@CAR,prop,Evan Engram,3051876.0,Total Receiving Yards (incl. overtime),under,18.5,,0.5221852221198333,-0.0016243016896905216,False
+20261108,401873041,DEN@CAR,prop,Chuba Hubbard,4241416.0,Total Receiving Yards (incl. overtime),under,17.5,,0.5184573152668512,-0.0053522085426725985,False
+20261108,401873041,DEN@CAR,prop,Jalen Coker,4695883.0,Total Receiving Yards (incl. overtime),under,53.5,,0.5139377552373953,-0.00987176857212857,False
+20261108,401873041,DEN@CAR,prop,Chuba Hubbard,4241416.0,Total Rushing Yards (incl. overtime),over,68.5,,0.5129771500645617,-0.010832373744962154,False
+20261108,401873041,DEN@CAR,prop,Bryce Young,4685720.0,Total Passing Yards (incl. overtime),over,228.5,,0.5044524355749256,-0.019357088234598252,False
+20261108,401873041,DEN@CAR,prop,Jaylen Waddle,4372016.0,Total Receiving Yards (incl. overtime),under,45.5,,0.5014625549943557,-0.022346968815168178,True
+20261108,401873041,DEN@CAR,prop,Darren Waller,2576925.0,Total Receiving Yards (incl. overtime),under,18.5,,0.5010631694679027,-0.02274635434162109,False
+20261108,401873041,DEN@CAR,game,,,DEN moneyline,,,-155.0,,0.0013274193548387658,True
+20261108,401873046,HOU@LAC,prop,Ladd McConkey,4612826.0,Total Receiving Yards (incl. overtime),under,50.5,,0.6359211107583844,0.11211158694886059,True
+20261108,401873046,HOU@LAC,prop,Quentin Johnston,4429025.0,Total Receiving Yards (incl. overtime),under,30.5,,0.5861316997707365,0.0623221759612127,True
+20261108,401873046,HOU@LAC,prop,Xavier Hutchinson,4686422.0,Total Receiving Yards (incl. overtime),over,19.5,,0.5821629825739744,0.05835345876445053,False
+20261108,401873046,HOU@LAC,prop,Nico Collins,4258173.0,Total Receiving Yards (incl. overtime),under,68.5,,0.5683952133641913,0.04458568955466746,True
+20261108,401873046,HOU@LAC,prop,Tre Harris,4686612.0,Total Receiving Yards (incl. overtime),under,30.5,,0.5679494623000201,0.044139938490496244,True
+20261108,401873046,HOU@LAC,prop,Justin Herbert,4038941.0,Total Rushing Yards (incl. overtime),under,22.5,,0.5638961407281424,0.04008661691861859,False
+20261108,401873046,HOU@LAC,prop,C.J. Stroud,4432577.0,Total Passing Yards (incl. overtime),under,246.5,,0.5637702521060921,0.03996072829656827,False
+20261108,401873046,HOU@LAC,prop,Omarion Hampton,4685382.0,Total Rushing Yards (incl. overtime),under,36.5,,0.5530806191684174,0.029271095358893606,True
+20261108,401873046,HOU@LAC,prop,Tank Dell,4366031.0,Total Receiving Yards (incl. overtime),under,15.5,,0.5421157258323188,0.018306202022794982,True
+20261108,401873046,HOU@LAC,prop,Justin Herbert,4038941.0,Total Passing Yards (incl. overtime),under,207.5,,0.5407964413375114,0.016986917527987533,False
+20261108,401873046,HOU@LAC,prop,Marvin Harrison Jr.,4432708.0,Total Receiving Yards (incl. overtime),under,26.5,,0.5251761451012851,0.0013666212917612386,False
+20261108,401873046,HOU@LAC,prop,Woody Marks,4429059.0,Total Rushing Yards (incl. overtime),over,63.5,,0.514413083912312,-0.009396439897211839,True
+20261108,401873046,HOU@LAC,prop,Kayshon Boutte,4429022.0,Total Receiving Yards (incl. overtime),under,17.5,,0.5065337160910397,-0.017275807718484137,True
+20261108,401873046,HOU@LAC,prop,Dalton Schultz,3117256.0,Total Receiving Yards (incl. overtime),under,34.5,,0.5037459855609816,-0.020063538248542234,False
+20261108,401873046,HOU@LAC,game,,,Under 40.5,,,-110.0,,-0.008036363636363508,True
+20261108,401873049,GB@NE,prop,Jordan Love,4036378.0,Total Passing Yards (incl. overtime),under,274.5,,0.6084519624856163,0.08464243867609245,False
+20261108,401873049,GB@NE,prop,Tucker Kraft,4572680.0,Total Receiving Yards (incl. overtime),under,45.5,,0.5913848127058977,0.06757528889637388,True
+20261108,401873049,GB@NE,prop,Savion Williams,4431487.0,Total Receiving Yards (incl. overtime),under,17.5,,0.5825606492187709,0.058751125409247096,True
+20261108,401873049,GB@NE,prop,Christian Watson,4248528.0,Total Receiving Yards (incl. overtime),under,72.5,,0.5665079131159296,0.04269838930640579,True
+20261108,401873049,GB@NE,prop,Josh Jacobs,4047365.0,Total Rushing Yards (incl. overtime),under,47.5,,0.5656405136999141,0.04183098989039025,True
+20261108,401873049,GB@NE,prop,Rhamondre Stevenson,4569173.0,Total Rushing Yards (incl. overtime),under,55.5,,0.5583111217426449,0.03450159793312102,False
+20261108,401873049,GB@NE,prop,Corey Kiner,4431431.0,Total Rushing Yards (incl. overtime),under,21.5,,0.5513091291463034,0.02749960533677953,False
+20261108,401873049,GB@NE,prop,Rhamondre Stevenson,4569173.0,Total Receiving Yards (incl. overtime),under,21.5,,0.5354640975648682,0.0116545737553444,False
+20261108,401873049,GB@NE,prop,Drake Maye,4431452.0,Total Rushing Yards (incl. overtime),under,24.5,,0.5240849898928357,0.0002754660833118594,False
+20261108,401873049,GB@NE,prop,Matthew Golden,4701936.0,Total Receiving Yards (incl. overtime),under,66.5,,0.5236338536978182,-0.00017567011170560587,True
+20261108,401873049,GB@NE,prop,Josh Jacobs,4047365.0,Total Receiving Yards (incl. overtime),under,20.5,,0.5201177930571242,-0.0036917307523995913,False
+20261108,401873049,GB@NE,prop,Drake Maye,4431452.0,Total Passing Yards (incl. overtime),over,227.5,,0.5139410387083728,-0.009868485101151014,False
+20261108,401873049,GB@NE,game,,,GB +3,,,-108.0,,0.010533333333333228,True
+20261108,401873047,LV@SF,prop,Kaelon Black,4696044.0,Total Rushing Yards (incl. overtime),under,39.5,,0.578456879712471,0.054647355902947115,True
+20261108,401873047,LV@SF,prop,Christian McCaffrey,3117251.0,Total Receiving Yards (incl. overtime),under,39.5,,0.5434011664408414,0.01959164263131752,True
+20261108,401873047,LV@SF,prop,George Kittle,3040151.0,Total Receiving Yards (incl. overtime),under,69.5,,0.5432271809093384,0.019417657099814578,True
+20261108,401873047,LV@SF,prop,Brock Purdy,4361741.0,Total Rushing Yards (incl. overtime),over,16.5,,0.5344872134186821,0.01067768960915827,False
+20261108,401873047,LV@SF,prop,Tre Tucker,4428718.0,Total Receiving Yards (incl. overtime),over,38.5,,0.5335229587256546,0.009713434916130748,False
+20261108,401873047,LV@SF,prop,Jalen Nailor,4382466.0,Total Receiving Yards (incl. overtime),under,21.5,,0.533354713200231,0.009545189390707143,False
+20261108,401873047,LV@SF,prop,Ashton Jeanty,4890973.0,Total Receiving Yards (incl. overtime),under,37.5,,0.5291739887572176,0.0053644649476937145,True
+20261108,401873047,LV@SF,prop,Christian McCaffrey,3117251.0,Total Rushing Yards (incl. overtime),under,60.5,,0.5238746182039028,6.50943943789617e-05,True
+20261108,401873047,LV@SF,prop,Brock Purdy,4361741.0,Total Passing Yards (incl. overtime),over,245.5,,0.5195296889797971,-0.004279834829726714,False
+20261108,401873047,LV@SF,prop,Michael Mayer,4429086.0,Total Receiving Yards (incl. overtime),under,28.5,,0.5169339515508747,-0.006875572258649099,False
+20261108,401873047,LV@SF,prop,Brock Bowers,4432665.0,Total Receiving Yards (incl. overtime),under,72.5,,0.5115054805955805,-0.012304043213943294,False
+20261108,401873047,LV@SF,prop,Ashton Jeanty,4890973.0,Total Rushing Yards (incl. overtime),over,28.5,,0.5102851037954316,-0.013524420014092264,True
+20261108,401873047,LV@SF,prop,Jordan Watkins,4431466.0,Total Receiving Yards (incl. overtime),over,20.5,,0.5064916981971982,-0.017317825612325644,True
+20261108,401873047,LV@SF,prop,Mike Washington Jr.,4686658.0,Total Rushing Yards (incl. overtime),under,31.5,,0.5055821090544308,-0.01822741475509304,True
+20261108,401873047,LV@SF,prop,Kirk Cousins,14880.0,Total Passing Yards (incl. overtime),under,246.5,,0.5044524355749255,-0.019357088234598363,False
+20261108,401873047,LV@SF,game,,,LV moneyline,,,370.0,,0.011439999999999784,True
+20261108,401873048,ARI@SEA,prop,Zach Charbonnet,4426385.0,Total Rushing Yards (incl. overtime),under,36.5,,0.6939214803761043,0.1701119565665805,True
+20261108,401873048,ARI@SEA,prop,Jadarian Price,4685512.0,Total Rushing Yards (incl. overtime),under,55.5,,0.6811281936510598,0.15731866984153597,True
+20261108,401873048,ARI@SEA,prop,AJ Barner,4576297.0,Total Receiving Yards (incl. overtime),under,23.5,,0.5694754908112668,0.04566596700174297,True
+20261108,401873048,ARI@SEA,prop,Gardner Minshew,4038524.0,Total Passing Yards (incl. overtime),under,198.5,,0.5383654374996342,0.014555913690110334,True
+20261108,401873048,ARI@SEA,prop,Drew Lock,3924327.0,Total Passing Yards (incl. overtime),under,211.5,,0.536056227571716,0.012246703762192168,True
+20261108,401873048,ARI@SEA,prop,Trey McBride,4361307.0,Total Receiving Yards (incl. overtime),under,61.5,,0.5230443694628889,-0.0007651543466349331,True
+20261108,401873048,ARI@SEA,prop,Michael Wilson,4360761.0,Total Receiving Yards (incl. overtime),over,49.5,,0.5164415295744964,-0.007367994235027431,True
+20261108,401873048,ARI@SEA,prop,Jaxon Smith-Njigba,4430878.0,Total Receiving Yards (incl. overtime),under,95.5,,0.5156297592363582,-0.008179764573165604,True
+20261108,401873048,ARI@SEA,game,,,ARI moneyline,,,360.0,,0.15000000000000002,False
+20261108,401873050,TB@CHI,prop,Baker Mayfield,3052587.0,Total Rushing Yards (incl. overtime),under,16.5,,0.6541459383967614,0.13033641458723755,True
+20261108,401873050,TB@CHI,prop,Baker Mayfield,3052587.0,Total Passing Yards (incl. overtime),under,212.5,,0.6027871244304589,0.07897760062093506,False
+20261108,401873050,TB@CHI,prop,Emeka Egbuka,4567750.0,Total Receiving Yards (incl. overtime),under,49.5,,0.5978707785933056,0.07406125478378178,True
+20261108,401873050,TB@CHI,prop,Caleb Williams,4431611.0,Total Rushing Yards (incl. overtime),under,19.5,,0.5694757016840825,0.04566617787455862,True
+20261108,401873050,TB@CHI,prop,Roschon Johnson,4426386.0,Total Rushing Yards (incl. overtime),under,16.5,,0.5675190702905761,0.0437095464810523,True
+20261108,401873050,TB@CHI,prop,Kalif Raymond,2973405.0,Total Receiving Yards (incl. overtime),over,16.5,,0.5510363633376317,0.027226839528107893,False
+20261108,401873050,TB@CHI,prop,D'Andre Swift,4259545.0,Total Receiving Yards (incl. overtime),under,20.5,,0.5504538107445716,0.026644286935047723,True
+20261108,401873050,TB@CHI,prop,D'Andre Swift,4259545.0,Total Rushing Yards (incl. overtime),under,66.5,,0.549482202402158,0.025672678592634113,False
+20261108,401873050,TB@CHI,prop,Rome Odunze,4431299.0,Total Receiving Yards (incl. overtime),over,47.5,,0.5412160453736962,0.017406521564172328,False
+20261108,401873050,TB@CHI,prop,Colston Loveland,4723086.0,Total Receiving Yards (incl. overtime),under,54.5,,0.5343774095457108,0.010567885736186944,True
+20261108,401873050,TB@CHI,prop,Kenny Gainwell,4371733.0,Total Rushing Yards (incl. overtime),over,22.5,,0.5109149065996962,-0.012894617209827652,False
+20261108,401873050,TB@CHI,prop,Bucky Irving,4596448.0,Total Rushing Yards (incl. overtime),over,65.5,,0.5100688936123,-0.013740630197223824,False
+20261108,401873050,TB@CHI,prop,Caleb Williams,4431611.0,Total Passing Yards (incl. overtime),under,244.5,,0.5058590297021675,-0.017950494107356385,False
+20261108,401873050,TB@CHI,prop,Luther Burden III,4685278.0,Total Receiving Yards (incl. overtime),over,66.5,,0.5,-0.023809523809523836,False
+20261108,401873050,TB@CHI,game,,,TB moneyline,,,230.0,,0.10104499999999994,False

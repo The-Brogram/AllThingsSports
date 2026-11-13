@@ -1,0 +1,30 @@
+{
+ "11": {
+  "checked": "Thu Nov 12, 2026",
+  "pick": {
+   "WAKE": "Gio Lopez"
+  },
+  "note": {
+   "WAKE": "Gio Lopez was held out of the Merrimack game as a precaution and was reported available to start at SMU, so he is modeled as the starter over Steele Pizzella.",
+   "WIS": "True freshman Ryan Hopkins started the last game with Colton Joseph hurt. Joseph is listed as emergency-only. Hopkins has thrown little, so Wisconsin passing numbers are low confidence.",
+   "MSST": "AJ Swann has started since Kamario Taylor's season-ending surgery. He left the Texas game early. Mississippi State passing numbers are low confidence.",
+   "NU": "Backup Nicco Marchiol started the Iowa game. No starter is announced for Ohio State yet, so Northwestern passing numbers are low confidence.",
+   "OSU": "Luke Fahey is modeled with Julian Sayin still out. Ohio State has not named a starter for this game, so passing numbers are low confidence.",
+   "KSU": "Kansas State's quarterback is unconfirmed for TCU. Blake Barnett, modeled here, holds a small share of the season's attempts, so passing numbers are low confidence.",
+   "ASU": "Jake Fette has started since Mikey Keene's knee injury, and Kenny Dillingham said he stays the starter. He is a freshman with a small sample.",
+   "TTU": "Thomas Castellanos made his first Texas Tech start Nov 1 after his eligibility case. His Texas Tech sample is small.",
+   "BOIS": "Max Cutforth replaced the injured Maddux Madsen against Texas State. Madsen's status for this game is unknown.",
+   "PITT": "ESPN reported Mason Heintschel tore his ACL and is out for the season. Holden Geriner is Pitt's full-time starter, so the modeled starter is confirmed with high confidence.",
+   "UCLA": "Nico Iamaleava is expected to miss the rest of the season after knee surgery (Daily Bruin, Oct 12). Ty Dieffenbach has taken over, so the modeled starter is confirmed with high confidence.",
+   "UCF": "Alonza Barnett III is back from a hamstring injury and led the winning drive at Kansas. Keyone Jenkins is the questionable backup. Barnett as starter is likely, with medium-high confidence.",
+   "CLEM": "Tait Reynolds has started since Christopher Vizzina's elbow injury in September, and Vizzina is listed out. No report names a different starter for Georgia Tech, so medium-high confidence.",
+   "KU": "The AP preview lists Isaiah Marshall as the Kansas passing leader, and he won the job in camp. The questionable QB on the injury list is a backup, so high confidence.",
+   "MSU": "Alessio Milivojevic is the named starter and Cam Fancher, listed questionable, is the backup. Milivojevic missed the UCLA game in late October. No report this week says he is out, so his start is unconfirmed but likely.",
+   "MD": "Malik Washington is Maryland's returning starter. The questionable QB on the injury list is a backup. No report this week changes that, so he is unconfirmed but likely.",
+   "SYR": "A Nov 5 Field Level Media story covers Steve Angeli as Syracuse's quarterback. The questionable QB on the injury list is a backup, so high confidence.",
+   "ND": "CJ Carr is Notre Dame's starter. The QB listed out is a backup, so the injury does not affect the model.",
+   "USC": "Jayden Maiava is USC's starter. The QB listed questionable is a backup, so the injury does not affect the model.",
+   "SC": "LaNorris Sellers is South Carolina's starter. The QB listed questionable is a backup, so the injury does not affect the model."
+  }
+ }
+}

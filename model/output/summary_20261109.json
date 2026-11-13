@@ -1,0 +1,51 @@
+{
+ "date": "20261109",
+ "week": 9,
+ "built": "2026-11-10 15:41",
+ "games": [
+  {
+   "id": "buf-min",
+   "a": "BUF",
+   "h": "MIN",
+   "win": "BUF",
+   "pw": 0.6272,
+   "pa": 24.582974936338225,
+   "ph": 21.15273377565584,
+   "ma": 23.418246724829945,
+   "mh": 20.875835118005988,
+   "line": "BUF -3.5",
+   "total": 45.5,
+   "likely": [
+    {
+     "player": "Josh Allen",
+     "team": "BUF",
+     "outcome": "15+ rushing yds",
+     "prob": 0.762906047069265
+    },
+    {
+     "player": "James Cook",
+     "team": "BUF",
+     "outcome": "50+ rushing yds",
+     "prob": 0.7523670131338405
+    }
+   ],
+   "td": [
+    {
+     "player": "James Cook",
+     "team": "BUF",
+     "prob": 0.5480299886899668
+    },
+    {
+     "player": "Josh Allen",
+     "team": "BUF",
+     "prob": 0.3889753842829426
+    },
+    {
+     "player": "Aaron Jones",
+     "team": "MIN",
+     "prob": 0.3713265060776951
+    }
+   ]
+  }
+ ]
+}

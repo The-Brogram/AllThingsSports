@@ -1,0 +1,63 @@
+{
+ "date": "20261112",
+ "week": 10,
+ "built": "2026-11-12 19:35",
+ "games": [
+  {
+   "id": "was-nyg",
+   "a": "WAS",
+   "h": "NYG",
+   "win": "NYG",
+   "pw": 0.5596,
+   "pa": 19.939632938072975,
+   "ph": 21.579578830043246,
+   "ma": 21.473967664844253,
+   "mh": 23.187926584546897,
+   "line": "NYG -1.5",
+   "total": 40.5,
+   "likely": [
+    {
+     "player": "Treylon Burks",
+     "team": "WAS",
+     "outcome": "10+ receiving yds",
+     "prob": 0.7533808264261175
+    },
+    {
+     "player": "Jayden Daniels",
+     "team": "WAS",
+     "outcome": "160+ passing yds",
+     "prob": 0.735452601382358
+    },
+    {
+     "player": "Stefon Diggs",
+     "team": "WAS",
+     "outcome": "20+ receiving yds",
+     "prob": 0.7339023891012739
+    },
+    {
+     "player": "Chig Okonkwo",
+     "team": "WAS",
+     "outcome": "20+ receiving yds",
+     "prob": 0.7031724928500964
+    }
+   ],
+   "td": [
+    {
+     "player": "Rachaad White",
+     "team": "WAS",
+     "prob": 0.36600718350595146
+    },
+    {
+     "player": "Cam Skattebo",
+     "team": "NYG",
+     "prob": 0.35226910867297256
+    },
+    {
+     "player": "Malik Nabers",
+     "team": "NYG",
+     "prob": 0.3203974958683252
+    }
+   ]
+  }
+ ]
+}

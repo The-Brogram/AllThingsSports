@@ -1,0 +1,118 @@
+{
+ "reliability_2025": {
+  "receiver_side": {
+   "L": 0.176,
+   "M": 0.386,
+   "R": 0.016,
+   "players": 178
+  },
+  "corner_side": {
+   "L": 0.6,
+   "M": 0.418,
+   "R": 0.607,
+   "players": 99
+  }
+ },
+ "2025": {
+  "n": 2183,
+  "games": 208,
+  "r_lift_resid": -0.018,
+  "r_lift_90ci": [
+   -0.051,
+   0.014
+  ],
+  "r_cornerpct_resid": -0.016,
+  "r_lift_resid_targets": -0.002,
+  "fp_per30_by_lift_fifth": [
+   0.68,
+   -0.32,
+   0.24,
+   0.13,
+   0.13
+  ],
+  "by_adv": {
+   "CB": {
+    "n": 676,
+    "fp_vs_own_rate": 0.08,
+    "tgt_vs_own_rate": -0.06
+   },
+   "Even": {
+    "n": 875,
+    "fp_vs_own_rate": 0.49,
+    "tgt_vs_own_rate": 0.17
+   },
+   "WR": {
+    "n": 632,
+    "fp_vs_own_rate": -0.33,
+    "tgt_vs_own_rate": 0.18
+   }
+  }
+ },
+ "2026": {
+  "n": 609,
+  "games": 57,
+  "r_lift_resid": -0.048,
+  "r_lift_90ci": [
+   -0.092,
+   0.001
+  ],
+  "r_cornerpct_resid": -0.044,
+  "r_lift_resid_targets": -0.014,
+  "fp_per30_by_lift_fifth": [
+   0.26,
+   0.09,
+   -0.47,
+   -0.38,
+   -0.92
+  ],
+  "by_adv": {
+   "CB": {
+    "n": 196,
+    "fp_vs_own_rate": 0.3,
+    "tgt_vs_own_rate": -0.07
+   },
+   "Even": {
+    "n": 245,
+    "fp_vs_own_rate": -0.36,
+    "tgt_vs_own_rate": -0.0
+   },
+   "WR": {
+    "n": 168,
+    "fp_vs_own_rate": -0.65,
+    "tgt_vs_own_rate": 0.18
+   }
+  }
+ },
+ "summary": {
+  "seasons": "2025 wk 5-18 + 2026 wk 5-8",
+  "n": 2792,
+  "r_2025": -0.018,
+  "ci_2025": [
+   -0.051,
+   0.014
+  ],
+  "r_2026": -0.048,
+  "adv_2025": {
+   "CB": 0.08,
+   "Even": 0.49,
+   "WR": -0.33
+  },
+  "adv_2026": {
+   "CB": 0.3,
+   "Even": -0.36,
+   "WR": -0.65
+  },
+  "wr_side_rel": {
+   "L": 0.176,
+   "M": 0.386,
+   "R": 0.016,
+   "players": 178
+  },
+  "cb_side_rel": {
+   "L": 0.6,
+   "M": 0.418,
+   "R": 0.607,
+   "players": 99
+  }
+ }
+}

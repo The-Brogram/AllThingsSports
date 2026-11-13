@@ -1,0 +1,15 @@
+date,event,game,kind,player,athlete,market,side,line,price,prob,edge,flagged
+20261109,401873051,BUF@MIN,prop,Aaron Jones,3042519.0,Total Rushing Yards (incl. overtime),over,30.5,,0.5960818287261853,0.07227230491666148,True
+20261109,401873051,BUF@MIN,prop,Justin Jefferson,4262921.0,Total Receiving Yards (incl. overtime),under,78.5,,0.5925620311225257,0.06875250731300186,True
+20261109,401873051,BUF@MIN,prop,Jordan Mason,4360569.0,Total Rushing Yards (incl. overtime),under,48.5,,0.583547533613433,0.0597380098039092,True
+20261109,401873051,BUF@MIN,prop,James Cook,4379399.0,Total Rushing Yards (incl. overtime),under,88.5,,0.5718912153124669,0.04808169150294306,True
+20261109,401873051,BUF@MIN,prop,DJ Moore,3915416.0,Total Receiving Yards (incl. overtime),under,48.5,,0.5667549153122114,0.04294539150268761,True
+20261109,401873051,BUF@MIN,prop,T.J. Hockenson,4036133.0,Total Receiving Yards (incl. overtime),under,40.5,,0.5333104448894066,0.009500921079882763,True
+20261109,401873051,BUF@MIN,prop,Josh Allen,3918298.0,Total Rushing Yards (incl. overtime),under,31.5,,0.5257225695718557,0.0019130457623318664,True
+20261109,401873051,BUF@MIN,prop,Khalil Shakir,4373678.0,Total Receiving Yards (incl. overtime),under,42.5,,0.5192776594635369,-0.004531864345986958,True
+20261109,401873051,BUF@MIN,prop,Josh Allen,3918298.0,Total Passing Yards (incl. overtime),under,228.5,,0.5173759415918804,-0.006433582217643452,True
+20261109,401873051,BUF@MIN,prop,Keon Coleman,4635008.0,Total Receiving Yards (incl. overtime),over,24.5,,0.5130475694668254,-0.010761954342698443,True
+20261109,401873051,BUF@MIN,prop,Carson Wentz,2573079.0,Total Passing Yards (incl. overtime),under,214.5,,0.5063010494316178,-0.017508474377906036,True
+20261109,401873051,BUF@MIN,prop,Jordan Addison,4429205.0,Total Receiving Yards (incl. overtime),over,42.5,,0.5011300558787518,-0.022679467930772024,True
+20261109,401873051,BUF@MIN,prop,Dalton Kincaid,4385690.0,Total Receiving Yards (incl. overtime),over,39.5,,0.5,-0.023809523809523836,True
+20261109,401873051,BUF@MIN,game,,,MIN moneyline,,,164.0,,-0.015807999999999933,True

@@ -1,0 +1,16 @@
+date,event,game,kind,player,athlete,market,side,line,price,prob,edge,flagged
+20261102,401873036,CHI@SEA,prop,Emanuel Wilson,4887558.0,Total Rushing Yards (incl. overtime),over,19.5,,0.8092589922185826,0.2854494684090587,True
+20261102,401873036,CHI@SEA,prop,D'Andre Swift,4259545.0,Total Rushing Yards (incl. overtime),under,58.5,,0.6466011859546893,0.12279166214516546,True
+20261102,401873036,CHI@SEA,prop,Caleb Williams,4431611.0,Total Rushing Yards (incl. overtime),under,25.5,,0.6152078715558672,0.09139834774634337,True
+20261102,401873036,CHI@SEA,prop,Tory Horton,4597703.0,Total Receiving Yards (incl. overtime),under,23.5,,0.5752902718010144,0.051480747991490605,True
+20261102,401873036,CHI@SEA,prop,Colston Loveland,4723086.0,Total Receiving Yards (incl. overtime),under,43.5,,0.5722292386059455,0.04841971479642171,False
+20261102,401873036,CHI@SEA,prop,D'Andre Swift,4259545.0,Total Receiving Yards (incl. overtime),under,22.5,,0.5653232645661258,0.04151374075660197,True
+20261102,401873036,CHI@SEA,prop,Jaxon Smith-Njigba,4430878.0,Total Receiving Yards (incl. overtime),over,101.5,,0.5568423532445234,0.03303282943499952,False
+20261102,401873036,CHI@SEA,prop,Luther Burden III,4685278.0,Total Receiving Yards (incl. overtime),under,54.5,,0.5466918780735568,0.022882354264032956,False
+20261102,401873036,CHI@SEA,prop,Caleb Williams,4431611.0,Total Passing Yards (incl. overtime),under,228.5,,0.543836700935486,0.020027177125962137,False
+20261102,401873036,CHI@SEA,prop,AJ Barner,4576297.0,Total Receiving Yards (incl. overtime),under,29.5,,0.5376570395410669,0.01384751573154308,False
+20261102,401873036,CHI@SEA,prop,Kalif Raymond,2973405.0,Total Receiving Yards (incl. overtime),over,17.5,,0.5217516034038414,-0.002057920405682423,False
+20261102,401873036,CHI@SEA,prop,Sam Darnold,3912547.0,Total Passing Yards (incl. overtime),over,240.5,,0.5022056734581368,-0.02160385035138701,False
+20261102,401873036,CHI@SEA,prop,Rome Odunze,4431299.0,Total Receiving Yards (incl. overtime),over,39.5,,0.5005597362302614,-0.023249787579262438,False
+20261102,401873036,CHI@SEA,prop,Cooper Kupp,2977187.0,Total Receiving Yards (incl. overtime),over,29.5,,0.5,-0.023809523809523836,False
+20261102,401873036,CHI@SEA,game,,,CHI +3,,,100.0,,0.039699999999999847,False

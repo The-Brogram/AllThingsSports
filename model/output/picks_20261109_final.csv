@@ -1,0 +1,14 @@
+date,event,game,kind,player,athlete,market,side,line,price,prob,edge,flagged
+20261109,401873051,BUF@MIN,prop,Justin Jefferson,4262921.0,Total Receiving Yards (incl. overtime),under,79.5,,0.5973273548229775,0.07351783101345366,True
+20261109,401873051,BUF@MIN,prop,Aaron Jones,3042519.0,Total Rushing Yards (incl. overtime),over,30.5,,0.5960818287261853,0.07227230491666148,True
+20261109,401873051,BUF@MIN,prop,Jordan Mason,4360569.0,Total Rushing Yards (incl. overtime),under,46.5,,0.5701763013699903,0.04636677756046648,True
+20261109,401873051,BUF@MIN,prop,James Cook,4379399.0,Total Rushing Yards (incl. overtime),under,87.5,,0.5640744944918179,0.040264970682294066,True
+20261109,401873051,BUF@MIN,prop,DJ Moore,3915416.0,Total Receiving Yards (incl. overtime),under,48.5,,0.5607505213462369,0.036940997536713094,True
+20261109,401873051,BUF@MIN,prop,T.J. Hockenson,4036133.0,Total Receiving Yards (incl. overtime),under,39.5,,0.541279271497591,0.017469747688067194,True
+20261109,401873051,BUF@MIN,prop,Josh Allen,3918298.0,Total Rushing Yards (incl. overtime),under,31.5,,0.5260401829033361,0.0022306590938122595,True
+20261109,401873051,BUF@MIN,prop,Josh Allen,3918298.0,Total Passing Yards (incl. overtime),under,231.5,,0.5234957167350331,-0.0003138070744906907,True
+20261109,401873051,BUF@MIN,prop,Keon Coleman,4635008.0,Total Receiving Yards (incl. overtime),over,25.5,,0.507127025590861,-0.016682498218662856,True
+20261109,401873051,BUF@MIN,prop,Jordan Addison,4429205.0,Total Receiving Yards (incl. overtime),under,40.5,,0.5012017217519389,-0.022607802057584947,True
+20261109,401873051,BUF@MIN,prop,Khalil Shakir,4373678.0,Total Receiving Yards (incl. overtime),over,40.5,,0.5012017217519388,-0.022607802057585058,True
+20261109,401873051,BUF@MIN,prop,Dalton Kincaid,4385690.0,Total Receiving Yards (incl. overtime),over,39.5,,0.5012017217519388,-0.022607802057585058,True
+20261109,401873051,BUF@MIN,game,,,Under 45.5,,,-108.0,,-0.006414814814814762,True

@@ -1,0 +1,138 @@
+{
+ "NAVY": {
+  "temp": 50,
+  "wind": "12 mph",
+  "dir": "NW",
+  "rain": 0,
+  "short": "Sunny",
+  "temp_end": 53,
+  "wind_end": "8 mph",
+  "rain_end": 0
+ },
+ "TTU": {
+  "temp": 57,
+  "wind": "5 mph",
+  "dir": "SSW",
+  "rain": 5,
+  "short": "Patchy Fog",
+  "temp_end": 60,
+  "wind_end": "5 mph",
+  "rain_end": 2
+ },
+ "SYR": {
+  "indoor": true
+ },
+ "MISS": {
+  "temp": 73,
+  "wind": "10 mph",
+  "dir": "SE",
+  "rain": 5,
+  "short": "Cloudy",
+  "temp_end": 76,
+  "wind_end": "10 mph",
+  "rain_end": 16
+ },
+ "UGA": {
+  "indoor": true
+ },
+ "IU": {
+  "temp": 69,
+  "wind": "6 mph",
+  "dir": "ESE",
+  "rain": 7,
+  "short": "Cloudy",
+  "temp_end": 70,
+  "wind_end": "3 mph",
+  "rain_end": 12
+ },
+ "BYU": {
+  "temp": 57,
+  "wind": "5 mph",
+  "dir": "S",
+  "rain": 23,
+  "short": "Slight Chance Showers And Thunderstorms",
+  "temp_end": 59,
+  "wind_end": "5 mph",
+  "rain_end": 18
+ },
+ "ORE": {
+  "temp": 47,
+  "wind": "1 mph",
+  "dir": "NW",
+  "rain": 1,
+  "short": "Mostly Cloudy",
+  "temp_end": 52,
+  "wind_end": "2 mph",
+  "rain_end": 1
+ },
+ "CIN": {
+  "temp": 68,
+  "wind": "7 mph",
+  "dir": "SE",
+  "rain": 2,
+  "short": "Mostly Cloudy",
+  "temp_end": 66,
+  "wind_end": "5 mph",
+  "rain_end": 3
+ },
+ "WAKE": {
+  "temp": 65,
+  "wind": "6 mph",
+  "dir": "NE",
+  "rain": 1,
+  "short": "Mostly Cloudy",
+  "temp_end": 59,
+  "wind_end": "5 mph",
+  "rain_end": 1
+ },
+ "UCLA": {
+  "temp": 68,
+  "wind": "5 mph",
+  "dir": "S",
+  "rain": 57,
+  "short": "Light Rain Likely",
+  "temp_end": 70,
+  "wind_end": "5 mph",
+  "rain_end": 57
+ },
+ "UNC": {
+  "temp": 59,
+  "wind": "3 mph",
+  "dir": "NE",
+  "rain": 1,
+  "short": "Mostly Cloudy",
+  "temp_end": 54,
+  "wind_end": "3 mph",
+  "rain_end": 1
+ },
+ "USC": {
+  "temp": 67,
+  "wind": "5 mph",
+  "dir": "SW",
+  "rain": 57,
+  "short": "Light Rain Likely",
+  "temp_end": 64,
+  "wind_end": "5 mph",
+  "rain_end": 84
+ },
+ "TEX": {
+  "temp": 79,
+  "wind": "0 mph",
+  "dir": "",
+  "rain": 3,
+  "short": "Mostly Cloudy",
+  "temp_end": 72,
+  "wind_end": "0 mph",
+  "rain_end": 1
+ },
+ "BOIS": {
+  "temp": 53,
+  "wind": "2 mph",
+  "dir": "WNW",
+  "rain": 55,
+  "short": "Rain Showers Likely",
+  "temp_end": 49,
+  "wind_end": "1 mph",
+  "rain_end": 86
+ }
+}

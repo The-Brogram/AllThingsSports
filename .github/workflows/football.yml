@@ -1,0 +1,58 @@
+name: football
+on:
+  schedule:
+    # NFL (times are UTC; the comment gives Eastern winter time)
+    - cron: "15 14 * * 1,2"   # Mon, Tue 9:15 AM: review finished slates
+    - cron: "15 15 * * 3"     # Wed 10:15 AM: hub refresh
+    - cron: "30 0 * * 5,2"    # Thu, Mon 7:30 PM: tonight's game
+    - cron: "20 15 * * 5"     # Fri 10:20 AM: first run of the Sunday slate
+    - cron: "30 13 * * 0"     # Sun 8:30 AM: Sunday slate again
+    - cron: "45 16 * * 0"     # Sun 11:45 AM: after inactives
+    - cron: "45 20 * * 0"     # Sun 3:45 PM: line snapshot
+    - cron: "5 1 * * 1"       # Sun 8:05 PM: line snapshot
+    # college
+    - cron: "15 16 * * 4"     # Thu 11:15 AM: first sims of the week
+    - cron: "10 14 * * 6"     # Sat 9:10 AM: rerun
+    - cron: "10 15 * * 0"     # Sun 10:10 AM: grade the week
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "nfl-review, nfl-hub, nfl-today, nfl-next, nfl-odds, cfb-run, cfb-review or hub"
+        default: hub
+  push:
+    paths: [".github/workflows/football.yml", "model/run_once.txt"]
+permissions:
+  contents: write
+concurrency:
+  group: model
+  cancel-in-progress: false
+jobs:
+  football:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      TZ: America/New_York
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - run: pip install -q numpy==2.5.4 pandas==3.1.0 pillow==13.0.0
+      - uses: actions/cache@v4
+        with:
+          path: |
+            model/data/slate_*.pkl
+            model/cfb/data/*.pkl
+            model/cfb/data/games
+          key: sims-${{ github.run_id }}
+          restore-keys: sims-
+      - run: python cloud_model.py "${{ github.event.schedule }}" "${{ github.event.inputs.mode }}"
+      - if: always()
+        run: |
+          git config user.name "model-bot"
+          git config user.email "model-bot@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -q -m "football run"
+            for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
+          fi

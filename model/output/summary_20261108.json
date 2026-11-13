@@ -1,0 +1,932 @@
+{
+ "date": "20261108",
+ "week": 9,
+ "built": "2026-11-06 12:58",
+ "games": [
+  {
+   "id": "cin-atl",
+   "a": "CIN",
+   "h": "ATL",
+   "win": "CIN",
+   "pw": 0.62365,
+   "pa": 27.825029599055526,
+   "ph": 24.700045015578937,
+   "ma": 26.398586268929794,
+   "mh": 21.86799043416389,
+   "line": "CIN -3",
+   "total": 52.5,
+   "likely": [
+    {
+     "player": "Chase Brown",
+     "team": "CIN",
+     "outcome": "30+ rushing yds",
+     "prob": 0.7941436516207314
+    },
+    {
+     "player": "Chase Brown",
+     "team": "CIN",
+     "outcome": "10+ receiving yds",
+     "prob": 0.7825096237297808
+    },
+    {
+     "player": "Bijan Robinson",
+     "team": "ATL",
+     "outcome": "60+ rushing yds",
+     "prob": 0.7775365273633232
+    },
+    {
+     "player": "Ja'Marr Chase",
+     "team": "CIN",
+     "outcome": "40+ receiving yds",
+     "prob": 0.7513881202634277
+    },
+    {
+     "player": "Drake London",
+     "team": "ATL",
+     "outcome": "50+ receiving yds",
+     "prob": 0.7326078181117562
+    },
+    {
+     "player": "Kyle Pitts",
+     "team": "ATL",
+     "outcome": "15+ receiving yds",
+     "prob": 0.7320463246682952
+    },
+    {
+     "player": "Michael Penix Jr.",
+     "team": "ATL",
+     "outcome": "190+ passing yds",
+     "prob": 0.726697930513242
+    },
+    {
+     "player": "Joe Burrow",
+     "team": "CIN",
+     "outcome": "240+ passing yds",
+     "prob": 0.7097595811388695
+    },
+    {
+     "player": "Tee Higgins",
+     "team": "CIN",
+     "outcome": "50+ receiving yds",
+     "prob": 0.7079600922179109
+    },
+    {
+     "player": "Jahan Dotson",
+     "team": "ATL",
+     "outcome": "15+ receiving yds",
+     "prob": 0.7047029661939622
+    }
+   ],
+   "td": [
+    {
+     "player": "Bijan Robinson",
+     "team": "ATL",
+     "prob": 0.6461408451736431
+    },
+    {
+     "player": "Chase Brown",
+     "team": "CIN",
+     "prob": 0.43851566041715107
+    },
+    {
+     "player": "Ja'Marr Chase",
+     "team": "CIN",
+     "prob": 0.40382181006631623
+    }
+   ]
+  },
+  {
+   "id": "dal-ind",
+   "a": "DAL",
+   "h": "IND",
+   "win": "DAL",
+   "pw": 0.6804,
+   "pa": 28.680501806294096,
+   "ph": 23.489413258045424,
+   "ma": 27.93144019897703,
+   "mh": 24.116804716490282,
+   "line": "DAL -5.5",
+   "total": 51.5,
+   "likely": [
+    {
+     "player": "Jonathan Taylor",
+     "team": "IND",
+     "outcome": "30+ rushing yds",
+     "prob": 0.7817254487990275
+    },
+    {
+     "player": "CeeDee Lamb",
+     "team": "DAL",
+     "outcome": "50+ receiving yds",
+     "prob": 0.7749662854731854
+    },
+    {
+     "player": "Ryan Flournoy",
+     "team": "DAL",
+     "outcome": "15+ receiving yds",
+     "prob": 0.7475403336129381
+    },
+    {
+     "player": "Tyler Warren",
+     "team": "IND",
+     "outcome": "20+ receiving yds",
+     "prob": 0.7361424069385936
+    },
+    {
+     "player": "Daniel Jones",
+     "team": "IND",
+     "outcome": "180+ passing yds",
+     "prob": 0.7286970904261076
+    },
+    {
+     "player": "Josh Downs",
+     "team": "IND",
+     "outcome": "20+ receiving yds",
+     "prob": 0.7239785868639579
+    },
+    {
+     "player": "Keenan Allen",
+     "team": "IND",
+     "outcome": "25+ receiving yds",
+     "prob": 0.7188709417536432
+    },
+    {
+     "player": "Javonte Williams",
+     "team": "DAL",
+     "outcome": "50+ rushing yds",
+     "prob": 0.708836113449121
+    },
+    {
+     "player": "Dak Prescott",
+     "team": "DAL",
+     "outcome": "220+ passing yds",
+     "prob": 0.705852090162873
+    }
+   ],
+   "td": [
+    {
+     "player": "Javonte Williams",
+     "team": "DAL",
+     "prob": 0.6538781878450122
+    },
+    {
+     "player": "Jonathan Taylor",
+     "team": "IND",
+     "prob": 0.5979047320592936
+    },
+    {
+     "player": "CeeDee Lamb",
+     "team": "DAL",
+     "prob": 0.4866792320159482
+    }
+   ]
+  },
+  {
+   "id": "nyj-kc",
+   "a": "NYJ",
+   "h": "KC",
+   "win": "KC",
+   "pw": 0.75935,
+   "pa": 20.047430882890854,
+   "ph": 28.86608848409068,
+   "ma": 21.9259020960216,
+   "mh": 25.608978108019816,
+   "line": "KC -9.5",
+   "total": 48.5,
+   "likely": [
+    {
+     "player": "Kenneth Walker III",
+     "team": "KC",
+     "outcome": "60+ rushing yds",
+     "prob": 0.7864752051314313
+    },
+    {
+     "player": "Breece Hall",
+     "team": "NYJ",
+     "outcome": "15+ rushing yds",
+     "prob": 0.7755929350244107
+    },
+    {
+     "player": "Xavier Worthy",
+     "team": "KC",
+     "outcome": "15+ receiving yds",
+     "prob": 0.7744695887282251
+    },
+    {
+     "player": "Braelon Allen",
+     "team": "NYJ",
+     "outcome": "25+ rushing yds",
+     "prob": 0.759742090298355
+    },
+    {
+     "player": "Rashee Rice",
+     "team": "KC",
+     "outcome": "30+ receiving yds",
+     "prob": 0.7573461466276341
+    },
+    {
+     "player": "Travis Kelce",
+     "team": "KC",
+     "outcome": "25+ receiving yds",
+     "prob": 0.7538432595481962
+    },
+    {
+     "player": "Adonai Mitchell",
+     "team": "NYJ",
+     "outcome": "25+ receiving yds",
+     "prob": 0.7439009165377822
+    },
+    {
+     "player": "Mason Taylor",
+     "team": "NYJ",
+     "outcome": "15+ receiving yds",
+     "prob": 0.7401791332268742
+    },
+    {
+     "player": "Geno Smith",
+     "team": "NYJ",
+     "outcome": "190+ passing yds",
+     "prob": 0.7308878760797253
+    },
+    {
+     "player": "Omar Cooper Jr.",
+     "team": "NYJ",
+     "outcome": "25+ receiving yds",
+     "prob": 0.7256320222773966
+    }
+   ],
+   "td": [
+    {
+     "player": "Kenneth Walker III",
+     "team": "KC",
+     "prob": 0.7267786908863124
+    },
+    {
+     "player": "Braelon Allen",
+     "team": "NYJ",
+     "prob": 0.34114684557344777
+    },
+    {
+     "player": "Rashee Rice",
+     "team": "KC",
+     "prob": 0.2980654505968563
+    }
+   ]
+  },
+  {
+   "id": "det-mia",
+   "a": "DET",
+   "h": "MIA",
+   "win": "DET",
+   "pw": 0.70355,
+   "pa": 28.664148276617205,
+   "ph": 22.449139576076163,
+   "ma": 28.23519435298158,
+   "mh": 23.020857347571162,
+   "line": "DET -6.5",
+   "total": 50.5,
+   "likely": [
+    {
+     "player": "Jahmyr Gibbs",
+     "team": "DET",
+     "outcome": "60+ rushing yds",
+     "prob": 0.75965288153461
+    },
+    {
+     "player": "Caleb Douglas",
+     "team": "MIA",
+     "outcome": "20+ receiving yds",
+     "prob": 0.7557017493744161
+    },
+    {
+     "player": "Jameson Williams",
+     "team": "DET",
+     "outcome": "30+ receiving yds",
+     "prob": 0.7500734087007525
+    },
+    {
+     "player": "Malik Willis",
+     "team": "MIA",
+     "outcome": "180+ passing yds",
+     "prob": 0.7438605169572508
+    },
+    {
+     "player": "Greg Dulcich",
+     "team": "MIA",
+     "outcome": "20+ receiving yds",
+     "prob": 0.7404790961148396
+    },
+    {
+     "player": "Jared Goff",
+     "team": "DET",
+     "outcome": "230+ passing yds",
+     "prob": 0.7364217898587262
+    },
+    {
+     "player": "Malik Washington",
+     "team": "MIA",
+     "outcome": "25+ receiving yds",
+     "prob": 0.7354536977014408
+    },
+    {
+     "player": "Sam LaPorta",
+     "team": "DET",
+     "outcome": "25+ receiving yds",
+     "prob": 0.7310521530586424
+    },
+    {
+     "player": "Chris Bell",
+     "team": "MIA",
+     "outcome": "10+ receiving yds",
+     "prob": 0.7077327622678946
+    },
+    {
+     "player": "Jahmyr Gibbs",
+     "team": "DET",
+     "outcome": "20+ receiving yds",
+     "prob": 0.7071636862125584
+    }
+   ],
+   "td": [
+    {
+     "player": "Jahmyr Gibbs",
+     "team": "DET",
+     "prob": 0.7028660809723243
+    },
+    {
+     "player": "Ollie Gordon II",
+     "team": "MIA",
+     "prob": 0.4940351984428003
+    },
+    {
+     "player": "Amon-Ra St. Brown",
+     "team": "DET",
+     "prob": 0.33127036481811845
+    }
+   ]
+  },
+  {
+   "id": "cle-no",
+   "a": "CLE",
+   "h": "NO",
+   "win": "NO",
+   "pw": 0.59405,
+   "pa": 20.187920476259727,
+   "ph": 22.943040025252788,
+   "ma": 21.713549150606372,
+   "mh": 21.36999464053694,
+   "line": "NO -3",
+   "total": 42.5,
+   "likely": [
+    {
+     "player": "Tyler Shough",
+     "team": "NO",
+     "outcome": "170+ passing yds",
+     "prob": 0.754364960945818
+    },
+    {
+     "player": "Chris Olave",
+     "team": "NO",
+     "outcome": "40+ receiving yds",
+     "prob": 0.7467577581271496
+    }
+   ],
+   "td": [
+    {
+     "player": "Quinshon Judkins",
+     "team": "CLE",
+     "prob": 0.5101283314637676
+    },
+    {
+     "player": "Kendre Miller",
+     "team": "NO",
+     "prob": 0.39007412548502457
+    },
+    {
+     "player": "Chris Olave",
+     "team": "NO",
+     "prob": 0.3246279447492068
+    }
+   ]
+  },
+  {
+   "id": "nyg-phi",
+   "a": "NYG",
+   "h": "PHI",
+   "win": "NYG",
+   "pw": 0.63255,
+   "pa": 21.551472900201627,
+   "ph": 17.992005917778325,
+   "ma": 24.57473149508728,
+   "mh": 18.94656167085432,
+   "line": "NYG -3.5",
+   "total": 38.5,
+   "likely": [
+    {
+     "player": "Isaiah Likely",
+     "team": "NYG",
+     "outcome": "25+ receiving yds",
+     "prob": 0.7687809885984145
+    },
+    {
+     "player": "Malachi Fields",
+     "team": "NYG",
+     "outcome": "10+ receiving yds",
+     "prob": 0.7436216221798414
+    },
+    {
+     "player": "J.J. McCarthy",
+     "team": "NYG",
+     "outcome": "180+ passing yds",
+     "prob": 0.7305959782077821
+    }
+   ],
+   "td": [
+    {
+     "player": "Saquon Barkley",
+     "team": "PHI",
+     "prob": 0.37088366249258536
+    },
+    {
+     "player": "Isaiah Likely",
+     "team": "NYG",
+     "prob": 0.35226910867297256
+    },
+    {
+     "player": "Devin Singletary",
+     "team": "NYG",
+     "prob": 0.31706488467635485
+    }
+   ]
+  },
+  {
+   "id": "la-was",
+   "a": "LA",
+   "h": "WAS",
+   "win": "LA",
+   "pw": 0.665,
+   "pa": 26.63550427255903,
+   "ph": 22.10526280259959,
+   "ma": 26.27597029032575,
+   "mh": 19.9988055907313,
+   "line": "LAR -4.5",
+   "total": 48.5,
+   "likely": [
+    {
+     "player": "Kyren Williams",
+     "team": "LA",
+     "outcome": "10+ receiving yds",
+     "prob": 0.7411627225640564
+    },
+    {
+     "player": "Blake Corum",
+     "team": "LA",
+     "outcome": "25+ rushing yds",
+     "prob": 0.7256944423534185
+    },
+    {
+     "player": "Kyren Williams",
+     "team": "LA",
+     "outcome": "40+ rushing yds",
+     "prob": 0.7202294311023929
+    },
+    {
+     "player": "Puka Nacua",
+     "team": "LA",
+     "outcome": "70+ receiving yds",
+     "prob": 0.7145291975100001
+    },
+    {
+     "player": "Matthew Stafford",
+     "team": "LA",
+     "outcome": "220+ passing yds",
+     "prob": 0.709561989509949
+    }
+   ],
+   "td": [
+    {
+     "player": "Kyren Williams",
+     "team": "LA",
+     "prob": 0.6120363159306105
+    },
+    {
+     "player": "Puka Nacua",
+     "team": "LA",
+     "prob": 0.5093474469114838
+    },
+    {
+     "player": "Rachaad White",
+     "team": "WAS",
+     "prob": 0.44415779859751736
+    }
+   ]
+  },
+  {
+   "id": "den-car",
+   "a": "DEN",
+   "h": "CAR",
+   "win": "DEN",
+   "pw": 0.60865,
+   "pa": 23.929271356649085,
+   "ph": 21.291106412103545,
+   "ma": 25.195026709342386,
+   "mh": 21.775377263886963,
+   "line": "DEN -2.5",
+   "total": 44.5,
+   "likely": [
+    {
+     "player": "Chuba Hubbard",
+     "team": "CAR",
+     "outcome": "40+ rushing yds",
+     "prob": 0.7836621243070193
+    },
+    {
+     "player": "Courtland Sutton",
+     "team": "DEN",
+     "outcome": "15+ receiving yds",
+     "prob": 0.7699047198435769
+    },
+    {
+     "player": "Jalen Coker",
+     "team": "CAR",
+     "outcome": "25+ receiving yds",
+     "prob": 0.7559549108606449
+    },
+    {
+     "player": "Tetairoa McMillan",
+     "team": "CAR",
+     "outcome": "40+ receiving yds",
+     "prob": 0.7538009807719609
+    },
+    {
+     "player": "Bryce Young",
+     "team": "CAR",
+     "outcome": "190+ passing yds",
+     "prob": 0.7431378428349268
+    },
+    {
+     "player": "Bo Nix",
+     "team": "DEN",
+     "outcome": "160+ passing yds",
+     "prob": 0.7280635310929335
+    }
+   ],
+   "td": [
+    {
+     "player": "Chuba Hubbard",
+     "team": "CAR",
+     "prob": 0.5287811050928095
+    },
+    {
+     "player": "Jonah Coleman",
+     "team": "DEN",
+     "prob": 0.4559335445182754
+    },
+    {
+     "player": "J.K. Dobbins",
+     "team": "DEN",
+     "prob": 0.3617324632028998
+    }
+   ]
+  },
+  {
+   "id": "hou-lac",
+   "a": "HOU",
+   "h": "LAC",
+   "win": "HOU",
+   "pw": 0.6976,
+   "pa": 23.336796962849906,
+   "ph": 17.354516469810665,
+   "ma": 22.228062088274914,
+   "mh": 16.33000715788252,
+   "line": "HOU -6",
+   "total": 40.5,
+   "likely": [
+    {
+     "player": "Justin Herbert",
+     "team": "LAC",
+     "outcome": "160+ passing yds",
+     "prob": 0.7414017673937179
+    },
+    {
+     "player": "Marvin Harrison Jr.",
+     "team": "HOU",
+     "outcome": "10+ receiving yds",
+     "prob": 0.7341008803628574
+    },
+    {
+     "player": "Tre Harris",
+     "team": "LAC",
+     "outcome": "10+ receiving yds",
+     "prob": 0.7219122923542899
+    },
+    {
+     "player": "Xavier Hutchinson",
+     "team": "HOU",
+     "outcome": "15+ receiving yds",
+     "prob": 0.7135618804807957
+    },
+    {
+     "player": "Dalton Schultz",
+     "team": "HOU",
+     "outcome": "20+ receiving yds",
+     "prob": 0.708181207880474
+    },
+    {
+     "player": "Nico Collins",
+     "team": "HOU",
+     "outcome": "30+ receiving yds",
+     "prob": 0.7037499435958542
+    },
+    {
+     "player": "C.J. Stroud",
+     "team": "HOU",
+     "outcome": "190+ passing yds",
+     "prob": 0.7002444727589113
+    }
+   ],
+   "td": [
+    {
+     "player": "Woody Marks",
+     "team": "HOU",
+     "prob": 0.47432736740360776
+    },
+    {
+     "player": "Omarion Hampton",
+     "team": "LAC",
+     "prob": 0.3321135540811997
+    },
+    {
+     "player": "Nico Collins",
+     "team": "HOU",
+     "prob": 0.271997494591218
+    }
+   ]
+  },
+  {
+   "id": "gb-ne",
+   "a": "GB",
+   "h": "NE",
+   "win": "NE",
+   "pw": 0.59315,
+   "pa": 21.081278653615975,
+   "ph": 23.86107599437529,
+   "ma": 21.67206407438133,
+   "mh": 21.923287481974533,
+   "line": "NE -3",
+   "total": 44.5,
+   "likely": [
+    {
+     "player": "Tucker Kraft",
+     "team": "GB",
+     "outcome": "15+ receiving yds",
+     "prob": 0.7677810340977806
+    },
+    {
+     "player": "Matthew Golden",
+     "team": "GB",
+     "outcome": "30+ receiving yds",
+     "prob": 0.7663209390188912
+    },
+    {
+     "player": "Rhamondre Stevenson",
+     "team": "NE",
+     "outcome": "25+ rushing yds",
+     "prob": 0.7538445175222113
+    },
+    {
+     "player": "Drake Maye",
+     "team": "NE",
+     "outcome": "190+ passing yds",
+     "prob": 0.7432824101939479
+    },
+    {
+     "player": "Jordan Love",
+     "team": "GB",
+     "outcome": "200+ passing yds",
+     "prob": 0.7108952015975367
+    },
+    {
+     "player": "Drake Maye",
+     "team": "NE",
+     "outcome": "15+ rushing yds",
+     "prob": 0.70046267368503
+    }
+   ],
+   "td": [
+    {
+     "player": "Josh Jacobs",
+     "team": "GB",
+     "prob": 0.46955773975080567
+    },
+    {
+     "player": "Rhamondre Stevenson",
+     "team": "NE",
+     "prob": 0.4215589606459871
+    },
+    {
+     "player": "Matthew Golden",
+     "team": "GB",
+     "prob": 0.33744751292926073
+    }
+   ]
+  },
+  {
+   "id": "lv-sf",
+   "a": "LV",
+   "h": "SF",
+   "win": "SF",
+   "pw": 0.7848,
+   "pa": 21.32130109340405,
+   "ph": 30.86662393637381,
+   "ma": 23.682998624549878,
+   "mh": 29.564727054247456,
+   "line": "SF -10",
+   "total": 51.5,
+   "likely": [
+    {
+     "player": "Michael Mayer",
+     "team": "LV",
+     "outcome": "10+ receiving yds",
+     "prob": 0.7700081486646638
+    },
+    {
+     "player": "Christian McCaffrey",
+     "team": "SF",
+     "outcome": "15+ receiving yds",
+     "prob": 0.7586512903284309
+    },
+    {
+     "player": "George Kittle",
+     "team": "SF",
+     "outcome": "30+ receiving yds",
+     "prob": 0.7405219406753288
+    },
+    {
+     "player": "Brock Bowers",
+     "team": "LV",
+     "outcome": "40+ receiving yds",
+     "prob": 0.7348937766208186
+    },
+    {
+     "player": "Brock Purdy",
+     "team": "SF",
+     "outcome": "210+ passing yds",
+     "prob": 0.7160680140254347
+    },
+    {
+     "player": "Tre Tucker",
+     "team": "LV",
+     "outcome": "25+ receiving yds",
+     "prob": 0.7146170905482669
+    },
+    {
+     "player": "Kirk Cousins",
+     "team": "LV",
+     "outcome": "210+ passing yds",
+     "prob": 0.7046133295544035
+    }
+   ],
+   "td": [
+    {
+     "player": "Christian McCaffrey",
+     "team": "SF",
+     "prob": 0.6578303056148976
+    },
+    {
+     "player": "George Kittle",
+     "team": "SF",
+     "prob": 0.4150999318599701
+    },
+    {
+     "player": "Ashton Jeanty",
+     "team": "LV",
+     "prob": 0.37994615740638804
+    }
+   ]
+  },
+  {
+   "id": "ari-sea",
+   "a": "ARI",
+   "h": "SEA",
+   "win": "SEA",
+   "pw": 0.75,
+   "pa": 16.33072425134277,
+   "ph": 24.577156830968523,
+   "ma": 19.87783533396934,
+   "mh": 25.42516113022691,
+   "line": "SEA -8.5",
+   "total": 39.5,
+   "likely": [],
+   "td": [
+    {
+     "player": "Tyler Allgeier",
+     "team": "ARI",
+     "prob": 0.3670054198016693
+    },
+    {
+     "player": "Jaxon Smith-Njigba",
+     "team": "SEA",
+     "prob": 0.3566154928325557
+    },
+    {
+     "player": "Emanuel Wilson",
+     "team": "SEA",
+     "prob": 0.3413148727031737
+    }
+   ]
+  },
+  {
+   "id": "tb-chi",
+   "a": "TB",
+   "h": "CHI",
+   "win": "CHI",
+   "pw": 0.66635,
+   "pa": 21.073447876542463,
+   "ph": 26.524981045782415,
+   "ma": 21.15305820080889,
+   "mh": 21.79013989320847,
+   "line": "CHI -6",
+   "total": 47.5,
+   "likely": [
+    {
+     "player": "D'Andre Swift",
+     "team": "CHI",
+     "outcome": "30+ rushing yds",
+     "prob": 0.7995128584254633
+    },
+    {
+     "player": "Luther Burden III",
+     "team": "CHI",
+     "outcome": "30+ receiving yds",
+     "prob": 0.7899945383172551
+    },
+    {
+     "player": "Colston Loveland",
+     "team": "CHI",
+     "outcome": "25+ receiving yds",
+     "prob": 0.7577252363260737
+    },
+    {
+     "player": "Bucky Irving",
+     "team": "TB",
+     "outcome": "40+ rushing yds",
+     "prob": 0.7477922992968032
+    },
+    {
+     "player": "Rome Odunze",
+     "team": "CHI",
+     "outcome": "30+ receiving yds",
+     "prob": 0.7441570846439495
+    },
+    {
+     "player": "Caleb Williams",
+     "team": "CHI",
+     "outcome": "200+ passing yds",
+     "prob": 0.7332693200713476
+    },
+    {
+     "player": "Emeka Egbuka",
+     "team": "TB",
+     "outcome": "20+ receiving yds",
+     "prob": 0.7286708424894389
+    },
+    {
+     "player": "Kenny Gainwell",
+     "team": "TB",
+     "outcome": "15+ rushing yds",
+     "prob": 0.717673370458335
+    },
+    {
+     "player": "Kalif Raymond",
+     "team": "CHI",
+     "outcome": "10+ receiving yds",
+     "prob": 0.7150735534012465
+    },
+    {
+     "player": "Baker Mayfield",
+     "team": "TB",
+     "outcome": "150+ passing yds",
+     "prob": 0.7013875957729845
+    }
+   ],
+   "td": [
+    {
+     "player": "D'Andre Swift",
+     "team": "CHI",
+     "prob": 0.6127770904127856
+    },
+    {
+     "player": "Bucky Irving",
+     "team": "TB",
+     "prob": 0.5504294502569639
+    },
+    {
+     "player": "Luther Burden III",
+     "team": "CHI",
+     "prob": 0.29493375989230575
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,16 @@
+date,event,game,kind,player,athlete,market,side,line,price,prob,edge,flagged
+20261112,401873052,WAS@NYG,prop,J.J. McCarthy,4433970.0,Total Rushing Yards (incl. overtime),under,15.5,,0.5955075289667722,0.07169800515724833,True
+20261112,401873052,WAS@NYG,prop,Cam Skattebo,4696981.0,Total Rushing Yards (incl. overtime),under,60.5,,0.5784433344509694,0.05463381064144557,True
+20261112,401873052,WAS@NYG,prop,J.J. McCarthy,4433970.0,Total Passing Yards (incl. overtime),over,206.5,,0.5576930439462235,0.03388352013669971,True
+20261112,401873052,WAS@NYG,prop,Isaiah Likely,4361050.0,Total Receiving Yards (incl. overtime),under,47.5,,0.5415710216389442,0.01776149782942038,True
+20261112,401873052,WAS@NYG,prop,Devin Singletary,4040761.0,Total Rushing Yards (incl. overtime),over,23.5,,0.5380588750216969,0.014249351212173078,True
+20261112,401873052,WAS@NYG,prop,Jayden Daniels,4426348.0,Total Rushing Yards (incl. overtime),under,38.5,,0.5376955929572907,0.01388606914776691,False
+20261112,401873052,WAS@NYG,prop,Austin Ekeler,3068267.0,Total Rushing Yards (incl. overtime),under,29.5,,0.5348133321683186,0.011003808358794775,True
+20261112,401873052,WAS@NYG,prop,Jayden Daniels,4426348.0,Total Passing Yards (incl. overtime),under,203.5,,0.5278167703209209,0.004007246511397056,False
+20261112,401873052,WAS@NYG,prop,Malachi Fields,4682648.0,Total Receiving Yards (incl. overtime),under,26.5,,0.5249681736313074,0.0011586498217835972,True
+20261112,401873052,WAS@NYG,prop,Malik Nabers,4595348.0,Total Receiving Yards (incl. overtime),under,68.5,,0.5194702773084983,-0.004339246501025573,True
+20261112,401873052,WAS@NYG,prop,Antonio Williams,5081432.0,Total Receiving Yards (incl. overtime),under,36.5,,0.5163119990696672,-0.007497524739856654,True
+20261112,401873052,WAS@NYG,prop,Stefon Diggs,2976212.0,Total Receiving Yards (incl. overtime),over,38.5,,0.5122181871333082,-0.011591336676215591,False
+20261112,401873052,WAS@NYG,prop,Chig Okonkwo,4360635.0,Total Receiving Yards (incl. overtime),over,35.5,,0.5096035611932336,-0.014205962616290257,False
+20261112,401873052,WAS@NYG,prop,Rachaad White,4697815.0,Total Rushing Yards (incl. overtime),under,37.5,,0.5027574291552123,-0.02105209465431157,True
+20261112,401873052,WAS@NYG,game,,,NYG moneyline,,,-130.0,,0.024650000000000116,True

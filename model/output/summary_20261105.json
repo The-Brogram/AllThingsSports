@@ -1,0 +1,63 @@
+{
+ "date": "20261105",
+ "week": 9,
+ "built": "2026-11-05 19:32",
+ "games": [
+  {
+   "id": "jax-bal",
+   "a": "JAX",
+   "h": "BAL",
+   "win": "JAX",
+   "pw": 0.7683,
+   "pa": 24.71273621197858,
+   "ph": 16.285758387179392,
+   "ma": 27.645601459911173,
+   "mh": 18.311323211919238,
+   "line": "JAX -8.5",
+   "total": 39.5,
+   "likely": [
+    {
+     "player": "Derrick Henry",
+     "team": "BAL",
+     "outcome": "40+ rushing yds",
+     "prob": 0.7568404692196377
+    },
+    {
+     "player": "Parker Washington",
+     "team": "JAX",
+     "outcome": "30+ receiving yds",
+     "prob": 0.751938936025761
+    },
+    {
+     "player": "Bhayshul Tuten",
+     "team": "JAX",
+     "outcome": "40+ rushing yds",
+     "prob": 0.7417642459844418
+    },
+    {
+     "player": "Trevor Lawrence",
+     "team": "JAX",
+     "outcome": "200+ passing yds",
+     "prob": 0.7158221204256182
+    }
+   ],
+   "td": [
+    {
+     "player": "Derrick Henry",
+     "team": "BAL",
+     "prob": 0.4648308002018342
+    },
+    {
+     "player": "Bhayshul Tuten",
+     "team": "JAX",
+     "prob": 0.42729724248145085
+    },
+    {
+     "player": "Parker Washington",
+     "team": "JAX",
+     "prob": 0.32569860290660285
+    }
+   ]
+  }
+ ]
+}

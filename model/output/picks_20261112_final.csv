@@ -1,0 +1,17 @@
+date,event,game,kind,player,athlete,market,side,line,price,prob,edge,flagged
+20261112,401873052,WAS@NYG,prop,J.J. McCarthy,4433970.0,Total Rushing Yards (incl. overtime),under,15.5,,0.5977575267021821,0.07394800289265824,True
+20261112,401873052,WAS@NYG,prop,Cam Skattebo,4696981.0,Total Rushing Yards (incl. overtime),under,63.5,,0.5960373688418181,0.07222784503229429,True
+20261112,401873052,WAS@NYG,prop,Devin Singletary,4040761.0,Total Rushing Yards (incl. overtime),over,19.5,,0.5803422961242662,0.05653277231474241,True
+20261112,401873052,WAS@NYG,prop,J.J. McCarthy,4433970.0,Total Passing Yards (incl. overtime),over,201.5,,0.5751511473290015,0.051341623519477686,True
+20261112,401873052,WAS@NYG,prop,Treylon Burks,4567156.0,Total Receiving Yards (incl. overtime),over,24.5,,0.5382553675003579,0.014445843690834015,False
+20261112,401873052,WAS@NYG,prop,Antonio Williams,5081432.0,Total Receiving Yards (incl. overtime),under,37.5,,0.5357035662059919,0.011894042396468074,True
+20261112,401873052,WAS@NYG,prop,Austin Ekeler,3068267.0,Total Rushing Yards (incl. overtime),under,29.5,,0.5339810581435128,0.010171534333988985,True
+20261112,401873052,WAS@NYG,prop,Jayden Daniels,4426348.0,Total Passing Yards (incl. overtime),under,202.5,,0.5215260889748452,-0.0022834348346786326,False
+20261112,401873052,WAS@NYG,prop,Malik Nabers,4595348.0,Total Receiving Yards (incl. overtime),under,68.5,,0.5185619281638039,-0.005247595645719971,True
+20261112,401873052,WAS@NYG,prop,Isaiah Likely,4361050.0,Total Receiving Yards (incl. overtime),under,48.5,,0.5179546746779821,-0.005854849131541773,True
+20261112,401873052,WAS@NYG,prop,Rachaad White,4697815.0,Total Rushing Yards (incl. overtime),under,38.5,,0.5124637258646778,-0.011345797944846026,True
+20261112,401873052,WAS@NYG,prop,Chig Okonkwo,4360635.0,Total Receiving Yards (incl. overtime),under,37.5,,0.5092460602520656,-0.01456346355745819,False
+20261112,401873052,WAS@NYG,prop,Malachi Fields,4682648.0,Total Receiving Yards (incl. overtime),over,26.5,,0.5091587269614242,-0.014650796848099668,True
+20261112,401873052,WAS@NYG,prop,Jayden Daniels,4426348.0,Total Rushing Yards (incl. overtime),over,33.5,,0.5010860648809843,-0.022723458928539553,False
+20261112,401873052,WAS@NYG,prop,Stefon Diggs,2976212.0,Total Receiving Yards (incl. overtime),over,38.5,,0.5,-0.023809523809523836,False
+20261112,401873052,WAS@NYG,game,,,NYG moneyline,,,-125.0,,0.007280000000000009,True

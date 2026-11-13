@@ -1,0 +1,73 @@
+{
+ "n": 562,
+ "games": 281,
+ "seasons": "2025 wk 5-18, 2026 wk 4-8",
+ "pressure": {
+  "r_matchup": 0.203,
+  "r_line_only": 0.126,
+  "r_rush_only": 0.147,
+  "mae_matchup": 0.0776,
+  "mae_league": 0.0791,
+  "ci_matchup": [
+   0.137,
+   0.266
+  ],
+  "r_sacks": 0.167
+ },
+ "thirds": [
+  {
+   "group": "Line favored",
+   "n": 188,
+   "exp": 0.174,
+   "act": 0.194,
+   "sack": 0.058
+  },
+  {
+   "group": "Even",
+   "n": 187,
+   "exp": 0.212,
+   "act": 0.219,
+   "sack": 0.063
+  },
+  {
+   "group": "Rush favored",
+   "n": 187,
+   "exp": 0.25,
+   "act": 0.245,
+   "sack": 0.075
+  }
+ ],
+ "thirds_yards": [
+  {
+   "group": "Line favored",
+   "n": 186,
+   "qb_res": 4.9,
+   "rec_res": 21.8
+  },
+  {
+   "group": "Even",
+   "n": 185,
+   "qb_res": -0.2,
+   "rec_res": 20.9
+  },
+  {
+   "group": "Rush favored",
+   "n": 185,
+   "qb_res": 1.0,
+   "rec_res": 18.9
+  }
+ ],
+ "passing": {
+  "n": 556,
+  "r_qb": -0.039,
+  "ci_qb": [
+   -0.103,
+   0.027
+  ],
+  "r_rec": -0.028,
+  "ci_rec": [
+   -0.098,
+   0.04
+  ]
+ }
+}

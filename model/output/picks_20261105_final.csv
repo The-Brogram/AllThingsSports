@@ -1,0 +1,15 @@
+date,event,game,kind,player,athlete,market,side,line,price,prob,edge,flagged
+20261105,401873037,JAX@BAL,prop,Joe Fagnano,4429582.0,Total Passing Yards (incl. overtime),over,167.5,,0.6252706332695364,0.10146110946001252,True
+20261105,401873037,JAX@BAL,prop,Justice Hill,4038441.0,Total Receiving Yards (incl. overtime),under,18.5,,0.5859423102697832,0.062132786460259326,True
+20261105,401873037,JAX@BAL,prop,Chris Rodriguez Jr.,4362619.0,Total Rushing Yards (incl. overtime),under,31.5,,0.5752265192634792,0.051416995453955394,True
+20261105,401873037,JAX@BAL,prop,Zay Flowers,4429615.0,Total Receiving Yards (incl. overtime),over,53.5,,0.5737921107388285,0.049982586929304684,True
+20261105,401873037,JAX@BAL,prop,Mark Andrews,3116365.0,Total Receiving Yards (incl. overtime),over,18.5,,0.557400122083948,0.03359059827442412,True
+20261105,401873037,JAX@BAL,prop,Derrick Henry,3043078.0,Total Rushing Yards (incl. overtime),under,70.5,,0.5560098557632398,0.032200331953715966,True
+20261105,401873037,JAX@BAL,prop,Brenton Strange,4430539.0,Total Receiving Yards (incl. overtime),over,33.5,,0.552248138171021,0.028438614361497194,True
+20261105,401873037,JAX@BAL,prop,Parker Washington,4432620.0,Total Receiving Yards (incl. overtime),under,63.5,,0.5404138464814172,0.01660432267189338,False
+20261105,401873037,JAX@BAL,prop,Trevor Lawrence,4360310.0,Total Passing Yards (incl. overtime),over,232.5,,0.5258634097088858,0.0020538858993619513,False
+20261105,401873037,JAX@BAL,prop,Jakobi Meyers,3916433.0,Total Receiving Yards (incl. overtime),over,40.5,,0.5218664786666705,-0.0019430451428533724,True
+20261105,401873037,JAX@BAL,prop,Ja'Kobi Lane,4870847.0,Total Receiving Yards (incl. overtime),under,17.5,,0.5127604483294823,-0.011049075480041526,True
+20261105,401873037,JAX@BAL,prop,Brian Thomas Jr.,4432773.0,Total Receiving Yards (incl. overtime),over,15.5,,0.5107488691378278,-0.013060654671696037,False
+20261105,401873037,JAX@BAL,prop,Bhayshul Tuten,4882093.0,Total Rushing Yards (incl. overtime),under,60.5,,0.5056373541341068,-0.018172169675417016,False
+20261105,401873037,JAX@BAL,game,,,BAL moneyline,,,350.0,,0.042649999999999966,False

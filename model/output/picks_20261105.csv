@@ -1,0 +1,12 @@
+date,event,game,kind,player,athlete,market,side,line,price,prob,edge,flagged
+20261105,401873037,JAX@BAL,prop,Joe Fagnano,4429582.0,Total Passing Yards (incl. overtime),over,155.5,,0.6666290492633793,0.14281952545385546,True
+20261105,401873037,JAX@BAL,prop,Zay Flowers,4429615.0,Total Receiving Yards (incl. overtime),over,46.5,,0.6117958489472547,0.08798632513773086,True
+20261105,401873037,JAX@BAL,prop,Justice Hill,4038441.0,Total Receiving Yards (incl. overtime),under,15.5,,0.5489994620308439,0.025189938221320096,True
+20261105,401873037,JAX@BAL,prop,Derrick Henry,3043078.0,Total Rushing Yards (incl. overtime),under,68.5,,0.5473447631461659,0.023535239336642033,True
+20261105,401873037,JAX@BAL,prop,Parker Washington,4432620.0,Total Receiving Yards (incl. overtime),under,64.5,,0.5439829245625303,0.020173400753006443,False
+20261105,401873037,JAX@BAL,prop,Brenton Strange,4430539.0,Total Receiving Yards (incl. overtime),over,35.5,,0.5417777540624705,0.017968230252946693,True
+20261105,401873037,JAX@BAL,prop,Mark Andrews,3116365.0,Total Receiving Yards (incl. overtime),over,20.5,,0.5335254185777166,0.00971589476819279,True
+20261105,401873037,JAX@BAL,prop,Jakobi Meyers,3916433.0,Total Receiving Yards (incl. overtime),under,39.5,,0.5208774238839254,-0.002932099925598397,True
+20261105,401873037,JAX@BAL,prop,Trevor Lawrence,4360310.0,Total Passing Yards (incl. overtime),over,235.5,,0.5104816468867719,-0.013327876922751947,False
+20261105,401873037,JAX@BAL,prop,Ja'Kobi Lane,4870847.0,Total Receiving Yards (incl. overtime),under,16.5,,0.503656067708935,-0.02015345610058883,True
+20261105,401873037,JAX@BAL,game,,,BAL moneyline,,,390.0,,0.02483499999999994,True

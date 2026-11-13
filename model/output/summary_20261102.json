@@ -1,0 +1,99 @@
+{
+ "date": "20261102",
+ "week": 8,
+ "built": "2026-11-13 11:39",
+ "games": [
+  {
+   "id": "chi-sea",
+   "a": "CHI",
+   "h": "SEA",
+   "win": "SEA",
+   "pw": 0.59095,
+   "pa": 21.963031583192826,
+   "ph": 24.863786389944433,
+   "ma": 21.481900936271764,
+   "mh": 22.48669900378782,
+   "line": "SEA -3",
+   "total": 46.5,
+   "likely": [
+    {
+     "player": "Colston Loveland",
+     "team": "CHI",
+     "outcome": "20+ receiving yds",
+     "prob": 0.7689891842018803
+    },
+    {
+     "player": "Rome Odunze",
+     "team": "CHI",
+     "outcome": "25+ receiving yds",
+     "prob": 0.7558283381804576
+    },
+    {
+     "player": "AJ Barner",
+     "team": "SEA",
+     "outcome": "10+ receiving yds",
+     "prob": 0.7527222567357982
+    },
+    {
+     "player": "Luther Burden III",
+     "team": "CHI",
+     "outcome": "30+ receiving yds",
+     "prob": 0.7456074714556887
+    },
+    {
+     "player": "Cooper Kupp",
+     "team": "SEA",
+     "outcome": "15+ receiving yds",
+     "prob": 0.7197147741684642
+    },
+    {
+     "player": "Kalif Raymond",
+     "team": "CHI",
+     "outcome": "10+ receiving yds",
+     "prob": 0.7168929454035842
+    },
+    {
+     "player": "Caleb Williams",
+     "team": "CHI",
+     "outcome": "180+ passing yds",
+     "prob": 0.7111419557052013
+    },
+    {
+     "player": "Sam Darnold",
+     "team": "SEA",
+     "outcome": "210+ passing yds",
+     "prob": 0.7065453322234693
+    },
+    {
+     "player": "D'Andre Swift",
+     "team": "CHI",
+     "outcome": "25+ rushing yds",
+     "prob": 0.7017995012622648
+    },
+    {
+     "player": "Jaxon Smith-Njigba",
+     "team": "SEA",
+     "outcome": "90+ receiving yds",
+     "prob": 0.7013046975003893
+    }
+   ],
+   "td": [
+    {
+     "player": "Jaxon Smith-Njigba",
+     "team": "SEA",
+     "prob": 0.4716788692685921
+    },
+    {
+     "player": "Emanuel Wilson",
+     "team": "SEA",
+     "prob": 0.4655218906922287
+    },
+    {
+     "player": "D'Andre Swift",
+     "team": "CHI",
+     "prob": 0.44673235526916966
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,168 @@
+{
+ "date": "20261108",
+ "slates": {
+  "20261102": {
+   "title": "Bears at Seahawks Game Book",
+   "notes": {
+    "SEA_": "Zach Charbonnet is expected to make his 2026 debut, so Emanuel Wilson's carry share (built while Charbonnet was out) likely overstates his role, and Charbonnet has no 2026 share at all. Seattle rushing numbers are held out of picks."
+   },
+   "hold_rushing": [
+    "SEA"
+   ]
+  },
+  "20261108": {
+   "notes": {
+    "SEA": "Sam Darnold (quad) is ruled out; coach Mike Macdonald said the plan is for Drew Lock to start, with Jalen Milroe as backup (ESPN injury page; Spokesman-Review/NBC Sports, Nov 4-5). Lock was limited all week with a right elbow injury and is listed questionable, so if he can't go Milroe makes his first NFL start. Seattle passing and receiving lines rest on Lock's small 2026 sample.",
+    "CLE": "Shedeur Sanders starts (ESPN, Nov 6: Browns to start Sanders vs. Saints). Deshaun Watson cleared the concussion protocol but is inactive (ESPN, Nov 8), and Taylen Green is inactive. Cleveland passing history under Watson is stale, so its passing and receiving lines are low confidence.",
+    "ARI": "Jeremiyah Love (ankle) went on IR Nov 3, James Conner (foot, IR) won't return this week, and Bam Knight (concussion) did not practice Thursday and is questionable (ESPN, citing Darren Urban). Tyler Allgeier's share should grow, so Arizona rushing lines are held out.",
+    "WAS": "Jeremy McNichols (foot) is out for the season (ESPN, citing Ian Rapoport), and Jacory Croskey-Merritt is on IR. His carries shift to Rachaad White and Austin Ekeler, so Washington rushing lines are held out.",
+    "ATL_": "Brian Robinson Jr. (hamstring) is ruled out (ESPN, citing the Falcons' site). He had almost no recent carries, so Bijan Robinson's role is unchanged.",
+    "NE_": "TreVeyon Henderson (illness) and A.J. Brown (knee) are out; Hunter Henry (foot) and Mack Hollins (calf) are questionable for the late game (ESPN).",
+    "NO_": "Alvin Kamara (back) returned to practice Thursday and CJ Donaldson (shoulder/concussion) did not; both are questionable (ESPN).",
+    "HOU_": "David Montgomery (groin) is out again; Woody Marks remains the lead back (ESPN, citing the Houston Chronicle).",
+    "DEN_": "RJ Harvey (knee) went on IR Oct 31; Week 8 was the first game of the Jonah Coleman / J.K. Dobbins split (ESPN).",
+    "PHI": "Joe Milton III makes his first NFL start, replacing Tanner McKee (ESPN, Adam Schefter; NFL Network, Nov 4). The depth-chart feed still lists McKee. Philadelphia passing history is stale, so treat its passing and receiving lines as low confidence. Saquon Barkley (hamstring/back) is questionable but practiced Friday; Dameon Pierce is on IR; Jalen Hurts is on IR (ESPN).",
+    "NYJ": "Garrett Wilson (concussion) is out and Tim Patrick is inactive (ESPN inactives, Nov 8). His targets shift mostly to depth receivers, so New York passing and receiving lines carry more role uncertainty.",
+    "SF": "Mike Evans (Achilles) is ruled out, joining Brandon Aiyuk (personal), Deebo Samuel (hamstring) and Christian Kirk (IR) (ESPN injury report, Nov 8). The receiver group is thin, so San Francisco receiving lines carry role uncertainty. McCaffrey is not listed as out.",
+    "DAL_": "KaVontae Turpin (ribs) and Luke Schoonmaker (groin) are out (ESPN inactives, Nov 8).",
+    "MIA_": "Jaylen Wright (quad) is out (ESPN inactives, Nov 8).",
+    "WAS_": "Treylon Burks (foot) is out (ESPN inactives, Nov 8).",
+    "NYG_": "Cam Skattebo (hamstring) is out (ESPN inactives, Nov 8), so the Giants backfield roles change and their rushing lines are held out."
+   },
+   "hold_rushing": [
+    "ARI",
+    "WAS",
+    "NYG"
+   ],
+   "qb": {
+    "SEA": "00-0035704",
+    "PHI": "00-0039398",
+    "CLE": "00-0040668"
+   },
+   "out": {
+    "NYJ": [
+     "00-0037740"
+    ],
+    "NYG": [
+     "00-0040715"
+    ],
+    "SF": [
+     "00-0031408"
+    ],
+    "DAL": [
+     "00-0037801",
+     "00-0038547"
+    ],
+    "MIA": [
+     "00-0039874"
+    ],
+    "WAS": [
+     "00-0037742"
+    ],
+    "DET": [
+     "00-0038896"
+    ]
+   }
+  },
+  "20261105": {
+   "notes": {
+    "BAL": "Lamar Jackson (thumb surgery, IR) and Tyler Huntley (toe) are ruled out. Undrafted rookie Joe Fagnano starts, and he also came out of the Buffalo game with a sore right ankle. Baltimore passing and receiving numbers rest on a tiny QB sample, so treat them as low confidence. Inactives (Yahoo live blog): WR Elijah Sarratt, CB Nate Wiggins, FS Jaylinn Hawkins, G Emery Jones, DT Aeneas Peebles, QB Kedon Slovis (3rd QB). Jacoby Brissett (trade) is not expected to play.",
+    "JAX_": "Bhayshul Tuten (ankle/foot, did not practice, listed questionable) was cleared after a full pregame workout and is active (Yahoo live blog, citing Jeremy Fowler). WR C.J. Williams is inactive."
+   },
+   "hold_rushing": [],
+   "qb": {
+    "BAL": "00-0040981"
+   },
+   "out": {
+    "BAL": [
+     "00-0034796",
+     "00-0035993",
+     "00-0040876"
+    ],
+    "JAX": [
+     "00-0041106"
+    ]
+   }
+  },
+  "20261109": {
+   "notes": {
+    "MIN": "Kyler Murray (hamstring) is inactive; Carson Wentz starts with Max Brosmer as backup (Vikings.com inactives, Nov 9). WR Jauan Jennings (calf) is inactive and RB Demond Claiborne (knee) was ruled out. Minnesota passing and receiving numbers rest on a backup-QB sample, so treat them as lower confidence.",
+    "BUF": "WR Joshua Palmer (hamstring) is out (Bills injury report). Inactives (Bills/Vikings.com, Nov 9): LT Dion Dawkins (ribs), G Alec Anderson (ankle) and WR Skyler Bell are inactive, so Tylan Grable starts at left tackle and Austin Corbett at left guard (Finger Lakes 1). With two line starters out, Josh Allen's pressure risk rises, and Bell's targets shift mostly to depth receivers. WR Trent Sherfield was elevated from the practice squad."
+   },
+   "qb": {
+    "MIN": "00-0032950"
+   },
+   "out": {
+    "MIN": [
+     "00-0035228",
+     "00-0036259",
+     "00-0041104"
+    ],
+    "BUF": [
+     "00-0036988",
+     "00-0033904",
+     "00-0037428",
+     "00-0041443"
+    ]
+   }
+  },
+  "20261112": {
+   "title": "Commanders at Giants Game Book",
+   "notes": {
+    "NYG": "Cam Skattebo (hamstring) missed Week 9, when Devin Singletary took 21 carries; Skattebo practiced fully, had no game status and is not on the inactive list, so he is active (Giants.com injury report, Nov 11; ESPN inactives, Nov 12). His return should take back most of the work, so Giants rushing lines are held out. J.J. McCarthy (hip) left Week 9 early but practiced fully and is expected to start (CBS Sports; Giants.com). Inactives (ESPN, Nov 12): LB Malik Harrison (groin), CB Nikko Reed, G Josh Sills, DT CJ Okoye, OT J.C. Davis.",
+    "WAS_": "Jayden Daniels (left elbow) practiced fully and has no game status. C Lucas Patrick (concussion) is inactive and TE Colson Yankoff (knee) was ruled out; WR Treylon Burks (foot) had no status and is not on the inactive list (Hogs Haven, Commanders.com). Other inactives (ESPN, Nov 12): QB Athan Kaliakmanis (3rd QB), CB Isaac Yiadom, G Tanoa Togiai, DT Ricky Barber."
+   },
+   "hold_rushing": [
+    "NYG"
+   ],
+   "play": {
+    "NYG": {
+     "00-0040715": 0.95
+    }
+   }
+  },
+  "20261115": {
+   "notes": {
+    "SEA": "Sam Darnold (quad) is out again and coach Mike Macdonald said Monday that Drew Lock starts at Las Vegas (ESPN/ABC7 and Fox 13 Seattle, Nov 9; ESPN injury page, Nov 10). The depth-chart feed still lists Darnold. Lock (right elbow/oblique) was limited Thursday (ESPN, citing John Boyle of Seahawks.com, Nov 13), so if he can't go Jalen Milroe would make his first NFL start. Seattle passing and receiving lines rest on Lock's small 2026 sample. In the backfield, Zach Charbonnet took 16 carries and Jadarian Price 9 in Week 9 while Emanuel Wilson did not play a snap (ESPN, Nov 9-11). The carry-share history still credits Wilson, so Seattle rushing lines are held out.",
+    "MIN": "Kirk Cousins, acquired from the Raiders on Nov 10, is expected to start at Green Bay (ESPN injury page, citing Ian Rapoport, Nov 13); the team has not been quoted naming him, but the depth chart lists him first. Kyler Murray (hamstring) is doubtful and week-to-week, and Carson Wentz (ankle) was limited Thursday. T.J. Hockenson (wrist/chest) and Jauan Jennings (calf) did not practice Thursday (ESPN, Nov 12-13). Cousins's 2026 history is with Las Vegas and he has had one week in this offense, so Minnesota passing and receiving lines are low confidence.",
+    "LV": "Rookie Fernando Mendoza makes his first NFL start after Las Vegas traded Kirk Cousins to Minnesota on Nov 10 (ESPN, Adam Schefter, Nov 10); Aidan O'Connell is the backup (ESPN, citing The Athletic, Nov 11). Mendoza has no NFL passing sample, so Las Vegas passing and receiving lines are low confidence.",
+    "MIA": "Kyle McCord makes his first NFL start; Malik Willis (core muscle) went on IR Nov 10 and misses at least four games (ESPN, citing Cameron Wolfe of NFL Network, Nov 10). Miami passing history under Willis is stale, so its passing and receiving lines are low confidence. WR Chris Bell (knee) did not practice Thursday (ESPN, Nov 12).",
+    "ARI": "Rookie Carson Beck makes his first NFL start; coach Mike LaFleur confirmed it Wednesday (ESPN, citing Darren Urban of the Cardinals' site, Nov 11). Gardner Minshew (elbow, IR) is out for the season, and WRs Michael Wilson (neck) and Kendrick Bourne (tibia) are on IR (ESPN). Arizona passing and receiving lines are low confidence. Backfield: Jeremiyah Love and James Conner remain on IR, and Conner won't return this week (ESPN). Bam Knight (concussion) missed Week 9, when Tyler Allgeier took 17 carries; Knight practiced in full Thursday and is listed questionable (ESPN, citing the Cardinals' site, Nov 13). Arizona rushing lines are held out.",
+    "LA": "Puka Nacua (MCL/PCL sprain, turf toe) went on IR Thursday and misses at least four games (ESPN injury page, Nov 13; TheRams.com). Davante Adams (hamstring) and Jordan Whittington (back) are also on IR. Tight ends Tyler Higbee (illness) and Davis Allen (oblique) did not practice and Colby Parkinson (ribs) was limited (ESPN, citing Adam Caplan, Nov 13). Nacua's targets have to be redistributed, so Rams passing and receiving lines carry role uncertainty.",
+    "IND": "The Colts traded Josh Downs and Keenan Allen on Nov 10 and Alec Pierce (heel) is on IR. Coach Shane Steichen said Anthony Gould takes the slot and Deion Burks and Ashton Dulin step into larger roles (ESPN, Stephen Holder, Nov 11). Indianapolis receiving lines carry role uncertainty.",
+    "GB_": "Josh Jacobs (broken finger) is out; he has surgery Friday and is expected to miss multiple weeks (Packers.com, Nov 9; ESPN, citing Matt Schneidman, Nov 12). Kaleb Johnson led the backfield with 14 carries in Week 9, and MarShawn Lloyd (knee) is off the injury report (ESPN, Nov 10-11). Roles are changing, so Green Bay rushing lines are held out.",
+    "NE_": "TreVeyon Henderson (illness) is ruled out. Rhamondre Stevenson (knee) is officially questionable after limited practices (Patriots.com injury report, Nov 13), but Ian Rapoport reported Nov 9 that he was expected to miss the next few weeks, and ESPN says he was not in uniform Friday. Corey Kiner is next up. New England rushing lines are held out until inactives. A.J. Brown (ankle/knee) is questionable after three limited practices; Hunter Henry (foot) was limited; Drake Maye (right shoulder) practiced in full (Patriots.com).",
+    "CLE_": "Deshaun Watson (cleared from the concussion protocol) starts and Shedeur Sanders returns to the backup role (ESPN, citing Kelsey Russo of the Browns' site, Nov 11). Denzel Boston (toe) did not practice Thursday and Harold Fannin Jr. (groin) was limited; both are questionable (ESPN, Nov 12).",
+    "HOU_": "Woody Marks (knee) did not practice Thursday and David Montgomery (groin), who has not had a carry since Week 5, was limited; both are questionable. Marvin Harrison Jr. (hamstring) did not practice Thursday (ESPN, citing the Akron Beacon Journal, Nov 12). Check Friday's game statuses before trusting Houston rushing lines.",
+    "DAL_": "Tyler Goodson (ACL/MCL sprains) and Jake Ferguson (knee) are out (ESPN, citing Todd Archer and the Cowboys' site, Nov 9-10). George Pickens (hamstring) and KaVontae Turpin (ribs) were limited Thursday and Jonathan Mingo (ankle/foot) did not practice (ESPN, citing Jon Machota, Nov 12-13).",
+    "KC_": "Patrick Mahomes (right elbow) practiced in full and is in line to start (ESPN, citing Ian Rapoport, Nov 13; NFL.com injury report). Josh Downs joined the roster this week after the Colts traded him and has no role history in Kansas City.",
+    "SF_": "Mike Evans (Achilles) did not practice Thursday; Kyle Shanahan called him 'real close' (ESPN, citing David Lombardi, Nov 13). Deebo Samuel (hamstring) was limited, and Brandon Aiyuk is on a roster exemption and out. Keenan Allen was acquired Nov 10 and has no role history with San Francisco (ESPN).",
+    "JAX_": "Bhayshul Tuten (ankle/foot) did not practice Thursday and Chris Rodriguez Jr. (hand) was limited; both are questionable. Tuten also sat out practice before Week 9 and played. Jakobi Meyers (ankle) was limited (ESPN, Nov 12).",
+    "TEN_": "Tony Pollard (finger/rest) and Carnell Tate (shoulder) did not practice Thursday; Tyjae Spears (knee) was limited (ESPN, citing Jim Wyatt of the Titans' site, Nov 12).",
+    "NO_": "Alvin Kamara (rest/back) practiced in full Thursday. Travis Etienne Jr. (hamstring) is still on IR but was limited in practice, and CJ Donaldson (shoulder) did not practice (ESPN, citing WWL-TV, Nov 12). Audric Estime led the backfield with 15 carries in Week 9; if Etienne is activated the roles change.",
+    "CAR_": "Jonathon Brooks (groin) and Xavier Legette (knee) are on IR but practicing; neither has been activated (ESPN, Nov 12).",
+    "DET_": "Amon-Ra St. Brown (ribs) was limited all week and has no posted game status yet; Jared Goff (chest) practiced in full; Sione Vaki (ankle) did not practice (Patriots.com injury report, Nov 13).",
+    "NYJ_": "Garrett Wilson (concussion) and Omar Cooper Jr. (ankle) were limited Thursday and are questionable (ESPN, Nov 12).",
+    "ATL_": "Zachariah Branch (hamstring) has not practiced and is doubtful (ESPN, Nov 11; NFL.com injury report).",
+    "BUF_": "Dalton Kincaid (ankle) was limited Thursday and is questionable (ESPN, Nov 12)."
+   },
+   "hold_rushing": [
+    "GB",
+    "ARI",
+    "NE",
+    "SEA"
+   ],
+   "qb": {
+    "SEA": "00-0035704"
+   },
+   "out": {
+    "GB": [
+     "00-0035700"
+    ],
+    "DAL": [
+     "00-0037120"
+    ]
+   }
+  }
+ }
+}
