@@ -1,30 +1,38 @@
 {
  "11": {
-  "checked": "Thu Nov 12, 2026",
+  "checked": "Sat Nov 14, 2026",
   "pick": {
-   "WAKE": "Gio Lopez"
+   "WAKE": "Gio Lopez",
+   "FLA": "Aaron Philo",
+   "ORST": "Maalik Murphy"
   },
   "note": {
-   "WAKE": "Gio Lopez was held out of the Merrimack game as a precaution and was reported available to start at SMU, so he is modeled as the starter over Steele Pizzella.",
-   "WIS": "True freshman Ryan Hopkins started the last game with Colton Joseph hurt. Joseph is listed as emergency-only. Hopkins has thrown little, so Wisconsin passing numbers are low confidence.",
-   "MSST": "AJ Swann has started since Kamario Taylor's season-ending surgery. He left the Texas game early. Mississippi State passing numbers are low confidence.",
-   "NU": "Backup Nicco Marchiol started the Iowa game. No starter is announced for Ohio State yet, so Northwestern passing numbers are low confidence.",
-   "OSU": "Luke Fahey is modeled with Julian Sayin still out. Ohio State has not named a starter for this game, so passing numbers are low confidence.",
-   "KSU": "Kansas State's quarterback is unconfirmed for TCU. Blake Barnett, modeled here, holds a small share of the season's attempts, so passing numbers are low confidence.",
+   "WAKE": "Gio Lopez was held out of the Merrimack game as a precaution and was reported available to start at SMU. Rotowire listed him probable on Nov 13, so he stays the modeled starter over Steele Pizzella.",
+   "WIS": "Luke Fickell confirmed true freshman Ryan Hopkins starts again at Maryland after his 241-yard debut against Rutgers (ESPN, Nov 9). Colton Joseph remains in the plan as a backup. Hopkins has a small sample, so passing numbers are low confidence.",
+   "MSST": "The Clarion Ledger's Nov 14 game-day story says AJ Swann is expected to start against Auburn, and Kamario Taylor is listed out. Swann threw for 254 yards against Vanderbilt last week, but his sample is small.",
+   "NU": "Aidan Chiles was ruled out for Ohio State (reported Nov 11-12). Nicco Marchiol is expected to make his second start, though Northwestern has not announced it. Passing numbers are low confidence.",
+   "OSU": "Julian Sayin is listed out on this week's report and Luke Fahey makes his third start (reports Nov 12-13). The modeled starter is confirmed.",
+   "KSU": "Still unconfirmed. Avery Johnson and Jacob Knuth are out, and Collin Klein has not named a starter between Blake Barnett and Dillon Duff and said he sees both playing. Passing numbers are low confidence.",
    "ASU": "Jake Fette has started since Mikey Keene's knee injury, and Kenny Dillingham said he stays the starter. He is a freshman with a small sample.",
    "TTU": "Thomas Castellanos made his first Texas Tech start Nov 1 after his eligibility case. His Texas Tech sample is small.",
-   "BOIS": "Max Cutforth replaced the injured Maddux Madsen against Texas State. Madsen's status for this game is unknown.",
+   "BOIS": "Unconfirmed. Maddux Madsen was listed questionable on the Nov 11 Pac-12 report, practiced this week, and Spencer Danielson said he starts if healthy, otherwise Max Cutforth. No final report was found, so Cutforth stays modeled and Madsen starting is a real possibility.",
    "PITT": "ESPN reported Mason Heintschel tore his ACL and is out for the season. Holden Geriner is Pitt's full-time starter, so the modeled starter is confirmed with high confidence.",
    "UCLA": "Nico Iamaleava is expected to miss the rest of the season after knee surgery (Daily Bruin, Oct 12). Ty Dieffenbach has taken over, so the modeled starter is confirmed with high confidence.",
-   "UCF": "Alonza Barnett III is back from a hamstring injury and led the winning drive at Kansas. Keyone Jenkins is the questionable backup. Barnett as starter is likely, with medium-high confidence.",
+   "UCF": "Alonza Barnett III is back from a hamstring injury and led the winning drive at Kansas. No new report on him was found this week, so his start is likely but unconfirmed.",
    "CLEM": "Tait Reynolds has started since Christopher Vizzina's elbow injury in September, and Vizzina is listed out. No report names a different starter for Georgia Tech, so medium-high confidence.",
    "KU": "The AP preview lists Isaiah Marshall as the Kansas passing leader, and he won the job in camp. The questionable QB on the injury list is a backup, so high confidence.",
-   "MSU": "Alessio Milivojevic is the named starter and Cam Fancher, listed questionable, is the backup. Milivojevic missed the UCLA game in late October. No report this week says he is out, so his start is unconfirmed but likely.",
+   "MSU": "Alessio Milivojevic returned last week and played the win at Michigan with a hand injury. He is not on this week's out list and Cam Fancher, listed questionable, is the backup, so his start is likely.",
    "MD": "Malik Washington is Maryland's returning starter. The questionable QB on the injury list is a backup. No report this week changes that, so he is unconfirmed but likely.",
    "SYR": "A Nov 5 Field Level Media story covers Steve Angeli as Syracuse's quarterback. The questionable QB on the injury list is a backup, so high confidence.",
    "ND": "CJ Carr is Notre Dame's starter. The QB listed out is a backup, so the injury does not affect the model.",
    "USC": "Jayden Maiava is USC's starter. The QB listed questionable is a backup, so the injury does not affect the model.",
-   "SC": "LaNorris Sellers is South Carolina's starter. The QB listed questionable is a backup, so the injury does not affect the model."
+   "SC": "LaNorris Sellers is South Carolina's starter. The QB listed questionable is a backup, so the injury does not affect the model.",
+   "ALA": "ESPN reported Nov 13 that Alabama is expected to start Austin Mack at Vanderbilt while Keelon Russell rests an ankle injury, with Russell available off the bench. The model cannot use Mack because he has not played in Alabama's last four games, so Alabama is still simulated with Russell. Alabama passing numbers are low confidence.",
+   "FLA": "CBS Sports' Matt Zenitz and two Florida beat writers reported Nov 12 that Florida is expected to start Aaron Philo at Kentucky in place of Tramell Jones Jr. Jon Sumrall has not confirmed it publicly.",
+   "ORST": "ESPN reported Braden Atkinson will not play at Boise State because of a hand injury (Nov 11-12). Maalik Murphy replaced him last week and is the reported likely starter, though Oregon State has not announced one.",
+   "WASH": "Demond Williams Jr. (rib) was upgraded from questionable to probable on Nov 12 and Jedd Fisch said he is scheduled to start, so the modeled starter stands.",
+   "IU": "Josh Hoover (right shoulder) is not on the Big Ten availability report, but Curt Cignetti declined to say whether Hoover or Grant Wilson starts against USC. Hoover's start is likely but unconfirmed.",
+   "MICH": "ESPN reported Nov 10 that Tommy Carr is expected to start at Oregon and that Bryce Underwood will also play, so Carr's passing volume may be shared."
   }
  }
 }
