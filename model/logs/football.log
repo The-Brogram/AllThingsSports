@@ -1,11 +1,10 @@
-football run Sun Nov 15 2026 12:17 PM ET: nfl-today (schedule 45 16 * * 0)
-== nfl-today
-[nflverse refresh] ok in 1s
-[run today] FAILED in 7s
-        ~~~~^^
-      File "/home/runner/work/AllThingsSports/AllThingsSports/model/fetch_data.py", line 79, in main
-        odds.snapshot()
-        ~~~~~~~~~~~~~^^
+football run Sun Nov 15 2026 04:16 PM ET: nfl-odds (schedule 45 20 * * 0)
+== nfl-odds
+[odds] FAILED in 13s
+    Traceback (most recent call last):
+      File "/home/runner/work/AllThingsSports/AllThingsSports/model/odds.py", line 97, in <module>
+        snapshot()
+        ~~~~~~~~^^
       File "/home/runner/work/AllThingsSports/AllThingsSports/model/odds.py", line 49, in snapshot
         df = pd.DataFrame(rows(now))
                           ~~~~^^^^^
@@ -13,4 +12,4 @@ football run Sun Nov 15 2026 12:17 PM ET: nfl-today (schedule 45 16 * * 0)
         aid = int(re.search(r"athletes/(\d+)", r["athlete"]["$ref"]).group(1))
                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
     AttributeError: 'NoneType' object has no attribute 'group'
-    fetch_data.py failed, so later steps were not run.
+    odds.py failed, so later steps were not run.
