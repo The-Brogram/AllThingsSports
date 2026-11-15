@@ -1,16 +1,24 @@
-football run Sun Nov 15 2026 09:17 AM ET: nfl-today (schedule 30 13 * * 0)
-== nfl-today
-[nflverse refresh] ok in 1s
-[run today] FAILED in 16s
-        ~~~~^^
-      File "/home/runner/work/AllThingsSports/AllThingsSports/model/fetch_data.py", line 79, in main
-        odds.snapshot()
-        ~~~~~~~~~~~~~^^
-      File "/home/runner/work/AllThingsSports/AllThingsSports/model/odds.py", line 49, in snapshot
-        df = pd.DataFrame(rows(now))
-                          ~~~~^^^^^
-      File "/home/runner/work/AllThingsSports/AllThingsSports/model/odds.py", line 41, in rows
-        aid = int(re.search(r"athletes/(\d+)", r["athlete"]["$ref"]).group(1))
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    AttributeError: 'NoneType' object has no attribute 'group'
-    fetch_data.py failed, so later steps were not run.
+football run Sun Nov 15 2026 10:44 AM ET: cfb-review (schedule 10 15 * * 0)
+== cfb-review
+[nflverse refresh] ok in 4s
+[fetch_cfb.py] ok in 13s
+    1686 games on file; 56 fetched
+[parse_cfb.py] ok in 27s
+    1685 games {2025: 934, 2026: 751} 0.5014836795252225 219853 plays 92614 targets 106644 passes 109516 rushes
+    target parse rate 0.9355185057634261 rec tie 0.6823374435830436
+[review_cfb.py] ok in 2s
+    Week 11: waiting on games that are not final (use --force to grade what is done)
+[season.py] ok in 68s
+    Sync with GitHub: no site repository
+    Players: 1052 offensive players, 24975 games, 1.82 MB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/players.json
+    WR/CB: week 10, 14 games, 159 receivers -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/wrcb.json
+    Team vs position: 2026 thru wk 9, 2025 thru wk 18 -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/teampos.json
+    NFL reviews: 137 of 137 finished games (0 fetched) -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/nflrev.json
+    Fantasy: 2026 week 10, 1 slate(s), 223 players, 0.87 MB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/fantasy.json
+    CFB leaders: 129 players, 137 FBS defenses, through week 11 -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/cfbl.json 127 KB
+    CFB: week 11 current, 487 in-scope games across 14 weeks, 50 with our pick, 186 teams, 243 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/cfb.json
+    Hub: Week 10 is current. 137 final, 12 with a Game Book, 13 with lines, 110 early. 9 reports. 465 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/index.html
+    Data freshness NFL: OK - games final through week 10; player stats through week 10; weekly rosters through week 10
+    Data freshness CFB: OK - games final through week 11; player stats through week 11
+    Data freshness NBA: OK - games final through 2026-11-14; 188/188 with box scores; 188/188 with shot charts
+hub copied to the site
