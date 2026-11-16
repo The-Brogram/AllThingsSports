@@ -975,8 +975,8 @@ def render_game(gm, c, R, cal):
     sosb = sec("Strength of schedule", CTX, GB.sos_cards(c, R["rt"], a, h), "Rank 1 = toughest schedule in the league, from our opponent-adjusted ratings (each opponent's offense plus defense, in points per game against an average team). Red is a tough schedule, yellow average, green soft. In the dropdowns, Off and Def are each opponent's 2026 rank (1 = best unit), colored by how hard that unit is to face.")
     move = sec("Odds movement", CTX, chart, "From DraftKings' opening number to our snapshots to now. A big move usually means news (here, a QB change) more than betting volume. Bet and money percentages are not in any free feed, so they are not shown.")
     bars = mblock("2026 team comparison", CTX, [side_head_simple(a, h, "2026 regular season<br># = league rank, 1 is best")] + GB.team_bars(GS, a, h, mrow, _better), "Green is the better-ranked team in that row.")
-    h2, h2s = GB.head_to_head(GS, a, h)
-    h2b = sec("Head to head", CTX, (f"<p class='sub'>{e(h2s)}</p>" if h2s else "") + h2, "Since 1999, regular season and playoffs. Cover uses the closing spread from nflverse.")
+    h2, h2s = GB.head_to_head(GS, a, h, gid=gid)
+    h2b = sec("Head to head", CTX, (f"<p class='sub'>{e(h2s)}</p>" if h2s else "") + h2, "Tap a game for its top performers (player lines are on file from 2015 on). Since 1999, regular season and playoffs. Cover uses the closing spread from nflverse.")
     l10 = sec("Last 10 games", CTX, f"<div class='pcols'><div class='pcol'><h5>{a}</h5>{GB.last10(GS, a)}</div><div class='pcol'><h5>{h}</h5>{GB.last10(GS, h)}</div></div>", "Includes 2025 when 2026 has fewer than 10 games. ATS and O/U use closing lines.")
     cond = sec("Game conditions", CTX, P9)
     # Best plays: the picks people open the book for, first
@@ -1160,6 +1160,9 @@ label.win select{font:600 13px var(--b);text-transform:none;letter-spacing:0;pad
 .seg{font:600 13px var(--b);background:none;border:0;border-radius:999px;padding:6px 14px;color:var(--mut);cursor:pointer}.seg[aria-pressed=true]{background:var(--fg);color:var(--bg)}
 .spark{width:100%;height:auto;max-width:760px;display:block}.spark .sv{font:700 12px var(--m);fill:var(--fg)}.spark .sl{font:500 10.5px var(--m);fill:var(--mut)}.sub{color:var(--mut);font-size:13px;margin:4px 0}
 .h2{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px}.h2c{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:8px 12px;display:grid;gap:4px}
+button.h2b{font:inherit;color:inherit;text-align:left;cursor:pointer}button.h2b:hover,button.h2b:focus-visible{border-color:currentColor}.h2m{font-weight:700;opacity:.75}
+dialog.h2d{border:0;border-radius:16px;padding:22px;width:min(94vw,820px);max-height:88vh;overflow:auto;background:var(--bg);color:var(--fg,inherit);box-shadow:0 30px 80px -20px rgba(0,0,0,.4)}dialog.h2d::backdrop{background:rgba(17,22,21,.5)}
+dialog.h2d h4{margin:4px 0 2px;font-size:24px}dialog.h2d td,dialog.h2d th{white-space:normal;text-align:left}dialog.h2d td:first-child{opacity:.7}.h2x{position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--bg);color:inherit;cursor:pointer;font-size:14px}
 .h2c small{color:var(--dim);font:500 11px var(--m)}.h2s{display:grid;font:500 14px var(--m)}.h2s span{color:var(--mut)}.h2s .w{color:var(--fg);font-weight:700}
 .chips{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px}.res{display:grid;place-items:center;width:26px;height:26px;border-radius:7px;font:700 12px var(--m)}.res.w{background:var(--grn-d);color:var(--good)}.res.l{background:var(--red-d);color:var(--bad)}.res.t{border:1px solid var(--line2);color:var(--mut)}
 .l10s{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.l10s>div{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:6px 10px}.l10s small{display:block;color:var(--dim);font:600 10px var(--m);text-transform:uppercase;letter-spacing:.08em}.l10s b{font:700 15px var(--m)}
@@ -1185,6 +1188,8 @@ B.forEach(b=>b.onclick=()=>{go(b.dataset.t,1);try{localStorage.setItem('nfl-tab'
 document.querySelectorAll('[data-go]').forEach(a=>a.onclick=ev=>{ev.preventDefault();go(a.dataset.go,1)});
 document.querySelectorAll('.game').forEach(g=>{const T=[...g.querySelectorAll('.gt')],P=[...g.querySelectorAll('.pane')];
 const sel=id=>{P.forEach(p=>p.hidden=p.id!==id);T.forEach(b=>b.setAttribute('aria-selected',b.dataset.p===id))};T.forEach(b=>b.onclick=()=>sel(b.dataset.p));sel(T[0].dataset.p);P.forEach(p=>{const S=[...p.querySelectorAll('.sb')],U=[...p.querySelectorAll('.sub')];if(!S.length)return;const f=id=>{U.forEach(u=>u.hidden=u.id!==id);S.forEach(b=>b.setAttribute('aria-selected',b.dataset.s===id))};S.forEach(b=>b.onclick=()=>f(b.dataset.s));f(S[0].dataset.s)});g.querySelectorAll('[data-tab]').forEach(a=>a.onclick=()=>{sel(a.dataset.tab);const b=a.dataset.sub&&g.querySelector('.sb[data-s="'+a.dataset.sub+'"]');if(b)b.click();g.querySelector('.gtabs').scrollIntoView({block:'start'})})});
+document.querySelectorAll('[data-dlg]').forEach(b=>b.onclick=()=>{const d=document.getElementById(b.dataset.dlg);if(d)d.showModal()});
+document.querySelectorAll('dialog.h2d').forEach(d=>{d.onclick=e=>{if(e.target===d)d.close()};d.querySelector('[data-close]').onclick=()=>d.close()});
 document.querySelectorAll('select[data-win]').forEach(s=>{const box=s.closest('.mblock'),f=()=>box.querySelectorAll('[data-w]').forEach(d=>d.hidden=d.dataset.w!==s.value);s.onchange=f;f()});
 document.querySelectorAll('.om').forEach(o=>{const B=[...o.querySelectorAll('[data-om]')],f=k=>{o.querySelectorAll('[data-omv]').forEach(d=>d.hidden=d.dataset.omv!==k);B.forEach(b=>b.setAttribute('aria-pressed',b.dataset.om===k))};B.forEach(b=>b.onclick=()=>f(b.dataset.om));f('sp')});
 let t=location.hash.slice(1);if(!V.some(v=>v.id===t)){try{t=localStorage.getItem('nfl-tab')}catch(e){}}go(V.some(v=>v.id===t)?t:'slate')"""

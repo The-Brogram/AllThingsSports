@@ -7,6 +7,7 @@ import json
 import math
 import os
 import numpy as np
+import html
 import pandas as pd
 import engine as E
 from config import OUT_IDS, QB_START
@@ -254,7 +255,52 @@ def team_bars(G, a, h, mrow, better):
     return [mrow(lab, f(stat[a][k]), f(stat[h][k]), int(rk[k][a]), int(rk[k][h]), better(int(rk[k][a]), int(rk[k][h]))) for lab, k, f in M]
 
 
-def head_to_head(G, a, h, k=6):
+_BOX = {}
+
+
+def _box(season):
+    """One season's player lines (regular season and playoffs), read once per run. None when that season's file is not on hand."""
+    if season not in _BOX:
+        import os
+        f = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", f"stats_player_week_{season}.csv")
+        try:
+            d = pd.read_csv(f, low_memory=False)
+            ic = "passing_interceptions" if "passing_interceptions" in d else "interceptions"
+            d = d.rename(columns={ic: "ints"})
+            for c in ("completions", "attempts", "passing_yards", "passing_tds", "ints", "carries", "rushing_yards", "rushing_tds", "receptions", "targets", "receiving_yards", "receiving_tds"):
+                d[c] = pd.to_numeric(d.get(c, 0), errors="coerce").fillna(0)
+            _BOX[season] = d
+        except OSError:
+            _BOX[season] = None
+    return _BOX[season]
+
+
+def top_performers(r):
+    """Each team's passer, two leading rushers and three leading receivers from one past game, as popup HTML ('' if no box score)."""
+    d = _box(int(r.season))
+    if d is None:
+        return ""
+    d = d[(d.week == r.week) & d.team.isin([r.away_team, r.home_team])]
+    if not len(d):
+        return ""
+    i = lambda v: int(round(v))
+    td = lambda v: f", {i(v)} TD" if v else ""
+    cols = []
+    for t in (r.away_team, r.home_team):
+        x = d[d.team == t]
+        rows = []
+        for _, q in x[x.attempts > 0].sort_values("attempts", ascending=False).head(1).iterrows():
+            rows.append(("Passing", q.player_display_name, f"{i(q.completions)}/{i(q.attempts)}, {i(q.passing_yards)} yds{td(q.passing_tds)}" + (f", {i(q.ints)} INT" if q.ints else "")))
+        for _, q in x[x.carries > 0].sort_values("rushing_yards", ascending=False).head(2).iterrows():
+            rows.append(("Rushing", q.player_display_name, f"{i(q.carries)} car, {i(q.rushing_yards)} yds{td(q.rushing_tds)}"))
+        for _, q in x[x.targets > 0].sort_values("receiving_yards", ascending=False).head(3).iterrows():
+            rows.append(("Receiving", q.player_display_name, f"{i(q.receptions)}/{i(q.targets)} tgt, {i(q.receiving_yards)} yds{td(q.receiving_tds)}"))
+        body = "".join(f"<tr><td>{c}</td><td><b>{html.escape(str(n))}</b></td><td>{html.escape(l)}</td></tr>" for c, n, l in rows) or "<tr><td colspan='3'>No player lines on file.</td></tr>"
+        cols.append(f"<div class='pcol'><h5>{t}</h5><div class='tw'><table><thead><tr><th>Category</th><th>Player</th><th>Line</th></tr></thead><tbody>{body}</tbody></table></div></div>")
+    return f"<div class='pcols'>{''.join(cols)}</div>"
+
+
+def head_to_head(G, a, h, k=6, gid=""):
     x = G[(((G.home_team == a) & (G.away_team == h)) | ((G.home_team == h) & (G.away_team == a))) & G.result.notna()].sort_values(["season", "week"]).tail(k)
     if not len(x):
         return "<p class='note'>These teams have not met since 1999.</p>", ""
@@ -269,9 +315,19 @@ def head_to_head(G, a, h, k=6):
             cover = r.home_team if d > 0 else r.away_team if d < 0 else "Push"
         ou = "–" if pd.isna(r.total_line) else ("Over" if r.total > r.total_line else "Under" if r.total < r.total_line else "Push")
         wk = f"{'Wk ' + str(r.week) if r.game_type == 'REG' else r.game_type}"
-        cells.append(f'<div class="h2c"><small>{r.season} · {wk}</small><div class="h2s"><span class="{"w" if win == r.away_team else ""}">{r.away_team} {int(r.away_score)}</span>'
-                     f'<span class="{"w" if win == r.home_team else ""}">@ {r.home_team} {int(r.home_score)}</span></div>'
-                     f'<small>Cover: {cover or "–"} · {ou}{"" if pd.isna(r.total_line) else " " + format(r.total_line, "g")}</small></div>')
+        top = top_performers(r)
+        did = f"h2-{gid}-{r.season}-{r.week}"
+        inner = (f'<small>{r.season} · {wk}</small><div class="h2s"><span class="{"w" if win == r.away_team else ""}">{r.away_team} {int(r.away_score)}</span>'
+                 f'<span class="{"w" if win == r.home_team else ""}">@ {r.home_team} {int(r.home_score)}</span></div>'
+                 f'<small>Cover: {cover or "–"} · {ou}{"" if pd.isna(r.total_line) else " " + format(r.total_line, "g")}</small>')
+        if top:  # the card opens a popup with that game's top performers
+            marg = abs(int(r.home_score) - int(r.away_score))
+            cells.append(f'<button class="h2c h2b" data-dlg="{did}" title="Top performers from this game">{inner}<small class="h2m">Top performers &rarr;</small></button>'
+                         f'<dialog class="h2d" id="{did}"><button class="h2x" data-close aria-label="Close">&#10005;</button><small>{r.season} · {wk} · {r.gameday}</small>'
+                         f'<h4>{r.away_team} {int(r.away_score)} at {r.home_team} {int(r.home_score)}</h4><p class="note">{(win + " won by " + str(marg)) if win else "Tie"}. Cover: {cover or "–"} · {ou}{"" if pd.isna(r.total_line) else " " + format(r.total_line, "g")}.</p>'
+                         f'{top}<p class="note">Each team\'s passer, two leading rushers and three leading receivers, from nflverse player stats.</p></dialog>')
+        else:
+            cells.append(f'<div class="h2c">{inner}</div>')
     summ = f"{a} {wins[a]} – {wins[h]} {h} in the last {len(x)} meetings"
     return f'<div class="h2">{"".join(cells)}</div>', summ
 

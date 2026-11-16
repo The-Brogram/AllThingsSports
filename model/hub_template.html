@@ -632,6 +632,8 @@ $('#menu').onclick=()=>{document.body.classList.add('mm');menu(!document.body.cl
 addEventListener('keydown',e=>{if(e.key==='Escape')menu(false)});
 addEventListener('hashchange',route);
 /* live scores and finals from scores.json (written every few minutes by cloud_scores.py on GitHub); the file is absent on other hosts, which is fine */
+/* always check with the server for a newer copy of the hub's own files, so a browser never shows a stale Game Book or slate */
+const _fetch=window.fetch.bind(window);window.fetch=(u,o)=>_fetch(u,typeof u==='string'&&!/^https?:/i.test(u)?{cache:'no-cache',...(o||{})}:o);
 let SCORES=null,REV=null,NFLREV=null;
 fetch('nflrev.json').then(r=>r.ok?r.json():null).then(j=>{if(j){NFLREV=j;route()}}).catch(()=>{});
 fetch('reviews.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(j){REV=j;route()}}).catch(()=>{});
@@ -840,6 +842,8 @@ function wire(r){const T=[...r.querySelectorAll('.gt')],P=[...r.querySelectorAll
   const s=id=>{P.forEach(p=>p.hidden=p.id!==id);T.forEach(b=>b.setAttribute('aria-selected',b.dataset.p===id))};T.forEach(b=>b.onclick=()=>s(b.dataset.p));if(T.length)s(T[0].dataset.p);
   P.forEach(p=>{const S=[...p.querySelectorAll('.sb')],U=[...p.querySelectorAll('.sub')];if(!S.length)return;const f=id=>{U.forEach(u=>u.hidden=u.id!==id);S.forEach(b=>b.setAttribute('aria-selected',b.dataset.s===id))};S.forEach(b=>b.onclick=()=>f(b.dataset.s));f(S[0].dataset.s)});
   r.querySelectorAll('[data-tab]').forEach(a=>a.onclick=()=>{s(a.dataset.tab);const b=a.dataset.sub&&r.querySelector('.sb[data-s="'+a.dataset.sub+'"]');if(b)b.click();const g=r.querySelector('.gtabs');if(g)g.scrollIntoView({block:'start'})});
+  r.querySelectorAll('[data-dlg]').forEach(b=>b.onclick=()=>{const d=r.getElementById?r.getElementById(b.dataset.dlg):r.querySelector('[id="'+b.dataset.dlg+'"]');if(d)d.showModal()});
+  r.querySelectorAll('dialog.h2d').forEach(d=>{d.onclick=e=>{if(e.target===d)d.close()};const x=d.querySelector('[data-close]');if(x)x.onclick=()=>d.close()});
   r.querySelectorAll('select[data-win]').forEach(x=>{const box=x.closest('.mblock'),f=()=>box.querySelectorAll('[data-w]').forEach(d=>d.hidden=d.dataset.w!==x.value);x.onchange=f;f()});
   r.querySelectorAll('.om').forEach(o=>{const B=[...o.querySelectorAll('[data-om]')],f=k=>{o.querySelectorAll('[data-omv]').forEach(d=>d.hidden=d.dataset.omv!==k);B.forEach(b=>b.setAttribute('aria-pressed',b.dataset.om===k))};B.forEach(b=>b.onclick=()=>f(b.dataset.om));if(B.length)f('sp')})}
 function toggle(b){
