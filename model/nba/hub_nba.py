@@ -423,7 +423,7 @@ def travel(tn):
 
 def old_games():
     """Final scores from the three seasons before our own data starts, from ESPN team schedules (fetched once, then cached)."""
-    f = f"{D}/h2h_old.json"
+    f = f"{D}/h2h_old2.json"  # v2 keeps ESPN's game id, so a past meeting's box score can be looked up
     if os.path.exists(f):
         return json.load(open(f))
     import subprocess
@@ -450,13 +450,59 @@ def old_games():
                 t = {x["homeAway"]: x for x in c["competitors"]}
                 sc = lambda x: (x.get("score") or {}).get("value") if isinstance(x.get("score"), dict) else x.get("score")
                 try:
-                    seen[e["id"]] = [e["date"][:10], t["home"]["team"]["abbreviation"], t["away"]["team"]["abbreviation"], int(float(sc(t["home"]))), int(float(sc(t["away"])))]
+                    seen[e["id"]] = [e["date"][:10], t["home"]["team"]["abbreviation"], t["away"]["team"]["abbreviation"], int(float(sc(t["home"]))), int(float(sc(t["away"]))), str(e["id"])]
                 except (KeyError, TypeError, ValueError):
                     continue
     out = sorted(seen.values())
     if len(out) > 2000:  # only cache a complete pull
         json.dump(out, open(f, "w"), separators=(",", ":"))
     return out
+
+
+def top_old(gid):
+    """Top performers of a meeting older than our box scores, from ESPN's game summary (fetched once per game, kept in data/h2h_top.json)."""
+    import subprocess
+    f = f"{D}/h2h_top.json"
+    try:
+        C = json.load(open(f))
+    except (OSError, ValueError):
+        C = {}
+    if gid in C:
+        return C[gid]
+    r = subprocess.run(["curl", "-s", "--max-time", "40", f"https://site.api.espn.com/apis/site/v2/sports/basketball/nba/summary?event={gid}"], capture_output=True, text=True)
+    try:
+        box = json.loads(r.stdout).get("boxscore", {}).get("players", [])
+    except ValueError:
+        return None
+    out = {}
+    for t in box:
+        st = (t.get("statistics") or [{}])[0]
+        L = {k: i for i, k in enumerate(st.get("labels") or [])}
+        if not {"MIN", "PTS", "REB", "AST"} <= set(L):
+            continue
+        rows = []
+        for a in st.get("athletes") or []:
+            v = a.get("stats") or []
+            if a.get("didNotPlay") or len(v) < len(L):
+                continue
+            num = lambda k: int(float(v[L[k]])) if str(v[L[k]]).replace(".", "").replace("-", "").isdigit() else 0
+            rows.append([a["athlete"]["displayName"], num("MIN"), num("PTS"), num("REB"), num("AST"), v[L["FG"]] if "FG" in L else "", v[L["3PT"]] if "3PT" in L else ""])
+        out[t["team"]["abbreviation"]] = sorted(rows, key=lambda x: -(x[2] + x[3] + x[4]))[:5]
+    if len(out) == 2:  # only keep a complete box score
+        C[gid] = out
+        json.dump(C, open(f, "w"), separators=(",", ":"))
+        return out
+    return None
+
+
+def top_ours(p, gid):
+    """Top performers of a meeting we have the box score for: each team's five best by points + rebounds + assists."""
+    x = p[p.game_id == gid]
+    out = {}
+    for t, y in x.groupby("team"):
+        y = y.assign(pra=y.pts + y.reb + y.ast).sort_values("pra", ascending=False).head(5)
+        out[t] = [[r["name"], int(r["min"]), int(r.pts), int(r.reb), int(r.ast), f"{int(r.fgm)}-{int(r.fga)}", f"{int(r.fg3)}-{int(r.fg3a)}"] for _, r in y.iterrows()]
+    return out if len(out) == 2 else None
 
 
 def matchup_history(tn):
@@ -467,7 +513,7 @@ def matchup_history(tn):
     d = M.load()
     g = d["games"]
     g = g[g.completed & g.hs.notna()]
-    rows = [[r.date_et, r.home, r.away, int(r.hs), int(r["as"]), r.game_id] for _, r in g.iterrows()] + [x + [None] for x in old_games()]
+    rows = [[r.date_et, r.home, r.away, int(r.hs), int(r["as"]), r.game_id, None] for _, r in g.iterrows()] + [x[:5] + [None, x[5] if len(x) > 5 else None] for x in old_games()]
     p = d["players"]
     p = p[p["min"] > 0]
     seas0 = p[p.season == p.season.max()].date_et.min()
@@ -475,7 +521,13 @@ def matchup_history(tn):
     for gm in tn["games"]:
         H, A = gm["home"], gm["away"]
         h2h = sorted([x for x in rows if {x[1], x[2]} == {H, A} and x[0] < tn["date"]], key=lambda x: x[0], reverse=True)  # meetings before this slate
-        gm["h2h"] = [x[:5] for x in h2h[:10]]
+        gm["h2h"] = []
+        for x in h2h[:10]:  # the sixth item is the meeting's top performers (None when no box score could be found)
+            try:
+                top = top_ours(p, x[5]) if x[5] else (top_old(x[6]) if x[6] else None)
+            except Exception:  # noqa: BLE001  a box score is an extra
+                top = None
+            gm["h2h"].append(x[:5] + [top])
         last = next((x for x in h2h if x[5]), None)
         if not last:
             gm["chg"] = None
