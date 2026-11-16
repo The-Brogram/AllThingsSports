@@ -1,6 +1,6 @@
-football run Sun Nov 15 2026 04:16 PM ET: nfl-odds (schedule 45 20 * * 0)
+football run Sun Nov 15 2026 09:20 PM ET: nfl-odds (schedule 5 1 * * 1)
 == nfl-odds
-[odds] FAILED in 13s
+[odds] FAILED in 8s
     Traceback (most recent call last):
       File "/home/runner/work/AllThingsSports/AllThingsSports/model/odds.py", line 97, in <module>
         snapshot()
