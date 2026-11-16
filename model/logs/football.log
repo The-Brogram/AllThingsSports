@@ -1,15 +1,36 @@
-football run Sun Nov 15 2026 09:20 PM ET: nfl-odds (schedule 5 1 * * 1)
-== nfl-odds
-[odds] FAILED in 8s
-    Traceback (most recent call last):
-      File "/home/runner/work/AllThingsSports/AllThingsSports/model/odds.py", line 97, in <module>
-        snapshot()
-        ~~~~~~~~^^
-      File "/home/runner/work/AllThingsSports/AllThingsSports/model/odds.py", line 49, in snapshot
-        df = pd.DataFrame(rows(now))
-                          ~~~~^^^^^
-      File "/home/runner/work/AllThingsSports/AllThingsSports/model/odds.py", line 41, in rows
-        aid = int(re.search(r"athletes/(\d+)", r["athlete"]["$ref"]).group(1))
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    AttributeError: 'NoneType' object has no attribute 'group'
-    odds.py failed, so later steps were not run.
+football run Mon Nov 16 2026 11:10 AM ET: nfl-review (schedule 15 14 * * 1,2)
+== nfl-review
+[review] FAILED in 2s
+    sync: no site repository
+    -> fetch_data.py results
+       done in 1s
+    
+    No finished slate with saved forecasts to review.
+nothing to review (or stats not posted): refreshing the hub instead
+[hub refresh] ok in 46s
+    Players: 1057 offensive players, 25217 games, 1.84 MB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/players.json
+    WR/CB: week 10, 14 games, 159 receivers -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/wrcb.json
+    Team vs position: 2026 thru wk 9, 2025 thru wk 18 -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/teampos.json
+    NFL reviews: 149 of 149 finished games (0 fetched) -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/nflrev.json
+    Fantasy: 2026 week 10, 1 slate(s), 223 players, 0.87 MB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/fantasy.json
+    CFB leaders: 129 players, 137 FBS defenses, through week 11 -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/cfbl.json 127 KB
+    CFB: week 11 current, 487 in-scope games across 14 weeks, 50 with our pick, 186 teams, 244 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/cfb.json
+    Hub: Week 10 is current. 149 final, 0 with a Game Book, 14 with lines, 109 early. 9 reports. 465 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/index.html
+    Data freshness NFL: OK - games final through week 10; player stats through week 10; weekly rosters through week 10
+    Data freshness CFB: OK - games final through week 11; player stats through week 11
+    Data freshness NBA: OK - games final through 2026-11-15; 197/197 with box scores; 197/197 with shot charts
+       done in 45s
+[checkpoint] ok in 1s
+    Most likely tier (highest 70%+ line per player): 313 calls, predicted 75.7%, hit 76.7% (±3.9%, 90%).
+    
+    Closing line value, first-run picks (positive = market moved toward us):
+                    n   mean  share_positive
+    kind flagged                            
+    game False      9 -0.108           0.333
+         True      19 -0.104           0.158
+    prop False    163 -0.325           0.227
+         True     172 -0.012           0.256
+    
+    Value-tier props: mean CLV -0.33 on 163 picks, 23% moved our way. That does not yet support trusting the Value tier.
+       done in 1s
+hub copied to the site
