@@ -117,7 +117,8 @@ on:
     # NFL (times are UTC; the comment gives Eastern winter time)
     - cron: "15 14 * * 1,2"   # Mon, Tue 9:15 AM: review finished slates
     - cron: "15 15 * * 3"     # Wed 10:15 AM: hub refresh
-    - cron: "30 0 * * 5,2"    # Thu, Mon 7:30 PM: tonight's game
+    - cron: "55 13 * * 1"     # Mon 8:55 AM: first build of tonight's Monday game (ready by about 9)
+    - cron: "30 0 * * 5,2"    # Thu, Mon 7:30 PM: tonight's game (Monday: rerun with inactives, news and line moves)
     - cron: "20 15 * * 5"     # Fri 10:20 AM: first run of the Sunday slate
     - cron: "30 13 * * 0"     # Sun 8:30 AM: Sunday slate again
     - cron: "45 16 * * 0"     # Sun 11:45 AM: after inactives

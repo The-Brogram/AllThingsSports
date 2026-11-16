@@ -109,3 +109,6 @@ is skipped for a week already forecast when its simulation cache is not on GitHu
 The score checker runs only in game hours, every 15 minutes (nightly 7 PM to 2 AM ET, weekend afternoons, two weekday catch-ups).
 
 NFL post-game reviews: `nfl_reviews.py` builds `nflrev.json` for every finished game (kept in `output/nfl_reviews.json`, fetched once each).
+
+Monday night game (since Nov 16, 2026): GitHub builds the Game Book Monday at about 9 AM ET (cron `55 13 * * 1`) and again at 7:30 PM with
+inactives, news and line moves. The morning run is the first run, so its picks are the ones closing line value is measured from.

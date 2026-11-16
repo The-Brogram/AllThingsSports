@@ -19,7 +19,7 @@ from datetime import datetime, timedelta, timezone
 
 SITE = os.path.dirname(os.path.abspath(__file__))
 M = os.path.join(SITE, "model")
-CRON = {"15 14 * * 1,2": "nfl-review", "15 15 * * 3": "nfl-hub", "30 0 * * 5,2": "nfl-today", "20 15 * * 5": "nfl-next", "30 13 * * 0": "nfl-today",
+CRON = {"15 14 * * 1,2": "nfl-review", "15 15 * * 3": "nfl-hub", "55 13 * * 1": "nfl-today", "30 0 * * 5,2": "nfl-today", "20 15 * * 5": "nfl-next", "30 13 * * 0": "nfl-today",
         "45 16 * * 0": "nfl-today", "45 20 * * 0": "nfl-odds", "5 1 * * 1": "nfl-odds", "15 16 * * 4": "cfb-run", "10 14 * * 6": "cfb-run", "10 15 * * 0": "cfb-review"}
 LOG = []
 LAST = [""]
