@@ -1531,7 +1531,7 @@ function nbh2h(g,i){const x=g.h2h[i],T=x[5];if(!T)return;let sh=$('#nbsheet');if
    <p class="note">Each team's five best by points + rebounds + assists. Box scores from ESPN.</p></div>`;
   sh.hidden=false;document.body.classList.add('noscroll');sh.scrollTop=0;sh.querySelector('.nbsh').focus()}
 function nbclose(){const sh=$('#nbsheet');if(sh)sh.hidden=true;document.body.classList.remove('noscroll')}
-addEventListener('keydown',e=>{if(e.key==='Escape')nbclose()});
+addEventListener('keydown',e=>{if(e.key==='Escape')nbclose()});addEventListener('hashchange',()=>nbclose());
 function nbprof(){const sh=$('#nbsheet'),p=NB.tonight.players.find(x=>x.id===NPS.pid),X=NBX.p[p.id]||{log:[]},K=NBX.keys,G=NB.tonight.games.find(x=>x.id===p.g),mk=NPS.mk,L=NPS.line;
   const i=k=>K.indexOf(k),log=X.log,cs=Math.max(0,...log.map(r=>r[i('season')]));
   const ch=chance(p,mk,L),po=ch.p,S=X.dist?.[mk],mean=dmean(S),q=v=>{if(!S)return null;const k=S.findIndex(s=>s<1000*(1-v));return k<0?S.length:Math.max(k-1,0)};

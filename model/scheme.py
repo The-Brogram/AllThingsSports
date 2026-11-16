@@ -362,7 +362,7 @@ class Ctx:
         wl = h[(h[vol] >= proj_vol * .8) & (h[vol] <= proj_vol * 1.2)]
         rk = self.teams_rank["rushd" if kind == "rush" else "passd"]
         tier = lambda x: 0 if rk.get(x, 16) <= 11 else (1 if rk.get(x, 16) <= 21 else 2)
-        tv = cur[[tier(o) == tier(opp) for o in cur.opponent_team]]
+        tv = cur[np.array([tier(o) == tier(opp) for o in cur.opponent_team], dtype=bool)]  # an array, so a player with no games this season gives an empty frame, not zero columns
         rows = []
         for k in ths:
             f = lambda d: (int((d[col] >= k).sum()), len(d))

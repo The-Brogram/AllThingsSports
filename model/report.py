@@ -1043,7 +1043,7 @@ def render_game(gm, c, R, cal):
     model = sec("Executive summary", PRED, A) + sec("Final ranked recommendations", PRED, I) + sec("Scenarios", PRED, f"<p><b>A, {h} wins by 8+:</b> {pc(probs[0])}. <b>B, {a} wins by 8+:</b> {pc(probs[1])}. <b>C, one-score game:</b> {pc(probs[2])}.</p>" + sc_v + sc_t)
 
     tabs = [("o", "Overview", overview),
-            ("m", "Matchup", subtabs(gid, "m", [("Offense & Defense", offdef), ("O-Line / D-Line", lnt), ("Special Teams", stt), ("Splits & history", splits + h2b + l10)])),
+            ("m", "Matchup", subtabs(gid, "m", [("Offense & Defense", offdef), ("O-Line / D-Line", lnt), ("Special Teams", stt), ("Splits", splits), ("History", h2b + l10)])),
             ("pl", "Players", subtabs(gid, "pl", [("Lineups", lineups), ("Injuries", injuries)])),
             ("p", "Picks", subtabs(gid, "p", [("Picks", picks), ("Touchdowns", tds), ("All props", allprops)])),
             ("md", "Model", subtabs(gid, "md", [("Summary", model), ("Odds & lines", odds)]))]
