@@ -1,0 +1,75 @@
+{
+ "date": "20261116",
+ "week": 10,
+ "built": "2026-11-16 16:21",
+ "games": [
+  {
+   "id": "lac-bal",
+   "a": "LAC",
+   "h": "BAL",
+   "win": "BAL",
+   "pw": 0.63655,
+   "pa": 18.041806394825503,
+   "ph": 22.196680613741282,
+   "ma": 18.711960824707738,
+   "mh": 21.252703013865567,
+   "line": "BAL -4.5",
+   "total": 39.5,
+   "likely": [
+    {
+     "player": "Quentin Johnston",
+     "team": "LAC",
+     "outcome": "10+ receiving yds",
+     "prob": 0.7582663317440658
+    },
+    {
+     "player": "Tre Harris",
+     "team": "LAC",
+     "outcome": "15+ receiving yds",
+     "prob": 0.7565032061820521
+    },
+    {
+     "player": "Justin Herbert",
+     "team": "LAC",
+     "outcome": "160+ passing yds",
+     "prob": 0.7528355355637394
+    },
+    {
+     "player": "Mark Andrews",
+     "team": "BAL",
+     "outcome": "10+ receiving yds",
+     "prob": 0.7481193538732568
+    },
+    {
+     "player": "Zay Flowers",
+     "team": "BAL",
+     "outcome": "40+ receiving yds",
+     "prob": 0.7152321325265653
+    },
+    {
+     "player": "Derrick Henry",
+     "team": "BAL",
+     "outcome": "50+ rushing yds",
+     "prob": 0.7108546473320253
+    }
+   ],
+   "td": [
+    {
+     "player": "Derrick Henry",
+     "team": "BAL",
+     "prob": 0.5942178225728663
+    },
+    {
+     "player": "Omarion Hampton",
+     "team": "LAC",
+     "prob": 0.3293018810601245
+    },
+    {
+     "player": "Zay Flowers",
+     "team": "BAL",
+     "prob": 0.2542599573432863
+    }
+   ]
+  }
+ ]
+}

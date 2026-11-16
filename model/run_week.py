@@ -108,7 +108,10 @@ def props():
             n = r["type"]["name"]
             if "athlete" not in r:
                 continue
-            aid = int(re.search(r"athletes/(\d+)", r["athlete"]["$ref"]).group(1))
+            m_ = re.search(r"athletes/(\d+)", r["athlete"].get("$ref") or "")
+            if not m_:  # a prop with no player link (ESPN lists team sacks under athlete -1): not a player line
+                continue
+            aid = int(m_.group(1))
             tgt = r.get("current", {}).get("target", {}).get("value")
             rows.setdefault((eid, aid, n), set()).add(tgt)
     return rows

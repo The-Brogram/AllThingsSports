@@ -1,0 +1,15 @@
+date,event,game,kind,player,athlete,market,side,line,price,prob,edge,flagged
+20261116,401873065,LAC@BAL,prop,Ja'Kobi Lane,4870847.0,Total Receiving Yards (incl. overtime),under,20.5,,0.5899138187847538,0.06610429497522996,True
+20261116,401873065,LAC@BAL,prop,Derrick Henry,3043078.0,Total Rushing Yards (incl. overtime),under,82.5,,0.574521922476765,0.0507123986672412,False
+20261116,401873065,LAC@BAL,prop,Tre Harris,4686612.0,Total Receiving Yards (incl. overtime),under,41.5,,0.5689432411199437,0.04513371731041982,True
+20261116,401873065,LAC@BAL,prop,Zay Flowers,4429615.0,Total Receiving Yards (incl. overtime),under,75.5,,0.5648123822189601,0.041002858409436294,False
+20261116,401873065,LAC@BAL,prop,Justin Herbert,4038941.0,Total Rushing Yards (incl. overtime),under,20.5,,0.5632183533125226,0.03940882950299873,True
+20261116,401873065,LAC@BAL,prop,Quentin Johnston,4429025.0,Total Receiving Yards (incl. overtime),under,33.5,,0.5524785227563784,0.028668998946854596,False
+20261116,401873065,LAC@BAL,prop,Rashod Bateman,4360939.0,Total Receiving Yards (incl. overtime),under,23.5,,0.5410401061926127,0.017230582383088833,False
+20261116,401873065,LAC@BAL,prop,Kimani Vidal,4430968.0,Total Rushing Yards (incl. overtime),under,21.5,,0.5408105075995379,0.017000983790014024,True
+20261116,401873065,LAC@BAL,prop,Mark Andrews,3116365.0,Total Receiving Yards (incl. overtime),under,24.5,,0.5331124993632713,0.009302975553747483,True
+20261116,401873065,LAC@BAL,prop,KeAndre Lambert-Smith,4430870.0,Total Receiving Yards (incl. overtime),under,17.5,,0.5206166563347275,-0.0031928674747963015,True
+20261116,401873065,LAC@BAL,prop,Charlie Kolar,4241263.0,Total Receiving Yards (incl. overtime),under,15.5,,0.5077813410361667,-0.016028182773357158,False
+20261116,401873065,LAC@BAL,prop,Justin Herbert,4038941.0,Total Passing Yards (incl. overtime),over,199.5,,0.5035718113709471,-0.02023771243857675,False
+20261116,401873065,LAC@BAL,prop,Omarion Hampton,4685382.0,Total Rushing Yards (incl. overtime),over,34.5,,0.5016229876168596,-0.022186536192664197,True
+20261116,401873065,LAC@BAL,game,,,LAC moneyline,,,185.0,,0.035832500000000156,False

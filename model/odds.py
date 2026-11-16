@@ -38,7 +38,10 @@ def rows(now):
             for r in json.load(open(f)).get("items", []):
                 if "athlete" not in r:
                     continue
-                aid = int(re.search(r"athletes/(\d+)", r["athlete"]["$ref"]).group(1))
+                m = re.search(r"athletes/(\d+)", r["athlete"].get("$ref") or "")
+                if not m:  # ESPN sometimes lists a prop with no player link (seen Nov 15, 2026): skip it rather than lose the whole snapshot
+                    continue
+                aid = int(m.group(1))
                 out.append(dict(base, market=r["type"]["name"], side="", athlete=aid, line=num(r.get("current", {}).get("target", {}).get("value")), price=None,
                                 open_line=num(r.get("open", {}).get("target", {}).get("value")), open_price=None, updated=r.get("lastUpdated")))
     return out
