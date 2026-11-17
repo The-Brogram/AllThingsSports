@@ -227,6 +227,24 @@
      "00-0041106"
     ]
    }
+  },
+  "20261116": {
+   "notes": {
+    "BAL": "Jacoby Brissett, acquired from Arizona on Nov 6, makes his first Ravens start; coach Jesse Minter said 'I expect (Brissett) to be our starter' (ESPN injury page, citing Jeff Zrebiec, Nov 9), and ESPN's inactives item lists him as the starter with Joe Fagnano the backup and Kedon Slovis the inactive emergency third QB (ESPN, Nov 16, about 7:10 PM ET). The depth chart already lists Brissett first, but the model has no Baltimore history for him and projects Joe Fagnano as the passer, so Baltimore passing lines are not usable, any Fagnano prop is void, and Baltimore receiving lines are low confidence. Lamar Jackson (thumb, IR, out 6-10 weeks per Minter, Nov 13) and Tyler Huntley (toe, IR) are out. Inactives (ESPN, Nov 16): WR Elijah Sarratt, OT Emery Jones Jr., S Jaylinn Hawkins (knee), DT Aeneas Peebles, CB Chandler Rivers, QB Kedon Slovis. RB Adam Randall (neck) was not activated from IR. WR Chris Moore and TE Nick Vannett were elevated from the practice squad. Rashod Bateman (calf) practiced in full Friday and has no designation.",
+    "LAC": "Inactives (ESPN, Nov 16, about 7 PM ET): Ladd McConkey (back) is INACTIVE for a second straight game and Brenen Thompson (hamstring) is INACTIVE, so any McConkey or Thompson prop is void; also out are LB Bud Dupree, DT Justin Eboigbe (ankle), CB Isas Waxter (ankle) and S Kendall Williamson (calf). ESPN lists Quentin Johnston, Tre Harris and KeAndre Lambert-Smith as the starting receivers with Derius Davis fourth. TE David Njoku (fibula) is ACTIVE, his first game since Week 2 (ESPN, citing Omar Navarro of Chargers.com, Nov 16); his role is uncertain and the roster file still lists him on reserve, so the model gives him no targets and Charlie Kolar and Oronde Gadsden receiving lines are low confidence. Justin Herbert (left middle finger, imaging negative) has no injury designation and starts (ESPN, Nov 12). LG Kayode Awosika (fibula) is active for the first time since Week 2; G Branson Taylor (ankle) went on IR Monday and OT Trey Pipkins (knee, IR) does not play. Keaton Mitchell (hip) has no designation; ESPN describes an unchanged three-man backfield of Omarion Hampton, Kimani Vidal and Mitchell, so rushing lines are not held."
+   },
+   "hold_rushing": [],
+   "out": {
+    "BAL": [
+     "00-0034796",
+     "00-0035993",
+     "00-0040876"
+    ],
+    "LAC": [
+     "00-0039915",
+     "00-0041550"
+    ]
+   }
   }
  }
 }
