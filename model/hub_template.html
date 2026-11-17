@@ -586,7 +586,7 @@ body.noscroll{overflow:hidden}
 .hit{color:var(--grn);font-weight:700}.miss{color:var(--red);font-weight:700}
 @media(max-width:720px){.uduo{grid-template-columns:1fr}.uteams{grid-template-columns:1fr 1fr}.uxg{grid-column:1/-1;grid-row:2}.urow{grid-template-columns:1fr 1fr;gap:2px 10px;padding:8px 12px}.urow .l{grid-column:1/-1;grid-row:1}.umini{grid-template-columns:1fr}.us .v{min-width:40px;font-size:13px}}
 .ucv{--ug:#16a34a;--ur:#dc2626;--uy:#eab308}
-.ucl-rows{display:grid;gap:8px}
+.ucl-rows{display:grid;gap:8px;margin-top:12px}.udtabs button small{font:500 11.5px var(--mono);color:var(--mut);margin-left:4px}
 .ucr{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr) minmax(0,1fr);gap:16px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:12px 18px;color:var(--fg);text-decoration:none;background:var(--bg)}
 .ucr:hover{background:var(--pan);border-color:var(--line2)}
 .ucr .ut{display:grid;gap:2px;min-width:0}.ucr .ut.a{text-align:right}
@@ -723,7 +723,7 @@ function show(v){const was=VIEWS.find(x=>!$('#v-'+x).hidden);VIEWS.forEach(x=>$(
   document.querySelectorAll('#side [data-v]').forEach(b=>{b.setAttribute('aria-pressed',b.dataset.v===v);if(b.dataset.v===v){const d=b.closest('details');if(d&&!d.open)d.open=true}});
   $('.top').hidden=v!=='weeks';$('#mtitle').textContent=v==='cash'?'Cash Center':(v.startsWith('cfb')?'College Football · ':v.startsWith('nba')?'NBA · ':v.startsWith('ucl')?'Champions League · ':'NFL · ')+VNAME[v];menu(false);if(was&&was!==v)scrollTo(0,0)}
 /* ---- Champions League: ucl.json (ESPN season data, refreshed on every hub build, plus the soccer model's analysed matchdays) and uclh.json (every UCL result since 2003) ---- */
-let UCL=null,UCLP=null,UCLH=null,UCLHP=null,UTAB='over';
+let UCL=null,UCLP=null,UCLH=null,UCLHP=null,UTAB='over';const UDAY={};
 function uclload(box,fn){if(UCL)return fn();if(!box.innerHTML)box.innerHTML='<p class="note">Loading…</p>';
   UCLP=UCLP||fetch('ucl.json').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()});
   UCLP.then(j=>{if(!UCL){UCL=j;UCL.byId={};j.fx.forEach(f=>UCL.byId[f.id]=f);UCL.mod={};(j.model||[]).forEach(d=>d.matches.forEach(m=>UCL.mod[m.id]={d,m}));UCL.rank={};j.table.forEach(r=>UCL.rank[r.id]=r)}fn()})
@@ -797,7 +797,7 @@ function uclhome(){const box=$('#v-ucl');box.classList.add('ucv');uclload(box,()
 function uclmd(k){const box=$('#v-ucl-md');box.classList.add('ucv');uclload(box,()=>{
   const F=UCL.fx,keys=[...new Set(F.map(ukey))],nx=F.find(f=>!f.fin);if(!keys.includes(k))k=nx?ukey(nx):keys[keys.length-1];
   const L=F.filter(f=>ukey(f)===k),i=keys.indexOf(k),done=L.filter(f=>f.fin),hit=done.filter(f=>{const M=UCL.mod[f.id];return M&&ubest(M.m.p)===uout(f)}).length,nm=done.filter(f=>UCL.mod[f.id]).length;
-  const days=[...new Set(L.map(f=>f.day))],pk=(UCL.model||[]).filter(d=>days.includes(d.day)&&d.pick);
+  const days=[...new Set(L.map(f=>f.day))];let sel=UDAY[k]&&days.includes(UDAY[k])?UDAY[k]:(days.find(d=>L.some(f=>f.day===d&&!f.fin))||days[0]);const pk=(UCL.model||[]).filter(d=>days.includes(d.day)&&d.pick);
   const card=f=>{const p=uprob(f),M=UCL.mod[f.id],pick=M&&M.d.pick&&M.d.pick.eid===f.id,o=f.odds,pl=f.st!=='pre',r=pl?uout(f):null;
     const res=side=>!f.fin?'':r==='D'?'rd':(r===side?'rw':'rl'),tag=side=>!f.fin?'':`<i class="urt ${res(side)}">${r==='D'?'D':r===side?'W':'L'}</i>`;
     const tm=(t,side)=>{const R=UCL.rank[t.id];return`<div class="ut ${side==='H'?'h':'a'} ${res(side)}"><b>${side==='A'?tag(side):''}${esc(ush(t.name))}${side==='H'?tag(side):''}</b><small>${R?`${uord(R.rank)} · ${R.pts} pts`:''}</small></div>`};
@@ -812,8 +812,10 @@ function uclmd(k){const box=$('#v-ucl-md');box.classList.add('ucv');uclload(box,
    `<div class="chips udays" role="group" aria-label="Matchday">${keys.map(x=>{const f0=F.find(f=>ukey(f)===x);return`<a class="chip" href="#ucl-md-${x}" aria-pressed="${x===k}" style="text-decoration:none">${f0.md?'MD'+f0.md:esc(f0.stage)}</a>`}).join('')}</div>
    <div class="unav">${i>0?`<a class="lk" href="#ucl-md-${keys[i-1]}">← ${esc(F.find(f=>ukey(f)===keys[i-1]).stage)}</a>`:'<span></span>'}${i<keys.length-1?`<a class="lk" href="#ucl-md-${keys[i+1]}">${esc(F.find(f=>ukey(f)===keys[i+1]).stage)} →</a>`:''}</div>`+
    pk.map(d=>{const f=UCL.byId[d.pick.eid],M=UCL.mod[d.pick.eid],g=M.m.dog,o=f&&f.fin?uout(f):null;return`<div class="upick"><small>Favorite underdog · ${esc(udays(d.day))}</small><b>${esc(d.pick.team)}<span>${pc(g.win)} to win · ${pc(g.dc)} win or draw · DraftKings ${esc(g.price)}</span></b><p>${esc(d.pick.why)}</p>${o?`<p class="ufin">Final ${esc(ush(f.h.name))} ${f.hs}–${f.as} ${esc(ush(f.a.name))} · ${o===g.side?'<span class="w">won</span>':o==='D'?'drew (win or draw <span class="w">hit</span>)':'<span class="l">lost</span>'}</p>`:''}<a class="lk" href="#ucl-match-${d.pick.eid}">Open the match →</a></div>`}).join('')+
-   days.map(d=>`<h3 class="ush">${esc(uday(d))}</h3><div class="ucl-rows">${L.filter(f=>f.day===d).map(card).join('')}</div>`).join('')+
-   `<p class="note" style="margin-top:16px">${L.some(f=>UCL.mod[f.id])?'Chances come from my model (blended with no-vig DraftKings and Bet365 prices) where a match was analysed; otherwise ':'Chances '}${L.some(f=>!UCL.mod[f.id]&&f.odds)?'are DraftKings prices with the bookmaker margin removed (the market, not my model).':'appear once DraftKings posts prices.'} The model runs on this computer on a matchday. Estimates, not certainties.</p>`})}
+   `<div class="utabs udtabs" role="tablist" aria-label="Day">${days.map(d=>{const n=L.filter(f=>f.day===d),dn=n.filter(f=>f.fin).length;return`<button role="tab" data-ud="${d}" aria-selected="${d===sel}">${esc(new Date(d+'T12:00:00').toLocaleDateString('en-US',{weekday:'long'}))} <small>${esc(new Date(d+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric'}))} · ${n.length} game${n.length===1?'':'s'}${dn===n.length?' · final':''}</small></button>`}).join('')}</div><div id="udpane"></div>`+
+   `<p class="note" style="margin-top:16px">${L.some(f=>UCL.mod[f.id])?'Chances come from my model (blended with no-vig DraftKings and Bet365 prices) where a match was analysed; otherwise ':'Chances '}${L.some(f=>!UCL.mod[f.id]&&f.odds)?'are DraftKings prices with the bookmaker margin removed (the market, not my model).':'appear once DraftKings posts prices.'} The model runs on this computer on a matchday. Estimates, not certainties.</p>`;
+  const dd=()=>{$('#udpane').innerHTML=`<div class="ucl-rows">${L.filter(f=>f.day===sel).map(card).join('')}</div>`};
+  box.querySelectorAll('[data-ud]').forEach(b=>b.onclick=()=>{sel=UDAY[k]=b.dataset.ud;box.querySelectorAll('[data-ud]').forEach(x=>x.setAttribute('aria-selected',x===b));dd()});dd()})}
 
 /* ---------- one match, in tabs ---------- */
 const UTABS=[['over','Overview'],['side','Side by side'],['hist','History'],['ha','Home vs away'],['play','Players'],['notes','Scouting notes']];
