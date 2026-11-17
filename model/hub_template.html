@@ -585,6 +585,23 @@ body.noscroll{overflow:hidden}
 .ustat{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:10px;margin:14px 0}.ustat>div{border:1px solid var(--line);border-radius:12px;padding:12px 14px;min-width:0}.ustat b{display:block;font:800 30px/1 var(--disp)}.ustat span{font:500 12px var(--mono);color:var(--mut)}.ustat small{display:block;font-size:12.5px;color:var(--mut);margin-top:6px}
 .hit{color:var(--grn);font-weight:700}.miss{color:var(--red);font-weight:700}
 @media(max-width:720px){.uduo{grid-template-columns:1fr}.uteams{grid-template-columns:1fr 1fr}.uxg{grid-column:1/-1;grid-row:2}.urow{grid-template-columns:1fr 1fr;gap:2px 10px;padding:8px 12px}.urow .l{grid-column:1/-1;grid-row:1}.umini{grid-template-columns:1fr}.us .v{min-width:40px;font-size:13px}}
+.ucv{--ug:#16a34a;--ur:#dc2626;--uy:#eab308}
+.ucl-rows{display:grid;gap:8px}
+.ucr{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr) minmax(0,1fr);gap:16px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:12px 18px;color:var(--fg);text-decoration:none;background:var(--bg)}
+.ucr:hover{background:var(--pan);border-color:var(--line2)}
+.ucr .ut{display:grid;gap:2px;min-width:0}.ucr .ut.a{text-align:right}
+.ucr .ut b{font:800 22px/1.1 var(--disp);font-stretch:112%;text-transform:uppercase;overflow-wrap:anywhere}
+.ucr .ut small{font:500 12px var(--mono);color:var(--mut)}
+.ucr .ut b{display:flex;align-items:center;gap:8px;min-width:0}.ucr .ut.a b{justify-content:flex-end}.ucr .ut .urt{margin:0;flex:none;vertical-align:0}.ucr .ut.rw b{color:var(--ug)}.ucr .ut.rl b{color:var(--mut)}.ucr .ut.rd b{color:#a16207}
+.urt{display:inline-block;font:700 11px/18px var(--mono);font-style:normal;width:18px;text-align:center;border-radius:4px;color:#fff;vertical-align:4px;margin:0 8px}
+.urt.rw{background:var(--ug)}.urt.rl{background:var(--ur)}.urt.rd{background:var(--uy);color:#3f2d00}
+.ucr .uc{display:grid;gap:6px;min-width:0}
+.ucs1{text-align:center;display:grid;gap:1px}.ucs1 b{font:800 26px/1 var(--disp)}.ucs1 b span{color:var(--dim);padding-inline:6px}.ucs1 b.t{font-size:20px}.ucs1 small{font:500 11.5px var(--mono);color:var(--mut);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ubar{display:flex;height:6px;border-radius:3px;overflow:hidden;background:var(--line)}.ubar i{display:block;height:100%}.ubar i+i{border-left:2px solid var(--bg)}
+.ubar .g{background:var(--ug)}.ubar .r{background:var(--ur)}.ubar .y{background:var(--uy)}
+.ulab{display:flex;justify-content:space-between;gap:8px;font:600 12.5px var(--mono)}.ulab .g{color:var(--ug)}.ulab .r{color:var(--ur)}.ulab .y{color:#a16207;font-weight:500}
+.ucr .ux{display:flex;flex-wrap:wrap;justify-content:center;gap:2px 12px;font:500 11.5px var(--mono);color:var(--mut)}.ucr .ux b{color:var(--fg)}.ucr .ux .pk{color:var(--pb);font-weight:700}
+@media(max-width:640px){.ucr{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px 12px;padding:12px 14px}.ucr .uc{grid-column:1/-1;grid-row:2}.ucr .ut b{font-size:16px;overflow-wrap:normal}}
 .ucv .ujump{margin-block:14px 0}
 .ucv .uteams{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}.ucv .uteams h3{font-size:clamp(24px,3.6vw,44px);overflow-wrap:anywhere}
 @media(max-width:720px){.ucv .uteams{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
@@ -781,18 +798,21 @@ function uclmd(k){const box=$('#v-ucl-md');box.classList.add('ucv');uclload(box,
   const F=UCL.fx,keys=[...new Set(F.map(ukey))],nx=F.find(f=>!f.fin);if(!keys.includes(k))k=nx?ukey(nx):keys[keys.length-1];
   const L=F.filter(f=>ukey(f)===k),i=keys.indexOf(k),done=L.filter(f=>f.fin),hit=done.filter(f=>{const M=UCL.mod[f.id];return M&&ubest(M.m.p)===uout(f)}).length,nm=done.filter(f=>UCL.mod[f.id]).length;
   const days=[...new Set(L.map(f=>f.day))],pk=(UCL.model||[]).filter(d=>days.includes(d.day)&&d.pick);
-  const card=f=>{const p=uprob(f),M=UCL.mod[f.id],b=p&&ubest(p),pick=M&&M.d.pick&&M.d.pick.eid===f.id,o=f.odds;
-    return`<a class="ucm" href="#ucl-match-${f.id}"><div class="uk"><span>${f.fin?'Final':f.st==='in'?esc(f.detail):utime(f.date)}${pick?' · <b style="color:var(--pb)">underdog pick</b>':''}</span><span>${esc(f.venue)}</span></div>
-     <div class="ut"><b>${esc(ush(f.h.name))}</b>${f.st!=='pre'?`<span class="sc">${f.hs}</span>`:p?`<span class="h">${pc(p.H)}</span>`:'<span></span>'}<b>${esc(ush(f.a.name))}</b>${f.st!=='pre'?`<span class="sc">${f.as}</span>`:p?`<span class="a">${pc(p.A)}</span>`:'<span></span>'}</div>
-     ${p?ustrip(p,f.h.name,f.a.name):''}
-     <div class="ux">${p?`<span>${p.src==='model'?'Model':'Market'} most likely <b>${esc(uwho(f,b))} ${pc(p[b])}</b></span>`:''}${M?`<span>xG <b>${ufx(M.m.home.lam)}–${ufx(M.m.away.lam)}</b></span><span>Over 2.5 <b>${pc(M.m.p.o25)}</b></span>`:''}${o&&f.st==='pre'?`<span>DraftKings <b>${esc(o.ml.join(' / '))}</b> · O/U ${esc(o.ou)}</span>`:''}${!p&&f.st==='pre'?'<span>No prices posted yet</span>':''}</div>
-     ${f.fin&&M?`<div class="ufin">Model's most likely result ${uout(f)===ubest(M.m.p)?'<span class="w">hit</span>':'<span class="l">missed</span>'}</div>`:''}</a>`};
+  const card=f=>{const p=uprob(f),M=UCL.mod[f.id],pick=M&&M.d.pick&&M.d.pick.eid===f.id,o=f.odds,pl=f.st!=='pre',r=pl?uout(f):null;
+    const res=side=>!f.fin?'':r==='D'?'rd':(r===side?'rw':'rl'),tag=side=>!f.fin?'':`<i class="urt ${res(side)}">${r==='D'?'D':r===side?'W':'L'}</i>`;
+    const tm=(t,side)=>{const R=UCL.rank[t.id];return`<div class="ut ${side==='H'?'h':'a'} ${res(side)}"><b>${side==='A'?tag(side):''}${esc(ush(t.name))}${side==='H'?tag(side):''}</b><small>${R?`${uord(R.rank)} · ${R.pts} pts`:''}</small></div>`};
+    const hf=p&&p.H>=p.A,bar=p?`<div class="ubar" role="img" aria-label="${esc(f.h.name)} ${pc(p.H)}, draw ${pc(p.D)}, ${esc(f.a.name)} ${pc(p.A)}"><i class="${hf?'g':'r'}" style="width:${p.H*100}%"></i><i class="y" style="width:${p.D*100}%"></i><i class="${hf?'r':'g'}" style="width:${p.A*100}%"></i></div>
+      <div class="ulab"><span class="${hf?'g':'r'}">${pc(p.H)}</span><span class="y">Draw ${pc(p.D)}</span><span class="${hf?'r':'g'}">${pc(p.A)}</span></div>`:'';
+    return`<a class="ucr" href="#ucl-match-${f.id}">${tm(f.h,'H')}
+     <div class="uc"><div class="ucs1">${pl?`<b>${f.hs}<span>–</span>${f.as}</b><small>${f.fin?'Final':esc(f.detail)}</small>`:`<b class="t">${utime(f.date).replace(' ET','')}</b><small>ET · ${esc(f.venue)}</small>`}</div>
+      ${bar}<div class="ux">${p?`<span>${p.src==='model'?'Model':'Market'} chances</span>`:'<span>No prices posted yet</span>'}${M?`<span>xG <b>${ufx(M.m.home.lam)}–${ufx(M.m.away.lam)}</b></span><span>Over 2.5 <b>${pc(M.m.p.o25)}</b></span>`:''}${o&&!pl?`<span>DraftKings <b>${esc(o.ml.join(' / '))}</b> · O/U ${esc(o.ou)}</span>`:''}${pick?'<span class="pk">Underdog pick</span>':''}${f.fin&&M?`<span>Model's most likely ${uout(f)===ubest(M.m.p)?'<b class="hit">hit</b>':'<b class="miss">missed</b>'}</span>`:''}</div></div>
+     ${tm(f.a,'A')}</a>`};
   box.innerHTML=`<div class="gdbar"><a class="lk" href="#ucl">← Champions League overview</a></div>`+uclhead(L.some(f=>f.md)?'League phase':'',esc(L[0].stage),
      `${days.map(uday).join(' and ')} · ${done.length} of ${L.length} played${nm?` · the model's most likely result hit in ${hit} of ${nm}`:''}`)+
    `<div class="chips udays" role="group" aria-label="Matchday">${keys.map(x=>{const f0=F.find(f=>ukey(f)===x);return`<a class="chip" href="#ucl-md-${x}" aria-pressed="${x===k}" style="text-decoration:none">${f0.md?'MD'+f0.md:esc(f0.stage)}</a>`}).join('')}</div>
    <div class="unav">${i>0?`<a class="lk" href="#ucl-md-${keys[i-1]}">← ${esc(F.find(f=>ukey(f)===keys[i-1]).stage)}</a>`:'<span></span>'}${i<keys.length-1?`<a class="lk" href="#ucl-md-${keys[i+1]}">${esc(F.find(f=>ukey(f)===keys[i+1]).stage)} →</a>`:''}</div>`+
    pk.map(d=>{const f=UCL.byId[d.pick.eid],M=UCL.mod[d.pick.eid],g=M.m.dog,o=f&&f.fin?uout(f):null;return`<div class="upick"><small>Favorite underdog · ${esc(udays(d.day))}</small><b>${esc(d.pick.team)}<span>${pc(g.win)} to win · ${pc(g.dc)} win or draw · DraftKings ${esc(g.price)}</span></b><p>${esc(d.pick.why)}</p>${o?`<p class="ufin">Final ${esc(ush(f.h.name))} ${f.hs}–${f.as} ${esc(ush(f.a.name))} · ${o===g.side?'<span class="w">won</span>':o==='D'?'drew (win or draw <span class="w">hit</span>)':'<span class="l">lost</span>'}</p>`:''}<a class="lk" href="#ucl-match-${d.pick.eid}">Open the match →</a></div>`}).join('')+
-   days.map(d=>`<h3 class="ush">${esc(uday(d))}</h3><div class="ucg">${L.filter(f=>f.day===d).map(card).join('')}</div>`).join('')+
+   days.map(d=>`<h3 class="ush">${esc(uday(d))}</h3><div class="ucl-rows">${L.filter(f=>f.day===d).map(card).join('')}</div>`).join('')+
    `<p class="note" style="margin-top:16px">${L.some(f=>UCL.mod[f.id])?'Chances come from my model (blended with no-vig DraftKings and Bet365 prices) where a match was analysed; otherwise ':'Chances '}${L.some(f=>!UCL.mod[f.id]&&f.odds)?'are DraftKings prices with the bookmaker margin removed (the market, not my model).':'appear once DraftKings posts prices.'} The model runs on this computer on a matchday. Estimates, not certainties.</p>`})}
 
 /* ---------- one match, in tabs ---------- */
