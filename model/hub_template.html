@@ -585,6 +585,34 @@ body.noscroll{overflow:hidden}
 .ustat{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:10px;margin:14px 0}.ustat>div{border:1px solid var(--line);border-radius:12px;padding:12px 14px;min-width:0}.ustat b{display:block;font:800 30px/1 var(--disp)}.ustat span{font:500 12px var(--mono);color:var(--mut)}.ustat small{display:block;font-size:12.5px;color:var(--mut);margin-top:6px}
 .hit{color:var(--grn);font-weight:700}.miss{color:var(--red);font-weight:700}
 @media(max-width:720px){.uduo{grid-template-columns:1fr}.uteams{grid-template-columns:1fr 1fr}.uxg{grid-column:1/-1;grid-row:2}.urow{grid-template-columns:1fr 1fr;gap:2px 10px;padding:8px 12px}.urow .l{grid-column:1/-1;grid-row:1}.umini{grid-template-columns:1fr}.us .v{min-width:40px;font-size:13px}}
+.ucv .ujump{margin-block:14px 0}
+.ucv .uteams{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}.ucv .uteams h3{font-size:clamp(24px,3.6vw,44px);overflow-wrap:anywhere}
+@media(max-width:720px){.ucv .uteams{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+.ucv .utb th,.ucv .utb td{text-align:left;font-family:var(--body)}.ucv .utb th{font-family:var(--mono)}.ucv .utb .n{text-align:right;font-family:var(--mono)}
+.ucv .ush{scroll-margin-top:calc(env(safe-area-inset-top,0px) + 64px)}
+.utbl tr td:first-child{box-shadow:inset 3px 0 transparent}.utbl tr.z1 td:first-child{box-shadow:inset 3px 0 var(--grn)}.utbl tr.z2 td:first-child{box-shadow:inset 3px 0 var(--pb)}.utbl tr.z3 td:first-child{box-shadow:inset 3px 0 var(--red)}
+.utbl tr.z1+tr.z2 td,.utbl tr.z2+tr.z3 td{border-top:2px solid var(--line2)}
+.uff{display:flex;gap:3px;flex-wrap:wrap}.uff .ures{width:18px;font-size:11px}
+.uzk{display:inline-block;width:10px;height:10px;border-radius:2px;margin:0 4px 0 2px;vertical-align:-1px}.uzk.z1{background:var(--grn)}.uzk.z2{background:var(--pb)}.uzk.z3{background:var(--red)}
+.uzones{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:12px;margin-top:10px}
+.uzone{border:1px solid var(--line);border-top:4px solid var(--grn);border-radius:12px;padding:12px 14px;min-width:0}.uzone.z2{border-top-color:var(--pb)}.uzone.z3{border-top-color:var(--red)}
+.uzone h4{font:800 18px var(--disp);text-transform:uppercase;margin:0}.uzone .note{margin:2px 0 8px;font-size:12.5px}
+.uzone ol,.uldc ol{margin:0;padding-left:26px;display:grid;gap:3px;font-size:13.5px}.uzone li,.uldc li{padding-left:2px}.uzone li::marker,.uldc li::marker{font:500 12px var(--mono);color:var(--mut)}
+.uzone li,.uldc li{display:list-item}.uzone li span,.uldc li span{display:inline-block;max-width:calc(100% - 64px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:bottom}.uzone li b,.uldc li b{float:right;font:600 13px var(--mono)}
+.uld{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:12px}
+.uldc{border:1px solid var(--line);border-radius:12px;padding:12px 14px;min-width:0}.uldc h4{font:800 16px var(--disp);text-transform:uppercase;margin:0 0 6px}.uldc small{display:block;font:500 11px var(--mono);color:var(--mut);margin:-4px 0 6px}
+.uldc li em{font-style:normal;font:500 11.5px var(--mono);color:var(--mut)}.uldc li b i{font-style:normal;font-weight:400;color:var(--mut);font-size:11.5px;margin-left:4px}
+.umds{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:10px}
+.umd{display:grid;gap:3px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;text-decoration:none;color:var(--fg);min-width:0}.umd:hover{background:var(--pan);border-color:var(--line2)}
+.umd small{font:600 10.5px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--mut)}.umd b{font:800 20px/1.1 var(--disp);text-transform:uppercase}.umd span{font-size:12.5px;color:var(--mut)}
+.umd em{font-style:normal;font:600 10.5px var(--mono);color:var(--pb);text-transform:uppercase;letter-spacing:.06em}
+.umd.nx{border-color:var(--fg);box-shadow:inset 0 0 0 1px var(--fg)}.umd.nx small{color:var(--grn)}.umd.off{background:var(--pan);border-style:dashed}
+.unav{display:flex;justify-content:space-between;gap:10px;margin-top:6px}
+.utabs{display:flex;gap:2px;overflow-x:auto;border-bottom:1px solid var(--line);margin:20px 0 4px;scrollbar-width:none}
+.utabs button{font:600 14px var(--body);background:none;border:0;border-bottom:2px solid transparent;padding:9px 12px;color:var(--mut);cursor:pointer;white-space:nowrap;flex:none}
+.utabs button[aria-selected=true]{color:var(--fg);border-bottom-color:var(--fg)}.utabs button:hover{color:var(--fg)}
+.utb td.uwin{font-weight:700}.utb tr.usub td{background:var(--pan);font:600 10.5px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--mut)}.utb td i{font-style:normal;color:var(--mut)}
+.ucv .ustat b{font-size:28px}
 </style>
 <div class="shell">
 <aside id="side" aria-label="Sections">
@@ -612,7 +640,8 @@ body.noscroll{overflow:hidden}
     <button data-v="nba-leaders"><span class="ic">◎</span>Season leaders</button></div>
   </details>
   <details class="sport ucl" id="sp-ucl" open><summary class="sh"><i></i>Champions League<small>2026-27</small><span class="chev" aria-hidden="true"></span></summary>
-    <div class="spl"><button data-v="ucl"><span class="ic">▦</span>Matchdays</button>
+    <div class="spl"><button data-v="ucl"><span class="ic">◉</span>Overview</button>
+    <button data-v="ucl-md"><span class="ic">▦</span>Matchdays</button>
     <button data-v="ucl-record"><span class="ic">✓</span>Track record</button></div>
   </details>
   <div class="soon"><b>More sports</b><small>Each new sport gets its own section here.</small></div>
@@ -641,6 +670,7 @@ body.noscroll{overflow:hidden}
 <section id="v-nba-weeks" hidden></section>
 <section id="v-nba-leaders" hidden></section>
 <section id="v-ucl" hidden></section>
+<section id="v-ucl-md" hidden></section>
 <section id="v-ucl-record" hidden></section>
 </main>
 </div></div>
@@ -669,103 +699,182 @@ $('#live').lastChild.textContent=`${wname(D.week)} · now`;
 $('#upd').textContent=`Updated ${D.built} ET`;
 
 /* ---- views ---- */
-const VIEWS=['weeks','cash','compare','record','players','wrcb','teampos','fantasy','cfb-weeks','cfb-record','cfb-teampos','cfb-leaders','nba','nba-record','nba-weeks','nba-leaders','ucl','ucl-record'];let cur=D.week;
-const VNAME={'nba-weeks':'Previous weeks',weeks:'Weeks',cash:'Cash Center',compare:'Compare teams',record:'Track record',players:'Player lookup',wrcb:'WR / CB matchups',teampos:'Team vs position',fantasy:'Fantasy','cfb-weeks':'Weeks','cfb-record':'Track record','cfb-teampos':'Team vs position','cfb-leaders':'Season leaders',nba:'Tonight','nba-record':'Track record','nba-leaders':'Season leaders',ucl:'Matchdays','ucl-record':'Track record'};
+const VIEWS=['weeks','cash','compare','record','players','wrcb','teampos','fantasy','cfb-weeks','cfb-record','cfb-teampos','cfb-leaders','nba','nba-record','nba-weeks','nba-leaders','ucl','ucl-md','ucl-record'];let cur=D.week;
+const VNAME={'nba-weeks':'Previous weeks',weeks:'Weeks',cash:'Cash Center',compare:'Compare teams',record:'Track record',players:'Player lookup',wrcb:'WR / CB matchups',teampos:'Team vs position',fantasy:'Fantasy','cfb-weeks':'Weeks','cfb-record':'Track record','cfb-teampos':'Team vs position','cfb-leaders':'Season leaders',nba:'Tonight','nba-record':'Track record','nba-leaders':'Season leaders',ucl:'Overview','ucl-md':'Matchdays','ucl-record':'Track record'};
 function menu(o){document.body.classList.toggle('menu',o);$('#menu').setAttribute('aria-expanded',String(o))}
 function show(v){const was=VIEWS.find(x=>!$('#v-'+x).hidden);VIEWS.forEach(x=>$('#v-'+x).hidden=x!==v);
   document.querySelectorAll('#side [data-v]').forEach(b=>{b.setAttribute('aria-pressed',b.dataset.v===v);if(b.dataset.v===v){const d=b.closest('details');if(d&&!d.open)d.open=true}});
   $('.top').hidden=v!=='weeks';$('#mtitle').textContent=v==='cash'?'Cash Center':(v.startsWith('cfb')?'College Football · ':v.startsWith('nba')?'NBA · ':v.startsWith('ucl')?'Champions League · ':'NFL · ')+VNAME[v];menu(false);if(was&&was!==v)scrollTo(0,0)}
-/* ---- Champions League: ucl.json, built on this computer from the soccer model (TheBrogram/soccer) ---- */
-let UCL=null,UCLP=null;
+/* ---- Champions League: ucl.json (ESPN season data, refreshed on every hub build, plus the soccer model's analysed matchdays) and uclh.json (every UCL result since 2003) ---- */
+let UCL=null,UCLP=null,UCLH=null,UCLHP=null,UTAB='over';
 function uclload(box,fn){if(UCL)return fn();if(!box.innerHTML)box.innerHTML='<p class="note">Loading…</p>';
   UCLP=UCLP||fetch('ucl.json').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()});
-  UCLP.then(j=>{UCL=j;fn()}).catch(e=>{UCLP=null;box.innerHTML=`<p class="empty">The Champions League pages did not load (${esc(e.message)}).</p>`})}
-const ush=n=>String(n||'').replace('Paris Saint-Germain','PSG').replace('Manchester United','Man United').replace('Manchester City','Man City').replace('Feyenoord Rotterdam','Feyenoord').replace('Internazionale','Inter').replace('Slovan Bratislava','Slovan').replace('Shakhtar Donetsk','Shakhtar').replace('Atlético Madrid','Atlético').replace('Bayern Munich','Bayern').replace('VfB Stuttgart','Stuttgart').replace('Aston Villa','Villa').replace('LASK Linz','LASK').replace('AS Roma','Roma').replace('Borussia Dortmund','Dortmund').replace('Bayer Leverkusen','Leverkusen');
+  UCLP.then(j=>{if(!UCL){UCL=j;UCL.byId={};j.fx.forEach(f=>UCL.byId[f.id]=f);UCL.mod={};(j.model||[]).forEach(d=>d.matches.forEach(m=>UCL.mod[m.id]={d,m}));UCL.rank={};j.table.forEach(r=>UCL.rank[r.id]=r)}fn()})
+   .catch(e=>{UCLP=null;box.innerHTML=`<p class="empty">The Champions League pages did not load (${esc(e.message)}).</p>`})}
+function uhist(fn){UCLHP=UCLHP||fetch('uclh.json').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()});UCLHP.then(j=>{UCLH=j;fn()}).catch(e=>{UCLHP=null;fn(e)})}
+const ush=n=>String(n||'').replace('Paris Saint-Germain','PSG').replace('Manchester United','Man United').replace('Manchester City','Man City').replace('Feyenoord Rotterdam','Feyenoord').replace('Internazionale','Inter').replace('Slovan Bratislava','Slovan').replace('Shakhtar Donetsk','Shakhtar').replace('Atlético Madrid','Atlético').replace('Bayern Munich','Bayern').replace('VfB Stuttgart','Stuttgart').replace('Aston Villa','Villa').replace('LASK Linz','LASK').replace('AS Roma','Roma').replace('Borussia Dortmund','Dortmund').replace('Bayer Leverkusen','Leverkusen').replace('Borussia Mönchengladbach','Gladbach').replace('Eintracht Frankfurt','Frankfurt').replace('Tottenham Hotspur','Tottenham').replace('Newcastle United','Newcastle').replace('Sporting CP','Sporting');
 const ulg={E0:'Premier League',SP1:'LaLiga',D1:'Bundesliga',I1:'Serie A',F1:'Ligue 1',N1:'Eredivisie',P1:'Primeira Liga',T1:'Süper Lig'};
 const uord=n=>n+(['th','st','nd','rd'][(n%100>10&&n%100<14)?0:(n%10<4?n%10:0)]||'th');
 const ufx=(x,d=2)=>x==null||isNaN(x)?'–':Number(x).toFixed(d);
 const umdx=s=>esc(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
-const umday=d=>d.matches.length?(d.matches[0].home.ucl||[]).length+1:'';
+const uet=(iso,o)=>new Date(iso).toLocaleString('en-US',{timeZone:'America/New_York',...o});
+const utime=iso=>uet(iso,{hour:'numeric',minute:'2-digit'})+' ET';
 const uday=s=>new Date(s+'T12:00:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'});
-const ures=(d,m)=>{const r=d.res&&d.res[m.id];return r&&r.final?r:null};
-const uout=r=>r.hs>r.as?'H':r.hs<r.as?'A':'D';
+const udays=s=>new Date(s+'T12:00:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
+const ukey=f=>f.md?String(f.md):f.stage.toLowerCase().replace(/[^a-z0-9]+/g,'-');
+const uout=f=>f.hs>f.as?'H':f.hs<f.as?'A':'D';
 const ubest=(p,k='')=>['H','D','A'].reduce((a,x)=>p[k+x]>p[k+a]?x:a,'H');
-const uwho=(m,x)=>x==='D'?'Draw':ush(x==='H'?m.home.name:m.away.name);
+const uwho=(f,x)=>x==='D'?'Draw':ush(x==='H'?f.h.name:f.a.name);
+const uimp=a=>{a=+String(a).replace('+','');return isNaN(a)||!a?null:a>0?100/(a+100):-a/(-a+100)};
+function uprob(f){const M=UCL.mod[f.id];if(M)return{...M.m.p,src:'model'};const o=f.odds;if(!o||!o.ml)return null;const q=o.ml.map(uimp);if(q.some(x=>x==null))return null;const s=q[0]+q[1]+q[2];return{H:q[0]/s,D:q[1]/s,A:q[2]/s,src:'market'}}
 function uform(s){const m=/(\d+)-(\d+)-(\d+)/.exec(s||'');return m?{w:+m[1],d:+m[2],l:+m[3],pts:3*m[1]+ +m[2],n:+m[1]+ +m[2]+ +m[3]}:null}
-function ustrip(m,big){const p=m.p,H=ush(m.home.name),A=ush(m.away.name);
-  return`<div class="ustrip" role="img" aria-label="${esc(H)} ${pc(p.H)}, draw ${pc(p.D)}, ${esc(A)} ${pc(p.A)}"><div class="h" style="width:${p.H*100}%">${big&&p.H>=.3?esc(H)+' ':''}${pc(p.H)}</div><div class="d" style="width:${p.D*100}%">${big&&p.D>=.25?'Draw ':''}${pc(p.D)}</div><div class="a" style="width:${p.A*100}%">${pc(p.A)}${big&&p.A>=.3?' '+esc(A):''}</div></div>`}
-function uclhead(d,title,sub){return`<div class="cfhead"><div><div class="eyebrow"><span>Champions League · League phase${d?' · Matchday '+umday(d):''}</span><span class="upd">Updated ${esc(UCL.built)} ET</span></div><h2>${title}</h2>${sub?`<p class="note">${sub}</p>`:''}</div></div>`}
-function uclview(h){const box=$('#v-ucl');box.classList.add('ucv');uclload(box,()=>{
-  const days=UCL.days,mm=h.match(/^ucl-match-(\d+)$/),dm=h.match(/^ucl-day-([\d-]+)$/);
-  if(mm){const d=days.find(x=>x.matches.some(m=>m.id===mm[1]));if(d)return uclmatch(box,d,d.matches.find(m=>m.id===mm[1]))}
-  let d=dm&&days.find(x=>x.day===dm[1]);
-  if(!d)d=days.find(x=>x.matches.some(m=>!ures(x,m)))||days[days.length-1];
-  if(!d){box.innerHTML='<p class="empty">No Champions League matchdays on file yet.</p>';return}
-  const done=d.matches.filter(m=>ures(d,m)),hit=done.filter(m=>ubest(m.p)===uout(ures(d,m))).length,pk=d.pick&&d.matches.find(m=>m.id===d.pick.eid);
-  box.innerHTML=uclhead(d,esc(uday(d.day)),`${d.matches.length} matches · 100,000 simulations per match · chances blend my model with no-vig DraftKings and Bet365 prices${done.length?` · ${done.length} final, the most likely result hit in ${hit}`:''}`)+
-   `<div class="chips udays" role="group" aria-label="Matchday">${days.map(x=>`<a class="chip" href="#ucl-day-${x.day}" aria-pressed="${x===d}" style="text-decoration:none">${esc(new Date(x.day+'T12:00:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'}))}</a>`).join('')}</div>`+
-   (pk?(()=>{const g=pk.dog,r=ures(d,pk),o=r&&uout(r);return`<div class="upick"><small>Favorite underdog</small><b>${esc(d.pick.team)}<span>${pc(g.win)} to win · ${pc(g.dc)} win or draw · DraftKings ${esc(g.price)}</span></b><p>${esc(d.pick.why)}</p>${r?`<p class="ufin">Final ${esc(ush(pk.home.name))} ${r.hs}–${r.as} ${esc(ush(pk.away.name))} · ${o===g.side?'<span class="w">won</span>':o==='D'?'drew (win or draw <span class="w">hit</span>)':'<span class="l">lost</span>'}</p>`:''}<a class="lk" href="#ucl-match-${pk.id}">Open ${esc(ush(pk.home.name))} v ${esc(ush(pk.away.name))} →</a></div>`})():'')+
-   `<div class="ucg">${d.matches.map(m=>{const p=m.p,r=ures(d,m),b=ubest(p),pick=d.pick&&d.pick.eid===m.id;
-     return`<a class="ucm" href="#ucl-match-${m.id}"><div class="uk"><span>${esc(m.ko)} ET${pick?' · <b style="color:var(--pb)">underdog pick</b>':''}</span><span>${esc(m.venue)}</span></div>
-     <div class="ut"><b>${esc(ush(m.home.name))}</b>${r?`<span class="sc">${r.hs}</span>`:`<span class="h">${pc(p.H)}</span>`}<b>${esc(ush(m.away.name))}</b>${r?`<span class="sc">${r.as}</span>`:`<span class="a">${pc(p.A)}</span>`}</div>
-     ${ustrip(m)}<div class="ux"><span>Most likely <b>${esc(uwho(m,b))} ${pc(p[b])}</b></span><span>xG <b>${ufx(m.home.lam)}–${ufx(m.away.lam)}</b></span><span>Over 2.5 <b>${pc(p.o25)}</b></span><span>Both score <b>${pc(p.btts)}</b></span></div>
-     ${r?`<div class="ufin">Final · most likely result ${uout(r)===b?'<span class="w">hit</span>':'<span class="l">missed</span>'} · ${r.hs+r.as>2.5?'over':'under'} 2.5 · ${r.hs&&r.as?'both scored':'not both scored'}</div>`:''}</a>`}).join('')}</div>
-   <p class="note" style="margin-top:16px">Chances are model estimates, not certainties. Lineups were projected from previews before kickoff. The Champions League model runs on this computer, so this page updates when a matchday is run here. Results so far are under <a href="#ucl-record">Track record</a>.</p>`})}
-function uclmatch(box,d,m){const H=m.home,A=m.away,p=m.p,ml=m.dk.ml,r=ures(d,m),b=ubest(p);
-  const fH=uform(H.form10),fA=uform(A.form10),uH=uform(H.form_ucl),uA=uform(A.form_ucl);
-  const row=(label,sub,hv,av,better,fmt=v=>ufx(v),scale)=>{const ok=hv!=null&&av!=null&&!isNaN(hv)&&!isNaN(av),mx=scale??(Math.max(Math.abs(hv||0),Math.abs(av||0))*1.1||1);let hw='',aw='';
-    if(ok&&better&&hv!==av){const hb=better==='hi'?hv>av:hv<av;hw=hb?'w':'';aw=hb?'':'w'}
-    const bar=v=>v==null||isNaN(v)?'':`<span class="f" style="width:${Math.max(2,Math.min(100,100*Math.abs(v)/mx))}%"></span>`;
-    return`<div class="urow"><div class="us h ${hw}"><span class="v">${hv==null||isNaN(hv)?'n/a':fmt(hv)}</span><span class="k">${bar(hv)}</span></div><div class="l">${label}${sub?`<em>${sub}</em>`:''}</div><div class="us a ${aw}"><span class="v">${av==null||isNaN(av)?'n/a':fmt(av)}</span><span class="k">${bar(av)}</span></div></div>`};
-  const trow=(l,h,a)=>`<div class="urow"><div class="us h"><span class="x">${h}</span></div><div class="l">${l}</div><div class="us a"><span class="x">${a}</span></div></div>`,g=t=>`<div class="g">${t}</div>`;
-  box.innerHTML=`<div class="gdbar"><a class="lk" href="#ucl-day-${d.day}">← All ${esc(new Date(d.day+'T12:00:00').toLocaleDateString('en-US',{weekday:'long'}))} matches</a></div>`+
-  uclhead(d,'',esc(uday(d.day))+' · '+esc(m.ko)+' ET').replace('<h2></h2>','')+
-  `<div class="uteams"><div class="h"><h3>${esc(H.name)}</h3><small>${uord(H.rank)} in the table · ${H.pts} pts · GD ${esc(H.gd)}</small></div>
-   <div class="uxg">${r?`${r.hs}<span style="color:var(--dim);padding-inline:6px">–</span>${r.as}<small>Final · xG ${ufx(H.lam)}–${ufx(A.lam)}</small>`:`${ufx(H.lam)}<span style="color:var(--dim);padding-inline:6px">–</span>${ufx(A.lam)}<small>Expected goals</small>`}</div>
-   <div class="a"><h3>${esc(A.name)}</h3><small>${uord(A.rank)} in the table · ${A.pts} pts · GD ${esc(A.gd)}</small></div></div>
-  <div class="ufix"><span>${esc(m.venue)}${m.neutral?' (neutral venue)':''}</span><span>Referee: ${esc(m.ref)}</span><span>DraftKings: ${esc(ml[0])} / ${esc(ml[1])} / ${esc(ml[2])} · O/U ${esc(m.dk.total[0])} (${esc(m.dk.total[1])} / ${esc(m.dk.total[2])})</span></div>
-  ${r?`<div class="ufb"><b>Final ${r.hs}–${r.as}</b><span>Most likely result (${esc(uwho(m,b))}, ${pc(p[b])}): ${uout(r)===b?'<span class="hit">hit</span>':'<span class="miss">missed</span>'}</span><span>Over 2.5 (${pc(p.o25)}): ${r.hs+r.as>2.5?'yes':'no'}</span><span>Both score (${pc(p.btts)}): ${r.hs&&r.as?'yes':'no'}</span></div>`:''}
-  ${ustrip(m,1)}
-  <div class="umini">${[['My model',p.mH,p.mD,p.mA],['Market (no-vig)',p.kH,p.kD,p.kA]].map(([l,h,dd,a])=>`<span>${l}</span><div><div class="bar"><i class="h" style="width:${h*100}%"></i><i class="d" style="width:${dd*100}%"></i><i class="a" style="width:${a*100}%"></i></div><div class="lab"><span>${pc(h)}</span><span>${pc(dd)}</span><span>${pc(a)}</span></div></div>`).join('')}</div>
-  <div class="lch"><span class="chip">Over 1.5 <b>${pc(p.o15)}</b></span><span class="chip">Over 2.5 <b>${pc(p.o25)}</b></span><span class="chip">Over 3.5 <b>${pc(p.o35)}</b></span><span class="chip">Both score <b>${pc(p.btts)}</b></span><span class="chip">Corners over 9.5 <b>${pc(p.cor95)}</b></span><span class="chip">Yellows over 3.5 <b>${pc(p.yc35)}</b></span></div>
-  ${m.dog?(()=>{const o=m.dog,Tm=o.side==='H'?H:A,ip=d.pick&&d.pick.eid===m.id;return`<div class="udog" aria-label="Underdog"><div><div class="t">Underdog</div><div class="v">${esc(ush(Tm.name))}${ip?' <span class="utag q">top pick</span>':''}</div><div class="s">DraftKings ${esc(o.price)}</div></div>
-    <div><div class="t">Win</div><div class="v">${pc(o.win)}</div><div class="s">model ${pc(o.model)} · market ${pc(o.mkt)}</div></div><div><div class="t">Win or draw</div><div class="v">${pc(o.dc)}</div><div class="s">the +0.5 line</div></div>
-    <div><div class="t">Draw no bet</div><div class="v">${pc(o.dnb)}</div><div class="s">stake back on a draw</div></div><div><div class="t">Edge vs market</div><div class="v">${o.win-o.mkt>=0?'+':''}${Math.round((o.win-o.mkt)*100)} pts</div><div class="s">a lead, not a proven edge</div></div></div>`})():''}
-  <h3 class="ush">Side by side <small>darker bar marks the better side on each line</small></h3><div class="utape">
-   ${g("Tonight's projection")}${row('Expected goals','blend of model and market',H.lam,A.lam,'hi')}${row('Independent model xG','before looking at prices',H.lam_model,A.lam_model,'hi')}${row('Market xG','fitted to DraftKings + Bet365',H.lam_mkt,A.lam_mkt,'hi')}
-   ${row('Chance to score','team over 0.5',H.to05,A.to05,'hi',pc,1)}${row('Chance to score 2+','team over 1.5',H.to15,A.to15,'hi',pc,1)}${row('Expected shots','',H.exp_sh,A.exp_sh,'hi',v=>ufx(v,1))}${row('Expected shots on target','',H.exp_sot,A.exp_sot,'hi',v=>ufx(v,1))}
-   ${row('Expected corners','',H.exp_cor,A.exp_cor,'hi',v=>ufx(v,1))}${row('Expected yellow cards','',H.exp_yc,A.exp_yc,null,v=>ufx(v,1))}${row('Keeper saves expected',`${esc(H.gk||'backup')} · ${esc(A.gk||'backup')}`,H.exp_saves,A.exp_saves,null,v=>ufx(v,1))}
-   ${g('Attack')}${row('Domestic xG per match',`${ulg[H.dom.league]||'no xG feed'} · ${ulg[A.dom.league]||'no xG feed'}`,H.dom.xgf,A.dom.xgf,'hi')}${row('Domestic goals per match','',H.dom.gf,A.dom.gf,'hi')}${row('Attack vs own league','opponent-adjusted, 1.00 = league average',H.dom.att,A.dom.att,'hi')}
-   ${row('Shots per match','all competitions',H.sh,A.sh,'hi',v=>ufx(v,1))}${row('Shots on target per match','',H.sot,A.sot,'hi',v=>ufx(v,1))}${row('Proxy xG per match','from shots and shots on target',H.pxg,A.pxg,'hi')}${row('Chance quality','proxy xG per shot',H.pxg/H.sh,A.pxg/A.sh,'hi',v=>ufx(v,3))}
-   ${g('Defense')}${row('Domestic xG against','',H.dom.xga,A.dom.xga,'lo')}${row('Domestic goals against','',H.dom.ga,A.dom.ga,'lo')}${row('Defense vs own league','opponent-adjusted, below 1.00 is better',H.dom.de,A.dom.de,'lo')}
-   ${row('Shots conceded','',H.sha,A.sha,'lo',v=>ufx(v,1))}${row('Shots on target conceded','',H.sota,A.sota,'lo',v=>ufx(v,1))}${row('Proxy xG against','',H.pxga,A.pxga,'lo')}
-   ${g('Style')}${row('Possession','',H.poss,A.poss,null,v=>ufx(v,0)+'%',100)}${row('Corners won','',H.cor,A.cor,'hi',v=>ufx(v,1))}${row('Corners conceded','',H.cora,A.cora,'lo',v=>ufx(v,1))}${row('Fouls committed','',H.fouls,A.fouls,null,v=>ufx(v,1))}${row('Yellow cards','per match',H.yc,A.yc,null)}
-   ${g('Form and table')}${row('UCL table position','1st–8th go straight to the round of 16',H.rank,A.rank,'lo',v=>uord(v),36)}${row('UCL points',`${(H.ucl||[]).length} games`,H.pts,A.pts,'hi',v=>v,9)}
-   ${uH&&uA?row('UCL record',`${esc(H.form_ucl.split(' (')[0])} · ${esc(A.form_ucl.split(' (')[0])}`,uH.pts,uA.pts,'hi',v=>v+' pts',9):''}
-   ${fH&&fA?row('Last 10, all competitions',`${esc(H.form10.split(' (')[0])} · ${esc(A.form10.split(' (')[0])}`,fH.pts/fH.n,fA.pts/fA.n,'hi',v=>ufx(v,1)+' ppg',3):''}
-   ${trow('Last 5',esc(H.form5),esc(A.form5))}${trow('Domestic league',esc(H.form_dom),esc(A.form_dom))}${row('Rest days','since last match',H.rest,A.rest,null,v=>v)}</div>
-  <h3 class="ush">Champions League so far <small>proxy xG from shots</small></h3><div class="uduo">${[H,A].map((t,k)=>`<div class="upan ${k?'a':'h'}"><h4>${esc(t.name)}</h4><div class="utb"><table><thead><tr><th></th><th>Opponent</th><th class="n">Score</th><th class="n">xG</th><th class="n">Shots</th></tr></thead><tbody>${(t.ucl||[]).map(u=>{const o=u.gf>u.ga?'W':u.gf===u.ga?'D':'L';return`<tr><td><span class="ures ${o}">${o}</span></td><td>${u.ha==='home'?'vs':'at'} ${esc(ush(u.opp))}</td><td class="n">${u.gf}–${u.ga}</td><td class="n">${ufx(u.xg)}–${ufx(u.xga)}</td><td class="n">${u.sh}–${u.sha}</td></tr>`}).join('')}</tbody></table></div></div>`).join('')}</div>
-  <h3 class="ush">Key players <small>sorted by chance to score · hit rate counts starts with 60+ minutes</small></h3><div class="uduo">${[H,A].map((t,k)=>`<div class="upan ${k?'a':'h'}"><h4>${esc(t.name)}</h4><div class="utb"><table><thead><tr><th>Player</th><th class="n">Start</th><th class="n">Score</th><th class="n">2+ shots</th><th class="n">1+ on tgt</th><th class="n">Card</th><th class="n">On tgt hit</th></tr></thead><tbody>${(t.players||[]).map(q=>`<tr><td><b>${esc(q.n)}</b>${q.pen?'<span class="utag p">pens</span>':''}${q.av>0&&q.av<1?'<span class="utag q">doubt</span>':''}</td><td class="n">${pc(q.st)}</td><td class="n">${pc(q.g)}</td><td class="n">${pc(q.sh2)}</td><td class="n">${pc(q.sot1)}</td><td class="n">${pc(q.card)}</td><td class="n">${esc(q.hit_sot1)}</td></tr>`).join('')}</tbody></table></div><p class="note">Keeper: ${esc(t.gk||'backup, not confirmed')} · Penalties: ${esc(t.pen||'unknown')} (judgment)</p></div>`).join('')}</div>
-  <h3 class="ush">Most likely scores</h3><div class="ucs">${m.cs.map(([s,v])=>`<div><b>${esc(s)}</b><span>${pc(v)}</span></div>`).join('')}</div>
-  <h3 class="ush">Scouting notes</h3><div class="unotes">${[['Team news',m.notes.news],['Matchup',m.notes.tactics],['Model vs market',m.notes.gap],['Traps',m.notes.traps,1],['Conditions and rest',m.notes.ext]].filter(x=>x[1]).map(([t,s,w])=>`<div class="unote${w?' t':''}"><h5>${t}</h5><p>${umdx(s)}</p></div>`).join('')}</div>
-  <p class="note" style="margin-top:16px">Model: opponent-adjusted domestic xG plus a shots-based xG proxy, blended 40/60 with no-vig DraftKings and Bet365 prices, then 100,000 Dixon-Coles simulations. Lineups were projected from previews and were not official. Model estimates, not certainties.</p>`}
+const ubadge=(r,t)=>`<span class="ures ${r}"${t?` title="${esc(t)}"`:''}>${r}</span>`;
+function ustrip(p,H,A,big){return`<div class="ustrip" role="img" aria-label="${esc(H)} ${pc(p.H)}, draw ${pc(p.D)}, ${esc(A)} ${pc(p.A)}"><div class="h" style="width:${p.H*100}%">${big&&p.H>=.3?esc(H)+' ':''}${pc(p.H)}</div><div class="d" style="width:${p.D*100}%">${big&&p.D>=.25?'Draw ':''}${pc(p.D)}</div><div class="a" style="width:${p.A*100}%">${pc(p.A)}${big&&p.A>=.3?' '+esc(A):''}</div></div>`}
+function uclhead(eb,title,sub){return`<div class="cfhead"><div><div class="eyebrow"><span>Champions League · ${esc(UCL.season)}${eb?' · '+eb:''}</span><span class="upd">Updated ${esc(UCL.built)} ET</span></div>${title?`<h2>${title}</h2>`:''}${sub?`<p class="note">${sub}</p>`:''}</div></div>`}
+/* a team's UCL results this season, oldest first */
+const useason=id=>UCL.fx.filter(f=>f.fin&&(f.h.id===id||f.a.id===id)).map(f=>{const h=f.h.id===id,gf=h?f.hs:f.as,ga=h?f.as:f.hs;return{f,h,gf,ga,r:gf>ga?'W':gf<ga?'L':'D',opp:h?f.a.name:f.h.name}});
+/* home / away splits from a list of results [{ha,gf,ga}] */
+function usplit(G){const o={gp:G.length};if(!G.length)return o;const c=f=>G.filter(f).length;o.w=c(g=>g.gf>g.ga);o.d=c(g=>g.gf===g.ga);o.l=c(g=>g.gf<g.ga);
+  o.ppg=(3*o.w+o.d)/o.gp;o.gf=G.reduce((s,g)=>s+g.gf,0)/o.gp;o.ga=G.reduce((s,g)=>s+g.ga,0)/o.gp;o.cs=c(g=>!g.ga)/o.gp;o.fts=c(g=>!g.gf)/o.gp;o.o25=c(g=>g.gf+g.ga>2.5)/o.gp;o.btts=c(g=>g.gf&&g.ga)/o.gp;return o}
+/* one mirrored comparison row; better: 'hi' | 'lo' | null */
+function urow(label,sub,hv,av,better,fmt=v=>ufx(v),scale){const ok=hv!=null&&av!=null&&!isNaN(hv)&&!isNaN(av),mx=scale??(Math.max(Math.abs(hv||0),Math.abs(av||0))*1.1||1);let hw='',aw='';
+  if(ok&&better&&hv!==av){const hb=better==='hi'?hv>av:hv<av;hw=hb?'w':'';aw=hb?'':'w'}
+  const bar=v=>v==null||isNaN(v)?'':`<span class="f" style="width:${Math.max(2,Math.min(100,100*Math.abs(v)/mx))}%"></span>`;
+  return`<div class="urow"><div class="us h ${hw}"><span class="v">${hv==null||isNaN(hv)?'n/a':fmt(hv)}</span><span class="k">${bar(hv)}</span></div><div class="l">${label}${sub?`<em>${sub}</em>`:''}</div><div class="us a ${aw}"><span class="v">${av==null||isNaN(av)?'n/a':fmt(av)}</span><span class="k">${bar(av)}</span></div></div>`}
+const utrow=(l,h,a)=>`<div class="urow"><div class="us h"><span class="x">${h}</span></div><div class="l">${l}</div><div class="us a"><span class="x">${a}</span></div></div>`,ug=t=>`<div class="g">${t}</div>`;
+
+/* ---------- overview: table, standings picture, leaders, matchdays ---------- */
+function uclhome(){const box=$('#v-ucl');box.classList.add('ucv');uclload(box,()=>{
+  const F=UCL.fx,T=UCL.table,fin=F.filter(f=>f.fin).length,nx=F.find(f=>!f.fin);
+  const keys=[...new Set(F.map(ukey))],grpd=k=>F.filter(f=>ukey(f)===k);
+  const form=id=>useason(id).slice(-5).map(x=>ubadge(x.r,`${x.h?'vs':'at'} ${x.opp} ${x.gf}–${x.ga}`)).join('');
+  const zone=r=>r<=8?'z1':r<=24?'z2':'z3';
+  const tbl=`<div class="utb"><table class="utbl"><thead><tr><th class="n">#</th><th>Team</th><th class="n">P</th><th class="n">W</th><th class="n">D</th><th class="n">L</th><th class="n">GF</th><th class="n">GA</th><th class="n">GD</th><th class="n">Pts</th><th>Last 5</th></tr></thead><tbody>${T.map(r=>`<tr class="${zone(r.rank)}"><td class="n">${r.rank}</td><td><b>${esc(r.name)}</b></td><td class="n">${r.p}</td><td class="n">${r.w}</td><td class="n">${r.d}</td><td class="n">${r.l}</td><td class="n">${r.gf}</td><td class="n">${r.ga}</td><td class="n">${r.gf-r.ga>0?'+':''}${r.gf-r.ga}</td><td class="n"><b>${r.pts}</b></td><td class="uff">${form(r.id)}</td></tr>`).join('')}</tbody></table></div>
+   <p class="note"><span class="uzk z1"></span>1st–8th go straight to the round of 16 · <span class="uzk z2"></span>9th–24th play the knockout playoff · <span class="uzk z3"></span>25th–36th are out. Ties are split on goal difference, then goals scored, then further UEFA tiebreakers.</p>`;
+  const R=n=>T.find(r=>r.rank===n),left=8-(T.length?Math.min(...T.map(r=>r.p)):0);
+  const zcard=(t,cls,a,b,line)=>`<div class="uzone ${cls}"><h4>${t}</h4><p class="note">${line}</p><ol start="${a}">${T.filter(r=>r.rank>=a&&r.rank<=b).map(r=>`<li><span>${esc(ush(r.name))}</span><b>${r.pts}</b></li>`).join('')}</ol></div>`;
+  const stand=T.length?`<p class="note">${left>0?`${left} matchday${left===1?'':'s'} left for every team (each club plays 8 league-phase games; up to ${left*3} more points to win).`:'The league phase is complete.'} The line for a top-8 place is ${R(8).pts} points right now (9th has ${R(9).pts}); the line for the top 24 is ${R(24).pts} (25th has ${R(25).pts}).</p>
+   <div class="uzones">${zcard('Round of 16 places','z1',1,8,`Top 8 skip the playoff round.`)}${zcard('Knockout playoff','z2',9,24,`Seeded playoff (9th–16th seeded, 17th–24th unseeded).`)}${zcard('Out of Europe','z3',25,36,`No Europa League drop-down in this format.`)}</div>`:'<p class="empty">The table did not load.</p>';
+  // leaders
+  const TT=Object.entries(UCL.teams).map(([id,t])=>({id,name:t.name,s:(t.ucl||{}).all})).filter(t=>t.s);
+  const tcard=(title,k,dir,fmt,sub)=>{const L=TT.filter(t=>t.s[k]!=null).sort((a,b)=>dir*(b.s[k]-a.s[k])||a.name.localeCompare(b.name)).slice(0,5);
+    return`<div class="uldc"><h4>${title}</h4>${sub?`<small>${sub}</small>`:''}<ol>${L.map(t=>`<li><span>${esc(ush(t.name))}</span><b>${fmt(t.s[k],t.s)}</b></li>`).join('')}</ol></div>`};
+  const PP=[];Object.entries(UCL.teams).forEach(([id,t])=>(t.players||[]).forEach(p=>PP.push({...p,tid:id,team:t.name,ga:(p.g||0)+(p.a||0)})));
+  const pcard=(title,k,f=x=>true,sub)=>{const L=PP.filter(p=>p[k]&&f(p)).sort((a,b)=>b[k]-a[k]||(b.g||0)-(a.g||0)||(b.sot||0)-(a.sot||0)).slice(0,5);
+    return`<div class="uldc"><h4>${title}</h4>${sub?`<small>${sub}</small>`:''}${L.length?`<ol>${L.map(p=>`<li><span>${esc(p.n)} <em>${esc(ush(p.team))}</em></span><b>${p[k]}</b></li>`).join('')}</ol>`:'<p class="note">None yet.</p>'}</div>`};
+  const tl=`<div class="uld">${tcard('Goals scored','gf',1,(v,s)=>`${v} <i>${ufx(v/s.gp,1)}/g</i>`)}${tcard('Fewest goals conceded','ga',-1,(v,s)=>`${v} <i>${ufx(v/s.gp,1)}/g</i>`)}${tcard('Shots per match','sh',1,v=>ufx(v,1))}${tcard('Shots on target per match','sot',1,v=>ufx(v,1))}
+    ${tcard('Possession','poss',1,v=>ufx(v,1)+'%')}${tcard('Clean sheets','cs',1,v=>v)}${tcard('Fewest shots allowed','sha',-1,v=>ufx(v,1),'per match')}${tcard('Corners per match','cor',1,v=>ufx(v,1))}</div>`;
+  const pl=`<div class="uld">${pcard('Goals','g')}${pcard('Assists','a')}${pcard('Goals + assists','ga')}${pcard('Shots on target','sot')}${pcard('Shots','sh')}${pcard('Saves','sv',p=>p.pos==='G'||p.pos==='GK','goalkeepers')}${pcard('Yellow cards','yc')}</div>`;
+  const mds=`<div class="umds">${keys.map(k=>{const L=grpd(k),done=L.filter(f=>f.fin).length,ds=[...new Set(L.map(f=>f.day))],g=L.filter(f=>f.fin).reduce((s,f)=>s+f.hs+f.as,0),an=L.some(f=>UCL.mod[f.id]),isn=nx&&ukey(nx)===k;
+    return`<a class="umd${isn?' nx':''}" href="#ucl-md-${k}"><small>${isn?'Next up':done===L.length?'Played':done?'In progress':'Upcoming'}</small><b>${esc(L[0].stage)}</b><span>${ds.map(udays).join(' · ')}</span><span>${done===L.length?`${L.length} matches · ${g} goals (${ufx(g/L.length,1)} a match)`:`${done} of ${L.length} played`}</span>${an?'<em>Model analysis</em>':''}</a>`}).join('')}
+    <div class="umd off"><small>From February 2027</small><b>Knockout rounds</b><span>Knockout playoffs, round of 16, quarterfinals, semifinals and the final, mid-February to spring 2027</span><span>Fixtures appear here once the draws are made.</span></div></div>`;
+  const sec=(id,t,sub,body)=>`<h3 class="ush" id="${id}">${t}${sub?` <small>${sub}</small>`:''}</h3>${body}`;
+  box.innerHTML=uclhead('League phase','Champions League',`${fin} of ${F.length} league-phase matches played${nx?` · next: ${esc(nx.stage)}, ${udays(nx.day)}`:''} · table, stats and results from ESPN`)+
+   `<div class="chips ujump" role="group" aria-label="Jump to">${[['ut-table','Table'],['ut-stand','Standings'],['ut-tl','Team leaders'],['ut-pl','Player leaders'],['ut-md','Matchdays']].map(([i,l])=>`<button class="chip" data-jump="${i}">${l}</button>`).join('')}</div>`+
+   sec('ut-table','Table so far','league phase, all 36 clubs',tbl)+sec('ut-stand','Standings','where each club stands against the cut lines',stand)+
+   sec('ut-tl','Stat leaders: teams',`Champions League matches only · ${fin} played`,tl)+sec('ut-pl','Stat leaders: players','Champions League matches only',pl)+
+   sec('ut-md','Matchdays','open any matchday, past or upcoming',mds);
+  box.querySelectorAll('[data-jump]').forEach(b=>b.onclick=()=>document.getElementById(b.dataset.jump).scrollIntoView({behavior:'smooth',block:'start'}))})}
+
+/* ---------- one matchday ---------- */
+function uclmd(k){const box=$('#v-ucl-md');box.classList.add('ucv');uclload(box,()=>{
+  const F=UCL.fx,keys=[...new Set(F.map(ukey))],nx=F.find(f=>!f.fin);if(!keys.includes(k))k=nx?ukey(nx):keys[keys.length-1];
+  const L=F.filter(f=>ukey(f)===k),i=keys.indexOf(k),done=L.filter(f=>f.fin),hit=done.filter(f=>{const M=UCL.mod[f.id];return M&&ubest(M.m.p)===uout(f)}).length,nm=done.filter(f=>UCL.mod[f.id]).length;
+  const days=[...new Set(L.map(f=>f.day))],pk=(UCL.model||[]).filter(d=>days.includes(d.day)&&d.pick);
+  const card=f=>{const p=uprob(f),M=UCL.mod[f.id],b=p&&ubest(p),pick=M&&M.d.pick&&M.d.pick.eid===f.id,o=f.odds;
+    return`<a class="ucm" href="#ucl-match-${f.id}"><div class="uk"><span>${f.fin?'Final':f.st==='in'?esc(f.detail):utime(f.date)}${pick?' · <b style="color:var(--pb)">underdog pick</b>':''}</span><span>${esc(f.venue)}</span></div>
+     <div class="ut"><b>${esc(ush(f.h.name))}</b>${f.st!=='pre'?`<span class="sc">${f.hs}</span>`:p?`<span class="h">${pc(p.H)}</span>`:'<span></span>'}<b>${esc(ush(f.a.name))}</b>${f.st!=='pre'?`<span class="sc">${f.as}</span>`:p?`<span class="a">${pc(p.A)}</span>`:'<span></span>'}</div>
+     ${p?ustrip(p,f.h.name,f.a.name):''}
+     <div class="ux">${p?`<span>${p.src==='model'?'Model':'Market'} most likely <b>${esc(uwho(f,b))} ${pc(p[b])}</b></span>`:''}${M?`<span>xG <b>${ufx(M.m.home.lam)}–${ufx(M.m.away.lam)}</b></span><span>Over 2.5 <b>${pc(M.m.p.o25)}</b></span>`:''}${o&&f.st==='pre'?`<span>DraftKings <b>${esc(o.ml.join(' / '))}</b> · O/U ${esc(o.ou)}</span>`:''}${!p&&f.st==='pre'?'<span>No prices posted yet</span>':''}</div>
+     ${f.fin&&M?`<div class="ufin">Model's most likely result ${uout(f)===ubest(M.m.p)?'<span class="w">hit</span>':'<span class="l">missed</span>'}</div>`:''}</a>`};
+  box.innerHTML=`<div class="gdbar"><a class="lk" href="#ucl">← Champions League overview</a></div>`+uclhead(L.some(f=>f.md)?'League phase':'',esc(L[0].stage),
+     `${days.map(uday).join(' and ')} · ${done.length} of ${L.length} played${nm?` · the model's most likely result hit in ${hit} of ${nm}`:''}`)+
+   `<div class="chips udays" role="group" aria-label="Matchday">${keys.map(x=>{const f0=F.find(f=>ukey(f)===x);return`<a class="chip" href="#ucl-md-${x}" aria-pressed="${x===k}" style="text-decoration:none">${f0.md?'MD'+f0.md:esc(f0.stage)}</a>`}).join('')}</div>
+   <div class="unav">${i>0?`<a class="lk" href="#ucl-md-${keys[i-1]}">← ${esc(F.find(f=>ukey(f)===keys[i-1]).stage)}</a>`:'<span></span>'}${i<keys.length-1?`<a class="lk" href="#ucl-md-${keys[i+1]}">${esc(F.find(f=>ukey(f)===keys[i+1]).stage)} →</a>`:''}</div>`+
+   pk.map(d=>{const f=UCL.byId[d.pick.eid],M=UCL.mod[d.pick.eid],g=M.m.dog,o=f&&f.fin?uout(f):null;return`<div class="upick"><small>Favorite underdog · ${esc(udays(d.day))}</small><b>${esc(d.pick.team)}<span>${pc(g.win)} to win · ${pc(g.dc)} win or draw · DraftKings ${esc(g.price)}</span></b><p>${esc(d.pick.why)}</p>${o?`<p class="ufin">Final ${esc(ush(f.h.name))} ${f.hs}–${f.as} ${esc(ush(f.a.name))} · ${o===g.side?'<span class="w">won</span>':o==='D'?'drew (win or draw <span class="w">hit</span>)':'<span class="l">lost</span>'}</p>`:''}<a class="lk" href="#ucl-match-${d.pick.eid}">Open the match →</a></div>`}).join('')+
+   days.map(d=>`<h3 class="ush">${esc(uday(d))}</h3><div class="ucg">${L.filter(f=>f.day===d).map(card).join('')}</div>`).join('')+
+   `<p class="note" style="margin-top:16px">${L.some(f=>UCL.mod[f.id])?'Chances come from my model (blended with no-vig DraftKings and Bet365 prices) where a match was analysed; otherwise ':'Chances '}${L.some(f=>!UCL.mod[f.id]&&f.odds)?'are DraftKings prices with the bookmaker margin removed (the market, not my model).':'appear once DraftKings posts prices.'} The model runs on this computer on a matchday. Estimates, not certainties.</p>`})}
+
+/* ---------- one match, in tabs ---------- */
+const UTABS=[['over','Overview'],['side','Side by side'],['hist','History'],['ha','Home vs away'],['play','Players'],['notes','Scouting notes']];
+function uclmatch(id,tab){const box=$('#v-ucl-md');box.classList.add('ucv');uclload(box,()=>{const f=UCL.byId[id];if(!f){box.innerHTML='<p class="empty">That match is not on file.</p>';return}
+  if(tab)UTAB=tab;const M=UCL.mod[id],tabs=UTABS.filter(t=>t[0]!=='notes'||M);if(!tabs.some(t=>t[0]===UTAB))UTAB='over';
+  const rH=UCL.rank[f.h.id],rA=UCL.rank[f.a.id],o=f.odds;
+  box.innerHTML=`<div class="gdbar"><a class="lk" href="#ucl-md-${ukey(f)}">← All ${esc(f.stage)} matches</a></div>`+uclhead(esc(f.stage),'',`${esc(uday(f.day))} · ${utime(f.date)} · ${esc(f.venue)}`)+
+   `<div class="uteams"><div class="h"><h3>${esc(f.h.name)}</h3><small>${rH?`${uord(rH.rank)} · ${rH.pts} pts · ${rH.w}-${rH.d}-${rH.l}`:''}</small></div>
+    <div class="uxg">${f.st!=='pre'?`${f.hs}<span style="color:var(--dim);padding-inline:6px">–</span>${f.as}<small>${f.fin?'Final':esc(f.detail)}</small>`:M?`${ufx(M.m.home.lam)}<span style="color:var(--dim);padding-inline:6px">–</span>${ufx(M.m.away.lam)}<small>Expected goals</small>`:`<span style="font-size:.55em">${utime(f.date).replace(' ET','')}</span><small>${esc(udays(f.day))} ET</small>`}</div>
+    <div class="a"><h3>${esc(f.a.name)}</h3><small>${rA?`${uord(rA.rank)} · ${rA.pts} pts · ${rA.w}-${rA.d}-${rA.l}`:''}</small></div></div>
+   <div class="utabs" role="tablist">${tabs.map(([k,l])=>`<button role="tab" data-ut="${k}" aria-selected="${k===UTAB}">${l}</button>`).join('')}</div><div id="utpane"></div>`;
+  const pane=$('#utpane'),draw=()=>{pane.innerHTML=({over:utOver,side:utSide,hist:utHist,ha:utHA,play:utPlay,notes:utNotes})[UTAB](f,M,pane)||''};
+  box.querySelectorAll('[data-ut]').forEach(b=>b.onclick=()=>{UTAB=b.dataset.ut;box.querySelectorAll('[data-ut]').forEach(x=>x.setAttribute('aria-selected',x===b));draw()});draw()})}
+function utOver(f,M){const p=uprob(f),o=f.odds,H=UCL.teams[f.h.id],A=UCL.teams[f.a.id],b=p&&ubest(p);
+  const last=(t,ha)=>(t.games||[]).slice(-5).map(g=>ubadge(g.gf>g.ga?'W':g.gf<g.ga?'L':'D',`${g.date} ${g.ha==='home'?'vs':'at'} ${g.opp} ${g.gf}–${g.ga} (${g.comp})`)).join('');
+  let h='';
+  if(o&&f.st==='pre')h+=`<div class="ufix"><span>DraftKings: ${esc(f.h.ab||ush(f.h.name))} ${esc(o.ml[0])} · draw ${esc(o.ml[1])} · ${esc(f.a.ab||ush(f.a.name))} ${esc(o.ml[2])}</span><span>Total ${esc(o.ou)}: over ${esc(o.o||'–')} / under ${esc(o.u||'–')}</span></div>`;
+  if(M){const m=M.m,q=m.p,ml=m.dk.ml;h+=`<div class="ufix"><span>Referee: ${esc(m.ref)}</span><span>DraftKings at analysis: ${esc(ml.join(' / '))} · O/U ${esc(m.dk.total[0])} (${esc(m.dk.total[1])} / ${esc(m.dk.total[2])})</span></div>`}
+  if(f.fin){h+=`<div class="ufb"><b>Final ${f.hs}–${f.as}</b>${p?`<span>${p.src==='model'?"Model's":"Market's"} most likely result (${esc(uwho(f,b))}, ${pc(p[b])}): ${uout(f)===b?'<span class="hit">hit</span>':'<span class="miss">missed</span>'}</span>`:''}${M?`<span>Over 2.5 (${pc(M.m.p.o25)}): ${f.hs+f.as>2.5?'yes':'no'}</span><span>Both score (${pc(M.m.p.btts)}): ${f.hs&&f.as?'yes':'no'}</span>`:''}</div>`;
+    const x=f.bx;if(x)h+=`<h3 class="ush">Match stats</h3><div class="utape">${urow('Possession','',x.h.poss,x.a.poss,null,v=>ufx(v,0)+'%',100)}${urow('Shots','',x.h.sh,x.a.sh,'hi',v=>v)}${urow('Shots on target','',x.h.sot,x.a.sot,'hi',v=>v)}${urow('Corners','',x.h.cor,x.a.cor,'hi',v=>v)}${urow('Saves','',x.h.sv,x.a.sv,null,v=>v)}${urow('Pass accuracy','',x.h.pass,x.a.pass,'hi',v=>pc(v))}${urow('Tackles won','',x.h.tkl,x.a.tkl,'hi',v=>v)}${urow('Fouls','',x.h.fouls,x.a.fouls,null,v=>v)}${urow('Yellow cards','',x.h.yc,x.a.yc,null,v=>v)}${urow('Red cards','',x.h.rc,x.a.rc,null,v=>v)}</div>`}
+  if(p){h+=`<h3 class="ush">${p.src==='model'?'Chances':'Market chances'} <small>${p.src==='model'?'my model blended 40/60 with no-vig DraftKings and Bet365 · 100,000 simulations':'DraftKings prices with the bookmaker margin removed. My model has not analysed this match yet.'}</small></h3>${ustrip(p,f.h.name,f.a.name,1)}`;
+    if(M){const q=M.m.p,m=M.m;h+=`<div class="umini">${[['My model',q.mH,q.mD,q.mA],['Market (no-vig)',q.kH,q.kD,q.kA]].map(([l,hh,dd,aa])=>`<span>${l}</span><div><div class="bar"><i class="h" style="width:${hh*100}%"></i><i class="d" style="width:${dd*100}%"></i><i class="a" style="width:${aa*100}%"></i></div><div class="lab"><span>${pc(hh)}</span><span>${pc(dd)}</span><span>${pc(aa)}</span></div></div>`).join('')}</div>
+      <div class="lch"><span class="chip">Over 1.5 <b>${pc(q.o15)}</b></span><span class="chip">Over 2.5 <b>${pc(q.o25)}</b></span><span class="chip">Over 3.5 <b>${pc(q.o35)}</b></span><span class="chip">Both score <b>${pc(q.btts)}</b></span><span class="chip">Corners over 9.5 <b>${pc(q.cor95)}</b></span><span class="chip">Yellows over 3.5 <b>${pc(q.yc35)}</b></span></div>
+      ${m.dog?(()=>{const g=m.dog,Tm=g.side==='H'?m.home:m.away,ip=M.d.pick&&M.d.pick.eid===f.id;return`<div class="udog"><div><div class="t">Underdog</div><div class="v">${esc(ush(Tm.name))}${ip?' <span class="utag q">top pick</span>':''}</div><div class="s">DraftKings ${esc(g.price)}</div></div><div><div class="t">Win</div><div class="v">${pc(g.win)}</div><div class="s">model ${pc(g.model)} · market ${pc(g.mkt)}</div></div><div><div class="t">Win or draw</div><div class="v">${pc(g.dc)}</div><div class="s">the +0.5 line</div></div><div><div class="t">Draw no bet</div><div class="v">${pc(g.dnb)}</div><div class="s">stake back on a draw</div></div><div><div class="t">Edge vs market</div><div class="v">${g.win-g.mkt>=0?'+':''}${Math.round((g.win-g.mkt)*100)} pts</div><div class="s">a lead, not a proven edge</div></div></div>`})():''}
+      <h3 class="ush">Most likely scores</h3><div class="ucs">${m.cs.map(([s,v])=>`<div><b>${esc(s)}</b><span>${pc(v)}</span></div>`).join('')}</div>`}}
+  h+=`<h3 class="ush">Recent form <small>last 5 in all competitions · hover a result for the score</small></h3><div class="uduo"><div class="upan h"><h4>${esc(f.h.name)}</h4><div class="uff">${last(H)||'<span class="note">No results on file.</span>'}</div></div><div class="upan a"><h4>${esc(f.a.name)}</h4><div class="uff">${last(A)||'<span class="note">No results on file.</span>'}</div></div></div>`;
+  return h}
+function utSide(f,M){const H=UCL.teams[f.h.id],A=UCL.teams[f.a.id],h=(H.ucl||{}).all||{},a=(A.ucl||{}).all||{},rH=UCL.rank[f.h.id]||{},rA=UCL.rank[f.a.id]||{};
+  const sH=usplit(H.games||[]),sA=usplit(A.games||[]),pg=(s,k)=>s.gp?s[k]/s.gp:null;
+  let t=`<h3 class="ush">Side by side <small>darker bar marks the better side on each line</small></h3><div class="utape">
+   ${ug('Champions League table')}${urow('Table position','',rH.rank,rA.rank,'lo',v=>uord(v),36)}${urow('Points',`${rH.p||0} and ${rA.p||0} games`,rH.pts,rA.pts,'hi',v=>v,24)}${urow('Goal difference','',rH.gf-rH.ga,rA.gf-rA.ga,'hi',v=>(v>0?'+':'')+v)}
+   ${ug('Champions League, per match')}${urow('Goals scored','',pg(h,'gf'),pg(a,'gf'),'hi')}${urow('Goals conceded','',pg(h,'ga'),pg(a,'ga'),'lo')}${urow('Shots','',h.sh,a.sh,'hi',v=>ufx(v,1))}${urow('Shots on target','',h.sot,a.sot,'hi',v=>ufx(v,1))}${urow('Shots conceded','',h.sha,a.sha,'lo',v=>ufx(v,1))}${urow('On target conceded','',h.sota,a.sota,'lo',v=>ufx(v,1))}
+   ${urow('Possession','',h.poss,a.poss,'hi',v=>ufx(v,1)+'%',100)}${urow('Pass accuracy','',h.pass,a.pass,'hi',v=>pc(v),1)}${urow('Corners','',h.cor,a.cor,'hi',v=>ufx(v,1))}${urow('Tackles won','',h.tkl,a.tkl,'hi',v=>ufx(v,1))}${urow('Interceptions','',h.int,a.int,'hi',v=>ufx(v,1))}${urow('Fouls','',h.fouls,a.fouls,null,v=>ufx(v,1))}${urow('Yellow cards','',h.yc,a.yc,null,v=>ufx(v,1))}${urow('Clean sheets','',h.cs,a.cs,'hi',v=>v,8)}
+   ${ug('All competitions this season')}${urow('Points per game',`${sH.gp} and ${sA.gp} games`,sH.ppg,sA.ppg,'hi',v=>ufx(v,2),3)}${utrow('Record',`${sH.w||0}-${sH.d||0}-${sH.l||0}`,`${sA.w||0}-${sA.d||0}-${sA.l||0}`)}${urow('Goals scored per game','',sH.gf,sA.gf,'hi')}${urow('Goals conceded per game','',sH.ga,sA.ga,'lo')}${urow('Clean sheets','',sH.cs,sA.cs,'hi',v=>pc(v),1)}${urow('Over 2.5 goals','',sH.o25,sA.o25,null,v=>pc(v),1)}${urow('Both teams scored','',sH.btts,sA.btts,null,v=>pc(v),1)}</div>`;
+  if(M){const m=M.m,X=m.home,Y=m.away;t+=`<h3 class="ush">From the model's analysis <small>domestic xG, opponent-adjusted</small></h3><div class="utape">
+   ${ug('Projection for this match')}${urow('Expected goals','blend of model and market',X.lam,Y.lam,'hi')}${urow('Independent model xG','before looking at prices',X.lam_model,Y.lam_model,'hi')}${urow('Chance to score','',X.to05,Y.to05,'hi',pc,1)}${urow('Expected shots','',X.exp_sh,Y.exp_sh,'hi',v=>ufx(v,1))}${urow('Expected corners','',X.exp_cor,Y.exp_cor,'hi',v=>ufx(v,1))}${urow('Expected yellow cards','',X.exp_yc,Y.exp_yc,null,v=>ufx(v,1))}
+   ${ug('Domestic league')}${urow('xG per match',`${ulg[X.dom.league]||'no xG feed'} · ${ulg[Y.dom.league]||'no xG feed'}`,X.dom.xgf,Y.dom.xgf,'hi')}${urow('xG against','',X.dom.xga,Y.dom.xga,'lo')}${urow('Attack vs own league','1.00 = league average',X.dom.att,Y.dom.att,'hi')}${urow('Defense vs own league','below 1.00 is better',X.dom.de,Y.dom.de,'lo')}${utrow('Domestic league',esc(X.form_dom),esc(Y.form_dom))}${urow('Rest days','since last match',X.rest,Y.rest,null,v=>v)}</div>`}
+  return t}
+function utHist(f,M,pane){if(!UCLH){uhist(e=>{if(UTAB==='hist'&&pane.isConnected)pane.innerHTML=e?`<p class="empty">The history file did not load (${esc(e.message)}).</p>`:utHist(f,M,pane)});return'<p class="note">Loading every Champions League result since 2003…</p>'}
+  const H=f.h.id,A=f.a.id,Ls=UCLH.filter(r=>((r[1]===H&&r[2]===A)||(r[1]===A&&r[2]===H))&&r[0]<f.day).reverse();let wH=0,wA=0,dr=0,gH=0,gA=0;Ls.forEach(r=>{const hs=r[1]===H?r[3]:r[4],as=r[1]===H?r[4]:r[3];gH+=hs;gA+=as;hs>as?wH++:hs<as?wA++:dr++});
+  const path=id=>useason(id).map(x=>`<tr><td>${ubadge(x.r)}</td><td>${x.h?'vs':'at'} ${esc(ush(x.opp))}</td><td class="n">${x.gf}–${x.ga}</td><td>${esc(x.f.stage)}</td></tr>`).join('');
+  return`<h3 class="ush">Head to head <small>Champions League meetings since 2002-03 (ESPN)</small></h3>`+
+   (Ls.length?`<div class="ustat"><div><span>${esc(f.h.name)} wins</span><b>${wH}</b></div><div><span>Draws</span><b>${dr}</b></div><div><span>${esc(f.a.name)} wins</span><b>${wA}</b></div><div><span>Goals</span><b>${gH}–${gA}</b><small>${esc(ush(f.h.name))} first</small></div></div>
+    <div class="utb"><table><thead><tr><th>Date</th><th>Round</th><th>Home</th><th class="n">Score</th><th>Away</th></tr></thead><tbody>${Ls.map(r=>`<tr><td>${esc(r[0])}</td><td>${esc(r[7])}</td><td${r[3]>r[4]?' class="uwin"':''}>${esc(r[5])}</td><td class="n">${r[3]}–${r[4]}</td><td${r[4]>r[3]?' class="uwin"':''}>${esc(r[6])}</td></tr>`).join('')}</tbody></table></div>`
+    :`<p class="empty">${esc(f.h.name)} and ${esc(f.a.name)} have not met in the Champions League since at least 2002-03. Meetings in other competitions are not on file.</p>`)+
+   `<h3 class="ush">Their Champions League so far</h3><div class="uduo">${[f.h,f.a].map((t,k)=>`<div class="upan ${k?'a':'h'}"><h4>${esc(t.name)}</h4><div class="utb"><table><tbody>${path(t.id)||'<tr><td class="note">No matches played yet.</td></tr>'}</tbody></table></div></div>`).join('')}</div>`}
+function utHA(f){const H=UCL.teams[f.h.id],A=UCL.teams[f.a.id],G=(t,ha)=>(t.games||[]).filter(g=>g.ha===ha);
+  const hh=usplit(G(H,'home')),aa=usplit(G(A,'away')),uh=(H.ucl||{}).home||{},ua=(A.ucl||{}).away||{};
+  const tb=(t)=>{const s={home:usplit(G(t,'home')),away:usplit(G(t,'away')),all:usplit(t.games||[])},u=t.ucl||{},c=(k,fm)=>['home','away','all'].map(x=>`<td class="n">${s[x].gp?fm(s[x][k]):'–'}</td>`).join(''),cu=(k,fm)=>['home','away','all'].map(x=>`<td class="n">${u[x]&&u[x][k]!=null?fm(u[x][k],u[x]):'–'}</td>`).join('');
+    return`<div class="utb"><table><thead><tr><th>All competitions</th><th class="n">Home</th><th class="n">Away</th><th class="n">All</th></tr></thead><tbody>
+     <tr><td>Played</td>${c('gp',v=>v)}</tr><tr><td>Won-drawn-lost</td>${['home','away','all'].map(x=>`<td class="n">${s[x].gp?`${s[x].w}-${s[x].d}-${s[x].l}`:'–'}</td>`).join('')}</tr><tr><td>Points per game</td>${c('ppg',v=>ufx(v))}</tr><tr><td>Goals scored per game</td>${c('gf',v=>ufx(v))}</tr><tr><td>Goals conceded per game</td>${c('ga',v=>ufx(v))}</tr><tr><td>Clean sheets</td>${c('cs',v=>pc(v))}</tr><tr><td>Failed to score</td>${c('fts',v=>pc(v))}</tr><tr><td>Over 2.5 goals</td>${c('o25',v=>pc(v))}</tr><tr><td>Both teams scored</td>${c('btts',v=>pc(v))}</tr>
+     <tr class="usub"><td>Champions League only</td><td></td><td></td><td></td></tr><tr><td>Played</td>${cu('gp',v=>v)}</tr><tr><td>Goals per game</td>${cu('gf',(v,o)=>ufx(v/o.gp))}</tr><tr><td>Conceded per game</td>${cu('ga',(v,o)=>ufx(v/o.gp))}</tr><tr><td>Shots</td>${cu('sh',v=>ufx(v,1))}</tr><tr><td>Shots on target</td>${cu('sot',v=>ufx(v,1))}</tr><tr><td>Shots conceded</td>${cu('sha',v=>ufx(v,1))}</tr><tr><td>Possession</td>${cu('poss',v=>ufx(v,1)+'%')}</tr><tr><td>Corners</td>${cu('cor',v=>ufx(v,1))}</tr></tbody></table></div>`};
+  return`<h3 class="ush">${esc(ush(f.h.name))} at home vs ${esc(ush(f.a.name))} away <small>the split that matters for this match</small></h3><div class="utape">
+   ${ug('All competitions this season')}${urow('Games','',hh.gp,aa.gp,null,v=>v)}${utrow('Record',hh.gp?`${hh.w}-${hh.d}-${hh.l}`:'–',aa.gp?`${aa.w}-${aa.d}-${aa.l}`:'–')}${urow('Points per game','',hh.ppg,aa.ppg,'hi',v=>ufx(v),3)}${urow('Goals scored per game','',hh.gf,aa.gf,'hi')}${urow('Goals conceded per game','',hh.ga,aa.ga,'lo')}${urow('Clean sheets','',hh.cs,aa.cs,'hi',v=>pc(v),1)}${urow('Failed to score','',hh.fts,aa.fts,'lo',v=>pc(v),1)}${urow('Over 2.5 goals','',hh.o25,aa.o25,null,v=>pc(v),1)}${urow('Both teams scored','',hh.btts,aa.btts,null,v=>pc(v),1)}
+   ${ug('Champions League only')}${urow('Games','',uh.gp,ua.gp,null,v=>v)}${urow('Goals scored per game','',uh.gp?uh.gf/uh.gp:null,ua.gp?ua.gf/ua.gp:null,'hi')}${urow('Goals conceded per game','',uh.gp?uh.ga/uh.gp:null,ua.gp?ua.ga/ua.gp:null,'lo')}${urow('Shots','',uh.sh,ua.sh,'hi',v=>ufx(v,1))}${urow('Shots on target','',uh.sot,ua.sot,'hi',v=>ufx(v,1))}${urow('Shots conceded','',uh.sha,ua.sha,'lo',v=>ufx(v,1))}${urow('Possession','',uh.poss,ua.poss,null,v=>ufx(v,1)+'%',100)}${urow('Corners','',uh.cor,ua.cor,'hi',v=>ufx(v,1))}</div>
+   <h3 class="ush">Full home and away splits</h3><div class="uduo"><div class="upan h"><h4>${esc(f.h.name)}</h4>${tb(H)}</div><div class="upan a"><h4>${esc(f.a.name)}</h4>${tb(A)}</div></div>
+   <p class="note">All-competition results come from ESPN team schedules (league, cup and European games this season). Champions League shot and possession numbers come from ESPN box scores. Small samples: a club may have played only two home and two away Champions League games.</p>`}
+function utPlay(f,M){const tab=(t)=>{const P=(t.players||[]).slice(0,14);return P.length?`<div class="utb"><table><thead><tr><th>Player</th><th>Pos</th><th class="n">Apps</th><th class="n">G</th><th class="n">A</th><th class="n">Shots</th><th class="n">On tgt</th><th class="n">YC</th></tr></thead><tbody>${P.map(p=>`<tr><td><b>${esc(p.n)}</b></td><td>${p.pos==='SUB'?'<i>sub</i>':esc(p.pos)}</td><td class="n">${p.app}${p.st<p.app?` <i>(${p.st})</i>`:''}</td><td class="n">${p.g||0}</td><td class="n">${p.a||0}</td><td class="n">${p.sh||0}</td><td class="n">${p.sot||0}</td><td class="n">${p.yc||0}</td></tr>`).join('')}</tbody></table></div>`:'<p class="note">No Champions League appearances on file.</p>'};
+  let h=`<h3 class="ush">Champions League 2026-27 <small>apps (starts in brackets) · from ESPN box scores</small></h3><div class="uduo">${[f.h,f.a].map((t,k)=>`<div class="upan ${k?'a':'h'}"><h4>${esc(t.name)}</h4>${tab(UCL.teams[t.id])}</div>`).join('')}</div>`;
+  if(M){const m=M.m;h+=`<h3 class="ush">Projected for this match <small>from the model · hit rate counts starts with 60+ minutes</small></h3><div class="uduo">${[m.home,m.away].map((t,k)=>`<div class="upan ${k?'a':'h'}"><h4>${esc(t.name)}</h4><div class="utb"><table><thead><tr><th>Player</th><th class="n">Start</th><th class="n">Score</th><th class="n">2+ shots</th><th class="n">1+ on tgt</th><th class="n">Card</th><th class="n">On tgt hit</th></tr></thead><tbody>${(t.players||[]).map(q=>`<tr><td><b>${esc(q.n)}</b>${q.pen?'<span class="utag p">pens</span>':''}${q.av>0&&q.av<1?'<span class="utag q">doubt</span>':''}</td><td class="n">${pc(q.st)}</td><td class="n">${pc(q.g)}</td><td class="n">${pc(q.sh2)}</td><td class="n">${pc(q.sot1)}</td><td class="n">${pc(q.card)}</td><td class="n">${esc(q.hit_sot1)}</td></tr>`).join('')}</tbody></table></div><p class="note">Keeper: ${esc(t.gk||'backup, not confirmed')} · Penalties: ${esc(t.pen||'unknown')} (judgment)</p></div>`).join('')}</div>`}
+  return h}
+function utNotes(f,M){const m=M.m;return`<h3 class="ush">Scouting notes</h3><div class="unotes">${[['Team news',m.notes.news],['Matchup',m.notes.tactics],['Model vs market',m.notes.gap],['Traps',m.notes.traps,1],['Conditions and rest',m.notes.ext]].filter(x=>x[1]).map(([t,s,w])=>`<div class="unote${w?' t':''}"><h5>${t}</h5><p>${umdx(s)}</p></div>`).join('')}</div><p class="note" style="margin-top:12px">Lineups were projected from previews and were not official.</p>`}
+
+/* ---------- the model's track record ---------- */
 function uclrecord(){const box=$('#v-ucl-record');box.classList.add('ucv');uclload(box,()=>{
-  const L=[];for(const d of UCL.days)for(const m of d.matches){const r=ures(d,m);if(r)L.push({d,m,r,o:uout(r)})}
-  if(!L.length){box.innerHTML=uclhead(null,'Track record')+'<p class="empty">No finished matches on file yet.</p>';return}
-  const n=L.length,cnt=f=>L.filter(f).length,bl=x=>x.m.p,brier=k=>L.reduce((s,x)=>s+['H','D','A'].reduce((a,y)=>a+((x.m.p[k+y])-(x.o===y?1:0))**2,0),0)/n;
-  const fb=cnt(x=>ubest(bl(x))===x.o),fm=cnt(x=>ubest(bl(x),'m')===x.o),fk=cnt(x=>ubest(bl(x),'k')===x.o);
-  const ov=cnt(x=>(x.m.p.o25>=.5)===(x.r.hs+x.r.as>2.5)),bt=cnt(x=>(x.m.p.btts>=.5)===(x.r.hs>0&&x.r.as>0));
+  const L=[];for(const d of UCL.model||[])for(const m of d.matches){const f=UCL.byId[m.id];if(f&&f.fin)L.push({d,m,f,o:uout(f)})}
+  if(!L.length){box.innerHTML=uclhead('','Track record')+'<p class="empty">No finished matches the model analysed yet.</p>';return}
+  const n=L.length,cnt=fn=>L.filter(fn).length,brier=k=>L.reduce((s,x)=>s+['H','D','A'].reduce((a,y)=>a+((x.m.p[k+y])-(x.o===y?1:0))**2,0),0)/n;
+  const fb=cnt(x=>ubest(x.m.p)===x.o),fm=cnt(x=>ubest(x.m.p,'m')===x.o),fk=cnt(x=>ubest(x.m.p,'k')===x.o);
+  const ov=cnt(x=>(x.m.p.o25>=.5)===(x.f.hs+x.f.as>2.5)),bt=cnt(x=>(x.m.p.btts>=.5)===(x.f.hs>0&&x.f.as>0));
   const B=brier(''),BM=brier('m'),BK=brier('k'),pk=L.filter(x=>x.d.pick&&x.d.pick.eid===x.m.id),dg=L.filter(x=>x.m.dog);
   const dgw=dg.filter(x=>x.o===x.m.dog.side).length,dgdc=dg.filter(x=>x.o===x.m.dog.side||x.o==='D').length,dgexp=dg.reduce((s,x)=>s+x.m.dog.win,0);
-  box.innerHTML=uclhead(null,'Track record',`${n} finished matches over ${UCL.days.length} matchday${UCL.days.length===1?'':'s'} · graded against ESPN final scores`)+
+  box.innerHTML=uclhead('','Track record',`${n} finished matches the model analysed, over ${(UCL.model||[]).length} matchday${(UCL.model||[]).length===1?'':'s'} · graded against ESPN final scores`)+
   `<div class="ustat"><div><span>Most likely result hit</span><b>${fb} of ${n}</b><small>${pc(fb/n)} · my model alone ${fm}, the market's favorite ${fk}</small></div>
    <div><span>Over / under 2.5 call</span><b>${ov} of ${n}</b><small>${pc(ov/n)} · over picked when its chance was 50% or more</small></div>
    <div><span>Both teams score call</span><b>${bt} of ${n}</b><small>${pc(bt/n)}</small></div>
    <div><span>Underdogs</span><b>${dgw} of ${dg.length} won</b><small>${dgdc} won or drew · expected ${ufx(dgexp,1)} wins from our chances</small></div></div>
   <p class="note"><b>Accuracy score (Brier, lower is better):</b> blend ${ufx(B,3)} · my model ${ufx(BM,3)} · market ${ufx(BK,3)}. ${BM<BK?'My model scored better than the market on these matches, but':'The market scored better than my model on these matches, and'} ${n} matches is far too few to prove an edge either way. No edge is proven until it beats real prices over many more matches.</p>
-  ${pk.length?`<h3 class="ush">Favorite underdog picks</h3><div class="utb"><table><thead><tr><th>Date</th><th>Pick</th><th>Match</th><th class="n">Win %</th><th class="n">Price</th><th>Result</th></tr></thead><tbody>${pk.map(x=>`<tr><td>${esc(x.d.day.slice(5))}</td><td><b>${esc(x.d.pick.team)}</b></td><td><a href="#ucl-match-${x.m.id}">${esc(ush(x.m.home.name))} ${x.r.hs}–${x.r.as} ${esc(ush(x.m.away.name))}</a></td><td class="n">${pc(x.m.dog.win)}</td><td class="n">${esc(x.m.dog.price)}</td><td>${x.o===x.m.dog.side?'<span class="hit">Won</span>':x.o==='D'?'Draw':'<span class="miss">Lost</span>'}</td></tr>`).join('')}</tbody></table></div>`:''}
-  <h3 class="ush">Every match</h3><div class="utb"><table><thead><tr><th>Date</th><th>Match</th><th class="n">Home</th><th class="n">Draw</th><th class="n">Away</th><th>Most likely</th><th>Final</th><th></th><th>O/U 2.5</th></tr></thead><tbody>${L.map(x=>{const p=x.m.p,b=ubest(p),ou=p.o25>=.5,oh=ou===(x.r.hs+x.r.as>2.5);
-    return`<tr><td>${esc(x.d.day.slice(5))}</td><td><a href="#ucl-match-${x.m.id}">${esc(ush(x.m.home.name))} v ${esc(ush(x.m.away.name))}</a></td><td class="n">${pc(p.H)}</td><td class="n">${pc(p.D)}</td><td class="n">${pc(p.A)}</td><td>${esc(uwho(x.m,b))}</td><td class="n">${x.r.hs}–${x.r.as}</td><td>${b===x.o?'<span class="hit">Hit</span>':'<span class="miss">Miss</span>'}</td><td>${ou?'Over':'Under'} ${pc(ou?p.o25:1-p.o25)} ${oh?'<span class="hit">✓</span>':'<span class="miss">✗</span>'}</td></tr>`}).join('')}</tbody></table></div>`})}
+  ${pk.length?`<h3 class="ush">Favorite underdog picks</h3><div class="utb"><table><thead><tr><th>Date</th><th>Pick</th><th>Match</th><th class="n">Win %</th><th class="n">Price</th><th>Result</th></tr></thead><tbody>${pk.map(x=>`<tr><td>${esc(x.d.day.slice(5))}</td><td><b>${esc(x.d.pick.team)}</b></td><td><a href="#ucl-match-${x.m.id}">${esc(ush(x.f.h.name))} ${x.f.hs}–${x.f.as} ${esc(ush(x.f.a.name))}</a></td><td class="n">${pc(x.m.dog.win)}</td><td class="n">${esc(x.m.dog.price)}</td><td>${x.o===x.m.dog.side?'<span class="hit">Won</span>':x.o==='D'?'Draw':'<span class="miss">Lost</span>'}</td></tr>`).join('')}</tbody></table></div>`:''}
+  <h3 class="ush">Every match</h3><div class="utb"><table><thead><tr><th>Date</th><th>Match</th><th class="n">Home</th><th class="n">Draw</th><th class="n">Away</th><th>Most likely</th><th>Final</th><th></th><th>O/U 2.5</th></tr></thead><tbody>${L.map(x=>{const p=x.m.p,b=ubest(p),ou=p.o25>=.5,oh=ou===(x.f.hs+x.f.as>2.5);
+    return`<tr><td>${esc(x.d.day.slice(5))}</td><td><a href="#ucl-match-${x.m.id}">${esc(ush(x.f.h.name))} v ${esc(ush(x.f.a.name))}</a></td><td class="n">${pc(p.H)}</td><td class="n">${pc(p.D)}</td><td class="n">${pc(p.A)}</td><td>${esc(uwho(x.f,b))}</td><td class="n">${x.f.hs}–${x.f.as}</td><td>${b===x.o?'<span class="hit">Hit</span>':'<span class="miss">Miss</span>'}</td><td>${ou?'Over':'Under'} ${pc(ou?p.o25:1-p.o25)} ${oh?'<span class="hit">✓</span>':'<span class="miss">✗</span>'}</td></tr>`}).join('')}</tbody></table></div>`})}
 function route(){const h=location.hash.slice(1),m=h.match(/^week-(\d+)$/),p=h.match(/^player-([\w-]+)$/),gm=h.match(/^game-([\w-]+)$/),gg=gm&&G.find(x=>slug(x.id)===gm[1]);
   if(gg){cur=gg.week;show('weeks');week(cur,gg.id)}
   else if(/^cash(-nfl|-cfb|-nba|-bets|-build)?$/.test(h)){show('cash');cash(h.slice(5)||null)}
@@ -777,7 +886,7 @@ function route(){const h=location.hash.slice(1),m=h.match(/^week-(\d+)$/),p=h.ma
   else if(/^cfb(-week-\d+|-game-\d+)?$/.test(h)){show('cfb-weeks');const cw=h.match(/^cfb-week-(\d+)$/),cg=h.match(/^cfb-game-(\d+)$/);cfbweeks(cw?+cw[1]:null,cg?cg[1]:null)}
   else if(/^nba(-game-\d+)?$/.test(h)){show('nba');const ng=h.match(/^nba-game-(\d+)$/);nbtonight(ng?ng[1]:null)}
   else if(/^nba-week(s|-\d+)$/.test(h)){show('nba-weeks');nbaweeks(h==='nba-weeks'?null:+h.slice(9))}
-  else if(/^ucl(-day-\d{4}-\d\d-\d\d|-match-\d+)?$/.test(h)){show('ucl');uclview(h)}else if(h==='ucl-record'){show('ucl-record');uclrecord()}
+  else if(h==='ucl'){show('ucl');uclhome()}else if(/^ucl-md(-[\w-]+)?$/.test(h)){show('ucl-md');uclmd(h.slice(7))}else if(/^ucl-match-\d+$/.test(h)){show('ucl-md');uclmatch(h.slice(10))}else if(h==='ucl-record'){show('ucl-record');uclrecord()}
   else if(h==='nba-record'){show('nba-record');nbarecord()}else if(h==='nba-leaders'||h==='nba-players'||/^nba-player-\d+$/.test(h)){show('nba-leaders');nbaleaders()}
   else if(h==='cfb-record'){show('cfb-record');cfbrecord()}else if(h==='cfb-teampos'){show('cfb-teampos');cfbteampos()}else if(h==='cfb-leaders'||/^cfb-player-\d+$/.test(h)){show('cfb-leaders');cfbleaders(h.startsWith('cfb-player-')?h.slice(11):null)}else{show('weeks');week(cur)}}
 document.querySelectorAll('#side details.sport').forEach(d=>{try{const k='sp:'+d.id;if(localStorage.getItem(k)==='0')d.open=false;d.addEventListener('toggle',()=>{try{localStorage.setItem(k,d.open?'1':'0')}catch(e){}})}catch(e){}});

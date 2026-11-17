@@ -228,7 +228,7 @@ def push_model():
     for sub in ("", "cfb", "nba") if FOOTBALL_PUBLIC else ("nba",):
         for f in glob.glob(os.path.join(ROOT, sub, "*.py")):
             mirror(f, os.path.join(MODEL, sub, os.path.basename(f)))
-    for f in ("hub_template.html", "slate.json", "cfb/qb.json", "ucl/ucl.json", "README.md", "SCHEDULE.md"):
+    for f in ("hub_template.html", "slate.json", "cfb/qb.json", "ucl/model.json", "README.md", "SCHEDULE.md"):
         if FOOTBALL_PUBLIC and os.path.exists(os.path.join(ROOT, f)):
             mirror(os.path.join(ROOT, f), os.path.join(MODEL, f))
     newer = {}
