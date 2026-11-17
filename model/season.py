@@ -312,6 +312,11 @@ def main():
         files.update(hub_nba.build(HUB))
     except Exception as e:  # an NBA data problem must not stop the NFL hub from building
         print("NBA hub data skipped:", repr(e))
+    try:  # Champions League pages (built from TheBrogram/soccer on this computer; GitHub reuses the kept copy)
+        import hub_ucl
+        files.update(hub_ucl.build(HUB))
+    except Exception as e:  # noqa: BLE001  a soccer data problem must not stop the hub from building
+        print("UCL hub data skipped:", repr(e))
     json.dump(files, open(os.path.join(HUB, "files.json"), "w"), indent=1)
     n = {k: sum(1 for x in rows if x["status"] == k) for k in ("final", "book", "lines", "early")}
     print(f"Hub: Week {wk} is current. {n['final']} final, {n['book']} with a Game Book, {n['lines']} with lines, {n['early']} early. "

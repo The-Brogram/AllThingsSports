@@ -529,6 +529,62 @@ body.noscroll{overflow:hidden}
 .nbld th:nth-child(n+3){text-align:right}.nbld th.lvh{text-align:left}
 @media(max-width:640px){.nbodds .chips,.lgrp .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}.lgrp .chip,.nbodds .chip{white-space:nowrap;flex:none}.nbld .lhide{display:none}.nbld td.lv{min-width:96px}.lpl .nbface{--sz:30px}}
 @media(max-width:640px){.nblist .nbt th:nth-child(n+3),.nblist .nbt td:nth-child(n+3){display:none}.nblm{display:block;font:600 13px var(--body);color:var(--fg);margin-top:2px;white-space:normal}.nblist .nbn{white-space:normal}.nbp i{width:44px}.nbt td,.nbt th{padding-inline:6px}}
+/* Champions League */
+.sport.ucl .sh i{background:#1b3d9c;box-shadow:0 0 0 3px rgba(27,61,156,.16)}
+.ucv{--uh:#cf5418;--uh2:#f7dfd1;--ua:#2563eb;--ua2:#dbe6fb;--ud:#8b949a}
+.ucv .udays{margin-block:14px 4px}
+.ucg{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:12px;margin-top:14px}
+.ucm{display:grid;gap:10px;border:1px solid var(--line);border-radius:12px;padding:14px;color:var(--fg);text-decoration:none;background:var(--bg);min-width:0}
+.ucm:hover{border-color:var(--line2);background:var(--pan)}
+.ucm .uk{display:flex;justify-content:space-between;gap:8px;font:500 12px var(--mono);color:var(--mut);min-width:0}.ucm .uk span:last-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ucm .ut{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 10px;align-items:baseline}
+.ucm .ut b{font:800 20px/1.15 var(--disp);font-stretch:112%;text-transform:uppercase;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ucm .ut span{font:600 14px var(--mono)}.ucm .ut .h{color:var(--uh)}.ucm .ut .a{color:var(--ua)}
+.ucm .ut .sc{font:800 22px/1 var(--disp);color:var(--fg)}
+.ustrip{display:flex;height:26px;border-radius:6px;overflow:hidden;font:600 12px var(--mono);color:#fff}
+.ustrip div{display:flex;align-items:center;padding-inline:8px;white-space:nowrap;overflow:hidden;min-width:0}
+.ustrip .h{background:var(--uh)}.ustrip .d{background:var(--ud);justify-content:center}.ustrip .a{background:var(--ua);justify-content:flex-end}
+.ucm .ux{display:flex;flex-wrap:wrap;gap:4px 12px;font:500 12px var(--mono);color:var(--mut)}.ucm .ux b{color:var(--fg)}
+.ufin{font:600 12.5px var(--mono);color:var(--mut)}.ufin .w{color:var(--grn)}.ufin .l{color:var(--red)}
+.upick{border:1px solid var(--line);border-left:4px solid var(--pb);border-radius:12px;padding:12px 16px;display:grid;gap:4px;margin-top:14px;background:var(--pan)}
+.upick small{font:600 10.5px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--pb)}
+.upick b{font:800 22px/1.15 var(--disp);font-stretch:112%;text-transform:uppercase}.upick b span{font:600 14px var(--mono);text-transform:none;color:var(--mut);margin-left:6px}
+.upick p{margin:0;font-size:14px;color:var(--mut);max-width:90ch}.upick .lk{justify-self:start}
+.uteams{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:end;margin-top:12px}
+.uteams h3{font:900 clamp(26px,5vw,48px)/.95 var(--disp);font-stretch:112%;text-transform:uppercase;margin:0;text-wrap:balance}
+.uteams .h h3{color:var(--uh)}.uteams .a{text-align:right}.uteams .a h3{color:var(--ua)}
+.uteams small{display:block;font:500 12.5px var(--mono);color:var(--mut);margin-top:6px}
+.uxg{font:800 clamp(34px,7vw,60px)/1 var(--disp);text-align:center;white-space:nowrap}.uxg small{display:block;font:600 10.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-top:4px}
+.ufix{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:13px;color:var(--mut);margin-top:12px}
+.ufb{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;background:var(--pan);border:1px solid var(--line);border-radius:12px;padding:10px 14px;font:500 13px var(--mono)}.ufb b{font:800 22px/1 var(--disp)}
+.ucv .ustrip{height:38px;font-size:13px;margin-top:16px}
+.umini{display:grid;grid-template-columns:130px 1fr;gap:6px 12px;align-items:center;font-size:12.5px;color:var(--mut);margin-top:10px}
+.umini .bar{display:flex;height:8px;border-radius:4px;overflow:hidden}.umini .bar i{display:block}.umini .bar .h{background:var(--uh)}.umini .bar .d{background:var(--ud)}.umini .bar .a{background:var(--ua)}
+.umini .lab{display:flex;justify-content:space-between;font:500 12px var(--mono)}
+.ucv .lch{margin-top:12px}.ucv .lch .chip{cursor:default}.ucv .lch .chip b{color:var(--fg)}
+.udog{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:14px}
+.udog>div{background:var(--bg);padding:10px 12px;min-width:0}.udog>div:first-child{background:var(--pan)}
+.udog .t{font:600 10.5px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--mut)}.udog .v{font:800 24px/1.15 var(--disp)}.udog .s{font-size:12px;color:var(--mut)}
+.ush{font:800 22px var(--disp);font-stretch:112%;text-transform:uppercase;margin:28px 0 8px;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}.ush small{font:500 12.5px var(--body);text-transform:none;color:var(--mut)}
+.utape{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.utape .g{padding:8px 14px 4px;font:600 10.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mut);background:var(--pan);border-top:1px solid var(--line)}.utape .g:first-child{border-top:0}
+.urow{display:grid;grid-template-columns:1fr minmax(120px,220px) 1fr;align-items:center;gap:10px;padding:7px 14px;border-top:1px solid var(--line)}.utape .g+.urow{border-top:0}
+.urow .l{text-align:center;font-size:13px;color:var(--mut);line-height:1.25}.urow .l em{display:block;font-style:normal;font-size:11px;opacity:.85}
+.us{display:flex;align-items:center;gap:8px;min-width:0}.us.h{flex-direction:row-reverse}
+.us .v{font:500 13.5px var(--mono);min-width:48px;white-space:nowrap}.us.h .v{text-align:right}
+.us .k{flex:1;height:10px;display:flex;min-width:0}.us.h .k{justify-content:flex-end}
+.us .f{height:100%;border-radius:2px}.us.h .f{background:var(--uh2)}.us.a .f{background:var(--ua2)}.us.w.h .f{background:var(--uh)}.us.w.a .f{background:var(--ua)}.us.w .v{font-weight:700}
+.us .x{font-size:13px}.us.h .x{text-align:right}
+.uduo{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.upan{border:1px solid var(--line);border-radius:12px;padding:14px;min-width:0}.upan h4{font:800 18px var(--disp);text-transform:uppercase;margin:0 0 8px}.upan.h h4{color:var(--uh)}.upan.a h4{color:var(--ua)}.upan .note{margin:8px 0 0;font-size:12.5px}
+.utb{overflow-x:auto}.utb table{border-collapse:collapse;width:100%;font-size:13px}.utb th{text-align:left;font:600 10.5px var(--mono);color:var(--mut);text-transform:uppercase;letter-spacing:.05em;padding:4px 6px;border-bottom:1px solid var(--line);white-space:nowrap}.utb td{padding:6px;border-bottom:1px solid var(--line);white-space:nowrap}.utb .n{text-align:right;font-family:var(--mono)}.utb tr:last-child td{border-bottom:0}.utb a{color:var(--fg)}
+.ures{display:inline-block;width:20px;text-align:center;border-radius:3px;font:600 12px var(--mono);color:#fff}.ures.W{background:var(--grn)}.ures.D{background:var(--ud)}.ures.L{background:var(--red)}
+.utag{display:inline-block;font:600 9.5px var(--mono);text-transform:uppercase;padding:1px 5px;border-radius:3px;margin-left:6px;vertical-align:1px}.utag.p{background:var(--fg);color:var(--bg)}.utag.q{border:1px solid var(--pb);color:var(--pb)}
+.ucs{display:flex;flex-wrap:wrap;gap:8px}.ucs div{border:1px solid var(--line);border-radius:8px;padding:6px 12px;text-align:center}.ucs b{display:block;font:800 20px/1.1 var(--disp)}.ucs span{font:500 12px var(--mono);color:var(--mut)}
+.unotes{display:grid;gap:10px}.unote{border:1px solid var(--line);border-radius:12px;padding:12px 16px;min-width:0}.unote h5{margin:0 0 4px;font:600 10.5px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--mut)}.unote p{margin:0;max-width:78ch;font-size:14px}.unote.t{border-left:3px solid var(--pb)}
+.ustat{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:10px;margin:14px 0}.ustat>div{border:1px solid var(--line);border-radius:12px;padding:12px 14px;min-width:0}.ustat b{display:block;font:800 30px/1 var(--disp)}.ustat span{font:500 12px var(--mono);color:var(--mut)}.ustat small{display:block;font-size:12.5px;color:var(--mut);margin-top:6px}
+.hit{color:var(--grn);font-weight:700}.miss{color:var(--red);font-weight:700}
+@media(max-width:720px){.uduo{grid-template-columns:1fr}.uteams{grid-template-columns:1fr 1fr}.uxg{grid-column:1/-1;grid-row:2}.urow{grid-template-columns:1fr 1fr;gap:2px 10px;padding:8px 12px}.urow .l{grid-column:1/-1;grid-row:1}.umini{grid-template-columns:1fr}.us .v{min-width:40px;font-size:13px}}
 </style>
 <div class="shell">
 <aside id="side" aria-label="Sections">
@@ -555,6 +611,10 @@ body.noscroll{overflow:hidden}
     <button data-v="nba-weeks"><span class="ic">▥</span>Previous weeks</button>
     <button data-v="nba-leaders"><span class="ic">◎</span>Season leaders</button></div>
   </details>
+  <details class="sport ucl" id="sp-ucl" open><summary class="sh"><i></i>Champions League<small>2026-27</small><span class="chev" aria-hidden="true"></span></summary>
+    <div class="spl"><button data-v="ucl"><span class="ic">▦</span>Matchdays</button>
+    <button data-v="ucl-record"><span class="ic">✓</span>Track record</button></div>
+  </details>
   <div class="soon"><b>More sports</b><small>Each new sport gets its own section here.</small></div>
 </aside>
 <div class="scrim" id="scrim"></div>
@@ -580,6 +640,8 @@ body.noscroll{overflow:hidden}
 <section id="v-nba-record" hidden></section>
 <section id="v-nba-weeks" hidden></section>
 <section id="v-nba-leaders" hidden></section>
+<section id="v-ucl" hidden></section>
+<section id="v-ucl-record" hidden></section>
 </main>
 </div></div>
 <script>
@@ -607,12 +669,103 @@ $('#live').lastChild.textContent=`${wname(D.week)} · now`;
 $('#upd').textContent=`Updated ${D.built} ET`;
 
 /* ---- views ---- */
-const VIEWS=['weeks','cash','compare','record','players','wrcb','teampos','fantasy','cfb-weeks','cfb-record','cfb-teampos','cfb-leaders','nba','nba-record','nba-weeks','nba-leaders'];let cur=D.week;
-const VNAME={'nba-weeks':'Previous weeks',weeks:'Weeks',cash:'Cash Center',compare:'Compare teams',record:'Track record',players:'Player lookup',wrcb:'WR / CB matchups',teampos:'Team vs position',fantasy:'Fantasy','cfb-weeks':'Weeks','cfb-record':'Track record','cfb-teampos':'Team vs position','cfb-leaders':'Season leaders',nba:'Tonight','nba-record':'Track record','nba-leaders':'Season leaders'};
+const VIEWS=['weeks','cash','compare','record','players','wrcb','teampos','fantasy','cfb-weeks','cfb-record','cfb-teampos','cfb-leaders','nba','nba-record','nba-weeks','nba-leaders','ucl','ucl-record'];let cur=D.week;
+const VNAME={'nba-weeks':'Previous weeks',weeks:'Weeks',cash:'Cash Center',compare:'Compare teams',record:'Track record',players:'Player lookup',wrcb:'WR / CB matchups',teampos:'Team vs position',fantasy:'Fantasy','cfb-weeks':'Weeks','cfb-record':'Track record','cfb-teampos':'Team vs position','cfb-leaders':'Season leaders',nba:'Tonight','nba-record':'Track record','nba-leaders':'Season leaders',ucl:'Matchdays','ucl-record':'Track record'};
 function menu(o){document.body.classList.toggle('menu',o);$('#menu').setAttribute('aria-expanded',String(o))}
 function show(v){const was=VIEWS.find(x=>!$('#v-'+x).hidden);VIEWS.forEach(x=>$('#v-'+x).hidden=x!==v);
   document.querySelectorAll('#side [data-v]').forEach(b=>{b.setAttribute('aria-pressed',b.dataset.v===v);if(b.dataset.v===v){const d=b.closest('details');if(d&&!d.open)d.open=true}});
-  $('.top').hidden=v!=='weeks';$('#mtitle').textContent=v==='cash'?'Cash Center':(v.startsWith('cfb')?'College Football · ':v.startsWith('nba')?'NBA · ':'NFL · ')+VNAME[v];menu(false);if(was&&was!==v)scrollTo(0,0)}
+  $('.top').hidden=v!=='weeks';$('#mtitle').textContent=v==='cash'?'Cash Center':(v.startsWith('cfb')?'College Football · ':v.startsWith('nba')?'NBA · ':v.startsWith('ucl')?'Champions League · ':'NFL · ')+VNAME[v];menu(false);if(was&&was!==v)scrollTo(0,0)}
+/* ---- Champions League: ucl.json, built on this computer from the soccer model (TheBrogram/soccer) ---- */
+let UCL=null,UCLP=null;
+function uclload(box,fn){if(UCL)return fn();if(!box.innerHTML)box.innerHTML='<p class="note">Loading…</p>';
+  UCLP=UCLP||fetch('ucl.json').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()});
+  UCLP.then(j=>{UCL=j;fn()}).catch(e=>{UCLP=null;box.innerHTML=`<p class="empty">The Champions League pages did not load (${esc(e.message)}).</p>`})}
+const ush=n=>String(n||'').replace('Paris Saint-Germain','PSG').replace('Manchester United','Man United').replace('Manchester City','Man City').replace('Feyenoord Rotterdam','Feyenoord').replace('Internazionale','Inter').replace('Slovan Bratislava','Slovan').replace('Shakhtar Donetsk','Shakhtar').replace('Atlético Madrid','Atlético').replace('Bayern Munich','Bayern').replace('VfB Stuttgart','Stuttgart').replace('Aston Villa','Villa').replace('LASK Linz','LASK').replace('AS Roma','Roma').replace('Borussia Dortmund','Dortmund').replace('Bayer Leverkusen','Leverkusen');
+const ulg={E0:'Premier League',SP1:'LaLiga',D1:'Bundesliga',I1:'Serie A',F1:'Ligue 1',N1:'Eredivisie',P1:'Primeira Liga',T1:'Süper Lig'};
+const uord=n=>n+(['th','st','nd','rd'][(n%100>10&&n%100<14)?0:(n%10<4?n%10:0)]||'th');
+const ufx=(x,d=2)=>x==null||isNaN(x)?'–':Number(x).toFixed(d);
+const umdx=s=>esc(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
+const umday=d=>d.matches.length?(d.matches[0].home.ucl||[]).length+1:'';
+const uday=s=>new Date(s+'T12:00:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'});
+const ures=(d,m)=>{const r=d.res&&d.res[m.id];return r&&r.final?r:null};
+const uout=r=>r.hs>r.as?'H':r.hs<r.as?'A':'D';
+const ubest=(p,k='')=>['H','D','A'].reduce((a,x)=>p[k+x]>p[k+a]?x:a,'H');
+const uwho=(m,x)=>x==='D'?'Draw':ush(x==='H'?m.home.name:m.away.name);
+function uform(s){const m=/(\d+)-(\d+)-(\d+)/.exec(s||'');return m?{w:+m[1],d:+m[2],l:+m[3],pts:3*m[1]+ +m[2],n:+m[1]+ +m[2]+ +m[3]}:null}
+function ustrip(m,big){const p=m.p,H=ush(m.home.name),A=ush(m.away.name);
+  return`<div class="ustrip" role="img" aria-label="${esc(H)} ${pc(p.H)}, draw ${pc(p.D)}, ${esc(A)} ${pc(p.A)}"><div class="h" style="width:${p.H*100}%">${big&&p.H>=.3?esc(H)+' ':''}${pc(p.H)}</div><div class="d" style="width:${p.D*100}%">${big&&p.D>=.25?'Draw ':''}${pc(p.D)}</div><div class="a" style="width:${p.A*100}%">${pc(p.A)}${big&&p.A>=.3?' '+esc(A):''}</div></div>`}
+function uclhead(d,title,sub){return`<div class="cfhead"><div><div class="eyebrow"><span>Champions League · League phase${d?' · Matchday '+umday(d):''}</span><span class="upd">Updated ${esc(UCL.built)} ET</span></div><h2>${title}</h2>${sub?`<p class="note">${sub}</p>`:''}</div></div>`}
+function uclview(h){const box=$('#v-ucl');box.classList.add('ucv');uclload(box,()=>{
+  const days=UCL.days,mm=h.match(/^ucl-match-(\d+)$/),dm=h.match(/^ucl-day-([\d-]+)$/);
+  if(mm){const d=days.find(x=>x.matches.some(m=>m.id===mm[1]));if(d)return uclmatch(box,d,d.matches.find(m=>m.id===mm[1]))}
+  let d=dm&&days.find(x=>x.day===dm[1]);
+  if(!d)d=days.find(x=>x.matches.some(m=>!ures(x,m)))||days[days.length-1];
+  if(!d){box.innerHTML='<p class="empty">No Champions League matchdays on file yet.</p>';return}
+  const done=d.matches.filter(m=>ures(d,m)),hit=done.filter(m=>ubest(m.p)===uout(ures(d,m))).length,pk=d.pick&&d.matches.find(m=>m.id===d.pick.eid);
+  box.innerHTML=uclhead(d,esc(uday(d.day)),`${d.matches.length} matches · 100,000 simulations per match · chances blend my model with no-vig DraftKings and Bet365 prices${done.length?` · ${done.length} final, the most likely result hit in ${hit}`:''}`)+
+   `<div class="chips udays" role="group" aria-label="Matchday">${days.map(x=>`<a class="chip" href="#ucl-day-${x.day}" aria-pressed="${x===d}" style="text-decoration:none">${esc(new Date(x.day+'T12:00:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'}))}</a>`).join('')}</div>`+
+   (pk?(()=>{const g=pk.dog,r=ures(d,pk),o=r&&uout(r);return`<div class="upick"><small>Favorite underdog</small><b>${esc(d.pick.team)}<span>${pc(g.win)} to win · ${pc(g.dc)} win or draw · DraftKings ${esc(g.price)}</span></b><p>${esc(d.pick.why)}</p>${r?`<p class="ufin">Final ${esc(ush(pk.home.name))} ${r.hs}–${r.as} ${esc(ush(pk.away.name))} · ${o===g.side?'<span class="w">won</span>':o==='D'?'drew (win or draw <span class="w">hit</span>)':'<span class="l">lost</span>'}</p>`:''}<a class="lk" href="#ucl-match-${pk.id}">Open ${esc(ush(pk.home.name))} v ${esc(ush(pk.away.name))} →</a></div>`})():'')+
+   `<div class="ucg">${d.matches.map(m=>{const p=m.p,r=ures(d,m),b=ubest(p),pick=d.pick&&d.pick.eid===m.id;
+     return`<a class="ucm" href="#ucl-match-${m.id}"><div class="uk"><span>${esc(m.ko)} ET${pick?' · <b style="color:var(--pb)">underdog pick</b>':''}</span><span>${esc(m.venue)}</span></div>
+     <div class="ut"><b>${esc(ush(m.home.name))}</b>${r?`<span class="sc">${r.hs}</span>`:`<span class="h">${pc(p.H)}</span>`}<b>${esc(ush(m.away.name))}</b>${r?`<span class="sc">${r.as}</span>`:`<span class="a">${pc(p.A)}</span>`}</div>
+     ${ustrip(m)}<div class="ux"><span>Most likely <b>${esc(uwho(m,b))} ${pc(p[b])}</b></span><span>xG <b>${ufx(m.home.lam)}–${ufx(m.away.lam)}</b></span><span>Over 2.5 <b>${pc(p.o25)}</b></span><span>Both score <b>${pc(p.btts)}</b></span></div>
+     ${r?`<div class="ufin">Final · most likely result ${uout(r)===b?'<span class="w">hit</span>':'<span class="l">missed</span>'} · ${r.hs+r.as>2.5?'over':'under'} 2.5 · ${r.hs&&r.as?'both scored':'not both scored'}</div>`:''}</a>`}).join('')}</div>
+   <p class="note" style="margin-top:16px">Chances are model estimates, not certainties. Lineups were projected from previews before kickoff. The Champions League model runs on this computer, so this page updates when a matchday is run here. Results so far are under <a href="#ucl-record">Track record</a>.</p>`})}
+function uclmatch(box,d,m){const H=m.home,A=m.away,p=m.p,ml=m.dk.ml,r=ures(d,m),b=ubest(p);
+  const fH=uform(H.form10),fA=uform(A.form10),uH=uform(H.form_ucl),uA=uform(A.form_ucl);
+  const row=(label,sub,hv,av,better,fmt=v=>ufx(v),scale)=>{const ok=hv!=null&&av!=null&&!isNaN(hv)&&!isNaN(av),mx=scale??(Math.max(Math.abs(hv||0),Math.abs(av||0))*1.1||1);let hw='',aw='';
+    if(ok&&better&&hv!==av){const hb=better==='hi'?hv>av:hv<av;hw=hb?'w':'';aw=hb?'':'w'}
+    const bar=v=>v==null||isNaN(v)?'':`<span class="f" style="width:${Math.max(2,Math.min(100,100*Math.abs(v)/mx))}%"></span>`;
+    return`<div class="urow"><div class="us h ${hw}"><span class="v">${hv==null||isNaN(hv)?'n/a':fmt(hv)}</span><span class="k">${bar(hv)}</span></div><div class="l">${label}${sub?`<em>${sub}</em>`:''}</div><div class="us a ${aw}"><span class="v">${av==null||isNaN(av)?'n/a':fmt(av)}</span><span class="k">${bar(av)}</span></div></div>`};
+  const trow=(l,h,a)=>`<div class="urow"><div class="us h"><span class="x">${h}</span></div><div class="l">${l}</div><div class="us a"><span class="x">${a}</span></div></div>`,g=t=>`<div class="g">${t}</div>`;
+  box.innerHTML=`<div class="gdbar"><a class="lk" href="#ucl-day-${d.day}">← All ${esc(new Date(d.day+'T12:00:00').toLocaleDateString('en-US',{weekday:'long'}))} matches</a></div>`+
+  uclhead(d,'',esc(uday(d.day))+' · '+esc(m.ko)+' ET').replace('<h2></h2>','')+
+  `<div class="uteams"><div class="h"><h3>${esc(H.name)}</h3><small>${uord(H.rank)} in the table · ${H.pts} pts · GD ${esc(H.gd)}</small></div>
+   <div class="uxg">${r?`${r.hs}<span style="color:var(--dim);padding-inline:6px">–</span>${r.as}<small>Final · xG ${ufx(H.lam)}–${ufx(A.lam)}</small>`:`${ufx(H.lam)}<span style="color:var(--dim);padding-inline:6px">–</span>${ufx(A.lam)}<small>Expected goals</small>`}</div>
+   <div class="a"><h3>${esc(A.name)}</h3><small>${uord(A.rank)} in the table · ${A.pts} pts · GD ${esc(A.gd)}</small></div></div>
+  <div class="ufix"><span>${esc(m.venue)}${m.neutral?' (neutral venue)':''}</span><span>Referee: ${esc(m.ref)}</span><span>DraftKings: ${esc(ml[0])} / ${esc(ml[1])} / ${esc(ml[2])} · O/U ${esc(m.dk.total[0])} (${esc(m.dk.total[1])} / ${esc(m.dk.total[2])})</span></div>
+  ${r?`<div class="ufb"><b>Final ${r.hs}–${r.as}</b><span>Most likely result (${esc(uwho(m,b))}, ${pc(p[b])}): ${uout(r)===b?'<span class="hit">hit</span>':'<span class="miss">missed</span>'}</span><span>Over 2.5 (${pc(p.o25)}): ${r.hs+r.as>2.5?'yes':'no'}</span><span>Both score (${pc(p.btts)}): ${r.hs&&r.as?'yes':'no'}</span></div>`:''}
+  ${ustrip(m,1)}
+  <div class="umini">${[['My model',p.mH,p.mD,p.mA],['Market (no-vig)',p.kH,p.kD,p.kA]].map(([l,h,dd,a])=>`<span>${l}</span><div><div class="bar"><i class="h" style="width:${h*100}%"></i><i class="d" style="width:${dd*100}%"></i><i class="a" style="width:${a*100}%"></i></div><div class="lab"><span>${pc(h)}</span><span>${pc(dd)}</span><span>${pc(a)}</span></div></div>`).join('')}</div>
+  <div class="lch"><span class="chip">Over 1.5 <b>${pc(p.o15)}</b></span><span class="chip">Over 2.5 <b>${pc(p.o25)}</b></span><span class="chip">Over 3.5 <b>${pc(p.o35)}</b></span><span class="chip">Both score <b>${pc(p.btts)}</b></span><span class="chip">Corners over 9.5 <b>${pc(p.cor95)}</b></span><span class="chip">Yellows over 3.5 <b>${pc(p.yc35)}</b></span></div>
+  ${m.dog?(()=>{const o=m.dog,Tm=o.side==='H'?H:A,ip=d.pick&&d.pick.eid===m.id;return`<div class="udog" aria-label="Underdog"><div><div class="t">Underdog</div><div class="v">${esc(ush(Tm.name))}${ip?' <span class="utag q">top pick</span>':''}</div><div class="s">DraftKings ${esc(o.price)}</div></div>
+    <div><div class="t">Win</div><div class="v">${pc(o.win)}</div><div class="s">model ${pc(o.model)} · market ${pc(o.mkt)}</div></div><div><div class="t">Win or draw</div><div class="v">${pc(o.dc)}</div><div class="s">the +0.5 line</div></div>
+    <div><div class="t">Draw no bet</div><div class="v">${pc(o.dnb)}</div><div class="s">stake back on a draw</div></div><div><div class="t">Edge vs market</div><div class="v">${o.win-o.mkt>=0?'+':''}${Math.round((o.win-o.mkt)*100)} pts</div><div class="s">a lead, not a proven edge</div></div></div>`})():''}
+  <h3 class="ush">Side by side <small>darker bar marks the better side on each line</small></h3><div class="utape">
+   ${g("Tonight's projection")}${row('Expected goals','blend of model and market',H.lam,A.lam,'hi')}${row('Independent model xG','before looking at prices',H.lam_model,A.lam_model,'hi')}${row('Market xG','fitted to DraftKings + Bet365',H.lam_mkt,A.lam_mkt,'hi')}
+   ${row('Chance to score','team over 0.5',H.to05,A.to05,'hi',pc,1)}${row('Chance to score 2+','team over 1.5',H.to15,A.to15,'hi',pc,1)}${row('Expected shots','',H.exp_sh,A.exp_sh,'hi',v=>ufx(v,1))}${row('Expected shots on target','',H.exp_sot,A.exp_sot,'hi',v=>ufx(v,1))}
+   ${row('Expected corners','',H.exp_cor,A.exp_cor,'hi',v=>ufx(v,1))}${row('Expected yellow cards','',H.exp_yc,A.exp_yc,null,v=>ufx(v,1))}${row('Keeper saves expected',`${esc(H.gk||'backup')} · ${esc(A.gk||'backup')}`,H.exp_saves,A.exp_saves,null,v=>ufx(v,1))}
+   ${g('Attack')}${row('Domestic xG per match',`${ulg[H.dom.league]||'no xG feed'} · ${ulg[A.dom.league]||'no xG feed'}`,H.dom.xgf,A.dom.xgf,'hi')}${row('Domestic goals per match','',H.dom.gf,A.dom.gf,'hi')}${row('Attack vs own league','opponent-adjusted, 1.00 = league average',H.dom.att,A.dom.att,'hi')}
+   ${row('Shots per match','all competitions',H.sh,A.sh,'hi',v=>ufx(v,1))}${row('Shots on target per match','',H.sot,A.sot,'hi',v=>ufx(v,1))}${row('Proxy xG per match','from shots and shots on target',H.pxg,A.pxg,'hi')}${row('Chance quality','proxy xG per shot',H.pxg/H.sh,A.pxg/A.sh,'hi',v=>ufx(v,3))}
+   ${g('Defense')}${row('Domestic xG against','',H.dom.xga,A.dom.xga,'lo')}${row('Domestic goals against','',H.dom.ga,A.dom.ga,'lo')}${row('Defense vs own league','opponent-adjusted, below 1.00 is better',H.dom.de,A.dom.de,'lo')}
+   ${row('Shots conceded','',H.sha,A.sha,'lo',v=>ufx(v,1))}${row('Shots on target conceded','',H.sota,A.sota,'lo',v=>ufx(v,1))}${row('Proxy xG against','',H.pxga,A.pxga,'lo')}
+   ${g('Style')}${row('Possession','',H.poss,A.poss,null,v=>ufx(v,0)+'%',100)}${row('Corners won','',H.cor,A.cor,'hi',v=>ufx(v,1))}${row('Corners conceded','',H.cora,A.cora,'lo',v=>ufx(v,1))}${row('Fouls committed','',H.fouls,A.fouls,null,v=>ufx(v,1))}${row('Yellow cards','per match',H.yc,A.yc,null)}
+   ${g('Form and table')}${row('UCL table position','1st–8th go straight to the round of 16',H.rank,A.rank,'lo',v=>uord(v),36)}${row('UCL points',`${(H.ucl||[]).length} games`,H.pts,A.pts,'hi',v=>v,9)}
+   ${uH&&uA?row('UCL record',`${esc(H.form_ucl.split(' (')[0])} · ${esc(A.form_ucl.split(' (')[0])}`,uH.pts,uA.pts,'hi',v=>v+' pts',9):''}
+   ${fH&&fA?row('Last 10, all competitions',`${esc(H.form10.split(' (')[0])} · ${esc(A.form10.split(' (')[0])}`,fH.pts/fH.n,fA.pts/fA.n,'hi',v=>ufx(v,1)+' ppg',3):''}
+   ${trow('Last 5',esc(H.form5),esc(A.form5))}${trow('Domestic league',esc(H.form_dom),esc(A.form_dom))}${row('Rest days','since last match',H.rest,A.rest,null,v=>v)}</div>
+  <h3 class="ush">Champions League so far <small>proxy xG from shots</small></h3><div class="uduo">${[H,A].map((t,k)=>`<div class="upan ${k?'a':'h'}"><h4>${esc(t.name)}</h4><div class="utb"><table><thead><tr><th></th><th>Opponent</th><th class="n">Score</th><th class="n">xG</th><th class="n">Shots</th></tr></thead><tbody>${(t.ucl||[]).map(u=>{const o=u.gf>u.ga?'W':u.gf===u.ga?'D':'L';return`<tr><td><span class="ures ${o}">${o}</span></td><td>${u.ha==='home'?'vs':'at'} ${esc(ush(u.opp))}</td><td class="n">${u.gf}–${u.ga}</td><td class="n">${ufx(u.xg)}–${ufx(u.xga)}</td><td class="n">${u.sh}–${u.sha}</td></tr>`}).join('')}</tbody></table></div></div>`).join('')}</div>
+  <h3 class="ush">Key players <small>sorted by chance to score · hit rate counts starts with 60+ minutes</small></h3><div class="uduo">${[H,A].map((t,k)=>`<div class="upan ${k?'a':'h'}"><h4>${esc(t.name)}</h4><div class="utb"><table><thead><tr><th>Player</th><th class="n">Start</th><th class="n">Score</th><th class="n">2+ shots</th><th class="n">1+ on tgt</th><th class="n">Card</th><th class="n">On tgt hit</th></tr></thead><tbody>${(t.players||[]).map(q=>`<tr><td><b>${esc(q.n)}</b>${q.pen?'<span class="utag p">pens</span>':''}${q.av>0&&q.av<1?'<span class="utag q">doubt</span>':''}</td><td class="n">${pc(q.st)}</td><td class="n">${pc(q.g)}</td><td class="n">${pc(q.sh2)}</td><td class="n">${pc(q.sot1)}</td><td class="n">${pc(q.card)}</td><td class="n">${esc(q.hit_sot1)}</td></tr>`).join('')}</tbody></table></div><p class="note">Keeper: ${esc(t.gk||'backup, not confirmed')} · Penalties: ${esc(t.pen||'unknown')} (judgment)</p></div>`).join('')}</div>
+  <h3 class="ush">Most likely scores</h3><div class="ucs">${m.cs.map(([s,v])=>`<div><b>${esc(s)}</b><span>${pc(v)}</span></div>`).join('')}</div>
+  <h3 class="ush">Scouting notes</h3><div class="unotes">${[['Team news',m.notes.news],['Matchup',m.notes.tactics],['Model vs market',m.notes.gap],['Traps',m.notes.traps,1],['Conditions and rest',m.notes.ext]].filter(x=>x[1]).map(([t,s,w])=>`<div class="unote${w?' t':''}"><h5>${t}</h5><p>${umdx(s)}</p></div>`).join('')}</div>
+  <p class="note" style="margin-top:16px">Model: opponent-adjusted domestic xG plus a shots-based xG proxy, blended 40/60 with no-vig DraftKings and Bet365 prices, then 100,000 Dixon-Coles simulations. Lineups were projected from previews and were not official. Model estimates, not certainties.</p>`}
+function uclrecord(){const box=$('#v-ucl-record');box.classList.add('ucv');uclload(box,()=>{
+  const L=[];for(const d of UCL.days)for(const m of d.matches){const r=ures(d,m);if(r)L.push({d,m,r,o:uout(r)})}
+  if(!L.length){box.innerHTML=uclhead(null,'Track record')+'<p class="empty">No finished matches on file yet.</p>';return}
+  const n=L.length,cnt=f=>L.filter(f).length,bl=x=>x.m.p,brier=k=>L.reduce((s,x)=>s+['H','D','A'].reduce((a,y)=>a+((x.m.p[k+y])-(x.o===y?1:0))**2,0),0)/n;
+  const fb=cnt(x=>ubest(bl(x))===x.o),fm=cnt(x=>ubest(bl(x),'m')===x.o),fk=cnt(x=>ubest(bl(x),'k')===x.o);
+  const ov=cnt(x=>(x.m.p.o25>=.5)===(x.r.hs+x.r.as>2.5)),bt=cnt(x=>(x.m.p.btts>=.5)===(x.r.hs>0&&x.r.as>0));
+  const B=brier(''),BM=brier('m'),BK=brier('k'),pk=L.filter(x=>x.d.pick&&x.d.pick.eid===x.m.id),dg=L.filter(x=>x.m.dog);
+  const dgw=dg.filter(x=>x.o===x.m.dog.side).length,dgdc=dg.filter(x=>x.o===x.m.dog.side||x.o==='D').length,dgexp=dg.reduce((s,x)=>s+x.m.dog.win,0);
+  box.innerHTML=uclhead(null,'Track record',`${n} finished matches over ${UCL.days.length} matchday${UCL.days.length===1?'':'s'} · graded against ESPN final scores`)+
+  `<div class="ustat"><div><span>Most likely result hit</span><b>${fb} of ${n}</b><small>${pc(fb/n)} · my model alone ${fm}, the market's favorite ${fk}</small></div>
+   <div><span>Over / under 2.5 call</span><b>${ov} of ${n}</b><small>${pc(ov/n)} · over picked when its chance was 50% or more</small></div>
+   <div><span>Both teams score call</span><b>${bt} of ${n}</b><small>${pc(bt/n)}</small></div>
+   <div><span>Underdogs</span><b>${dgw} of ${dg.length} won</b><small>${dgdc} won or drew · expected ${ufx(dgexp,1)} wins from our chances</small></div></div>
+  <p class="note"><b>Accuracy score (Brier, lower is better):</b> blend ${ufx(B,3)} · my model ${ufx(BM,3)} · market ${ufx(BK,3)}. ${BM<BK?'My model scored better than the market on these matches, but':'The market scored better than my model on these matches, and'} ${n} matches is far too few to prove an edge either way. No edge is proven until it beats real prices over many more matches.</p>
+  ${pk.length?`<h3 class="ush">Favorite underdog picks</h3><div class="utb"><table><thead><tr><th>Date</th><th>Pick</th><th>Match</th><th class="n">Win %</th><th class="n">Price</th><th>Result</th></tr></thead><tbody>${pk.map(x=>`<tr><td>${esc(x.d.day.slice(5))}</td><td><b>${esc(x.d.pick.team)}</b></td><td><a href="#ucl-match-${x.m.id}">${esc(ush(x.m.home.name))} ${x.r.hs}–${x.r.as} ${esc(ush(x.m.away.name))}</a></td><td class="n">${pc(x.m.dog.win)}</td><td class="n">${esc(x.m.dog.price)}</td><td>${x.o===x.m.dog.side?'<span class="hit">Won</span>':x.o==='D'?'Draw':'<span class="miss">Lost</span>'}</td></tr>`).join('')}</tbody></table></div>`:''}
+  <h3 class="ush">Every match</h3><div class="utb"><table><thead><tr><th>Date</th><th>Match</th><th class="n">Home</th><th class="n">Draw</th><th class="n">Away</th><th>Most likely</th><th>Final</th><th></th><th>O/U 2.5</th></tr></thead><tbody>${L.map(x=>{const p=x.m.p,b=ubest(p),ou=p.o25>=.5,oh=ou===(x.r.hs+x.r.as>2.5);
+    return`<tr><td>${esc(x.d.day.slice(5))}</td><td><a href="#ucl-match-${x.m.id}">${esc(ush(x.m.home.name))} v ${esc(ush(x.m.away.name))}</a></td><td class="n">${pc(p.H)}</td><td class="n">${pc(p.D)}</td><td class="n">${pc(p.A)}</td><td>${esc(uwho(x.m,b))}</td><td class="n">${x.r.hs}–${x.r.as}</td><td>${b===x.o?'<span class="hit">Hit</span>':'<span class="miss">Miss</span>'}</td><td>${ou?'Over':'Under'} ${pc(ou?p.o25:1-p.o25)} ${oh?'<span class="hit">✓</span>':'<span class="miss">✗</span>'}</td></tr>`}).join('')}</tbody></table></div>`})}
 function route(){const h=location.hash.slice(1),m=h.match(/^week-(\d+)$/),p=h.match(/^player-([\w-]+)$/),gm=h.match(/^game-([\w-]+)$/),gg=gm&&G.find(x=>slug(x.id)===gm[1]);
   if(gg){cur=gg.week;show('weeks');week(cur,gg.id)}
   else if(/^cash(-nfl|-cfb|-nba|-bets|-build)?$/.test(h)){show('cash');cash(h.slice(5)||null)}
@@ -624,6 +777,7 @@ function route(){const h=location.hash.slice(1),m=h.match(/^week-(\d+)$/),p=h.ma
   else if(/^cfb(-week-\d+|-game-\d+)?$/.test(h)){show('cfb-weeks');const cw=h.match(/^cfb-week-(\d+)$/),cg=h.match(/^cfb-game-(\d+)$/);cfbweeks(cw?+cw[1]:null,cg?cg[1]:null)}
   else if(/^nba(-game-\d+)?$/.test(h)){show('nba');const ng=h.match(/^nba-game-(\d+)$/);nbtonight(ng?ng[1]:null)}
   else if(/^nba-week(s|-\d+)$/.test(h)){show('nba-weeks');nbaweeks(h==='nba-weeks'?null:+h.slice(9))}
+  else if(/^ucl(-day-\d{4}-\d\d-\d\d|-match-\d+)?$/.test(h)){show('ucl');uclview(h)}else if(h==='ucl-record'){show('ucl-record');uclrecord()}
   else if(h==='nba-record'){show('nba-record');nbarecord()}else if(h==='nba-leaders'||h==='nba-players'||/^nba-player-\d+$/.test(h)){show('nba-leaders');nbaleaders()}
   else if(h==='cfb-record'){show('cfb-record');cfbrecord()}else if(h==='cfb-teampos'){show('cfb-teampos');cfbteampos()}else if(h==='cfb-leaders'||/^cfb-player-\d+$/.test(h)){show('cfb-leaders');cfbleaders(h.startsWith('cfb-player-')?h.slice(11):null)}else{show('weeks');week(cur)}}
 document.querySelectorAll('#side details.sport').forEach(d=>{try{const k='sp:'+d.id;if(localStorage.getItem(k)==='0')d.open=false;d.addEventListener('toggle',()=>{try{localStorage.setItem(k,d.open?'1':'0')}catch(e){}})}catch(e){}});
