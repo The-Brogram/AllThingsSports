@@ -1,4 +1,4 @@
-"""Copy the built hub into the public site repository (../hub_site) and push it to GitHub, where GitHub Pages serves it.
+"""Copy the built hub into the public site repository (../site) and push it to GitHub, where GitHub Pages serves it.
 
 Run after season.py: venv/bin/python publish_site.py [--no-push]
 
@@ -20,7 +20,7 @@ from datetime import datetime
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 HUB = os.path.join(ROOT, "output", "hub")
-SITE = os.environ.get("HUB_SITE") or os.path.join(os.path.dirname(ROOT), "hub_site")
+SITE = os.environ.get("HUB_SITE") or os.path.join(os.path.dirname(ROOT), "site")
 MODEL = os.path.join(SITE, "model")
 # The NBA code and data are public in the site repository (Josh's choice, Nov 13, 2026). The NFL and college code, data and
 # pick records go there only when this is True.

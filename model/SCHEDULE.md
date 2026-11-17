@@ -39,14 +39,14 @@ NFL downloads now replace a file only when the download succeeds, so a failed or
 Each prompt is self-contained because every run starts fresh.
 
 ### Tuesday review (cron `0 9 * * 2`)
-You run the weekly postgame review (Phase 15) for Josh's NFL prediction program at /Users/joshuacruz/Desktop/nfl_model. Read README.md and PROMPT.md there first.
-1. `cd /Users/joshuacruz/Desktop/nfl_model && venv/bin/python slate.py review`. It refreshes nflverse results and scores every slate of the last finished week that has saved forecasts. If a slate has no results yet (Monday-night stats post some time Tuesday), say so and score the rest.
+You run the weekly postgame review (Phase 15) for Josh's NFL prediction program at /Users/joshuacruz/Desktop/TheBrogram/program. Read README.md and PROMPT.md there first.
+1. `cd /Users/joshuacruz/Desktop/TheBrogram/program && venv/bin/python slate.py review`. It refreshes nflverse results and scores every slate of the last finished week that has saved forecasts. If a slate has no results yet (Monday-night stats post some time Tuesday), say so and score the rest.
 2. `venv/bin/python slate.py checkpoint` for running totals.
 3. Report briefly in plain language: per slate, Brier vs base rate by market, calibration (did 70% calls hit about 70%?), and the Most likely tier's hit rate; the biggest misses sorted into volume, efficiency, game script, injury/inactive, or variance (check inactives first); closing line value where available; and any systematic problem, as a suggestion only.
 Rules: never invent stats; separate facts from estimates; never say guaranteed. Do not change model code (changes go through factor_study.py and need Josh's OK) and do not commit. If a step fails, report the error output.
 
 ### Thursday TNF run (cron `30 19 * * 4`) and Monday MNF run (cron `30 19 * * 1`)
-You run tonight's NFL game for Josh's prediction program at /Users/joshuacruz/Desktop/nfl_model. Read README.md and PROMPT.md there first.
+You run tonight's NFL game for Josh's prediction program at /Users/joshuacruz/Desktop/TheBrogram/program. Read README.md and PROMPT.md there first.
 1. Get today's date (`date +%Y%m%d`) and check `venv/bin/python slate.py next` lists a game today; if not, stop.
 2. Check confirmed inactives and QB or backfield news (ESPN or NFL.com). Add confirmed changes to slate.json under "slates" → today's date: "notes" by team (a key ending in "_" only shows the note) and "hold_rushing" for backfields with changing roles. Keep the JSON valid.
 3. `venv/bin/python slate.py run <today>`.
@@ -55,7 +55,7 @@ You run tonight's NFL game for Josh's prediction program at /Users/joshuacruz/De
 Rules: never invent stats, odds or injuries; never say guaranteed. Do not change model code or commit. Report errors as they are.
 
 ### Sunday rerun after inactives (cron `45 11 * * 0`)
-You rerun today's Sunday NFL slate after inactives for Josh's prediction program at /Users/joshuacruz/Desktop/nfl_model. Read README.md and PROMPT.md there first.
+You rerun today's Sunday NFL slate after inactives for Josh's prediction program at /Users/joshuacruz/Desktop/TheBrogram/program. Read README.md and PROMPT.md there first.
 1. Get today's date (`date +%Y%m%d`) and check `venv/bin/python slate.py next` lists games today; if not, stop.
 2. Check confirmed inactives and late QB or backfield news. Add confirmed changes to slate.json under "slates" → today's date. Keep the JSON valid.
 3. `venv/bin/python slate.py run <today>`. The first run's picks stay for closing line value; this writes picks_<date>_final.csv and logs a pre-kickoff odds snapshot.
@@ -64,10 +64,10 @@ You rerun today's Sunday NFL slate after inactives for Josh's prediction program
 Rules as above.
 
 ### Sunday late-game lines (cron `45 15 * * 0`)
-Run `cd /Users/joshuacruz/Desktop/nfl_model && venv/bin/python slate.py odds` to log a line snapshot before the late-afternoon kickoffs. Report only the line it prints, or the error. Do not change any files.
+Run `cd /Users/joshuacruz/Desktop/TheBrogram/program && venv/bin/python slate.py odds` to log a line snapshot before the late-afternoon kickoffs. Report only the line it prints, or the error. Do not change any files.
 
 ### CLV checkpoint (one time, Tue Dec 8 2026 9:30 AM ET)
-At /Users/joshuacruz/Desktop/nfl_model run `venv/bin/python slate.py checkpoint` after the Tuesday review. Tell Josh whether, after about five live weeks, (1) the Most likely tier hits near its predicted rate and (2) first-run picks beat closing lines. If closing line value is positive and most picks moved his way, the Value tier has earned some trust and a paid odds feed with prop prices is worth considering; if not, keep using the Most likely tier and treat Value as leads only.
+At /Users/joshuacruz/Desktop/TheBrogram/program run `venv/bin/python slate.py checkpoint` after the Tuesday review. Tell Josh whether, after about five live weeks, (1) the Most likely tier hits near its predicted rate and (2) first-run picks beat closing lines. If closing line value is positive and most picks moved his way, the Value tier has earned some trust and a paid odds feed with prop prices is worth considering; if not, keep using the Most likely tier and treat Value as leads only.
 
 ## The agent team (Nov 13, 2026)
 
@@ -80,14 +80,14 @@ If an agent is unavailable in a run, the job does that part itself and says so.
 
 ## Public page and live scores (Nov 13, 2026)
 
-The hub is also served at https://the-brogram.github.io/AllThingsSports/ from the public repository `The-Brogram/AllThingsSports` (local folder `../hub_site`).
+The hub is also served at https://the-brogram.github.io/AllThingsSports/ from the public repository `The-Brogram/AllThingsSports` (local folder `../site`).
 - `publish_site.py` copies the built hub there and pushes it; every scheduled job runs it after its rebuild. Only the built page, its data files and the Game Books go public, never model code or bet logs.
 - On GitHub, the `scores` workflow runs `cloud_scores.py` every 10 minutes (no computer needed) and saves `scores.json` when a score changes. The hub page reads it on load and shows live scores and finals its own data does not have yet.
 - Stats, grades and forecasts are still rebuilt by the jobs on this Mac. The push uses the GitHub token stored in the Mac keychain; when it expires, `publish_site.py` prints "push failed".
 
 ## NBA runs on GitHub (since Nov 13, 2026)
 
-The NBA no longer needs this computer. The public site repository (`../hub_site`, The-Brogram/AllThingsSports) holds the NBA code, data and
+The NBA no longer needs this computer. The public site repository (`../site`, The-Brogram/AllThingsSports) holds the NBA code, data and
 outputs under `model/nba`, and its "nba" workflow runs `cloud_nba.py` at 9:45 AM, 5:30 PM and 9:15 PM ET (fetch, parse, shots, grade, sim,
 rebuild the NBA hub files, commit). Rules:
 
@@ -103,7 +103,7 @@ rebuild the NBA hub files, commit). Rules:
 `cloud_model.py` and the "football" workflow (written by `publish_site.py`) run the NFL and college jobs on GitHub on the same timetable
 as the desktop jobs. Josh approved making the code, data and pick records public (`FOOTBALL_PUBLIC = True`). First run on GitHub:
 Sunday slate in under 6 minutes, all 1,686 college game files downloaded in 21 seconds. Each run commits `model/logs/football.log`.
-To run a job by hand without a GitHub login: put job names (one per line) in `hub_site/model/run_once.txt` and publish.
+To run a job by hand without a GitHub login: put job names (one per line) in `site/model/run_once.txt` and publish.
 Known limits: no lineup or quarterback news check on GitHub (slate.json and cfb/qb.json come from this computer), and the college sim
 is skipped for a week already forecast when its simulation cache is not on GitHub (so started games keep their original forecasts).
 The score checker runs only in game hours, every 15 minutes (nightly 7 PM to 2 AM ET, weekend afternoons, two weekday catch-ups).
