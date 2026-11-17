@@ -1,17 +1,29 @@
-football run Mon Nov 16 2026 08:42 PM ET: nfl-today (schedule 30 0 * * 5,2)
-== nfl-today
-[nflverse refresh] ok in 1s
-[run today] ok in 90s
-    Team vs position: 2026 thru wk 9, 2025 thru wk 18 -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/teampos.json
-    NFL reviews: 149 of 149 finished games (0 fetched) -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/nflrev.json
+football run Tue Nov 17 2026 09:58 AM ET: nfl-review (schedule 15 14 * * 1,2)
+== nfl-review
+[review] ok in 64s
+    Players: 1057 offensive players, 25235 games, 1.84 MB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/players.json
+    WR/CB: week 11, 13 games, 163 receivers -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/wrcb.json
+    Team vs position: 2026 thru wk 10, 2025 thru wk 18 -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/teampos.json
+    NFL reviews: 150 of 150 finished games (1 fetched) -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/nflrev.json
     Fantasy: 2026 week 10, 2 slate(s), 243 players, 0.95 MB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/fantasy.json
     CFB leaders: 129 players, 137 FBS defenses, through week 11 -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/cfbl.json 127 KB
     CFB: week 11 current, 487 in-scope games across 14 weeks, 50 with our pick, 186 teams, 244 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/cfb.json
-    Hub: Week 10 is current. 149 final, 1 with a Game Book, 11 with lines, 111 early. 10 reports. 468 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/index.html
+    Hub: Week 11 is current. 150 final, 0 with a Game Book, 13 with lines, 109 early. 10 reports. 470 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/index.html
     Data freshness NFL: OK - games final through week 10; player stats through week 10; weekly rosters through week 10
     Data freshness CFB: OK - games final through week 11; player stats through week 11
-    Data freshness NBA: OK - games final through 2026-11-15; 197/197 with box scores; 197/197 with shot charts
-       done in 49s
-    Report: output/nfl_20261116_report.html
-    Hub: output/hub/index.html
+    Data freshness NBA: STALE - games final through 2026-11-16; 200/200 with box scores; 200/200 with shot charts; 5 game(s) tipped 8+ hours ago with no final score on file (oldest 2026-11-16)
+       done in 61s
+[checkpoint] ok in 2s
+    Most likely tier (highest 70%+ line per player): 318 calls, predicted 75.7%, hit 76.4% (±3.9%, 90%).
+    
+    Closing line value, first-run picks (positive = market moved toward us):
+                    n   mean  share_positive
+    kind flagged                            
+    game False     10 -0.097           0.300
+         True      19 -0.104           0.158
+    prop False    169 -0.314           0.219
+         True     179 -0.011           0.246
+    
+    Value-tier props: mean CLV -0.31 on 169 picks, 22% moved our way. That does not yet support trusting the Value tier.
+       done in 2s
 hub copied to the site
