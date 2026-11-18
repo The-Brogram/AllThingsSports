@@ -1,29 +1,22 @@
-football run Tue Nov 17 2026 09:58 AM ET: nfl-review (schedule 15 14 * * 1,2)
-== nfl-review
-[review] ok in 64s
-    Players: 1057 offensive players, 25235 games, 1.84 MB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/players.json
+football run Wed Nov 18 2026 11:17 AM ET: nfl-hub (schedule 15 15 * * 3)
+== nfl-hub
+[review] FAILED in 1s
+    sync: no site repository
+    -> fetch_data.py results
+       done in 1s
+    
+    No finished slate with saved forecasts to review.
+[hub refresh] ok in 96s
     WR/CB: week 11, 13 games, 163 receivers -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/wrcb.json
     Team vs position: 2026 thru wk 10, 2025 thru wk 18 -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/teampos.json
-    NFL reviews: 150 of 150 finished games (1 fetched) -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/nflrev.json
+    NFL reviews: 150 of 150 finished games (0 fetched) -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/nflrev.json
     Fantasy: 2026 week 10, 2 slate(s), 243 players, 0.95 MB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/fantasy.json
     CFB leaders: 129 players, 137 FBS defenses, through week 11 -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/cfbl.json 127 KB
     CFB: week 11 current, 487 in-scope games across 14 weeks, 50 with our pick, 186 teams, 244 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/cfb.json
-    Hub: Week 11 is current. 150 final, 0 with a Game Book, 13 with lines, 109 early. 10 reports. 470 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/index.html
-    Data freshness NFL: OK - games final through week 10; player stats through week 10; weekly rosters through week 10
-    Data freshness CFB: OK - games final through week 11; player stats through week 11
-    Data freshness NBA: STALE - games final through 2026-11-16; 200/200 with box scores; 200/200 with shot charts; 5 game(s) tipped 8+ hours ago with no final score on file (oldest 2026-11-16)
-       done in 61s
-[checkpoint] ok in 2s
-    Most likely tier (highest 70%+ line per player): 318 calls, predicted 75.7%, hit 76.4% (±3.9%, 90%).
-    
-    Closing line value, first-run picks (positive = market moved toward us):
-                    n   mean  share_positive
-    kind flagged                            
-    game False     10 -0.097           0.300
-         True      19 -0.104           0.158
-    prop False    169 -0.314           0.219
-         True     179 -0.011           0.246
-    
-    Value-tier props: mean CLV -0.31 on 169 picks, 22% moved our way. That does not yet support trusting the Value tier.
-       done in 2s
+    UCL: 144 fixtures (72 final, 72 box scores), 36 in the table, 2 analysed matchdays
+    Hub: Week 11 is current. 150 final, 0 with a Game Book, 29 with lines, 93 early. 10 reports. 524 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/index.html
+    Data freshness NFL: OK - games final through week 10; player stats through week 10; weekly rosters through week 11
+    Data freshness CFB: STALE - games final through week 11; player stats through week 11; 1 game(s) played with no result on file
+    Data freshness NBA: OK - games final through 2026-11-17; 210/210 with box scores; 210/210 with shot charts
+       done in 95s
 hub copied to the site
