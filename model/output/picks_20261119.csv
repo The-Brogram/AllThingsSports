@@ -1,0 +1,19 @@
+date,event,game,kind,player,athlete,market,side,line,price,prob,edge,flagged
+20261119,401873066,IND@HOU,prop,Anthony Gould,4429684.0,Total Receiving Yards (incl. overtime),under,20.5,,0.6811774966515393,0.15736797284201542,True
+20261119,401873066,IND@HOU,prop,David Montgomery,4035538.0,Total Rushing Yards (incl. overtime),under,56.5,,0.6008773294854153,0.07706780567589144,True
+20261119,401873066,IND@HOU,prop,Deion Burks,4683151.0,Total Receiving Yards (incl. overtime),under,17.5,,0.5900361957579516,0.0662266719484278,True
+20261119,401873066,IND@HOU,prop,Seth McGowan,4686468.0,Total Rushing Yards (incl. overtime),under,26.5,,0.5883604312651955,0.06455090745567171,True
+20261119,401873066,IND@HOU,prop,Laquon Treadwell,3051889.0,Total Receiving Yards (incl. overtime),under,28.5,,0.5820705318167896,0.05826100800726575,True
+20261119,401873066,IND@HOU,prop,Emari Demercado,4362478.0,Total Rushing Yards (incl. overtime),over,21.5,,0.5671237407868084,0.04331421697728455,True
+20261119,401873066,IND@HOU,prop,Jonathan Taylor,4242335.0,Total Rushing Yards (incl. overtime),under,52.5,,0.55964145389972,0.03583193009019614,True
+20261119,401873066,IND@HOU,prop,Ashton Dulin,4061956.0,Total Receiving Yards (incl. overtime),under,15.5,,0.5427973016789571,0.018987777869433287,True
+20261119,401873066,IND@HOU,prop,Nico Collins,4258173.0,Total Receiving Yards (incl. overtime),under,71.5,,0.5294660939688611,0.005656570159337293,True
+20261119,401873066,IND@HOU,prop,Kayshon Boutte,4429022.0,Total Receiving Yards (incl. overtime),under,26.5,,0.5247817049809989,0.0009721811714750173,True
+20261119,401873066,IND@HOU,prop,C.J. Stroud,4432577.0,Total Passing Yards (incl. overtime),over,253.5,,0.5225706720770045,-0.0012388517325193638,True
+20261119,401873066,IND@HOU,prop,Daniel Jones,3917792.0,Total Passing Yards (incl. overtime),over,180.5,,0.51881118849808,-0.004998335311443891,True
+20261119,401873066,IND@HOU,prop,Xavier Hutchinson,4686422.0,Total Receiving Yards (incl. overtime),over,36.5,,0.5132374981369149,-0.010572025672608953,True
+20261119,401873066,IND@HOU,prop,Dalton Schultz,3117256.0,Total Receiving Yards (incl. overtime),over,28.5,,0.5113822700538176,-0.012427253755706191,True
+20261119,401873066,IND@HOU,prop,Tank Dell,4366031.0,Total Receiving Yards (incl. overtime),under,37.5,,0.5088473714729849,-0.01496215233653897,True
+20261119,401873066,IND@HOU,prop,Jonathan Taylor,4242335.0,Total Receiving Yards (incl. overtime),under,22.5,,0.5077892021064924,-0.01602032170303147,True
+20261119,401873066,IND@HOU,prop,Tyler Warren,4431459.0,Total Receiving Yards (incl. overtime),over,39.5,,0.5077892021064924,-0.01602032170303147,True
+20261119,401873066,IND@HOU,game,,,IND +12.5,,,-111.0,,0.04216891891891894,False

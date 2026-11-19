@@ -1,5 +1,5 @@
 {
- "date": "20261108",
+ "date": "20261119",
  "slates": {
   "20261102": {
    "title": "Bears at Seahawks Game Book",
@@ -244,6 +244,36 @@
      "00-0039915",
      "00-0041550"
     ]
+   }
+  },
+  "20261119": {
+   "notes": {
+    "HOU": "C.J. Stroud starts (he started Weeks 9 and 10 and is on no injury list; reports of him missing a third straight game are from 2025). RB Woody Marks (concussion) is OUT; David Montgomery (groin) practiced fully, has no designation and returns as the lead back, with Emari Demercado expected to share carries (ESPN Nov 18; CBS Sports Nov 19). WR Marvin Harrison Jr. (hamstring) is OUT for the second straight game, TE Brevin Jordan (foot) is OUT, DE Danielle Hunter (hamstring) is OUT and LB Azeez Al-Shaair is on IR. G Wyatt Teller (back) is questionable. Montgomery's role after six weeks out is uncertain, so Houston rushing lines carry extra risk.",
+    "IND": "Daniel Jones starts; coach Shane Steichen has kept him as the starter. Both starting tackles are OUT: LT Bernhard Raimann (concussion) and RT Jalen Travis (knee, second straight game), and backup OT Charlie Heck is questionable (personal), so expect heavy pressure on Jones. TE Will Mallory (hamstring), CB Charvarius Ward (knee) and DT Jerry Tillery (calf) are OUT; CB Sauce Gardner (calf) and slot WR Anthony Gould (toe) are questionable (ESPN Nov 18; Colts Wire final injury report Nov 18)."
+   },
+   "hold_rushing": [],
+   "qb": {
+    "HOU": "00-0039163",
+    "IND": "00-0035710"
+   },
+   "out": {
+    "HOU": [
+     "00-0040583",
+     "00-0039849",
+     "00-0036556",
+     "00-0031565"
+    ],
+    "IND": [
+     "00-0038394",
+     "00-0037757",
+     "00-0040163",
+     "00-0034573"
+    ]
+   },
+   "play": {
+    "HOU": {
+     "00-0035685": 1.0
+    }
    }
   }
  }
