@@ -257,14 +257,13 @@ def record():
 
 def shown_model(m):
     """What the page shows (skeptic review, 2026-11-20). The win and over chances are DraftKings' no-vig price exactly (the
-    simulation only matches them to within noise), so no moneyline or total edge is shown. The shootout chance is left off until
-    the overtime/shootout split is refit. The puck line shown is the market's."""
+    simulation only matches them to within noise), so no moneyline or total edge is shown. The overtime/shootout split was refit on 2021-24
+    and checked on 2024-26 (shootouts 7.1% vs 7.5% actual). The puck line shown is the market's."""
     m = json.loads(json.dumps(m))
     nv = m.get("ml", {}).get("nv_h")
     if nv is not None:
         m["ph"], m["pa"] = round(nv, 4), round(1 - nv, 4)
     m["ml"] = {"nv_h": nv}
-    m.pop("pso", None)
     t = m.get("tot")
     if t and t.get("nv_o") is not None:
         t["po"], t["pu"] = t["nv_o"], round(1 - t["nv_o"], 4)
@@ -276,10 +275,12 @@ def shown_model(m):
 
 
 def shown_props(rows):
-    """Props show DraftKings' chance and price only, until the props model has been graded at real prices and holds up."""
+    """Props v2 (backtested at real DraftKings prices, backtest_props.py): the chance is the fitted blend, the edge sits beside it.
+    Rows from a v1 run (no blend weight on file) show DraftKings' chance only."""
     out = []
     for r in rows:
-        r = {k: v for k, v in r.items() if k not in ("p", "p_model", "edge")}
+        if "w" not in r:
+            r = {k: v for k, v in r.items() if k not in ("p", "p_model", "edge")}
         out.append(r)
     return out
 
@@ -340,7 +341,7 @@ def build(hub):
                 if t:
                     r.update(gf=t["gf"], ga=t["ga"], diff=t["gf"] - t["ga"])
     out = {"built": f"{now:%b %-d, %Y %-I:%M %p} ET", "season": "2026-27", "teams": teams, "stand": stand, "days": days, "next": nxt,
-           "det": det, "sk": sk, "gl": gl, "tl": tl, "base": BASE, "longest": LONGEST, "props_model": False,
+           "det": det, "sk": sk, "gl": gl, "tl": tl, "base": BASE, "longest": LONGEST, "props_model": True,
            "credit": "Data: ESPN, NHL.com, DailyFaceoff. Lines: DraftKings via ESPN. Goals for/against exclude shootout goals (NHL.com)."}
     rec = record()
     if rec:

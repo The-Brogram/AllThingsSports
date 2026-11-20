@@ -27,6 +27,8 @@ def main():
     mode = sys.argv[1] if len(sys.argv) > 1 and sys.argv[1] else "morning"
     bad = []
     if mode == "morning":
+        if step("history", ["fetch_history.py"]).returncode:   # last night's box scores and props, for player history
+            bad.append("history")
         if step("grade", ["review_nhl.py"]).returncode:
             bad.append("grade")
     r = step("sim", ["run_nhl.py", "--mode", mode])

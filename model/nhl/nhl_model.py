@@ -19,10 +19,12 @@ but does not post (OT chance, regulation splits, the puck line from the same gam
 import numpy as np
 
 # Score effects and goalie pull: shape parameters, tuned in backtest_nhl.py on 2021-24 and checked on 2024-25 onward
-P = dict(trail=0.22, lead=0.13,            # trailing team scores 22% more often, leading team 13% less
+# Score effects, goalie pull, overtime: tuned in backtest_nhl.py on 2021-22 to 2023-24 (refit 2026-11-20 after the skeptic review, to
+# match the overtime rate, the share of overtimes that reach a shootout, and empty-net goals per game), checked on 2024-25 onward.
+P = dict(trail=0.277, lead=0.070,           # trailing team scores 28% more often, leading team 7% less
          en_min=57.0,                       # goalie pulled for the last 3 minutes when down 1 (the last 4 when down 2)
-         en_for=0.10, en_against=0.42,      # goals per minute with the net empty: trailing team, leading team
-         ot_rate=0.215, so_skill=0.5)       # 3-on-3 OT goals per minute (both teams), shootout edge from team strength
+         en_for=0.052, en_against=0.213,    # goals per minute with the net empty: trailing team, leading team
+         ot_rate=0.254, so_skill=0.5)       # 3-on-3 OT goals per minute (both teams), shootout edge from team strength
 MIN = 60
 
 
@@ -121,6 +123,7 @@ def summary(s, pl_line_home=None, total=None):
                rh=float((s["hreg"] > s["areg"]).mean()), ra=float((s["hreg"] < s["areg"]).mean()),
                xh=float((s["h"] - (s["so"] & s["hw"])).mean()), xa=float((s["a"] - (s["so"] & ~s["hw"])).mean()))
     out["pa"] = 1 - out["ph"]
+    out["en"] = float((s["enh"] + s["ena"]).mean())   # empty-net goals per game
     out["home_m15"] = float((m >= 2).mean())     # home -1.5 covers
     out["away_m15"] = float((m <= -2).mean())    # away -1.5 covers
     if total is not None:

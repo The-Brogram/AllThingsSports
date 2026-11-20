@@ -118,76 +118,78 @@ def sim_game(e, st_idx, dfo, n, seed):
     return rec
 
 
-def price_props(e, s, h, a, gh, ga, q, st_idx, seed):
-    by, gl, tm = st_idx
+def calib():
+    """Blend weights and the anytime-goal margin factor, fit by backtest_props.py on the tuning period (output/backtest_props.json)."""
+    try:
+        b = json.load(open(os.path.join(OUT, "backtest_props.json")))["markets"]
+    except (OSError, ValueError, KeyError):
+        return {}
+    return {k: dict(w=v.get("blend_weight", 0.0), c=v.get("margin_factor") or 1.0) for k, v in b.items() if "blend_weight" in v}
+
+
+def price_props(e, s, h, a, gh, ga, q, H, seed):
+    """Props v2 (nhl_props.py): pre-game player history by ESPN athlete id, ice time, position-specific rates, the same simulated games."""
+    import nhl_props as NP
     rng = np.random.default_rng(seed + 7)
     raw = ND.props(e["id"])
     if not raw:
         return []
+    day = f"{ND.to_et(e['date'][:16]):%Y-%m-%d}"
     names = {}
     for side in (h, a):
         for aid, (nm, pos) in ND.roster(side["id"]).items():
             names[aid] = (nm, pos, side["ab"])
-    team = {}
-    for comp in e["competitions"][0]["competitors"]:
-        team[ND.ab(comp["team"]["abbreviation"])] = tm.get(ND.name_key(comp["team"]["displayName"]))
+    team = {x["ab"]: H.team(x["ab"], day) for x in (h, a)}
+    cal = calib()
     pairs = {}
     for r in raw:
         mk = MKT.get(r["market"])
         if not mk or not r["aid"] or r["aid"] not in names or not r["price"]:
             continue
-        key = (r["aid"], mk, r["line"])
-        pairs.setdefault(key, []).append(r)
+        pairs.setdefault((r["aid"], mk, r["line"]), []).append(r)
     # a two-way prop needs both prices, and they must add up like a real market (100-112% implied)
     for key in list(pairs):
         it = pairs[key]
         if key[1] == "goal":
             pairs[key] = it[:1]
-            continue
-        if len(it) < 2 or not (1.0 <= M.implied(it[0]["price"]) + M.implied(it[1]["price"]) <= 1.12):
+        elif len(it) < 2 or not (1.0 <= M.implied(it[0]["price"]) + M.implied(it[1]["price"]) <= 1.12):
             del pairs[key]
     cache, rows = {}, []
     for (aid, mk, line), items in pairs.items():
         nm, pos, tab = names[aid]
         side = "h" if tab == h["ab"] else "a"
-        T = team.get(tab) or {}
-        O = team.get(a["ab"] if side == "h" else h["ab"]) or {}
+        T, O = team.get(tab), team.get(a["ab"] if side == "h" else h["ab"])
+        if not T or not O:
+            continue
+        row = dict(aid=aid, n=nm, tm=tab, pos="G" if mk == "saves" else pos, mk=mk, line=line, side="yes" if mk == "goal" else "over",
+                   price=items[0]["price"], under=items[1]["price"] if mk != "goal" else None)
         if mk == "saves":
             g = gh if side == "h" else ga
-            row = dict(aid=aid, n=nm, tm=tab, pos="G", mk=mk, line=line, side="over", price=items[0]["price"],
-                       under=items[1]["price"] if len(items) > 1 else None)
             if not g or ND.name_key(g["n"]) != ND.name_key(nm):
                 continue  # not the projected starter: DraftKings voids it if they do not start
             if g.get("st") != "Confirmed":
                 row["hold"] = True
                 rows.append(row)
                 continue
-            if aid not in cache:
-                cache[aid] = dict(saves=M.goalie(rng, s, side, O.get("shotsForPerGame") or 28, T.get("shotsAgainstPerGame") or 28))
-            v = cache[aid]["saves"]
+            v = cache.setdefault(aid, dict(saves=NP.saves_draws(rng, s, side, O["sf"], T["sa"])))["saves"]
         else:
-            cands = by.get((ND.name_key(nm), tab)) or []
-            if len(cands) > 1:   # same name on one team: tell them apart by position (D vs forward)
-                cands = [c for c in cands if (c.get("positionCode") == "D") == (pos == "D")]
-            if len(cands) != 1 or not cands[0].get("gamesPlayed"):
-                continue
-            r = cands[0]
             if aid not in cache:
-                cache[aid] = M.skater(rng, s, side, r["gamesPlayed"], r["goals"], r["assists"], r["shots"],
-                                      T.get("goalsForPerGame") or 3.0, q["xh"] if side == "h" else q["xa"])
+                f = H.skater(aid, day)
+                if not f:
+                    continue
+                cache[aid] = NP.skater_draws(rng, s, side, f, T["gf"])
             v = cache[aid][mk]
-            row = dict(aid=aid, n=nm, tm=tab, pos=pos, mk=mk, line=line, side="yes" if mk == "goal" else "over", price=items[0]["price"],
-                       under=items[1]["price"] if len(items) > 1 and mk != "goal" else None)
         L = 0.5 if mk == "goal" else float(line)
         pm = float((v > L).mean())
-        nv = M.novig(row["price"], row["under"]) if row.get("under") else None
-        p = M.blend(pm, nv)
-        row.update(p=round(p, 4), p_model=round(pm, 4))
-        if nv is not None:
-            row["nv"] = round(nv, 4)
-            row["edge"] = round(p - nv, 4)
+        c = cal.get(mk, dict(w=0.0, c=1.0))
+        if mk == "goal":   # one-way price: the market chance is the implied chance less DraftKings' fitted margin
+            nv = min(M.implied(row["price"]) / c["c"], 0.99)
+            row["imp"] = round(M.implied(row["price"]), 4)
         else:
-            row["imp"] = round(M.implied(row["price"]), 4)   # one-way price: its implied chance still carries the book's margin
+            nv = M.novig(row["price"], row["under"])
+        z = c["w"] * M.lg(pm) + (1 - c["w"]) * M.lg(nv)
+        p = float(1 / (1 + np.exp(-z)))
+        row.update(p=round(p, 4), p_model=round(pm, 4), nv=round(nv, 4), edge=round(p - nv, 4), w=c["w"])
         rows.append(row)
     return rows
 
@@ -219,7 +221,8 @@ def main():
     if not todo:
         print(f"{day} {a.mode}: nothing to run ({len(evs)} games on the slate)")
         return
-    st_idx = stat_index(ND.season_stats())
+    import nhl_props as NP
+    st_idx = NP.History()   # pre-game player and team history (players.csv.gz)
     dfo = ND.dailyfaceoff(day)
     for e in todo:
         rec = sim_game(e, st_idx, dfo, a.n, int(e["id"]) % 100000)

@@ -7,6 +7,7 @@ model/output/hub/
 model/data/slate_*.pkl
 model/cfb/data/*.pkl
 model/cfb/data/games/
+model/nhl/data/raw/
 model/data/stats_player_week_2026.csv
 model/data/play_by_play_2026.csv.gz
 model/data/snap_counts_2026.csv

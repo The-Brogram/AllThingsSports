@@ -14,6 +14,8 @@ import json
 import os
 import numpy as np
 import nhl_model as M
+# empty-net goals per game, NHL stats API team realtime (fetched 2026-11-20); ESPN season = end year
+EN_RATE = {2022: 0.363, 2023: 0.334, 2024: 0.341, 2025: 0.399, 2026: 0.387, 2027: 0.349}
 CLUBS = {"ANA", "ARI", "BOS", "BUF", "CAR", "CBJ", "CGY", "CHI", "COL", "DAL", "DET", "EDM", "FLA", "LA", "MIN", "MTL", "NJ", "NSH", "NYI",
          "NYR", "OTT", "PHI", "PIT", "SEA", "SJ", "STL", "TB", "TOR", "UTA", "UTAH", "VAN", "VGK", "WPG", "WSH"}
 
@@ -55,7 +57,7 @@ def run(rs, n, p=M.P):
                  pfav=q["home_m15"] if fav_home else q["away_m15"], yfav=int((hs - as_ if fav_home else as_ - hs) >= 2),
                  pdog=1 - (q["home_m15"] if fav_home else q["away_m15"]),
                  xg=q["xh"] + q["xa"], goals=hreg + areg + (hs + as_ - hreg - areg if r["detail"] != "Final/SO" else 0),
-                 po=q["po"], yo=(hs + as_ > line) * 1 + (hs + as_ == line) * -1, pomkt=po)
+                 en=q["en"], po=q["po"], yo=(hs + as_ > line) * 1 + (hs + as_ == line) * -1, pomkt=po)
         # the market's own puck-line price (home spread -1.5 or +1.5), where coherent
         if r["spread"] and r["hpl"] and r["apl"] and abs(abs(float(r["spread"])) - 1.5) < 1e-6:
             sp = float(r["spread"])
@@ -76,6 +78,12 @@ def report(res, label):
     out["reg_home_win"] = dict(model=mean("rh", res), actual=mean("yrh", res))
     out["fav_minus_1_5"] = dict(model=mean("pfav", res), actual=mean("yfav", res))
     out["goals_reg_ot"] = dict(model=mean("xg", res), actual=mean("goals", res))
+    seasons = sorted({x["season"] for x in res})
+    out["empty_net_per_game"] = dict(model=mean("en", res), actual=float(np.mean([EN_RATE.get(x["season"], np.nan) for x in res])),
+                                     note="actual from the NHL stats API (team realtime emptyNetGoals), season averages")
+    out["so_share_of_ot"] = dict(model=mean("pso", res) / max(mean("pot", res), 1e-9), actual=mean("so", res) / max(mean("ot", res), 1e-9))
+    out["by_season"] = [dict(season=s_, games=len(rr), ot_model=mean("pot", rr), ot=mean("ot", rr), so_model=mean("pso", rr), so=mean("so", rr),
+                             fav_model=mean("pfav", rr), fav=mean("yfav", rr)) for s_ in seasons for rr in [[x for x in res if x["season"] == s_]]]
     pl = [x for x in res if "pl_model" in x]
     if pl:
         a = ll([x["pl_model"] for x in pl], [x["pl_y"] for x in pl])

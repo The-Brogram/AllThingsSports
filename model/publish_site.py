@@ -39,14 +39,14 @@ STATE = {"model": [("output", ["hub", "fs", "fantasy_bt_rows.pkl", "fantasy_bt_d
                    ("cfb/output", []),
                    ("cfb/data", ["*.pkl", "games"])],
          "nba": [("nba/output", ["bt_rows.csv.gz"]), ("nba/data", [])],
-         "nhl": [("nhl/output", ["backtest_log.txt"]), ("nhl/data", [])]}
+         "nhl": [("nhl/output", ["backtest_log.txt"]), ("nhl/data", ["raw"])]}
 MARK = {"model": ["output/predictions_*.csv", "output/track_record.csv", "output/odds_log.csv", "cfb/output/predictions_w*.csv", "cfb/output/review_w*.json"],
         "nba": ["nba/output/predictions_*.csv", "nba/output/review_*.json"],
         "nhl": ["nhl/output/slate_*.json", "nhl/output/review_*.json"]}
 STAMP = {"model": "output/cloud_model.json", "nba": "nba/output/cloud_stamp.json", "nhl": "nhl/output/cloud_stamp.json"}
 NHL_HUB = ("nhl.json",)
 NBA_HUB = ("nba.json", "nbap.json", "nbl.json", "nblh.json", "nbm.json", "nbw.json", "heads.json")
-IGNORE = "\n".join(["__pycache__/", "*.pyc", "*.part", "*.tmp", ".DS_Store", "model/output/hub/", "model/data/slate_*.pkl", "model/cfb/data/*.pkl", "model/cfb/data/games/"]
+IGNORE = "\n".join(["__pycache__/", "*.pyc", "*.part", "*.tmp", ".DS_Store", "model/output/hub/", "model/data/slate_*.pkl", "model/cfb/data/*.pkl", "model/cfb/data/games/", "model/nhl/data/raw/"]
                    + ["model/data/" + v for v in VOLATILE]) + "\n"
 
 SCORES_FLOW = """name: scores
