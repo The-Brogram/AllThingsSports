@@ -347,7 +347,7 @@ def build(hub):
         out["record"] = rec
     os.makedirs(hub, exist_ok=True)
     json.dump(out, open(os.path.join(hub, "nhl.json"), "w"), separators=(",", ":"))
-    return {"nhl": "nhl.json"}
+    return {"nhl.json": os.path.abspath(os.path.join(hub, "nhl.json"))}
 
 
 if __name__ == "__main__":
