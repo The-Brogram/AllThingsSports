@@ -112,3 +112,12 @@ NFL post-game reviews: `nfl_reviews.py` builds `nflrev.json` for every finished 
 
 Monday night game (since Nov 16, 2026): GitHub builds the Game Book Monday at about 9 AM ET (cron `55 13 * * 1`) and again at 7:30 PM with
 inactives, news and line moves. The morning run is the first run, so its picks are the ones closing line value is measured from.
+
+## NHL runs on GitHub (since Nov 20, 2026)
+
+The site repository holds the NHL code, data and outputs under `model/nhl`. Its "nhl" workflow runs `cloud_nhl.py`:
+- **10 AM ET** (`morning`): grade last night (`review_nhl.py`), simulate every game with a DraftKings line using ESPN's Expected goalies, then rebuild `nhl.json`.
+- **Every 30 minutes, 11:15 AM to 10:45 PM ET** (`pregame`): re-simulate any game starting in the next 30-110 minutes with the starters as reported by then (ESPN + DailyFaceoff), and unlock goalie saves props for a Confirmed starter. A run with no game in that window changes nothing.
+- A game that has started is never re-run. Picks are logged at the price on offer in `nhl/output/picks_<date>.json` and graded under DraftKings rules: a shootout adds a goal to the winner and the total; props exclude shootout goals; goalie props are void if the goalie does not start.
+- The same "newest run wins" sync as the NBA applies (`nhl/output/cloud_stamp.json`).
+- No desktop job: GitHub is the only scheduler. Check the workflow's first morning and pregame runs.

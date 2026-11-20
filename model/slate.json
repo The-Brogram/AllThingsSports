@@ -248,10 +248,12 @@
   },
   "20261119": {
    "notes": {
-    "HOU": "C.J. Stroud starts (he started Weeks 9 and 10 and is on no injury list; reports of him missing a third straight game are from 2025). RB Woody Marks (concussion) is OUT; David Montgomery (groin) practiced fully, has no designation and returns as the lead back, with Emari Demercado expected to share carries (ESPN Nov 18; CBS Sports Nov 19). WR Marvin Harrison Jr. (hamstring) is OUT for the second straight game, TE Brevin Jordan (foot) is OUT, DE Danielle Hunter (hamstring) is OUT and LB Azeez Al-Shaair is on IR. G Wyatt Teller (back) is questionable. Montgomery's role after six weeks out is uncertain, so Houston rushing lines carry extra risk.",
-    "IND": "Daniel Jones starts; coach Shane Steichen has kept him as the starter. Both starting tackles are OUT: LT Bernhard Raimann (concussion) and RT Jalen Travis (knee, second straight game), and backup OT Charlie Heck is questionable (personal), so expect heavy pressure on Jones. TE Will Mallory (hamstring), CB Charvarius Ward (knee) and DT Jerry Tillery (calf) are OUT; CB Sauce Gardner (calf) and slot WR Anthony Gould (toe) are questionable (ESPN Nov 18; Colts Wire final injury report Nov 18)."
+    "HOU": "C.J. Stroud starts (he started Weeks 9 and 10 and is on no injury list; reports of him missing a third straight game are from 2025). RB Woody Marks (concussion) is OUT; David Montgomery (groin) practiced fully, has no designation and returns as the lead back for the first time since Week 5, with Emari Demercado the RB2 (ESPN Nov 18; CBS Sports Nov 19; NFL.com final report). WR Marvin Harrison Jr. (hamstring) is OUT for the second straight game, TE Brevin Jordan (foot/illness) is OUT, DE Danielle Hunter (hamstring) is OUT and LB Azeez Al-Shaair is on IR. G Wyatt Teller (back), LB Jake Hummel (groin) and CB Jaylin Smith (hamstring) are questionable after full practices. Montgomery's role after six weeks out is uncertain and Marks led the backfield the last four weeks, so Houston rushing lines are held out of picks.",
+    "IND": "Daniel Jones starts; coach Shane Steichen has kept him as the starter. Both starting tackles are OUT: LT Bernhard Raimann (concussion) and RT Jalen Travis (knee, second straight game), and backup OT Charlie Heck is questionable (personal), so expect heavy pressure on Jones. TE Will Mallory (hamstring), CB Charvarius Ward (knee) and DT Jerry Tillery (calf) are OUT. CB Sauce Gardner (calf) is listed questionable but did not practice and will not play per NFL Network's Jane Slater (Nov 19), so both starting corners are out. Slot WR Anthony Gould (toe, full practice) and LS Luke Rhodes (hamstring, limited) are questionable (Colts.com and NFL.com final injury report Nov 18)."
    },
-   "hold_rushing": [],
+   "hold_rushing": [
+    "HOU"
+   ],
    "qb": {
     "HOU": "00-0039163",
     "IND": "00-0035710"
@@ -267,7 +269,8 @@
      "00-0038394",
      "00-0037757",
      "00-0040163",
-     "00-0034573"
+     "00-0034573",
+     "00-0037190"
     ]
    },
    "play": {
@@ -275,6 +278,23 @@
      "00-0035685": 1.0
     }
    }
+  },
+  "20261122": {
+   "notes": {
+    "CHI": "Kyle Monangai (turf toe/thumb) returns after missing five straight games: full participant on Wednesday's estimated report and he says he expects to play (SI Bears On SI; NBC Sports citing ESPN's Courtney Cronin, Nov 16). SI expects D'Andre Swift to stay the lead back with Monangai's snaps limited in his first game back, and the two split work almost evenly before his injury. Chicago's usage history cannot see this, so Bears rushing lines are held.",
+    "KC": "Kenneth Walker III (groin) missed Week 10 and did not practice Wednesday or Thursday (Arizona Sports injury table, Nov 19; NBC Sports, Nov 19). Andy Reid: 'We just don't want to do something stupid' (CBS, Nov 18). Rookie Emmett Johnson started Week 10 (22-101 rushing, 6-70 receiving, 2 TD) and starts again if Walker sits; Friday's designation is not yet known, so Chiefs rushing lines are held either way.",
+    "TB": "Baker Mayfield (foot/right thumb) did not practice Wednesday and was limited Thursday; the team will not name its Week 11 starter until at least Friday (Buccaneers.com injury report, Nov 19). Rookie Jalon Daniels took first-team reps Wednesday and would start if Mayfield cannot. Unconfirmed: confirm the Tampa Bay starter before using any Buccaneers prop.",
+    "ARI": "Carson Beck makes his second start (Gardner Minshew on IR, season-ending elbow surgery), but Beck was added to Thursday's report with a back injury and was limited (Arizona Sports, Nov 19; SI Cardinals On SI). 40-year-old Josh Johnson is the backup. Beck's Friday status is unconfirmed.",
+    "NYJ": "Geno Smith (left ankle, imaging found no major injury) was limited Wednesday; asked if he will start Sunday he said 'Yes. For sure.' and Aaron Glenn said 'He's our starter' (NewYorkJets.com, Nov 18). Rookie Cade Klubnik starts if Smith is not cleared. WRs Omar Cooper Jr. (ankle/hip) and Isaiah Williams (ribs) did not practice Wednesday.",
+    "SF": "Mike Evans (Achilles) has missed three straight games; he did not practice Wednesday and was limited Thursday, and Kyle Shanahan sounded optimistic he can play (Vikings.com injury report, Nov 19; USA Today via Yahoo, Nov 18). If he plays his role is uncertain, so 49ers receiving lines are low confidence. Christian McCaffrey's Wednesday absence was a rest day; he practiced fully Thursday.",
+    "PHI": "Joe Milton III starts again (named by Nick Sirianni, BVM Sports, Nov 18); Jalen Hurts is out for the season. DeVonta Smith (hamstring, five of the last six games missed) and Dontayvion Wicks (ankle, out since Week 6) were limited Wednesday and are on track to return (CBS, Nov 18; USA Today via Yahoo, Nov 18), so their roles are uncertain and Eagles receiving lines are low confidence.",
+    "MIN_": "Kirk Cousins starts in Mexico City; Kyler Murray (hamstring) and Jordan Addison (thumb) did not practice Wednesday or Thursday, and T.J. Hockenson (wrist) was limited both days (Vikings.com, Nov 19).",
+    "LV_": "Fernando Mendoza makes his second start (first on the road). Brock Bowers (ankle) did not practice Wednesday; Klint Kubiak said 'If he's ready to go, we'll get him out there' and that he need not practice to play (USA Today via Yahoo, Nov 18). His status is unconfirmed."
+   },
+   "hold_rushing": [
+    "CHI",
+    "KC"
+   ]
   }
  }
 }

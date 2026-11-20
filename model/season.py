@@ -312,6 +312,12 @@ def main():
         files.update(hub_nba.build(HUB))
     except Exception as e:  # an NBA data problem must not stop the NFL hub from building
         print("NBA hub data skipped:", repr(e))
+    try:  # NHL pages: nhl.json (games, model numbers, standings, stat leaders, track record)
+        sys.path.insert(0, os.path.join(ROOT, "nhl"))
+        import hub_nhl
+        files.update(hub_nhl.build(HUB))
+    except Exception as e:  # noqa: BLE001  an NHL data problem must not stop the hub from building
+        print("NHL hub data skipped:", repr(e))
     try:  # Champions League pages (built from TheBrogram/soccer on this computer; GitHub reuses the kept copy)
         import hub_ucl
         files.update(hub_ucl.build(HUB))

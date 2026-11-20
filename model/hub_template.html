@@ -630,6 +630,114 @@ body.noscroll{overflow:hidden}
 .utabs button[aria-selected=true]{color:var(--fg);border-bottom-color:var(--fg)}.utabs button:hover{color:var(--fg)}
 .utb td.uwin{font-weight:700}.utb tr.usub td{background:var(--pan);font:600 10.5px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--mut)}.utb td i{font-style:normal;color:var(--mut)}
 .ucv .ustat b{font-size:28px}
+/* ===================== NHL (nhl.json, built by nhl/hub_nhl.py) ===================== */
+.sport.nhl .sh i{background:#0e7490;box-shadow:0 0 0 3px rgba(14,116,144,.16)}
+/* left = away team (blue), right = home team (orange); the shared urow/uteams classes are positional */
+.nhv{--uh:#2563eb;--uh2:#dbe6fb;--ua:#cf5418;--ua2:#f7dfd1;--ug:#16a34a;--ur:#dc2626;--uy:#eab308;--ud:#8b949a}
+/* date rail: reuses .wstrip; a day with no games stays clickable but muted */
+.nhrail{margin-block:14px 0;padding-bottom:6px}.nhrail button{min-width:84px}.nhrail button b{font:800 18px/1 var(--disp)}
+.nhrail button.none{background:var(--bg);border-style:dashed;color:var(--dim)}
+.nhrail button.today small{color:var(--red)}
+.nhrnav{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap;margin-top:2px}
+.nhsort{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font:600 10.5px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--mut)}.nhsort .chips{margin:0}
+.nhjump{border:1px solid var(--line2);border-left:3px solid #0e7490;border-radius:10px;padding:8px 12px;margin:12px 0 0;font-size:13.5px;background:var(--pan)}
+/* game rows: same grid as .ucr, away on the left */
+.nhr{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr) minmax(0,1fr);gap:16px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:12px 18px;color:var(--fg);text-decoration:none;background:var(--bg)}
+.nhr:hover{background:var(--pan);border-color:var(--line2)}
+.nhr .ut{display:grid;gap:2px;min-width:0}.nhr .ut.r{text-align:right}
+.nhr .ut b{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;min-width:0;font:800 22px/1.1 var(--disp);font-stretch:112%;text-transform:uppercase;overflow-wrap:anywhere}.nhr .ut.r b{justify-content:flex-end}
+.nhr .ut b .urt{margin:0;flex:none;vertical-align:0}
+.nhr .ut.rw b{color:var(--ug)}.nhr .ut.rl b{color:var(--mut)}
+.nhr .ut small{font:500 12px var(--mono);color:var(--mut)}
+.nhg{font:500 12px var(--body);color:var(--mut);display:flex;gap:6px;align-items:center;flex-wrap:wrap;min-width:0}.ut.r .nhg{justify-content:flex-end}
+.nhg .gi{font:700 9.5px var(--mono);color:var(--dim)}.nhg span{color:var(--fg);font-weight:600}
+.nhgs{display:inline-block;font:700 9.5px/1.5 var(--mono);text-transform:uppercase;letter-spacing:.04em;border-radius:4px;padding:0 5px;border:1px solid var(--line2);color:var(--mut);font-style:normal;white-space:nowrap}
+.nhgs.c{background:color-mix(in srgb,var(--grn) 13%,var(--bg));border-color:color-mix(in srgb,var(--grn) 45%,var(--bg));color:#087a49}
+.nhgs.e{background:color-mix(in srgb,#e3a008 14%,var(--bg));border-color:color-mix(in srgb,#e3a008 50%,var(--bg));color:#8a5a00}
+.nhgs.u{border-style:dashed}
+.nhgs.dis{background:color-mix(in srgb,var(--red) 10%,var(--bg));border-color:color-mix(in srgb,var(--red) 40%,var(--bg));color:#b5162b}
+.nhotl{font:700 9.5px/18px var(--mono);border:1px solid var(--line2);border-radius:4px;padding:0 4px;color:var(--mut);font-style:normal;flex:none}
+.nhr .uc{display:grid;gap:6px;min-width:0}
+.nhr .ux{display:flex;flex-wrap:wrap;justify-content:center;gap:2px 12px;font:500 11.5px var(--mono);color:var(--mut)}.nhr .ux b{color:var(--fg)}
+.nhmod{color:var(--fg)}.nhmod b{font-weight:700}.nhmod em{font-style:normal;color:var(--mut)}
+.nhlive{display:inline-flex;align-items:center;gap:6px;font:700 11px var(--mono);color:var(--red);text-transform:uppercase;letter-spacing:.06em}.nhlive i{width:7px;height:7px;border-radius:50%;background:var(--red)}
+.nhpend{display:inline-flex;align-items:center;gap:6px;font:600 10.5px var(--mono);color:var(--dim);border:1px dashed var(--line2);border-radius:999px;padding:1px 8px;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+.nhpendbox{border:1px dashed var(--line2);border-radius:12px;padding:12px 14px;background:repeating-linear-gradient(135deg,var(--pan) 0 8px,var(--bg) 8px 16px);color:var(--mut);font-size:13px;min-width:0}
+.nhpendbox b{display:block;font:700 10.5px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--mut);margin-bottom:2px}
+@media(max-width:640px){.nhr{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px 12px;padding:12px 14px}.nhr .uc{grid-column:1/-1;grid-row:2}.nhr .ut b{font-size:17px;overflow-wrap:normal}.nhg{font-size:11.5px}}
+/* match page */
+.nhchance{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px;margin-top:16px}
+.nhbig{border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;gap:8px;min-width:0;align-content:start}
+.nhbig.off{border-style:dashed}
+.nhbig h4{margin:0;font:600 10.5px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--mut);display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.nhbig .pp{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.nhbig .pp div{display:grid;min-width:0}.nhbig .pp div:last-child{text-align:right}
+.nhbig .pp b{font:800 44px/1 var(--disp);font-variant-numeric:tabular-nums}.nhbig .pp b.g{color:var(--ug)}.nhbig .pp b.r{color:var(--ur)}
+.nhbig .pp span{font:600 12px var(--mono);color:var(--mut)}.nhbig .pp em{font:600 11.5px var(--mono);font-style:normal;color:var(--fg)}
+.nhbig .ubar{height:10px;border-radius:5px}
+.nhbig small{font-size:12.5px;color:var(--mut)}
+.nhends{display:flex;height:26px;border-radius:6px;overflow:hidden;border:1px dashed var(--line2)}.nhends div{flex:1;display:grid;place-items:center;font:600 10.5px var(--mono);color:var(--dim);border-left:1px dashed var(--line2);text-align:center;padding-inline:2px;min-width:0;overflow:hidden;white-space:nowrap}.nhends div:first-child{border-left:0}
+.nhends div.y{background:color-mix(in srgb,#eab308 14%,var(--bg));color:#8a5a00;flex:.7}
+.nhends.on{border:0;gap:2px;background:var(--bg)}.nhends.on div{border:0;color:#fff;font-weight:700}.nhends.on div.g{background:var(--ug)}.nhends.on div.r{background:var(--ur)}.nhends.on div.y{background:var(--uy);color:#3f2d00}
+.nhendk{display:flex;justify-content:space-between;gap:6px 12px;flex-wrap:wrap;font:600 12px var(--mono);color:var(--mut)}.nhendk b{color:var(--fg)}
+.nhgd{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px;margin-top:10px}
+.nhgc{border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;gap:8px;min-width:0}
+.nhgc.l{border-top:4px solid var(--uh)}.nhgc.r{border-top:4px solid var(--ua)}
+.nhgc .gh{display:flex;justify-content:space-between;gap:8px;align-items:flex-start;flex-wrap:wrap}
+.nhgc .gh b{font:800 24px/1.05 var(--disp);font-stretch:110%;text-transform:uppercase;overflow-wrap:anywhere}.nhgc .gh small{display:block;font:500 12px var(--mono);color:var(--mut)}
+.nhgc .gst{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}.nhgc .gst div{background:var(--pan);border-radius:8px;padding:6px 8px;min-width:0}
+.nhgc .gst small{display:block;font:600 9.5px var(--mono);color:var(--dim);text-transform:uppercase;letter-spacing:.06em}.nhgc .gst b{font:700 15px var(--mono);font-variant-numeric:tabular-nums}
+.nhgc .bk{font-size:12.5px;color:var(--mut)}
+@media(max-width:420px){.nhgc .gst{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.nhlines{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:10px}
+.nhlines>div{background:var(--bg);padding:12px 14px;display:grid;gap:4px;min-width:0;align-content:start}
+.nhlines small{font:600 10.5px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--mut)}
+.nhlines .lq{display:flex;justify-content:space-between;gap:8px;font-size:13.5px}.nhlines .lq b{font:800 22px/1.1 var(--disp);font-variant-numeric:tabular-nums}
+.nhlines .lp{font:500 12px var(--mono);color:var(--mut)}.nhlines .lp b{color:var(--fg)}
+.nhform{display:flex;gap:3px;flex-wrap:wrap}.nhform .ures{width:auto;padding:0 5px}.nhv .ures.OTL{background:var(--mut)}
+.nhlsc{overflow-x:auto}.nhlsc table{border-collapse:collapse;width:100%;font:500 14px var(--mono);font-variant-numeric:tabular-nums}.nhlsc th{font:600 10.5px var(--mono);color:var(--mut);text-transform:uppercase;padding:6px 8px;text-align:center;border-bottom:1px solid var(--line)}.nhlsc td{padding:8px;text-align:center;border-bottom:1px solid var(--line)}.nhlsc td:first-child,.nhlsc th:first-child{text-align:left;font-family:var(--body);font-weight:700}.nhlsc td.t{font-weight:800;font-size:16px}.nhlsc tr:last-child td{border-bottom:0}
+.nhtline{list-style:none;margin:0;padding:0;display:grid;gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.nhtline li{display:grid;grid-template-columns:62px minmax(0,1fr) 54px;gap:10px;padding:9px 14px;border-top:1px solid var(--line);align-items:baseline;font-size:13.5px}.nhtline li:first-child{border-top:0}
+.nhtline li.ph{background:var(--pan);font:600 10.5px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--mut);display:block;padding:6px 14px}
+.nhtline .tm{font:600 12px var(--mono);color:var(--mut)}.nhtline .sc{font:700 13px var(--mono);text-align:right}.nhtline .ta{border-left:3px solid var(--uh);padding-left:8px}.nhtline .th{border-left:3px solid var(--ua);padding-left:8px}
+.nhrevv{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px;margin-top:10px}
+.nhrevv>div{border:1px solid var(--line);border-radius:12px;padding:12px 14px;min-width:0}.nhrevv h5{margin:0 0 4px;font:600 10.5px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--mut)}.nhrevv p{margin:0;font-size:14px}.nhrevv b.big{display:block;font:800 26px/1.1 var(--disp)}
+.nhb2b{display:inline-block;justify-self:start;font:600 10.5px var(--mono);color:#6b4e00;border:1px dashed #d9b44a;border-radius:4px;padding:0 6px;background:#fffaf0;margin-top:4px;white-space:normal}
+.nhv .uteams .a .nhb2b{justify-self:end}
+/* props: likelihood first, price and edge beside it */
+.nhprops td.p{font:800 18px var(--disp);font-variant-numeric:tabular-nums}.nhprops td.pl{white-space:normal;min-width:150px}.nhprops td.pl small{display:block;font:500 11px var(--mono);color:var(--mut)}
+.nhprops td.hold{white-space:normal;color:var(--mut);font-size:12.5px}
+/* standings */
+.nhst{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,560px),1fr));gap:14px;margin-top:12px}
+.nhst .utb{border:1px solid var(--line);border-radius:12px;padding:8px 10px}
+.nhst h4{font:800 18px var(--disp);text-transform:uppercase;margin:4px 4px 6px;display:flex;justify-content:space-between;align-items:baseline;gap:8px}.nhst h4 small{font:500 11.5px var(--mono);color:var(--mut);text-transform:none}
+.nhtb td,.nhtb th{font-variant-numeric:tabular-nums}.nhtb td.tm{position:sticky;left:0;background:var(--bg);z-index:1;min-width:150px;white-space:normal}.nhtb td.tm a{font-weight:650;text-decoration:none}.nhtb td.tm small{display:block;font:500 11px var(--mono);color:var(--mut)}
+.nhtb th.tm{position:sticky;left:0;background:var(--bg);z-index:2}
+.nhtb td.pts{font-weight:700}
+.nhtb tr.cut td{border-bottom:2px dashed var(--fg)}
+.nhzl{display:inline-block;font:700 9.5px var(--mono);border-radius:3px;padding:0 4px;margin-left:4px;vertical-align:1px}.nhzl.z1{color:#087a49;border:1px solid color-mix(in srgb,var(--grn) 45%,var(--bg))}.nhzl.z2{color:#8a5a00;border:1px solid color-mix(in srgb,#e3a008 50%,var(--bg))}
+@media(max-width:640px){.nhtb .lh{display:none}}
+/* teams + leaders */
+.nhteams{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px;margin-top:12px}
+.nhdiv{border:1px solid var(--line);border-radius:12px;padding:10px 12px;min-width:0}.nhdiv h4{font:800 16px var(--disp);text-transform:uppercase;margin:2px 2px 6px}
+.nhtl{display:grid;gap:2px}.nhtl a{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 8px;padding:7px 8px;border-radius:8px;text-decoration:none;color:var(--fg)}.nhtl a:hover{background:var(--pan)}
+.nhtl a b{font:700 14px var(--body)}.nhtl a span{font:600 13px var(--mono);text-align:right}.nhtl a small{grid-column:1/-1;font:500 11px var(--mono);color:var(--mut)}
+.nhsl{display:grid;gap:4px;font:600 10.5px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--mut);min-width:min(100%,260px)}
+.nhsl input[type=range]{width:100%;accent-color:var(--fg)}.nhsl output{font:700 14px var(--mono);color:var(--fg);text-transform:none;letter-spacing:0}
+.nhsrch{font:500 14px var(--body);border:1px solid var(--line2);border-radius:10px;padding:8px 12px;background:var(--bg);color:var(--fg);width:min(100%,260px)}
+.nhctl{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:end;margin:10px 0}
+.nhctl label{display:grid;gap:4px;font:600 10.5px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--mut)}
+.nhv .utb td.k{font-weight:700}.nhv .utb th.k{color:var(--fg)}
+.nhv .uteams{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}.nhv .uteams h3{font-size:clamp(20px,2.6vw,44px);overflow-wrap:break-word}.nhv .uteams small.nloc{margin:0 0 2px;font:700 12px var(--mono);text-transform:uppercase;letter-spacing:.08em}
+@media(max-width:720px){.nhv .uteams{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.nhv .uteams h3{font-size:clamp(17px,5.4vw,24px);font-stretch:100%}.nhv .uteams{gap:10px}}
+.nhv .utb th,.nhv .utb td{text-align:left;font-family:var(--body)}.nhv .utb th{font-family:var(--mono)}.nhv .utb .n{text-align:right;font-family:var(--mono)}
+.nhv .ush{scroll-margin-top:calc(env(safe-area-inset-top,0px) + 64px)}
+.nhv .ustat b{font-size:28px}
+@media(max-width:640px){.nhrnav .nhsort{order:3;width:100%}}
+.nhstatsel{display:none;gap:4px;font:600 10.5px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--mut)}.nhstatsel select{font:600 14px var(--body);text-transform:none;letter-spacing:0;color:var(--fg);background:var(--bg);border:1px solid var(--line2);border-radius:10px;padding:8px 10px;width:min(100%,320px)}
+.nhlead td.nm{white-space:normal;min-width:130px;font-weight:600}.nhcap{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.nhmore{margin:10px 0 0}.nhwhat{margin:4px 0 8px}
+@media(max-width:640px){.nhstatchips{display:none}.nhstatsel{display:grid;width:100%}}
+/* ===================== end NHL ===================== */
 </style>
 <div class="shell">
 <aside id="side" aria-label="Sections">
@@ -655,6 +763,14 @@ body.noscroll{overflow:hidden}
     <button data-v="nba-record"><span class="ic">✓</span>Track record</button>
     <button data-v="nba-weeks"><span class="ic">▥</span>Previous weeks</button>
     <button data-v="nba-leaders"><span class="ic">◎</span>Season leaders</button></div>
+  </details>
+  <!-- NHL -->
+  <details class="sport nhl" id="sp-nhl" open><summary class="sh"><i></i>NHL<small>2026-27</small><span class="chev" aria-hidden="true"></span></summary>
+    <div class="spl"><button data-v="nhl"><span class="ic">▦</span>Games</button>
+    <button data-v="nhl-standings"><span class="ic">▤</span>Standings</button>
+    <button data-v="nhl-teams"><span class="ic">◉</span>Teams</button>
+    <button data-v="nhl-leaders"><span class="ic">◎</span>Stat leaders</button>
+    <button data-v="nhl-record"><span class="ic">✓</span>Track record</button></div>
   </details>
   <details class="sport ucl" id="sp-ucl" open><summary class="sh"><i></i>Champions League<small>2026-27</small><span class="chev" aria-hidden="true"></span></summary>
     <div class="spl"><button data-v="ucl"><span class="ic">◉</span>Overview</button>
@@ -686,6 +802,12 @@ body.noscroll{overflow:hidden}
 <section id="v-nba-record" hidden></section>
 <section id="v-nba-weeks" hidden></section>
 <section id="v-nba-leaders" hidden></section>
+<!-- NHL -->
+<section id="v-nhl" class="nhv" hidden></section>
+<section id="v-nhl-standings" class="nhv" hidden></section>
+<section id="v-nhl-teams" class="nhv" hidden></section>
+<section id="v-nhl-leaders" class="nhv" hidden></section>
+<section id="v-nhl-record" class="nhv" hidden></section>
 <section id="v-ucl" hidden></section>
 <section id="v-ucl-md" hidden></section>
 <section id="v-ucl-record" hidden></section>
@@ -716,12 +838,12 @@ $('#live').lastChild.textContent=`${wname(D.week)} · now`;
 $('#upd').textContent=`Updated ${D.built} ET`;
 
 /* ---- views ---- */
-const VIEWS=['weeks','cash','compare','record','players','wrcb','teampos','fantasy','cfb-weeks','cfb-record','cfb-teampos','cfb-leaders','nba','nba-record','nba-weeks','nba-leaders','ucl','ucl-md','ucl-record'];let cur=D.week;
-const VNAME={'nba-weeks':'Previous weeks',weeks:'Weeks',cash:'Cash Center',compare:'Compare teams',record:'Track record',players:'Player lookup',wrcb:'WR / CB matchups',teampos:'Team vs position',fantasy:'Fantasy','cfb-weeks':'Weeks','cfb-record':'Track record','cfb-teampos':'Team vs position','cfb-leaders':'Season leaders',nba:'Tonight','nba-record':'Track record','nba-leaders':'Season leaders',ucl:'Overview','ucl-md':'Matchdays','ucl-record':'Track record'};
+const VIEWS=['weeks','cash','compare','record','players','wrcb','teampos','fantasy','cfb-weeks','cfb-record','cfb-teampos','cfb-leaders','nba','nba-record','nba-weeks','nba-leaders','nhl','nhl-standings','nhl-teams','nhl-leaders','nhl-record','ucl','ucl-md','ucl-record'];let cur=D.week;
+const VNAME={'nba-weeks':'Previous weeks',weeks:'Weeks',cash:'Cash Center',compare:'Compare teams',record:'Track record',players:'Player lookup',wrcb:'WR / CB matchups',teampos:'Team vs position',fantasy:'Fantasy','cfb-weeks':'Weeks','cfb-record':'Track record','cfb-teampos':'Team vs position','cfb-leaders':'Season leaders',nba:'Tonight','nba-record':'Track record','nba-leaders':'Season leaders',nhl:'Games','nhl-standings':'Standings','nhl-teams':'Teams','nhl-leaders':'Stat leaders','nhl-record':'Track record',ucl:'Overview','ucl-md':'Matchdays','ucl-record':'Track record'};
 function menu(o){document.body.classList.toggle('menu',o);$('#menu').setAttribute('aria-expanded',String(o))}
 function show(v){const was=VIEWS.find(x=>!$('#v-'+x).hidden);VIEWS.forEach(x=>$('#v-'+x).hidden=x!==v);
   document.querySelectorAll('#side [data-v]').forEach(b=>{b.setAttribute('aria-pressed',b.dataset.v===v);if(b.dataset.v===v){const d=b.closest('details');if(d&&!d.open)d.open=true}});
-  $('.top').hidden=v!=='weeks';$('#mtitle').textContent=v==='cash'?'Cash Center':(v.startsWith('cfb')?'College Football · ':v.startsWith('nba')?'NBA · ':v.startsWith('ucl')?'Champions League · ':'NFL · ')+VNAME[v];menu(false);if(was&&was!==v)scrollTo(0,0)}
+  $('.top').hidden=v!=='weeks';$('#mtitle').textContent=v==='cash'?'Cash Center':(v.startsWith('cfb')?'College Football · ':v.startsWith('nba')?'NBA · ':v.startsWith('nhl')?'NHL · ':v.startsWith('ucl')?'Champions League · ':'NFL · ')+VNAME[v];menu(false);if(was&&was!==v)scrollTo(0,0)}
 /* ---- Champions League: ucl.json (ESPN season data, refreshed on every hub build, plus the soccer model's analysed matchdays) and uclh.json (every UCL result since 2003) ---- */
 let UCL=null,UCLP=null,UCLH=null,UCLHP=null,UTAB='over';const UDAY={};
 function uclload(box,fn){if(UCL)return fn();if(!box.innerHTML)box.innerHTML='<p class="note">Loading…</p>';
@@ -897,6 +1019,364 @@ function uclrecord(){const box=$('#v-ucl-record');box.classList.add('ucv');ucllo
   ${pk.length?`<h3 class="ush">Favorite underdog picks</h3><div class="utb"><table><thead><tr><th>Date</th><th>Pick</th><th>Match</th><th class="n">Win %</th><th class="n">Price</th><th>Result</th></tr></thead><tbody>${pk.map(x=>`<tr><td>${esc(x.d.day.slice(5))}</td><td><b>${esc(x.d.pick.team)}</b></td><td><a href="#ucl-match-${x.m.id}">${esc(ush(x.f.h.name))} ${x.f.hs}–${x.f.as} ${esc(ush(x.f.a.name))}</a></td><td class="n">${pc(x.m.dog.win)}</td><td class="n">${esc(x.m.dog.price)}</td><td>${x.o===x.m.dog.side?'<span class="hit">Won</span>':x.o==='D'?'Draw':'<span class="miss">Lost</span>'}</td></tr>`).join('')}</tbody></table></div>`:''}
   <h3 class="ush">Every match</h3><div class="utb"><table><thead><tr><th>Date</th><th>Match</th><th class="n">Home</th><th class="n">Draw</th><th class="n">Away</th><th>Most likely</th><th>Final</th><th></th><th>O/U 2.5</th></tr></thead><tbody>${L.map(x=>{const p=x.m.p,b=ubest(p),ou=p.o25>=.5,oh=ou===(x.f.hs+x.f.as>2.5);
     return`<tr><td>${esc(x.d.day.slice(5))}</td><td><a href="#ucl-match-${x.m.id}">${esc(ush(x.f.h.name))} v ${esc(ush(x.f.a.name))}</a></td><td class="n">${pc(p.H)}</td><td class="n">${pc(p.D)}</td><td class="n">${pc(p.A)}</td><td>${esc(uwho(x.f,b))}</td><td class="n">${x.f.hs}–${x.f.as}</td><td>${b===x.o?'<span class="hit">Hit</span>':'<span class="miss">Miss</span>'}</td><td>${ou?'Over':'Under'} ${pc(ou?p.o25:1-p.o25)} ${oh?'<span class="hit">✓</span>':'<span class="miss">✗</span>'}</td></tr>`}).join('')}</tbody></table></div>`})}
+/* ===================== NHL: nhl.json (ESPN scoreboard, DraftKings lines, probable goalies, standings, leaders, built by nhl/hub_nhl.py)
+   plus the NHL model's fields (m, props, record) when they exist. Every key may be missing: a missing model block shows "Model output — pending",
+   never a made-up number. All NHL code lives in this one block; the router calls NHL.route(hash). ===================== */
+const NHL=(()=>{
+let N=null,NP=null;
+const pc=v=>v==null||isNaN(v)?'–':Math.round(v*100)+'%';
+const pts=v=>v==null||isNaN(v)?'':(v>=0?'+':'−')+Math.abs(v*100).toFixed(1)+' pts';
+const num=o=>{if(o==null||o==='')return null;const x=+String(o).replace('−','-').replace('+','');return isNaN(x)?null:x};
+const imp=o=>{o=num(o);return o==null||!o?null:o>0?100/(o+100):-o/(-o+100)};
+const nv=(a,b)=>{const x=imp(a),y=imp(b);return x==null||y==null?null:[x/(x+y),y/(x+y)]};
+const odd=o=>{const x=num(o);return x==null?'–':(x>0?'+':'−')+Math.abs(x)};
+const f1=v=>v==null||isNaN(v)?'–':(+v).toFixed(1),f2=v=>v==null||isNaN(v)?'–':(+v).toFixed(2);
+const et=iso=>{try{return new Date(iso).toLocaleTimeString('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'})}catch(e){return''}};
+const dlong=d=>new Date(d+'T12:00:00').toLocaleDateString('en-US',{weekday:'long',month:'short',day:'numeric'});
+const dshort=d=>new Date(d+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric'});
+const ord=n=>n+(['th','st','nd','rd'][(n%100>10&&n%100<14)?0:(n%10<4?n%10:0)]||'th');
+const today=()=>{try{return new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date())}catch(e){return new Date().toISOString().slice(0,10)}};
+const T=ab=>(N.teams||{})[ab]||{name:ab||'?',nick:ab||'?',loc:''};
+const DAYS=()=>N.days||{};
+let ALLG=[],G={},DAYOF={},ST={};
+
+/* standings index: division rank, conference rank, playoff zone (top 3 per division = z1, two wild cards = z2) */
+function index(){ALLG=Object.values(DAYS()).flat();G={};DAYOF={};ST={};
+  Object.entries(DAYS()).forEach(([d,L])=>(L||[]).forEach(g=>{G[g.id]=g;DAYOF[g.id]=d}));
+  (N.stand||[]).forEach(C=>{const all=[];(C.divs||[]).forEach(D=>(D.rows||[]).forEach((r,i)=>{const x={...r,away:r.away??r.road,div:D.name,conf:C.conf,dr:i+1,pp:r.ppct!=null?+r.ppct:r.gp?r.pts/(2*r.gp):null,gd:r.diff!=null?+r.diff:(r.gf!=null&&r.ga!=null?r.gf-r.ga:null)};ST[r.ab]=x;all.push(x)}));
+    const cmp=(a,b)=>b.pts-a.pts||a.gp-b.gp||b.rw-a.rw;all.sort(cmp);all.forEach((x,i)=>x.cr=i+1);
+    all.forEach(x=>x.zone=x.dr<=3?1:0);const rest=all.filter(x=>!x.zone);rest.forEach((x,i)=>{x.wc=i+1;if(i<2)x.zone=2});
+    const wc2=rest[1];rest.forEach(x=>x.back=x.wc>2&&wc2?wc2.pts-x.pts:null);C.wc=rest;C.all=all})}
+function load(box,fn){if(N)return fn();if(!box.innerHTML||box.querySelector('.empty'))box.innerHTML='<p class="note">Loading…</p>';
+  NP=NP||fetch('nhl.json').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()});
+  NP.then(j=>{if(!N){N=j||{};index()}fn()}).catch(e=>{NP=null;box.innerHTML=`<p class="empty">Couldn't load NHL data (${esc(e.message)}). <button class="lk" type="button" data-nretry>Try again</button></p>`;
+    const b=box.querySelector('[data-nretry]');if(b)b.onclick=()=>route(location.hash.slice(1))})}
+const tinfo=ab=>{const s=ST[ab];return s?`${s.w}-${s.l}-${s.otl} · ${s.pts} pts · ${ord(s.dr)} ${s.div}`:''};
+
+/* ---------- shared bits ---------- */
+function head(eb,title,sub){return`<div class="cfhead"><div><div class="eyebrow"><span>NHL · ${esc(N.season||'2026-27')}${eb?' · '+eb:''}</span>${N.built?`<span class="upd">Updated ${esc(N.built)}</span>`:''}</div>${title?`<h2>${title}</h2>`:''}${sub?`<p class="note">${sub}</p>`:''}</div></div>`}
+const gstat=s=>s==='Confirmed'?'c':s==='Expected'?'e':'u';
+const dis=g=>g&&g.agree===false?`<i class="nhgs dis" title="ESPN and DailyFaceoff name different starters">Sources disagree</i>`:'';
+const goalie=t=>t&&t.g&&t.g.n?`<span class="nhg"><span class="gi">G</span><span>${esc(t.g.n)}</span><i class="nhgs ${gstat(t.g.st)}">${esc(t.g.st||'Unconfirmed')}</i>${dis(t.g)}</span>`:`<span class="nhg"><span class="gi">G</span>Starter not reported <i class="nhgs u">Unconfirmed</i></span>`;
+const pend=(t='Model output — pending')=>`<span class="nhpend">${t}</span>`;
+function urow(label,sub,lv,rv,better,fmt=v=>v,scale){const ok=lv!=null&&rv!=null&&!isNaN(lv)&&!isNaN(rv),mx=scale??(Math.max(Math.abs(+lv||0),Math.abs(+rv||0))*1.1||1);let lw='',rw='';
+  if(ok&&better&&+lv!==+rv){const lb=better==='hi'?+lv>+rv:+lv<+rv;lw=lb?'w':'';rw=lb?'':'w'}
+  const bar=v=>v==null||isNaN(v)?'':`<span class="f" style="width:${Math.min(100,Math.abs(+v)/mx*100)}%"></span>`;
+  return`<div class="urow"><div class="us h ${lw}"><span class="v">${lv==null||isNaN(lv)?'n/a':fmt(lv)}</span><span class="k">${bar(lv)}</span></div><div class="l">${label}${sub?`<em>${sub}</em>`:''}</div><div class="us a ${rw}"><span class="v">${rv==null||isNaN(rv)?'n/a':fmt(rv)}</span><span class="k">${bar(rv)}</span></div></div>`}
+const utrow=(l,a,b)=>`<div class="urow"><div class="us h"><span class="x">${a}</span></div><div class="l">${l}</div><div class="us a"><span class="x">${b}</span></div></div>`,ug=t=>`<div class="g">${t}</div>`;
+const ot=g=>/OT|SO/.exec(g.det||'')?.[0];
+const prevDay=d=>{const x=new Date(d+'T12:00:00Z');x.setUTCDate(x.getUTCDate()-1);return x.toISOString().slice(0,10)};
+/* winner side of a finished game: res first, then the score */
+const wside=g=>g.res?(g.res.a==='W'?'a':g.res.h==='W'?'h':null):(+g.a?.score>+g.h?.score?'a':+g.h?.score>+g.a?.score?'h':null);
+const otlSide=(g,s)=>g.res?g.res[s]==='OTL':(wside(g)&&wside(g)!==s&&!!ot(g));
+/* back-to-back: the file's b2b flag; if absent, whether the team played the previous day (only when that day is on file). A tracked lead, never a probability change */
+const b2b=(g,s)=>{if(g.b2b&&g.b2b[s]!=null)return!!g.b2b[s];const p=DAYS()[prevDay(DAYOF[g.id])],ab=g[s]?.ab;return!!p&&p.some(x=>x.a?.ab===ab||x.h?.ab===ab)};
+const b2bTag=(g,s)=>b2b(g,s)?`<span class="nhb2b" title="Second night of a back-to-back. A tracked lead, not proven: it does not change any chance shown.">2nd of back-to-back · tracked lead, not in the chances</span>`:'';
+const hasM=g=>!!(g.m&&g.m.ph!=null&&g.m.pa!=null);
+
+/* ---------- one game row (away left, home right); the bar is always the market's two-way chance ---------- */
+function row(g){const A=g.a||{},H=g.h||{},m=g.mk,fin=g.st==='post',live=g.st==='in',w=fin?wside(g):null,x=ot(g);
+  const res=s=>!fin||!w?'':w===s?'rw':'rl',tag=s=>!fin||!w?'':`<i class="urt ${res(s)}">${w===s?'W':'L'}</i>${otlSide(g,s)?`<i class="nhotl" title="Lost in ${x||'OT'}: still earns a standings point">OTL</i>`:''}`;
+  const tm=(t,s)=>`<div class="ut ${s==='a'?'l':'r'} ${res(s)}"><b>${s==='h'?tag(s):''}${esc(T(t.ab).nick)}${s==='a'?tag(s):''}</b><small>${esc(t.ab)}${tinfo(t.ab)?' · '+esc(tinfo(t.ab)):''}</small>${goalie(t)}</div>`;
+  const ok=m&&m.a!=null&&m.h!=null,af=ok&&m.a>m.h;
+  const bar=ok?`<div class="ubar" role="img" aria-label="Market: ${esc(T(A.ab).name)} ${pc(m.a)}, ${esc(T(H.ab).name)} ${pc(m.h)}"><i class="${af?'g':'r'}" style="width:${m.a*100}%"></i><i class="${af?'r':'g'}" style="width:${m.h*100}%"></i></div>
+    <div class="ulab"><span class="${af?'g':'r'}">${esc(A.ab)} ${pc(m.a)}</span><span class="y" style="color:var(--mut)">${fin||live?'pre-game market':'market · incl. OT/SO'}</span><span class="${af?'r':'g'}">${pc(m.h)} ${esc(H.ab)}</span></div>`:'';
+  const o=g.odds,fav=ok?(m.a>m.h?'a':'h'):null;
+  const center=fin||live?`<b>${esc(A.score??'')}<span>–</span>${esc(H.score??'')}</b><small>${live?`<span class="nhlive"><i></i>${esc(g.det)}</span>`:esc(g.det)}${A.sog?` · shots ${esc(A.sog)}–${esc(H.sog)}`:''}</small>`:`<b class="t">${g.t?et(g.t):'TBD'}</b><small>ET${g.venue?' · '+esc(g.venue):''}</small>`;
+  const ux=[];
+  if(!ok&&!fin)ux.push('<span>Lines not posted yet · DraftKings posts about a day before puck drop</span>');
+  if(o&&ok&&!fin&&!live){const pl=o.pl&&o.pl[fav==='a'?0:1];if(pl)ux.push(`<span>Puck line <b>${esc(String(pl[0]).replace('-','−'))} ${esc(fav==='a'?A.ab:H.ab)}</b></span>`);if(o.tot&&o.tot[0]!=null)ux.push(`<span>Total <b>${esc(o.tot[0])}</b></span>`)}
+  if(fin&&ok&&w){ux.push(`<span>Market favorite ${w===fav?'<b class="hit">won</b>':'<b class="miss">lost</b>'}${x?` (${x})`:''}</span>`)}
+  if(hasM(g)){const M=g.m,ms=M.pa>M.ph?'a':'h',e=M.ml?.[ms==='a'?'edge_a':'edge_h'];ux.push(`<span class="nhmod">Model <b>${esc(g[ms].ab)} ${pc(ms==='a'?M.pa:M.ph)}</b>${e!=null?` <em>· edge ${pts(e)}</em>`:''}</span>`)}
+  else if(!fin)ux.push(pend('Model — pending'));
+  return`<a class="nhr" href="#nhl-game-${esc(g.id)}">${tm(A,'a')}<div class="uc"><div class="ucs1">${center}</div>${bar}<div class="ux">${ux.join('')}</div></div>${tm(H,'h')}</a>`}
+
+/* ---------- Games view: date rail + rows ---------- */
+let NSORT='time';
+function nhday(day){const box=$('#v-nhl'),D=DAYS(),days=Object.keys(D).sort(),TD=today();
+  if(!days.length){box.innerHTML=head('','Games','')+'<p class="empty">No NHL games are on file right now.</p>';return}
+  let jumped=false;
+  if(!day||!D[day]){const has=d=>d&&D[d]&&D[d].length;if(has(TD))day=TD;else{day=has(N.next)?N.next:(days.find(d=>d>=TD&&has(d))||[...days].reverse().find(has)||days[days.length-1]);jumped=day!==TD}}
+  const L=[...(D[day]||[])],i=days.indexOf(day),done=L.filter(g=>g.st==='post').length;
+  const rail=`<div class="wstrip nhrail" role="group" aria-label="Day">${days.map(d=>{const n=D[d]||[],dt=new Date(d+'T12:00:00');return`<button data-day="${d}" class="${n.length?'':'none'} ${d===TD?'today':''}" aria-pressed="${d===day}"><small>${d===TD?'Today':dt.toLocaleDateString('en-US',{weekday:'short'})}</small><b>${dshort(d)}</b><small>${n.length?n.length+' game'+(n.length>1?'s':''):'No games'}</small></button>`}).join('')}</div>`;
+  const first=L.length?et(L.map(g=>g.t).filter(Boolean).sort()[0]):'';
+  let sub=L.length?`${L.length} game${L.length>1?'s':''}${done===L.length?' · all final':first?` · first puck drop ${first} ET`:''}`:'No NHL games are scheduled this day.';
+  if(done){const mk=L.filter(g=>g.mk&&g.mk.a!=null&&g.st==='post'&&wside(g)),hit=mk.filter(g=>(g.mk.a>g.mk.h?'a':'h')===wside(g)).length;if(mk.length)sub+=` · market favorites won ${hit} of ${mk.length}`}
+  if(NSORT==='fav')L.sort((a,b)=>Math.max(b.mk?.a||0,b.mk?.h||0)-Math.max(a.mk?.a||0,a.mk?.h||0));else L.sort((a,b)=>String(a.t).localeCompare(String(b.t)));
+  const jmp=jumped?`<p class="nhjump" role="status">No NHL games today (${esc(dlong(TD))}). Showing the next slate: <b>${esc(dlong(day))}</b>.</p>`:'';
+  const nextWith=days.find(d=>d>day&&(D[d]||[]).length);
+  const B=N.base,bt=B?` League base rates${B.span?' ('+esc(B.span)+(B.games?', '+Number(B.games).toLocaleString()+' games':'')+')':''}: ${B.fav_win!=null?`favorites win ${pc(B.fav_win)}, `:''}${B.home_win!=null?`the home team ${pc(B.home_win)}, `:''}${B.ot!=null?`${(B.ot*100).toFixed(1)}% of games go past regulation`:''}${B.so!=null?` (${(B.so*100).toFixed(1)}% to a shootout)`:''}.`:'';
+  box.innerHTML=head('Regular season',esc(dlong(day)),sub)+jmp+rail+
+   `<div class="nhrnav">${i>0?`<a class="lk" href="#nhl-day-${days[i-1]}">← ${esc(dlong(days[i-1]))}</a>`:'<span></span>'}
+    ${L.length>1&&L.some(g=>g.mk)?`<div class="nhsort">Order<div class="chips" role="group" aria-label="Order games"><button class="chip" data-sort="time" aria-pressed="${NSORT==='time'}">Start time</button><button class="chip" data-sort="fav" aria-pressed="${NSORT==='fav'}">Biggest favorite</button></div></div>`:''}
+    ${i<days.length-1?`<a class="lk" href="#nhl-day-${days[i+1]}">${esc(dlong(days[i+1]))} →</a>`:'<span></span>'}</div>`+
+   (L.length?`<div class="ucl-rows">${L.map(row).join('')}</div>`:`<p class="empty" style="margin-top:14px">No NHL games on ${esc(dlong(day))}.${nextWith?` <a href="#nhl-day-${nextWith}">See the next slate →</a>`:''}</p>`)+
+   `<p class="note" style="margin-top:16px">The bar is the market's view: DraftKings moneylines with the bookmaker margin removed. My model's chance sits below it once the model has run. Hockey moneylines include overtime and the shootout, so the two sides add to 100%.${bt} Goalie tags: <i class="nhgs c">Confirmed</i> named by the team or seen in warmups, <i class="nhgs e">Expected</i> the probable starter, <i class="nhgs u">Unconfirmed</i> not reported yet. OTL = lost in overtime or a shootout, which still earns one standings point.${N.credit?' '+esc(N.credit):''}</p>`;
+  box.querySelectorAll('[data-day]').forEach(b=>b.onclick=()=>{location.hash='#nhl-day-'+b.dataset.day});
+  box.querySelectorAll('[data-sort]').forEach(b=>b.onclick=()=>{NSORT=b.dataset.sort;nhday(day)});
+  const on=box.querySelector('.nhrail [aria-pressed=true]');if(on){const r=on.parentElement;r.scrollLeft=on.offsetLeft-r.clientWidth/2+on.clientWidth/2}}
+
+/* ---------- one game, in tabs ---------- */
+let NTAB='over';
+function nhgame(id,tab){const box=$('#v-nhl'),g=G[id];if(!g){box.innerHTML='<div class="gdbar"><a class="lk" href="#nhl">← Games</a></div><p class="empty">That game is not on file.</p>';return}
+  const fin=g.st==='post',D=(N.det||{})[id]||{};
+  const tabs=[['over','Overview'],...(fin?[['rev','Review']]:[]),['side','Side by side'],['hist','History'],['ha','Home vs away'],['play','Players']];
+  if(tab)NTAB=tab;if(!tabs.some(t=>t[0]===NTAB))NTAB='over';
+  const A=g.a||{},H=g.h||{},day=DAYOF[id];
+  box.innerHTML=`<div class="gdbar"><a class="lk" href="#nhl-day-${day}">← All games on ${esc(dlong(day))}</a></div>`+head('Regular season','',`${esc(dlong(day))}${g.t?' · '+et(g.t)+' ET':''}${g.venue?' · '+esc(g.venue):''}${g.tv?.length?' · '+esc(g.tv.join(', ')):''}`)+
+   `<div class="uteams"><div class="h"><small class="nloc">${esc(T(A.ab).loc)}</small><h3>${esc(T(A.ab).nick)}</h3><small>Away${tinfo(A.ab)?' · '+esc(tinfo(A.ab)):''}</small>${g.st==='pre'?b2bTag(g,'a'):''}</div>
+    <div class="uxg">${fin||g.st==='in'?`${esc(A.score??'')}<span style="color:var(--dim);padding-inline:6px">–</span>${esc(H.score??'')}<small>${esc(g.det)}</small>`:`<span style="font-size:.55em">${g.t?et(g.t):'TBD'}</span><small>ET puck drop</small>`}</div>
+    <div class="a"><small class="nloc">${esc(T(H.ab).loc)}</small><h3>${esc(T(H.ab).nick)}</h3><small>Home${tinfo(H.ab)?' · '+esc(tinfo(H.ab)):''}</small>${g.st==='pre'?b2bTag(g,'h'):''}</div></div>
+   <div class="utabs" role="tablist" aria-label="Game sections">${tabs.map(([k,l])=>`<button role="tab" data-nt="${k}" aria-selected="${k===NTAB}">${l}</button>`).join('')}</div><div id="nhpane" role="tabpanel"></div>`;
+  const pane=$('#nhpane'),draw=()=>{pane.innerHTML=({over:ntOver,rev:ntRev,side:ntSide,hist:ntHist,ha:ntHA,play:ntPlay})[NTAB](g,D);if(NTAB==='play')propWire(g,D)};
+  box.querySelectorAll('[data-nt]').forEach(b=>b.onclick=()=>{NTAB=b.dataset.nt;box.querySelectorAll('[data-nt]').forEach(x=>x.setAttribute('aria-selected',x===b));draw()});draw()}
+
+function chanceCard(g){const m=g.mk,A=g.a,H=g.h,o=g.odds||{};let h='';
+  if(!m||m.a==null)h+=`<div class="nhbig"><h4>Who wins · market</h4><p class="note" style="margin:0">DraftKings hasn't posted a moneyline yet.</p></div>`;
+  else{const af=m.a>m.h,ml=o.ml||[],mlo=o.mlo;
+    h+=`<div class="nhbig"><h4><span>Who wins · market</span><span>${g.st==='post'?'last line before puck drop':'incl. OT and shootout'}</span></h4>
+     <div class="pp"><div><b class="${af?'g':'r'}">${pc(m.a)}</b><span>${esc(A.ab)} ${odd(ml[0])}</span></div><div><b class="${af?'r':'g'}">${pc(m.h)}</b><span>${odd(ml[1])} ${esc(H.ab)}</span></div></div>
+     <div class="ubar"><i class="${af?'g':'r'}" style="width:${m.a*100}%"></i><i class="${af?'r':'g'}" style="width:${m.h*100}%"></i></div>
+     <small>DraftKings moneyline with the margin removed.${mlo&&mlo.length===2&&ml.length===2?` Opened ${esc(A.ab)} ${odd(mlo[0])} / ${esc(H.ab)} ${odd(mlo[1])}${num(ml[1])<num(mlo[1])?`: money has moved toward ${esc(H.ab)}`:num(ml[1])>num(mlo[1])?`: money has moved toward ${esc(A.ab)}`:''}.`:''}</small></div>`}
+  if(!hasM(g))return h+`<div class="nhbig off"><h4><span>Who wins · my model</span>${pend()}</h4><div class="pp"><div><b style="color:var(--dim)">—</b><span>${esc(A.ab)}</span></div><div><b style="color:var(--dim)">—</b><span>${esc(H.ab)}</span></div></div>
+   <div class="nhends" aria-label="How the game ends, pending"><div>${esc(A.ab)} wins in regulation</div><div class="y">Goes to OT</div><div>${esc(H.ab)} wins in regulation</div></div>
+   <small>No model run for this game yet${g.st==='post'?'':' (it runs once DraftKings posts a line)'}. The model card shows each team's chance with its edge over the market beside it, and a three-part bar: regulation win, goes to overtime, regulation win.</small></div>`;
+  const M=g.m,af=M.pa>M.ph,eA=M.ml?.edge_a,eH=M.ml?.edge_h;
+  const three=M.rh!=null&&M.ra!=null&&M.pot!=null,ra=af?'g':'r',rh=af?'r':'g';
+  const seg=(c,v,l)=>`<div class="${c}" style="flex:${Math.max(+v,.0001)}" title="${esc(l)} ${pc(v)}">${v>=.12?pc(v):''}</div>`;
+  const run=[M.run==='pregame'?'Pre-game run':M.run==='morning'?'Morning run':'',M.at?esc(M.at):'',M.goalies==='confirmed'?'goalies confirmed':M.goalies==='expected'?'with expected goalies':''].filter(Boolean).join(' · ');
+  return h+`<div class="nhbig"><h4><span>Who wins · my model</span><span>${run||'incl. OT and shootout'}</span></h4>
+   <div class="pp"><div><b class="${af?'g':'r'}">${pc(M.pa)}</b><span>${esc(A.ab)}${eA!=null?` <em>edge ${pts(eA)}</em>`:''}</span></div><div><b class="${af?'r':'g'}">${pc(M.ph)}</b><span>${eH!=null?`<em>edge ${pts(eH)}</em> `:''}${esc(H.ab)}</span></div></div>
+   ${three?`<div class="nhends on" role="img" aria-label="${esc(A.ab)} wins in regulation ${pc(M.ra)}, goes to overtime ${pc(M.pot)}, ${esc(H.ab)} wins in regulation ${pc(M.rh)}">${seg(ra,M.ra,A.ab+' wins in regulation')}${seg('y',M.pot,'Goes to OT')}${seg(rh,M.rh,H.ab+' wins in regulation')}</div>
+   <div class="nhendk"><span>${esc(A.ab)} in regulation <b>${pc(M.ra)}</b></span><span>Goes to OT <b>${pc(M.pot)}</b>${M.pso!=null?` · shootout <b>${pc(M.pso)}</b>`:''}</span><span>${esc(H.ab)} in regulation <b>${pc(M.rh)}</b></span></div>`:''}
+   <small>Who wins matches DraftKings' no-vig price: tested on 6,500 games, nothing beat the closing line, so the model does not move it and shows no edge. What the model adds is how the game splits: a regulation win either way, or overtime (calibrated on 2024-26 games; the overtime rate itself moves about 2 points from season to season).${three?' The three-part bar splits the game: a regulation win either way, or the game going to overtime (yellow).':''}</small></div>`}
+
+function goalieCards(g,D){const card=(t,side,list)=>{const s=t.g,me=s&&(list||[]).find(x=>x.n===s.n),fromL=(N.gl||[]).find(x=>s&&x.n===s.n),r=me?{gp:me.gp,rec:`${me.w}-${me.l}-${me.otl}`,sv:me.sv,gaa:me.gaa,so:me.so}:fromL?{gp:fromL.gp,rec:`${fromL.w}-${fromL.l}-${fromL.otl}`,sv:fromL.sv,gaa:fromL.gaa,so:fromL.so}:null;
+    const others=(list&&list.length?list:(N.gl||[]).filter(x=>x.tm===t.ab)).filter(x=>!s||x.n!==s.n);
+    const src=s?`Source: ${esc(s.src||'ESPN')} (${esc(s.st||'Unconfirmed')})${s.dfo?` · DailyFaceoff: ${esc(s.dfo.n||'')}${s.dfo.st?' ('+esc(s.dfo.st)+')':''}${s.dfo.t?' · '+esc(s.dfo.t):''}`:''}`:'Source: not reported yet';
+    return`<div class="nhgc ${side}"><div class="gh"><div><small>${esc(T(t.ab).nick)} in goal</small><b>${s&&s.n?esc(s.n):'Not reported'}</b></div><div>${s&&s.n?`<i class="nhgs ${gstat(s.st)}">${esc(s.st||'Unconfirmed')}</i>`:'<i class="nhgs u">Unconfirmed</i>'} ${dis(s)}</div></div>
+     ${r?`<div class="gst"><div><small>GP</small><b>${esc(r.gp)}</b></div><div><small>W-L-OTL</small><b>${esc(r.rec)}</b></div><div><small>SV%</small><b>${esc(r.sv)}</b></div><div><small>GAA</small><b>${esc(r.gaa)}</b></div><div><small>SO</small><b>${esc(r.so)}</b></div></div>`:'<p class="note" style="margin:0">Season line appears once a starter is named.</p>'}
+     ${s&&s.agree===false?'<div class="bk"><b>Sources disagree</b> on the starter. The model re-runs when it settles.</div>':''}
+     ${others.length?`<div class="bk">If they don't start: ${others.slice(0,2).map(o=>`${esc(o.n)} (${esc(o.sv)} SV%, ${esc(o.gp)} GP)`).join(' · ')}</div>`:''}
+     <div class="bk">${src}</div></div>`};
+  return`<div class="nhgd">${card(g.a,'l',D.goalies?.away)}${card(g.h,'r',D.goalies?.home)}</div>`}
+
+function ntOver(g,D){const A=g.a,H=g.h,o=g.odds,fin=g.st==='post',M=hasM(g)?g.m:null;let h='';
+  if(fin)h+=boxLine(g,D);
+  h+=`<div class="nhchance">${chanceCard(g)}</div>`;
+  h+=`<h3 class="ush">Starting goalies <small>the biggest single factor in one hockey game</small></h3>`+(fin&&(A.gp||H.gp)?gameGoalies(g):goalieCards(g,D));
+  if(o&&(o.pl||o.tot)){const fav=g.mk&&g.mk.a!=null?(g.mk.a>g.mk.h?0:1):(num(o.pl?.[0]?.[0])<0?0:1),fa=fav?H.ab:A.ab,da=fav?A.ab:H.ab,pl=o.pl?nv(o.pl[0][1],o.pl[1][1]):null,tt=o.tot?nv(o.tot[1],o.tot[2]):null;
+    const mp=M&&M.pl,mt=M&&M.tot;
+    h+=`<h3 class="ush">Lines <small>DraftKings${fin?', last line before puck drop':''}; market chance = price with the margin removed</small></h3><div class="nhlines">
+     ${o.pl?`<div><small>Puck line · market</small><div class="lq"><span>${esc(fa)} wins by 2+</span><b>${pl?pc(pl[fav]):'–'}</b></div><div class="lp">${esc(fa)} <b>${esc(o.pl[fav][0])}</b> ${odd(o.pl[fav][1])} · ${esc(da)} <b>${esc(o.pl[1-fav][0])}</b> ${odd(o.pl[1-fav][1])}</div>
+       ${mp&&mp.p_fav!=null?`<div class="lp">${mp.p_sim!=null?'Model (follows the market price)':'My model'}: <b>${esc(mp.fav)} ${esc(mp.line??'-1.5')}</b> ${pc(mp.p_fav)}${mp.edge_fav!=null?` · edge ${pts(mp.edge_fav)}`:mp.nv_fav!=null?` · edge ${pts(mp.p_fav-mp.nv_fav)}`:''}${mp.p_sim!=null?` <span title="The simulation's own puck-line chance. The chance shown follows DraftKings' price, which tested slightly better.">(sim ${pc(mp.p_sim)})</span>`:''}</div>`:`<div class="lp">My model: ${pend('pending')}</div>`}</div>`:''}
+     ${o.tot?`<div><small>Total goals · market</small><div class="lq"><span>Over ${esc(o.tot[0])}</span><b>${tt?pc(tt[0]):'–'}</b></div><div class="lp">Over ${odd(o.tot[1])} · Under ${odd(o.tot[2])} (${tt?pc(tt[1]):'–'})</div>
+       ${mt&&mt.po!=null?`<div class="lp">My model: <b>Over ${esc(mt.line??o.tot[0])}</b> ${pc(mt.po)} · Under ${pc(mt.pu)}${mt.nv_o!=null?` · edge on the over ${pts(mt.po-mt.nv_o)}`:''}</div>`:`<div class="lp">My model: ${pend('pending')}</div>`}</div>`:''}
+     <div><small>Model expected goals</small><div class="lq"><span>${esc(A.ab)} – ${esc(H.ab)}</span><b ${M&&M.xa!=null?'':'style="color:var(--dim)"'}>${M&&M.xa!=null&&M.xh!=null?`${f1(M.xa)} – ${f1(M.xh)}`:'—'}</b></div><div class="lp">${M&&M.xa!=null?'Regulation and overtime; the shootout is not counted.':pend()}</div></div></div>
+    <p class="note">Settlement: a shootout adds one goal to the winner and to the total, so a shootout game is always decided by one goal on the puck line.</p>`}
+  if(D.last5){const f=ab=>(D.last5[ab]||[]).map(e=>`<span class="ures ${esc(e.r)}" title="${esc(e.d)} ${e.v==='@'?'at':'vs'} ${esc(e.o)} ${esc(e.s)}">${esc(e.r)}</span>`).join('');
+    h+=`<h3 class="ush">Form <small>last five, newest first; hover or tap a box for the score</small></h3><div class="utape">${utrow('Last five',`<span class="nhform">${f(A.ab)}</span>`,`<span class="nhform">${f(H.ab)}</span>`)}${ST[A.ab]&&ST[H.ab]?utrow('Streak',esc(ST[A.ab].strk),esc(ST[H.ab].strk))+utrow('Last 10',esc(ST[A.ab].l10),esc(ST[H.ab].l10)):''}</div>`}
+  if(D.inj){const li=ab=>(D.inj[ab]||[]).map(x=>`${esc(x.n)} <i>${esc(x.pos||'')} · ${esc(x.st)}</i>`).join('<br>')||'<i>None listed</i>';
+    h+=`<h3 class="ush">Injuries <small>ESPN injury report</small></h3><div class="uduo"><div class="upan h"><h4>${esc(T(A.ab).nick)}</h4><div class="utb" style="font-size:13.5px;white-space:normal">${li(A.ab)}</div></div><div class="upan a"><h4>${esc(T(H.ab).nick)}</h4><div class="utb" style="font-size:13.5px;white-space:normal">${li(H.ab)}</div></div></div>`}
+  return h}
+
+function boxLine(g,D){const A=g.a,H=g.h;if(!A.ls||!A.ls.length)return'';const n=Math.max(A.ls.length,3),lab=['1st','2nd','3rd','OT','SO'],x=ot(g),l=wside(g)==='a'?H:A;
+  return`<h3 class="ush">Final${x?` in a ${x==='SO'?'shootout':'overtime'}`:''} <small>${D.att?`attendance ${Number(D.att).toLocaleString()}`:''}</small></h3><div class="nhlsc utb" style="border:1px solid var(--line);border-radius:12px"><table><thead><tr><th>Team</th>${lab.slice(0,n).map(x=>`<th>${x}</th>`).join('')}<th>T</th><th>Shots</th></tr></thead><tbody>
+   ${[A,H].map(t=>`<tr><td>${esc(T(t.ab).nick)}</td>${(t.ls||[]).slice(0,n).map(v=>`<td>${esc(v)}</td>`).join('')}<td class="t">${esc(t.score)}</td><td>${esc(t.sog||'–')}</td></tr>`).join('')}</tbody></table></div>
+   <p class="note">A shootout win counts as one goal in the final score.${x?` ${esc(T(l.ab).nick)} still take one standings point.`:''}</p>`}
+function gameGoalies(g){const c=(t,side)=>(t.gp||[]).map(x=>`<div class="nhgc ${side}"><div class="gh"><div><small>${esc(T(t.ab).nick)} in goal</small><b>${esc(x.n)}</b></div><i class="nhgs c">Played</i></div><div class="gst"><div><small>Saves</small><b>${esc(x.sv)}</b></div><div><small>Shots</small><b>${esc(x.sa)}</b></div><div><small>SV%</small><b>${esc(x.pct)}</b></div><div><small>GA</small><b>${num(x.sa)!=null&&num(x.sv)!=null?num(x.sa)-num(x.sv):'–'}</b></div><div><small>TOI</small><b>${esc(x.toi)}</b></div></div></div>`).join('');
+  return`<div class="nhgd">${c(g.a,'l')}${c(g.h,'r')}</div>`}
+
+function ntRev(g,D){const A=g.a,H=g.h,m=g.mk,ws=wside(g),x=ot(g);if(!ws)return'<p class="empty">The result is not on file yet.</p>';
+  const w=ws==='a'?A:H,l=ws==='a'?H:A,tot=num(A.score)+num(H.score),M=hasM(g)?g.m:null;let h='<div class="nhrevv">';
+  h+=`<div><h5>Result</h5><b class="big">${esc(T(w.ab).nick)} ${x?'in '+(x==='SO'?'a shootout':'OT'):'in regulation'}</b><p>${esc(T(w.ab).nick)} 2 points, ${esc(T(l.ab).nick)} ${x?'1 point (OTL)':'0'}.</p></div>`;
+  if(m&&m.a!=null){const fs=m.a>m.h?'a':'h',fav=g[fs];h+=`<div><h5>The market</h5><b class="big">${esc(T(fav.ab).nick)} ${pc(Math.max(m.a,m.h))}</b><p>Favorite ${fs===ws?'<span class="hit">won</span>':'<span class="miss">lost</span>'}. ${esc(T(w.ab).nick)} had a ${pc(m[ws])} chance before puck drop.</p></div>`;
+    const o=g.odds||{};if(o.tot||o.pl){const pl=o.pl&&o.pl[fs==='a'?0:1];h+=`<div><h5>Total and puck line</h5><b class="big">${tot} goals</b><p>${o.tot?`Line ${esc(o.tot[0])}: <b>${tot>+o.tot[0]?'over':tot<+o.tot[0]?'under':'push'}</b>. `:''}${pl?`Puck line ${esc(fav.ab)} ${esc(pl[0])}: ${(fs===ws&&Math.abs(num(A.score)-num(H.score))>=2)?'<span class="hit">covered</span>':'<span class="miss">did not cover</span>'}${x==='SO'?' (shootout games are decided by one goal)':''}.`:''}</p></div>`}}
+  if(M){const ms=M.pa>M.ph?'a':'h',mp=ms==='a'?M.pa:M.ph;h+=`<div><h5>My model</h5><b class="big">${esc(T(g[ms].ab).nick)} ${pc(mp)}</b><p>Most likely winner ${ms===ws?'<span class="hit">hit</span>':'<span class="miss">missed</span>'}. ${esc(T(w.ab).nick)} had a ${pc(ws==='a'?M.pa:M.ph)} chance.${M.pot!=null?` Overtime chance was ${pc(M.pot)}; it ${x?'<b>went</b>':'<b>did not go</b>'} past regulation.`:''}${M.tot&&M.tot.po!=null&&M.tot.line!=null?` Over ${esc(M.tot.line)}: ${pc(M.tot.po)}, ${tot>M.tot.line?'it went over':'it stayed under'}.`:''}</p></div>`}
+  else h+=`<div class="nhpendbox"><b>My model's review</b>No model run was on file for this game. ${pend()}</div>`;
+  h+='</div>';
+  if(D.plays&&D.plays.length){let lastP=0;h+=`<h3 class="ush">Scoring <small>${esc(T(A.ab).nick)} in blue, ${esc(T(H.ab).nick)} in orange</small></h3><ol class="nhtline">`+D.plays.map(p=>{let s='';if(p.p!==lastP){lastP=p.p;s=`<li class="ph">${['','1st period','2nd period','3rd period','Overtime','Shootout'][p.p]||'Period '+p.p}</li>`}
+      return s+`<li><span class="tm">${p.p===5?'SO':esc(p.c)}</span><span class="${p.tm===A.ab?'ta':'th'}"><b>${esc(p.tm)}</b> ${esc(p.tx)}</span><span class="sc">${p.p===5?'winner':`${esc(p.as)}–${esc(p.hs)}`}</span></li>`}).join('')+'</ol>'}
+  const top=(D.sk||[]).filter(s=>s.g+s.a>0).sort((a,b)=>(b.g*2+b.a)-(a.g*2+a.a)||b.sog-a.sog).slice(0,6);
+  if(top.length)h+=`<h3 class="ush">Top performers <small>goals and assists in this game</small></h3><div class="utb"><table><thead><tr><th>Player</th><th>Team</th><th class="n">G</th><th class="n">A</th><th class="n">SOG</th><th class="n">TOI</th></tr></thead><tbody>${top.map(s=>`<tr><td>${esc(s.n)}</td><td>${esc(s.tm)}</td><td class="n">${s.g}</td><td class="n">${s.a}</td><td class="n">${s.sog}</td><td class="n">${esc(s.toi)}</td></tr>`).join('')}</tbody></table></div>`;
+  return h}
+
+function ntSide(g,D){const A=g.a,H=g.h,a=ST[A.ab],b=ST[H.ab],ta=D.team?.[A.ab],tb=D.team?.[H.ab],fin=g.st==='post';
+  let h=`<p class="note">${esc(T(A.ab).nick)} on the left, ${esc(T(H.ab).nick)} on the right. The darker bar and bold number mark the better side.</p><div class="utape">`;
+  if(a&&b)h+=`${ug('Standings')}${urow('Points',`${a.gp} and ${b.gp} games`,a.pts,b.pts,'hi')}${urow('Points %','points per available point',a.pp,b.pp,'hi',v=>(v*100).toFixed(1)+'%',1)}${urow('Regulation wins','first standings tiebreak',a.rw,b.rw,'hi')}${urow('Goal difference','',a.gd,b.gd,'hi',v=>(v>0?'+':'')+v)}${urow('Goals for per game','',a.gp?a.gf/a.gp:null,b.gp?b.gf/b.gp:null,'hi',f2)}${urow('Goals against per game','',a.gp?a.ga/a.gp:null,b.gp?b.ga/b.gp:null,'lo',f2)}`;
+  if(ta&&tb&&!fin)h+=`${ug('Season rates (ESPN team stats)')}${urow('Shots per game','',ta['Shots per Game'],tb['Shots per Game'],'hi',f1)}${urow('Shots against per game','',ta['Shots Against per Game'],tb['Shots Against per Game'],'lo',f1)}${urow('Power play','',ta['Power Play Percentage'],tb['Power Play Percentage'],'hi',v=>f1(v)+'%',40)}${urow('Penalty kill','',ta['Penalty Kill Percentage'],tb['Penalty Kill Percentage'],'hi',v=>f1(v)+'%',100)}${urow('Power-play goals','',ta['Power Play Goals'],tb['Power Play Goals'],'hi')}${urow('Shorthanded goals','',ta['Short Handed Goals'],tb['Short Handed Goals'],'hi')}${urow('Penalty minutes','',ta['Penalty Minutes'],tb['Penalty Minutes'],'lo')}`;
+  if(ta&&tb&&fin)h+=`${ug('This game')}${urow('Shots','',ta.Shots,tb.Shots,'hi')}${urow('Hits','',ta.Hits,tb.Hits,null)}${urow('Blocked shots','',ta['Blocked Shots'],tb['Blocked Shots'],null)}${urow('Faceoff wins','',ta['Faceoff Win Percent'],tb['Faceoff Win Percent'],'hi',v=>f1(v)+'%',100)}${urow('Power play',`${esc(ta['Power Play Goals'])}/${esc(ta['Power Play Opportunities'])} and ${esc(tb['Power Play Goals'])}/${esc(tb['Power Play Opportunities'])}`,ta['Power Play Percentage'],tb['Power Play Percentage'],'hi',v=>f1(v)+'%',100)}${urow('Giveaways','',ta.Giveaways,tb.Giveaways,'lo')}${urow('Takeaways','',ta.Takeaways,tb.Takeaways,'hi')}${urow('Penalty minutes','',ta['Penalty Minutes'],tb['Penalty Minutes'],'lo')}`;
+  const M=hasM(g)?g.m:null;
+  h+=`${ug('Model and rest')}${utrow('Model expected goals',M&&M.xa!=null?f1(M.xa):pend('pending'),M&&M.xh!=null?f1(M.xh):pend('pending'))}${g.st==='pre'?utrow('Rest',b2b(g,'a')?'2nd of back-to-back':'–',b2b(g,'h')?'2nd of back-to-back':'–'):''}</div>
+   <p class="note">${g.st==='pre'?'Rest is context only: the back-to-back effect is a tracked lead, not proven, and it does not change any chance shown. ':''}${a&&b?'':'Standings are not on file for one of these teams. '}</p>`;
+  return h}
+
+function ntHist(g,D){const s=D.series;let h=`<h3 class="ush">This season <small>${s&&s.sum?esc(s.sum):''}</small></h3>`;
+  if(s&&s.games&&s.games.length){h+=`<div class="utb"><table><thead><tr><th>Date</th><th>Matchup</th><th class="n">Score</th><th>Result</th></tr></thead><tbody>${s.games.map(x=>{const aw=(x.c||[]).find(c=>c[1]==='away'),hm=(x.c||[]).find(c=>c[1]==='home');if(!aw||!hm)return'';const done=/Final/.test(x.det);return`<tr><td>${esc(dshort(x.d))}</td><td>${esc(aw[0])} at ${esc(hm[0])}</td><td class="n">${done?`${esc(aw[2])}–${esc(hm[2])}`:'–'}</td><td>${done?`${esc((aw[3]?aw:hm)[0])} won · ${esc(x.det)}`:'<i>upcoming</i>'}</td></tr>`}).join('')}</tbody></table></div>`}
+  else h+='<p class="empty">They have not met yet this season.</p>';
+  return h}
+
+function ntHA(g){const A=g.a,H=g.h,a=ST[A.ab],b=ST[H.ab];if(!a||!b)return'<p class="empty">Home and road records are not on file for this game.</p>';
+  const sp=r=>{if(!r)return null;const[w,l,o]=String(r).split('-').map(Number);return w+l+o?{pp:(2*w+o)/(2*(w+l+o))}:null};const ar=sp(a.away),hr=sp(b.home);
+  return`<p class="note">How each side does in tonight's setting: ${esc(T(A.ab).nick)} on the road, ${esc(T(H.ab).nick)} at home.</p><div class="utape">${ug('Tonight\'s setting')}
+   ${utrow('Record (W-L-OTL)',`${esc(a.away||'–')} on the road`,`${esc(b.home||'–')} at home`)}${urow('Points %','',ar?ar.pp:null,hr?hr.pp:null,'hi',v=>(v*100).toFixed(1)+'%',1)}
+   ${ug('The other split')}${utrow('Record (W-L-OTL)',`${esc(a.home||'–')} at home`,`${esc(b.away||'–')} on the road`)}</div>`}
+
+/* props: likelihood first, DraftKings price and edge beside it; "most likely" order hides prices longer than -400 */
+const PMK={goal:'Goals',ast:'Assists',pts:'Points',sog:'Shots on goal',saves:'Goalie saves'};
+let NPM='all';
+function propLabel(p){const side=p.side==='under'?'Under':'Over';if(p.mk==='goal'&&(p.side==='yes'||p.line==null||+p.line===.5))return'Anytime goal';
+  const w={goal:'goals',ast:'assists',pts:'points',sog:'shots on goal',saves:'saves'}[p.mk]||esc(p.mk);return`${side} ${esc(p.line)} ${w}`}
+function propBlock(g){const P=g.props;
+  if(!P||!P.length)return`<h3 class="ush">Player props <small>my model's chance first, the DraftKings price beside it</small></h3><div class="nhpendbox"><b>Props</b>${g.st==='pre'?'Props appear on game day once the model has run.':'No props were on file for this game.'} ${pend()}</div>`;
+  const cap=num(N.longest)??-400,capT=odd(cap),long=p=>{const x=num(p.price);return x!=null&&x<cap};
+  const mks=Object.keys(PMK).filter(k=>P.some(p=>p.mk===k));if(NPM!=='all'&&!mks.includes(NPM))NPM='all';
+  const L=P.filter(p=>NPM==='all'||p.mk===NPM),hid=L.filter(p=>!p.hold&&long(p)).length;
+  const MO=N.props_model!==false,mc=p=>p.nv!=null?p.nv:p.imp;
+  if(!MO){const live=L.filter(p=>!p.hold&&!long(p)&&mc(p)!=null).sort((a,b)=>mc(b)-mc(a)),hold=L.filter(p=>p.hold);
+   const tr=p=>`<tr><td class="pl"><b>${esc(p.n)}</b><small>${esc(p.tm)}${p.pos?' · '+esc(p.pos):''}</small></td><td>${propLabel(p)}</td>${p.hold?`<td class="hold" colspan="2">Waiting for confirmed starter</td>`:`<td class="n p">${pc(mc(p))}${p.nv==null?` <i title="DraftKings' implied chance, including the book margin">implied</i>`:''}</td><td class="n">${odd(p.price)}</td>`}</tr>`;
+   return`<h3 class="ush">Player props <small>most likely first · DraftKings' chance and price</small></h3>
+   <div class="chips" role="group" aria-label="Prop market"><button class="chip" data-pm="all" aria-pressed="${NPM==='all'}">All</button>${mks.map(k=>`<button class="chip" data-pm="${k}" aria-pressed="${NPM===k}">${PMK[k]}</button>`).join('')}</div>
+   ${live.length||hold.length?`<div class="utb nhprops"><table><thead><tr><th>Player</th><th>Prop</th><th class="n k">Market chance</th><th class="n">DK price</th></tr></thead><tbody>${live.map(tr).join('')}${hold.map(tr).join('')}</tbody></table></div>`:'<p class="empty">No props in this market.</p>'}
+   <p class="note">The props model is being tested before it is shown: it is graded every night at these prices, and its chances and edges come onto this page once they hold up. Until then the chance shown is DraftKings' own, with the margin removed when both sides are posted. Anytime-goal props are one-way, so their chance is "implied" (includes the book margin, so it runs high).${hid?` ${hid} prop${hid>1?'s are':' is'} hidden because the price is longer than ${capT}.`:` Prices longer than ${capT} are left off this list.`} Goalie-save props wait for a confirmed starter, because they void if that goalie doesn't start.</p>`}
+  const live=L.filter(p=>!p.hold&&!long(p)&&p.p!=null).sort((a,b)=>b.p-a.p),hold=L.filter(p=>p.hold);
+  const tr=p=>`<tr><td class="pl"><b>${esc(p.n)}</b><small>${esc(p.tm)}${p.pos?' · '+esc(p.pos):''}</small></td><td>${propLabel(p)}</td>${p.hold?`<td class="hold" colspan="4">Waiting for confirmed starter</td>`:`<td class="n p">${pc(p.p)}</td><td class="n">${odd(p.price)}</td><td class="n">${p.nv!=null?pc(p.nv):p.imp!=null?`${pc(p.imp)} <i title="DraftKings' implied chance, including the book margin">implied</i>`:'–'}</td><td class="n">${p.nv!=null&&p.edge!=null?pts(p.edge):'–'}</td>`}</tr>`;
+  return`<h3 class="ush">Player props <small>most likely first · my model's chance, then the DraftKings price</small></h3>
+   <div class="chips" role="group" aria-label="Prop market"><button class="chip" data-pm="all" aria-pressed="${NPM==='all'}">All</button>${mks.map(k=>`<button class="chip" data-pm="${k}" aria-pressed="${NPM===k}">${PMK[k]}</button>`).join('')}</div>
+   ${live.length||hold.length?`<div class="utb nhprops"><table><thead><tr><th>Player</th><th>Prop</th><th class="n k">Model chance</th><th class="n">DK price</th><th class="n">Market chance</th><th class="n">Edge</th></tr></thead><tbody>${live.map(tr).join('')}${hold.map(tr).join('')}</tbody></table></div>`:'<p class="empty">No props in this market.</p>'}
+   <p class="note">Model chance = how often my model has the prop hitting. Market chance is DraftKings' price with the margin removed when both sides are posted. Anytime-goal props are one-way, so their market chance is marked “implied” (incl. book margin), which overstates it, and no edge is shown. Edge = model minus market, in percentage points.${hid?` ${hid} prop${hid>1?'s are':' is'} hidden because the price is longer than ${capT}.`:` Prices longer than ${capT} are left off this list.`} Goalie-save props wait for a confirmed starter, because they void if that goalie doesn't start.</p>`}
+function propWire(g,D){document.querySelectorAll('#nhpane [data-pm]').forEach(b=>b.onclick=()=>{NPM=b.dataset.pm;$('#nhpane').innerHTML=ntPlay(g,D);propWire(g,D)})}
+
+function ntPlay(g,D){const A=g.a,H=g.h,fin=g.st==='post';const tbl=ab=>{const L=(N.sk||[]).filter(s=>s.tm===ab).sort((a,b)=>b.pts-a.pts).slice(0,10);
+    if(!L.length)return'<p class="empty">No season skater lines on file for this team.</p>';
+    return`<div class="utb"><table><thead><tr><th>Skater</th><th>Pos</th><th class="n">GP</th><th class="n">G</th><th class="n">A</th><th class="n k">PTS</th><th class="n">+/-</th><th class="n">TOI</th></tr></thead><tbody>${L.map(s=>`<tr><td>${esc(s.n)}</td><td>${esc(s.pos)}</td><td class="n">${s.gp}</td><td class="n">${s.g}</td><td class="n">${s.a}</td><td class="n k">${s.pts}</td><td class="n">${esc(s.pm)}</td><td class="n">${esc(s.toi)}</td></tr>`).join('')}</tbody></table></div>`};
+  const gt=ab=>{const L=(N.gl||[]).filter(x=>x.tm===ab);return L.length?`<div class="utb" style="margin-top:8px"><table><thead><tr><th>Goalie</th><th class="n">GP</th><th class="n">W-L-OTL</th><th class="n">SV%</th><th class="n">GAA</th></tr></thead><tbody>${L.map(x=>`<tr><td>${esc(x.n)}</td><td class="n">${x.gp}</td><td class="n">${x.w}-${x.l}-${x.otl}</td><td class="n">${esc(x.sv)}</td><td class="n">${esc(x.gaa)}</td></tr>`).join('')}</tbody></table></div>`:''};
+  const gbox=ab=>{const L=(D.sk||[]).filter(s=>s.tm===ab).sort((a,b)=>(b.g+b.a)-(a.g+a.a)||b.sog-a.sog);return L.length?`<div class="utb"><table><thead><tr><th>Skater</th><th class="n">G</th><th class="n">A</th><th class="n">SOG</th><th class="n">Hits</th><th class="n">Blk</th><th class="n">+/-</th><th class="n">TOI</th></tr></thead><tbody>${L.map(s=>`<tr><td>${esc(s.n)} <i>${esc(s.pos)}</i></td><td class="n">${s.g}</td><td class="n">${s.a}</td><td class="n">${s.sog}</td><td class="n">${s.ht}</td><td class="n">${s.bs}</td><td class="n">${esc(s.pm)}</td><td class="n">${esc(s.toi)}</td></tr>`).join('')}</tbody></table></div>`:''};
+  const pan=(t,c)=>`<div class="upan ${c}"><h4>${esc(T(t.ab).nick)}</h4>${fin&&gbox(t.ab)?'<p class="note" style="margin:0 0 6px">This game</p>'+gbox(t.ab)+'<p class="note">Season leaders</p>':''}${tbl(t.ab)}${gt(t.ab)}</div>`;
+  return propBlock(g)+`<h3 class="ush">Players <small>top ten skaters by points this season, then every goalie who has played</small></h3><div class="uduo">${pan(A,'h')}${pan(H,'a')}</div>`}
+
+/* ---------- Standings ---------- */
+let NSV='div';
+function nhstand(){const box=$('#v-nhl-standings');if(!(N.stand||[]).length){box.innerHTML=head('Standings','Standings','')+'<p class="empty">Standings are not on file right now.</p>';return}
+  const cols=`<th class="tm">Team</th><th class="n">GP</th><th class="n">W</th><th class="n">L</th><th class="n">OTL</th><th class="n k">PTS</th><th class="n">P%</th><th class="n lh">RW</th><th class="n lh">GF</th><th class="n lh">GA</th><th class="n">Diff</th><th class="n lh">L10</th><th class="n lh">Strk</th>`;
+  const tr=(x,n,extra='',cls='')=>`<tr class="${x.zone===1?'z1':x.zone===2?'z2':''} ${cls}"><td class="n">${n}</td><td class="tm"><a href="#nhl-team-${esc(x.ab)}">${esc(T(x.ab).name)}</a>${x.zone===1?'<span class="nhzl z1">DIV</span>':x.zone===2?'<span class="nhzl z2">WC</span>':''}${extra}</td><td class="n">${x.gp}</td><td class="n">${x.w}</td><td class="n">${x.l}</td><td class="n">${x.otl}</td><td class="n pts">${x.pts}</td><td class="n">${x.pp!=null?x.pp.toFixed(3).replace(/^0/,''):'–'}</td><td class="n lh">${x.rw??'–'}</td><td class="n lh">${x.gf??'–'}</td><td class="n lh">${x.ga??'–'}</td><td class="n">${x.gd==null?'–':(x.gd>0?'+':'')+x.gd}</td><td class="n lh">${esc(x.l10)}</td><td class="n lh">${esc(x.strk)}</td></tr>`;
+  const tb=(title,sub,rows,fn)=>`<div class="utb"><h4>${title}<small>${sub}</small></h4><table class="nhtb utbl"><thead><tr><th class="n">#</th>${cols}</tr></thead><tbody>${rows.map(fn).join('')}</tbody></table></div>`;
+  let body='';
+  if(NSV==='div')body=N.stand.map(C=>(C.divs||[]).map(D=>tb(esc(D.name),esc(C.conf),(D.rows||[]).map(r=>ST[r.ab]),(x,i)=>tr(x,i+1,'',i===2?'cut':''))).join('')).join('');
+  if(NSV==='wc')body=N.stand.map(C=>{const lead=(C.divs||[]).map(D=>(D.rows||[]).slice(0,3).map(r=>ST[r.ab]));
+    return`<div class="utb"><h4>${esc(C.conf)} wild card<small>top 3 in each division + 2 wild cards make it</small></h4><table class="nhtb utbl"><thead><tr><th class="n">#</th>${cols}</tr></thead><tbody>
+     ${lead.map((L,j)=>`<tr class="usub"><td colspan="14">${esc(C.divs[j].name)}</td></tr>`+L.map((x,i)=>tr(x,i+1)).join('')).join('')}
+     <tr class="usub"><td colspan="14">Wild card</td></tr>${C.wc.map((x,i)=>tr(x,'WC'+(i+1),x.back!=null?`<small>${x.back} pts back${C.wc[1]&&(C.wc[1].gp-x.gp)>0?` · ${C.wc[1].gp-x.gp} games in hand`:''}</small>`:'',i===1?'cut':'')).join('')}</tbody></table></div>`}).join('');
+  if(NSV==='lg'){const all=Object.values(ST).sort((a,b)=>b.pts-a.pts||a.gp-b.gp||b.rw-a.rw);body=tb('League',`all ${all.length} teams by points`,all,(x,i)=>tr(x,i+1))}
+  box.innerHTML=head('Standings','Standings',`${Object.keys(ST).length} teams · from ESPN`)+
+   `<div class="utabs" role="tablist" aria-label="Standings view">${[['div','Division'],['wc','Wild card'],['lg','League']].map(([k,l])=>`<button role="tab" data-sv="${k}" aria-selected="${k===NSV}">${l}</button>`).join('')}</div>
+    <p class="note"><span class="uzk z1"></span>Division playoff spot (top 3, tagged DIV) <span class="uzk z2"></span>Wild card (next 2 in the conference, tagged WC) · the dashed line is the playoff cut. P% = points ÷ points available, which matters because teams have played different numbers of games. Tables scroll sideways on a phone; the team column stays put.</p>
+    <div class="nhst">${body}</div>`;
+  box.querySelectorAll('[data-sv]').forEach(b=>b.onclick=()=>{NSV=b.dataset.sv;nhstand()})}
+
+/* ---------- Teams ---------- */
+function nhteams(){const box=$('#v-nhl-teams');if(!(N.stand||[]).length){box.innerHTML=head('Teams','Teams','')+'<p class="empty">Teams are not on file right now.</p>';return}
+  box.innerHTML=head('Teams','Teams','Pick a team for its record, goalies, top skaters, special teams and schedule.')+
+   `<div class="nhteams">${N.stand.flatMap(C=>C.divs||[]).map(D=>`<div class="nhdiv"><h4>${esc(D.name)}</h4><div class="nhtl">${(D.rows||[]).map(r=>{const x=ST[r.ab];return`<a href="#nhl-team-${esc(x.ab)}"><b>${esc(T(x.ab).name)}</b><span>${x.pts} pts</span><small>${x.w}-${x.l}-${x.otl} · ${ord(x.dr)} · ${esc(x.strk)}</small></a>`}).join('')}</div></div>`).join('')}</div>`}
+function nhteam(ab){const box=$('#v-nhl-teams'),x=ST[ab];if(!x){box.innerHTML='<div class="gdbar"><a class="lk" href="#nhl-teams">← All teams</a></div><p class="empty">That team is not on file.</p>';return}
+  const nxt=ALLG.filter(g=>(g.a?.ab===ab||g.h?.ab===ab)).sort((a,b)=>String(a.t).localeCompare(String(b.t))),up=nxt.filter(g=>g.st!=='post'),last=nxt.filter(g=>g.st==='post');
+  const det=Object.entries(N.det||{}).find(([k,d])=>d.team?.[ab]&&G[k]?.st!=='post')?.[1],ts=det?.team?.[ab],l5=Object.values(N.det||{}).find(d=>d.last5?.[ab])?.last5?.[ab];
+  const sk=(N.sk||[]).filter(s=>s.tm===ab).sort((a,b)=>b.pts-a.pts).slice(0,12),gl=(N.gl||[]).filter(g=>g.tm===ab);
+  box.innerHTML=`<div class="gdbar"><a class="lk" href="#nhl-teams">← All teams</a></div>`+head(esc(x.div)+' Division',esc(T(ab).name),`${x.w}-${x.l}-${x.otl} · ${x.pts} points · ${ord(x.dr)} in the ${esc(x.div)}, ${ord(x.cr)} in the ${esc(x.conf)}${x.zone===1?' · in a division playoff spot':x.zone===2?' · holding a wild card':x.back!=null?' · '+x.back+' points out of a wild card':''}`)+
+   `<div class="ustat"><div><b>${x.pts}</b><span>points${x.pp!=null?' · '+(x.pp*100).toFixed(1)+'% of available':''}</span></div><div><b>${x.gd==null?'–':(x.gd>0?'+':'')+x.gd}</b><span>goal difference · ${x.gf??'–'} for, ${x.ga??'–'} against</span></div><div><b>${esc(x.home||'–')}</b><span>at home</span></div><div><b>${esc(x.away||'–')}</b><span>on the road</span></div><div><b>${esc(x.l10||'–')}</b><span>last 10 · streak ${esc(x.strk||'–')}</span></div></div>`+
+   (up.length?`<h3 class="ush">Next up</h3><div class="ucl-rows">${up.slice(0,2).map(row).join('')}</div>`:'')+
+   (last.length?`<h3 class="ush">Last result</h3><div class="ucl-rows">${row(last[last.length-1])}</div>`:'')+
+   (l5?`<p class="note">Last five: <span class="nhform">${l5.map(e=>`<span class="ures ${esc(e.r)}" title="${esc(e.d)} ${e.v==='@'?'at':'vs'} ${esc(e.o)} ${esc(e.s)}">${esc(e.r)}</span>`).join(' ')}</span></p>`:'')+
+   (ts&&ts['Power Play Percentage']!=null?`<h3 class="ush">Special teams and shots <small>season, ESPN</small></h3><div class="ustat"><div><b>${f1(ts['Power Play Percentage'])}%</b><span>power play · ${esc(ts['Power Play Goals'])} goals</span></div><div><b>${f1(ts['Penalty Kill Percentage'])}%</b><span>penalty kill</span></div><div><b>${esc(ts['Shots per Game'])}</b><span>shots per game</span></div><div><b>${esc(ts['Shots Against per Game'])}</b><span>shots against per game</span></div></div>`:'')+
+   `<h3 class="ush">Goalies</h3>`+(gl.length?`<div class="utb"><table><thead><tr><th>Goalie</th><th class="n">GP</th><th class="n">W-L-OTL</th><th class="n k">SV%</th><th class="n">GAA</th><th class="n">SO</th></tr></thead><tbody>${gl.map(g=>`<tr><td>${esc(g.n)}</td><td class="n">${g.gp}</td><td class="n">${g.w}-${g.l}-${g.otl}</td><td class="n k">${esc(g.sv)}</td><td class="n">${esc(g.gaa)}</td><td class="n">${g.so}</td></tr>`).join('')}</tbody></table></div>`:'<p class="empty">No goalie lines on file.</p>')+
+   `<h3 class="ush">Top skaters</h3>`+(sk.length?`<div class="utb"><table><thead><tr><th>Skater</th><th>Pos</th><th class="n">GP</th><th class="n">G</th><th class="n">A</th><th class="n k">PTS</th><th class="n">PPG</th><th class="n">SOG</th><th class="n">+/-</th></tr></thead><tbody>${sk.map(s=>`<tr><td>${esc(s.n)}</td><td>${esc(s.pos)}</td><td class="n">${s.gp}</td><td class="n">${s.g}</td><td class="n">${s.a}</td><td class="n k">${s.pts}</td><td class="n">${s.ppg}</td><td class="n">${s.sog}</td><td class="n">${esc(s.pm)}</td></tr>`).join('')}</tbody></table></div>`:'<p class="empty">No skater lines on file for this team.</p>')}
+
+/* ---------- Stat leaders: players (sk), goalies (gl), teams (tl); one stat at a time, leaders first ---------- */
+/* each stat: [key, chip label, column head, format, 'lo' when lowest is best, qualifier test, qualifier note] */
+const fx1=v=>v==null||isNaN(v)?'–':(+v).toFixed(1),fpm=v=>v==null?'–':(v>0?'+':'')+v,fpc=v=>v==null||isNaN(v)?'–':(+v).toFixed(1)+'%';
+const SKS=[['g','Goals','G'],['a','Assists','A'],['pts','Points','PTS'],['pim','Penalty minutes','PIM'],['pm','+/-','+/-',fpm],['ppp','PP points','PPP'],['ppg','PP goals','PPG'],['shg','SH goals','SHG'],['gwg','Game-winning goals','GWG'],['sog','Shots','SOG'],
+  ['shp','Shooting %','S%',fpc,0,s=>s.sog>=20,'minimum 20 shots'],['toi_s','TOI per game','TOI',(v,s)=>esc(s.toi),0,s=>s.gp>=10,'minimum 10 games'],['fo','Faceoff %','FO%',fpc,0,s=>s.gp>=10&&s.pos==='C'&&s.toi_s>=720,'centers with 10+ games and 12+ minutes a night'],['hit','Hits','HIT'],['blk','Blocks','BLK']];
+const GLS=[['w','Wins','W'],['sv','Save %','SV%',v=>esc(v)],['gaa','Goals against avg','GAA',v=>esc(v),'lo'],['so','Shutouts','SO'],['svs','Saves','SVS'],['gs','Starts','GS']];
+const TMS=[['pts','Points','PTS'],['gf','Goals scored','GF'],['ga','Goals against','GA',null,'lo'],['diff','Goal differential','DIFF',fpm],['pim','Penalty minutes','PIM'],['pp','Power play %','PP%',fpc],['pk','Penalty kill %','PK%',fpc],
+  ['sfpg','Shots for per game','SF/GP',fx1],['sapg','Shots against per game','SA/GP',fx1,'lo'],['fo','Faceoff %','FO%',fpc],['rw','Regulation wins','RW'],['sho','Shutouts','SHO'],['hit','Hits','HIT'],['blk','Blocks','BLK'],['drawn','Penalties drawn','DRAWN']];
+const SKBASE=['g','a','pts','pm','pim','ppp','sog','toi_s'],GLBASE=['w','sv','gaa','so','svs'],TMBASE=['pts','gf','ga','diff','pim','pp','pk'];
+let NLT='sk',NLSK='pts',NLGS='w',NLTM='pts',NLP='all',NLQ='',NGM=8,NALL=false;
+const SVAL=(o,k)=>{const v=o[k];return typeof v==='string'?parseFloat(v):v};
+function nhlead(tab){if(tab)NLT=tab;const box=$('#v-nhl-leaders');
+  const cfg=NLT==='sk'?{list:N.sk||[],defs:SKS,base:SKBASE,cur:NLSK,name:'Skater'}:NLT==='g'?{list:N.gl||[],defs:GLS,base:GLBASE,cur:NLGS,name:'Goalie'}:{list:N.tl||[],defs:TMS,base:TMBASE,cur:NLTM,name:'Team'};
+  const D=cfg.defs.find(d=>d[0]===cfg.cur)||cfg.defs[0],[key,,,,dir,qual,qn]=D;
+  let L=cfg.list.filter(o=>SVAL(o,key)!=null&&!isNaN(SVAL(o,key)));
+  if(NLT==='sk')L=L.filter(s=>NLP==='all'||(NLP==='D'?s.pos==='D':s.pos!=='D'));
+  if(NLT==='g')L=L.filter(g=>(g.gp||0)>=NGM);
+  if(qual)L=L.filter(qual);
+  if(NLQ&&NLT!=='tm')L=L.filter(s=>(s.n+' '+s.tm+' '+T(s.tm).name).toLowerCase().includes(NLQ));
+  const sec=NLT==='tm'?'pts':NLT==='g'?'gp':'pts';
+  L.sort((a,b)=>(dir==='lo'?SVAL(a,key)-SVAL(b,key):SVAL(b,key)-SVAL(a,key))||(SVAL(b,sec)||0)-(SVAL(a,sec)||0));
+  const total=L.length,shown=NALL?L:L.slice(0,25);
+  const cols=cfg.base.includes(key)?cfg.base:[...cfg.base,key],def=k=>cfg.defs.find(d=>d[0]===k);
+  const cell=(o,k)=>{const d=def(k),f=d[3];const v=o[k];return`<td class="n ${k===key?'k':''}">${f?f(v,o):(v??'–')}</td>`};
+  const head2=cols.map(k=>`<th class="n ${k===key?'k':''}" scope="col">${def(k)[2]}</th>`).join('');
+  /* rank shares a number on ties */
+  let rk=0,prev=null;const ranks=shown.map((o,i)=>{const v=SVAL(o,key);if(v!==prev){rk=i+1;prev=v}return rk});
+  const rowsH=shown.map((o,i)=>NLT==='tm'?`<tr><td class="n">${ranks[i]}</td><td class="nm"><a href="#nhl-team-${esc(o.ab)}">${esc(T(o.ab).name)}</a></td><td class="n">${o.gp??'–'}</td>${cols.map(k=>cell(o,k)).join('')}</tr>`
+    :`<tr><td class="n">${ranks[i]}</td><td class="nm">${esc(o.n)}</td><td><a href="#nhl-team-${esc(o.tm)}">${esc(o.tm)}</a></td>${NLT==='sk'?`<td>${esc(o.pos)}</td>`:''}<td class="n">${o.gp??'–'}</td>${cols.map(k=>cell(o,k)).join('')}</tr>`).join('');
+  const chips=`<div class="chips nhstatchips" role="group" aria-label="Sort by stat">${cfg.defs.map(([k,l])=>`<button class="chip" data-st="${k}" aria-pressed="${k===key}">${l}</button>`).join('')}</div>
+   <label class="nhstatsel">Stat<select id="nhstat" aria-label="Sort by stat">${cfg.defs.map(([k,l])=>`<option value="${k}"${k===key?' selected':''}>${l}${cfg.defs.find(d=>d[0]===k)[4]==='lo'?' (lowest first)':''}</option>`).join('')}</select></label>`;
+  let ctl='';
+  if(NLT==='sk')ctl=`<div class="chips" role="group" aria-label="Position">${[['all','All'],['F','Forwards'],['D','Defense']].map(([k,l])=>`<button class="chip" data-lp="${k}" aria-pressed="${k===NLP}">${l}</button>`).join('')}</div>`;
+  if(NLT==='g')ctl=`<label class="nhsl">Minimum games played <output id="nhgmo">${NGM}+ games · ${total} goalies</output><input id="nhgm" type="range" min="1" max="20" step="1" value="${NGM}" aria-label="Minimum games played"></label>`;
+  if(NLT!=='tm')ctl+=`<label>Find a ${NLT==='g'?'goalie':'player'} or team<input class="nhsrch" id="nhq" type="search" value="${esc(NLQ)}" placeholder="${NLT==='g'?'e.g. Wallstedt or MIN':'e.g. Makar or COL'}"></label>`;
+  const what=`${esc(D[1])}${dir==='lo'?', lowest first':', highest first'}${qn?' · '+esc(qn):''}${NLT==='g'?` · ${NGM}+ games`:''}`;
+  const table=total?`<div class="utb nhlead"><table><caption class="nhcap">${esc(D[1])} leaders</caption><thead><tr><th class="n" scope="col">#</th><th scope="col">${cfg.name}</th>${NLT==='tm'?'':'<th scope="col">Team</th>'}${NLT==='sk'?'<th scope="col">Pos</th>':''}<th class="n" scope="col">GP</th>${head2}</tr></thead><tbody>${rowsH}</tbody></table></div>
+    ${total>25?`<p class="nhmore"><button class="lk" type="button" data-all>${NALL?'Show top 25':`Show all ${total}`}</button></p>`:''}`
+   :`<p class="empty">${NLQ?`No ${NLT==='g'?'goalie':'player'} matches “${esc(NLQ)}”.`:NLT==='g'?'No goalie has played that many games yet. Lower the minimum.':'No lines on file for this stat yet.'}</p>`;
+  box.innerHTML=head('Stat leaders','Stat leaders',`Season leaders for players, goalies and teams. Pick a stat; the leaders come first.`)+
+   `<div class="utabs" role="tablist" aria-label="Leader type">${[['sk','Players'],['g','Goalies'],['tm','Teams']].map(([k,l])=>`<button role="tab" data-lt="${k}" aria-selected="${k===NLT}">${l}</button>`).join('')}</div>
+    <div class="nhctl">${chips}</div>${ctl?`<div class="nhctl">${ctl}</div>`:''}
+    <p class="note nhwhat">Sorted by <b>${what}</b> · showing ${Math.min(total,shown.length)} of ${total}</p>${table}
+    ${NLT==='g'?'<p class="note">Why the slider: save percentage over a handful of starts is mostly luck, so a goalie with one good start can top an unfiltered list.</p>':''}
+    <p class="note">Stats: NHL.com.${NLT==='sk'?' TOI = average ice time per game. Shooting % needs 20+ shots; faceoff % covers centers with 10+ games and 12+ minutes a night (the feed has no faceoff counts).':''}${NLT==='tm'?' Goals against and shots against rank lowest first.':''}</p>`;
+  const setS=k=>{if(NLT==='sk')NLSK=k;else if(NLT==='g')NLGS=k;else NLTM=k;NALL=false;nhlead()};
+  box.querySelectorAll('[data-lt]').forEach(b=>b.onclick=()=>{NLT=b.dataset.lt;NALL=false;nhlead()});
+  box.querySelectorAll('[data-st]').forEach(b=>b.onclick=()=>setS(b.dataset.st));
+  const sel=$('#nhstat');if(sel)sel.onchange=()=>{setS(sel.value);$('#nhstat').focus()};
+  box.querySelectorAll('[data-lp]').forEach(b=>b.onclick=()=>{NLP=b.dataset.lp;NALL=false;nhlead()});
+  const all=box.querySelector('[data-all]');if(all)all.onclick=()=>{NALL=!NALL;nhlead()};
+  const q=$('#nhq');if(q){q.oninput=()=>{clearTimeout(q._t);q._t=setTimeout(()=>{NLQ=q.value.trim().toLowerCase();nhlead();const n=$('#nhq');n.focus();n.setSelectionRange(n.value.length,n.value.length)},250)}}
+  const r=$('#nhgm');if(r){r.oninput=()=>{NGM=+r.value;nhlead();$('#nhgm').focus()}}}
+
+/* ---------- Track record ---------- */
+function nhrec(){const box=$('#v-nhl-record'),R=N.record;
+  const D=DAYS(),lastDay=Object.keys(D).sort().reverse().find(d=>(D[d]||[]).some(g=>g.st==='post'));
+  let base='';
+  if(lastDay){const L=D[lastDay].filter(g=>g.st==='post'),mk=L.filter(g=>g.mk&&g.mk.a!=null&&wside(g)),hit=mk.filter(g=>(g.mk.a>g.mk.h?'a':'h')===wside(g)).length,otg=L.filter(ot).length;
+    base=`<div><b>${hit} of ${mk.length}</b><span>DraftKings favorites won on ${esc(dshort(lastDay))}</span><small>Hockey favorites lose often; that's why chances, not picks, lead every row.</small></div><div><b>${otg} of ${L.length}</b><span>games went past regulation on ${esc(dshort(lastDay))}</span><small>Why the model shows an overtime chance on each game.</small></div>`}
+  const B=N.base;if(B){if(B.fav_win!=null)base+=`<div><b>${pc(B.fav_win)}</b><span>favorites win${B.span?' · '+esc(B.span):''}</span>${B.games?`<small>${Number(B.games).toLocaleString()} games</small>`:''}</div>`;if(B.ot!=null)base+=`<div><b>${(B.ot*100).toFixed(1)}%</b><span>of games go past regulation</span>${B.so!=null?`<small>${(B.so*100).toFixed(1)}% reach a shootout</small>`:''}</div>`;if(B.home_win!=null)base+=`<div><b>${pc(B.home_win)}</b><span>home teams win</span></div>`;if(B.fav_pl!=null)base+=`<div><b>${pc(B.fav_pl)}</b><span>favorites win by 2+ (puck line)</span></div>`}
+  const baseH=base?`<h3 class="ush">Market baseline <small>not the model: the bar the model has to beat</small></h3><div class="ustat">${base}</div>`:'';
+  if(!R||!R.ml||!R.ml.n){box.innerHTML=head('Track record','Track record','How my NHL model does against real results and real DraftKings prices.')+
+   `<p class="empty" style="margin-top:14px">No graded NHL games yet. This page fills in after the model's first graded night.</p>
+   <h3 class="ush">What will show here</h3><div class="ustat"><div class="nhpendbox"><b>Most likely winner hit rate</b>${pend('pending')}</div><div class="nhpendbox"><b>Calibration</b>Did 60% picks win about 60%? ${pend('pending')}</div><div class="nhpendbox"><b>At real prices</b>Return per bet for moneyline, puck line, totals and props ${pend('pending')}</div><div class="nhpendbox"><b>Vs closing line</b>Model price vs DraftKings close ${pend('pending')}</div></div>`+baseH;return}
+  const ml=R.ml,bands=R.bands||[],bets=R.bets||{},clv=R.clv;
+  const bn={ml:'Moneyline',pl:'Puck line',tot:'Total',props:'Props'};
+  box.innerHTML=head('Track record','Track record',`${ml.n} graded games${R.nights?` over ${R.nights} night${R.nights>1?'s':''}`:''}${R.since?' since '+esc(dshort(R.since)):''} · graded against ESPN finals and the logged DraftKings price`)+
+   `<div class="ustat"><div><span>Most likely winner hit</span><b>${ml.hit} of ${ml.n}</b><small>${pc(ml.hit/ml.n)}${ml.avg_p!=null?` · my model expected ${pc(ml.avg_p)}`:''}</small></div>
+    ${clv&&clv.n?`<div><span>Vs closing line</span><b>${pts(clv.avg)}</b><small>average over ${clv.n} logged prices; above zero means the market moved toward the model</small></div>`:''}</div>
+   ${bands.length?`<h3 class="ush">Calibration <small>did 60% picks win about 60%?</small></h3><div class="utb"><table><thead><tr><th>Model chance</th><th class="n">Games</th><th class="n">Won</th><th class="n k">Hit rate</th></tr></thead><tbody>${bands.map(b=>`<tr><td>${pc(b.lo)}–${pc(b.hi)}</td><td class="n">${b.n}</td><td class="n">${b.hit}</td><td class="n k">${b.n?pc(b.hit/b.n):'–'}</td></tr>`).join('')}</tbody></table></div>`:''}
+   ${Object.keys(bets).length?`<h3 class="ush">At real prices <small>one unit per bet at the logged DraftKings price</small></h3><div class="utb"><table><thead><tr><th>Market</th><th class="n">Bets</th><th class="n k">Units</th><th class="n">Return per bet</th></tr></thead><tbody>${Object.entries(bets).map(([k,b])=>`<tr><td>${esc(bn[k]||k)}</td><td class="n">${b.n??'–'}</td><td class="n k">${b.units==null?'–':(b.units>=0?'+':'−')+Math.abs(b.units).toFixed(2)}</td><td class="n">${b.roi==null?'–':(b.roi>=0?'+':'−')+Math.abs(b.roi*100).toFixed(1)+'%'}</td></tr>`).join('')}</tbody></table></div>`:''}
+   <p class="note">A few nights is far too few to prove an edge either way. No edge is proven until it beats real prices over many more games.</p>`+baseH}
+
+/* ---------- router: returns after drawing the NHL view for this hash ---------- */
+function route(h){let m;
+  if(m=h.match(/^nhl-game-(\d+)(?:-([a-z]+))?$/)){show('nhl');const b=$('#v-nhl');load(b,()=>{nhgame(m[1],m[2]);scrollTo(0,0)})}
+  else if(m=h.match(/^nhl-team-([A-Z]{2,4})$/)){show('nhl-teams');const b=$('#v-nhl-teams');load(b,()=>{nhteam(m[1]);scrollTo(0,0)})}
+  else if(h==='nhl-standings'){show(h);load($('#v-nhl-standings'),nhstand)}
+  else if(h==='nhl-teams'){show(h);load($('#v-nhl-teams'),nhteams)}
+  else if(m=h.match(/^nhl-leaders(?:-(players|goalies|teams))?$/)){show('nhl-leaders');const t={players:'sk',goalies:'g',teams:'tm'}[m[1]];load($('#v-nhl-leaders'),()=>nhlead(t))}
+  else if(h==='nhl-record'){show(h);load($('#v-nhl-record'),nhrec)}
+  else{m=h.match(/^nhl-day-(\d{4}-\d{2}-\d{2})$/);show('nhl');load($('#v-nhl'),()=>nhday(m?m[1]:null))}}
+return{route};
+})();
+/* ===================== end NHL ===================== */
 function route(){const h=location.hash.slice(1),m=h.match(/^week-(\d+)$/),p=h.match(/^player-([\w-]+)$/),gm=h.match(/^game-([\w-]+)$/),gg=gm&&G.find(x=>slug(x.id)===gm[1]);
   if(gg){cur=gg.week;show('weeks');week(cur,gg.id)}
   else if(/^cash(-nfl|-cfb|-nba|-bets|-build)?$/.test(h)){show('cash');cash(h.slice(5)||null)}
@@ -907,6 +1387,7 @@ function route(){const h=location.hash.slice(1),m=h.match(/^week-(\d+)$/),p=h.ma
   else if(/^fantasy(-sit|-acc|-sos|-cmp)?$/.test(h)){show('fantasy');fantasy(h.slice(8)||'rank')}
   else if(/^cfb(-week-\d+|-game-\d+)?$/.test(h)){show('cfb-weeks');const cw=h.match(/^cfb-week-(\d+)$/),cg=h.match(/^cfb-game-(\d+)$/);cfbweeks(cw?+cw[1]:null,cg?cg[1]:null)}
   else if(/^nba(-game-\d+)?$/.test(h)){show('nba');const ng=h.match(/^nba-game-(\d+)$/);nbtonight(ng?ng[1]:null)}
+  else if(/^nhl(-[\w-]+)?$/.test(h)){NHL.route(h)}
   else if(/^nba-week(s|-\d+)$/.test(h)){show('nba-weeks');nbaweeks(h==='nba-weeks'?null:+h.slice(9))}
   else if(h==='ucl'){show('ucl');uclhome()}else if(/^ucl-md(-[\w-]+)?$/.test(h)){show('ucl-md');uclmd(h.slice(7))}else if(/^ucl-match-\d+$/.test(h)){show('ucl-md');uclmatch(h.slice(10))}else if(h==='ucl-record'){show('ucl-record');uclrecord()}
   else if(h==='nba-record'){show('nba-record');nbarecord()}else if(h==='nba-leaders'||h==='nba-players'||/^nba-player-\d+$/.test(h)){show('nba-leaders');nbaleaders()}

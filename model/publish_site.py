@@ -38,10 +38,13 @@ STATE = {"model": [("output", ["hub", "fs", "fantasy_bt_rows.pkl", "fantasy_bt_d
                    ("data", ["slate_*.pkl"] + VOLATILE),
                    ("cfb/output", []),
                    ("cfb/data", ["*.pkl", "games"])],
-         "nba": [("nba/output", ["bt_rows.csv.gz"]), ("nba/data", [])]}
+         "nba": [("nba/output", ["bt_rows.csv.gz"]), ("nba/data", [])],
+         "nhl": [("nhl/output", ["backtest_log.txt"]), ("nhl/data", [])]}
 MARK = {"model": ["output/predictions_*.csv", "output/track_record.csv", "output/odds_log.csv", "cfb/output/predictions_w*.csv", "cfb/output/review_w*.json"],
-        "nba": ["nba/output/predictions_*.csv", "nba/output/review_*.json"]}
-STAMP = {"model": "output/cloud_model.json", "nba": "nba/output/cloud_stamp.json"}
+        "nba": ["nba/output/predictions_*.csv", "nba/output/review_*.json"],
+        "nhl": ["nhl/output/slate_*.json", "nhl/output/review_*.json"]}
+STAMP = {"model": "output/cloud_model.json", "nba": "nba/output/cloud_stamp.json", "nhl": "nhl/output/cloud_stamp.json"}
+NHL_HUB = ("nhl.json",)
 NBA_HUB = ("nba.json", "nbap.json", "nbl.json", "nblh.json", "nbm.json", "nbw.json", "heads.json")
 IGNORE = "\n".join(["__pycache__/", "*.pyc", "*.part", "*.tmp", ".DS_Store", "model/output/hub/", "model/data/slate_*.pkl", "model/cfb/data/*.pkl", "model/cfb/data/games/"]
                    + ["model/data/" + v for v in VOLATILE]) + "\n"
@@ -111,6 +114,32 @@ jobs:
       TZ: America/New_York
     steps:
 """ + SETUP + "      - run: python cloud_nba.py\n" + SAVE % ("nba-bot", "nba-bot", "nba run")
+NHL_FLOW = """name: nhl
+on:
+  schedule:
+    # times are UTC (Eastern is 5 hours behind in winter, 4 in summer)
+    - cron: "0 15 * * *"            # 10 AM ET: grade last night, sim every game with a line (Expected goalies)
+    - cron: "15,45 16-23 * * *"     # 11:15 AM to 6:45 PM ET, every 30 minutes: re-sim games starting in the next 30-110 minutes
+    - cron: "15,45 0-3 * * *"       # 7:15 PM to 10:45 PM ET
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "morning or pregame"
+        default: morning
+permissions:
+  contents: write
+concurrency:
+  group: nhl
+  cancel-in-progress: false
+jobs:
+  nhl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      TZ: America/New_York
+    steps:
+""" + SETUP + """      - run: python cloud_nhl.py "${{ github.event.schedule == '0 15 * * *' && 'morning' || (github.event.inputs.mode || 'pregame') }}"
+""" + SAVE % ("nhl-bot", "nhl-bot", "nhl run")
 MODEL_FLOW = """name: football
 on:
   schedule:
@@ -200,7 +229,7 @@ def pull():
     if r.returncode:
         return "pull failed: " + r.stderr.strip()[:200]
     said = []
-    for which, name in (("model", "NFL + college"), ("nba", "NBA")):
+    for which, name in (("model", "NFL + college"), ("nba", "NBA"), ("nhl", "NHL")):
         ran, mine = cloud_ran(which), newest(ROOT, which)
         if not ran:
             said.append(f"{name}: GitHub has not run yet")
@@ -225,7 +254,7 @@ pull_nba = pull  # older name, still imported by season.py copies
 def push_model():
     """Code and settings always go up. Outputs and data go up for each part where this computer ran more recently (or GitHub never has)."""
     os.makedirs(MODEL, exist_ok=True)
-    for sub in ("", "cfb", "nba") if FOOTBALL_PUBLIC else ("nba",):
+    for sub in ("", "cfb", "nba", "nhl") if FOOTBALL_PUBLIC else ("nba", "nhl"):
         for f in glob.glob(os.path.join(ROOT, sub, "*.py")):
             mirror(f, os.path.join(MODEL, sub, os.path.basename(f)))
     for f in ("hub_template.html", "slate.json", "cfb/qb.json", "ucl/model.json", "README.md", "SCHEDULE.md"):
@@ -267,10 +296,12 @@ def main():
     keep = set()
     if not newer["nba"]:
         keep |= {n for n in NBA_HUB if os.path.exists(os.path.join(SITE, n))}
+    if not newer["nhl"]:
+        keep |= {n for n in NHL_HUB if os.path.exists(os.path.join(SITE, n))}
     copy_hub(HUB, SITE, keep)
-    for f in ("cloud_scores.py", "cloud_nba.py") + (("cloud_model.py",) if FOOTBALL_PUBLIC else ()):
+    for f in ("cloud_scores.py", "cloud_nba.py", "cloud_nhl.py") + (("cloud_model.py",) if FOOTBALL_PUBLIC else ()):
         shutil.copy2(os.path.join(ROOT, f), os.path.join(SITE, f))
-    for name, text in (("scores.yml", SCORES_FLOW), ("nba.yml", NBA_FLOW)) + ((("football.yml", MODEL_FLOW),) if FOOTBALL_PUBLIC else ()):
+    for name, text in (("scores.yml", SCORES_FLOW), ("nba.yml", NBA_FLOW), ("nhl.yml", NHL_FLOW)) + ((("football.yml", MODEL_FLOW),) if FOOTBALL_PUBLIC else ()):
         open(os.path.join(SITE, ".github", "workflows", name), "w").write(text)
     open(os.path.join(SITE, ".nojekyll"), "w").write("")
     open(os.path.join(SITE, ".gitignore"), "w").write(IGNORE)
