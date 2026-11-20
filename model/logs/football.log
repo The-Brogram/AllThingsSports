@@ -1,50 +1,17 @@
-football run Thu Nov 19 2026 12:16 PM ET: cfb-run (schedule 15 16 * * 4)
-== cfb-run
-[nflverse refresh] ok in 1s
-[fetch_cfb.py] ok in 16s
-    1756 games on file; 71 fetched
-[parse_cfb.py] ok in 27s
-    1691 games {2025: 934, 2026: 757} 0.5026611472501479 220580 plays 92838 targets 106906 passes 109957 rushes
-    target parse rate 0.9355037537765114 rec tie 0.6822637282147397
-[weather_cfb.py] ok in 70s
-    Week 12: 35 forecasts, 0 indoor, 2 unavailable
-[run_cfb.py] ok in 47s
-        Micah Ford RB 3.7t 22y 19.2c 101r 65% | Caden High WR 7.1t 57y 0.2c 1r 28% | Nico Brown WR 6.1t 49y 0.1c 1r 27% | Sedrick Irvin RB 0.9t 6y 5.0c 24r 31% | Benji Blackburn WR 4.2t 29y 0.1c 0r 20% | JonAnthony Hall WR 2.8t 28y 0.1c 1r 15%
-        Adam Mohammed RB 1.7t 13y 9.9c 49r 48% | Chase Hendricks WR 6.4t 47y 0.3c 1r 28% | Ian Strong WR 4.7t 41y 0.1c 1r 17% | Mark Hamper WR 4.7t 39y 0.2c 1r 18% | Ashten Emory RB 1.6t 8y 6.0c 25r 34% | Taimane Purcell WR 2.9t 24y 0.1c 0r 13%
-    UTAH @ TCU UTAH -7 46.5 | ours 25.1 21.2 | sim 27.1 19.8 | QB ['Devon Dampier'] ['Jaden Craig'] {}
-        Wayshawn Parker RB 2.0t 15y 8.9c 49r 42% | Braden Pegan WR 6.2t 50y 0.2c 1r 27% | Devon Dampier QB 0.0t 0y 10.1c 46r 33% | Daniel Bray RB 1.4t 8y 4.9c 31r 22% | Creed Whittemore WR 3.5t 33y 0.1c 0r 13% | Noah Bennee WR 2.4t 25y 0.1c 0r 12%
-        Jordan Dwyer WR 8.4t 65y 0.1c 0r 22% | Kari Ashley WR 6.2t 49y 1.0c 5r 18% | Jeremy Payne RB 2.0t 9y 7.9c 40r 28% | Ed Small WR 4.7t 39y 0.1c 0r 13% | Jon Denman RB 1.4t 6y 4.4c 20r 18% | Jacobe Hayes WR 2.5t 19y 0.1c 0r 8%
-    SDSU @ BOIS BOIS -17.5 60.5 | ours 24.3 39.1 | sim 21.2 40.8 | QB ['Stone Saunders'] ['Maddux Madsen'] {'SDSU': np.float64(0.38)}
-        Javion Kinnard RB 1.4t 8y 11.3c 61r 33% | Lucky Sutton RB 0.9t 4y 13.6c 63r 53% | Jaylon Hawkins WR 4.2t 37y 0.3c 1r 12% | Nathan Acevedo WR 4.1t 29y 0.2c 1r 12% | Jacob Bostick WR 3.1t 22y 0.2c 1r 11% | Bert Emanuel Jr. RB 2.4t 16y 0.9c 4r 9%
-        Dylan Riley RB 1.9t 18y 15.1c 87r 49% | Rasean Jones WR 6.0t 83y 0.7c 3r 46% | Sire Gaines RB 1.1t 8y 10.8c 54r 56% | Akeem Wright WR 3.1t 34y 0.1c 0r 24% | Matt Wagner WR 3.3t 31y 0.1c 0r 24% | Ben Ford WR 2.1t 22y 0.1c 0r 15%
-    OKST @ ASU OKST -2.5 59.5 | ours 32.3 31.6 | sim 30.7 28.5 | QB ['Drew Mestemaker'] ['Jake Fette'] {'ASU': np.float64(0.31)}
-        Caleb Hawkins RB 4.9t 37y 16.4c 86r 59% | Justin Bowick WR 5.9t 62y 0.1c 0r 30% | Wyatt Young WR 5.4t 57y 0.5c 2r 34% | Miles Coleman WR 4.1t 38y 0.1c 0r 19% | Terrence Lewis WR 3.0t 24y 0.1c 0r 17% | Chris Barnes WR 2.5t 23y 0.2c 1r 12%
-        Cardae Mack RB 1.9t 13y 16.1c 82r 62% | Reed Harris WR 7.6t 74y 0.2c 1r 35% | Omarion Miller WR 6.2t 43y 0.1c 1r 26% | Derek Eusebio WR 4.7t 31y 0.6c 3r 22% | Kyson Brown RB 1.7t 8y 4.5c 22r 18% | Marquis Gillis RB 0.5t 3y 3.6c 16r 20%
-    Week 12: 37 games -> /home/runner/work/AllThingsSports/AllThingsSports/model/cfb/data/cfb_slate_w12.pkl
-[report_cfb.py] FAILED in 13s
-        section = self._getitem_axis(key, axis=i)
-      File "/opt/hostedtoolcache/Python/3.14.10/x64/lib/python3.14/site-packages/pandas/core/indexing.py", line 1966, in _getitem_axis
-        return self._get_label(key, axis=axis)
-               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
-      File "/opt/hostedtoolcache/Python/3.14.10/x64/lib/python3.14/site-packages/pandas/core/indexing.py", line 1884, in _get_label
-        return self.obj.xs(label, axis=axis)
-               ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
-      File "/opt/hostedtoolcache/Python/3.14.10/x64/lib/python3.14/site-packages/pandas/core/generic.py", line 4291, in xs
-        loc = index.get_loc(key)
-      File "/opt/hostedtoolcache/Python/3.14.10/x64/lib/python3.14/site-packages/pandas/core/indexes/base.py", line 3823, in get_loc
-        raise KeyError(key) from err
-    KeyError: 'WOF'
-[season.py] ok in 69s
-    Players: 1057 offensive players, 25235 games, 1.84 MB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/players.json
-    WR/CB: week 11, 13 games, 162 receivers -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/wrcb.json
-    Team vs position: 2026 thru wk 10, 2025 thru wk 18 -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/teampos.json
+football run Thu Nov 19 2026 08:37 PM ET: nfl-today (schedule 30 0 * * 5,2)
+== nfl-today
+[nflverse refresh] ok in 2s
+[run today] ok in 125s
     NFL reviews: 150 of 150 finished games (0 fetched) -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/nflrev.json
-    Fantasy: 2026 week 10, 2 slate(s), 243 players, 0.95 MB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/fantasy.json
+    Fantasy: 2026 week 11, 1 slate(s), 18 players, 0.07 MB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/fantasy.json
     CFB leaders: 128 players, 137 FBS defenses, through week 12 -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/cfbl.json 127 KB
-    CFB: week 12 current, 488 in-scope games across 14 weeks, 50 with our pick, 188 teams, 241 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/cfb.json
+    CFB: week 12 current, 488 in-scope games across 14 weeks, 50 with our pick, 188 teams, 245 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/cfb.json
     UCL: 144 fixtures (72 final, 72 box scores), 36 in the table, 2 analysed matchdays
-    Hub: Week 11 is current. 150 final, 0 with a Game Book, 29 with lines, 93 early. 10 reports. 524 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/index.html
+    Hub: Week 11 is current. 150 final, 1 with a Game Book, 26 with lines, 95 early. 11 reports. 524 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/index.html
     Data freshness NFL: OK - games final through week 10; player stats through week 10; weekly rosters through week 11
     Data freshness CFB: STALE - games final through week 12; player stats through week 12; forecasts never graded: week 11
     Data freshness NBA: OK - games final through 2026-11-18; 222/222 with box scores; 222/222 with shot charts
+       done in 68s
+    Report: output/nfl_20261119_report.html
+    Hub: output/hub/index.html
 hub copied to the site
