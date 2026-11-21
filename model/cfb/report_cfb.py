@@ -54,6 +54,10 @@ def success(x):
     return ((x.down == 1) & (x.yds >= .5 * x.dist)) | ((x.down == 2) & (x.yds >= .7 * x.dist)) | ((x.down >= 3) & (x.yds >= x.dist))
 
 
+def rk_(v):
+    return "–" if pd.isna(v) else f"#{v:.0f}"
+
+
 class Ctx:
     def __init__(self, d):
         self.d = d
@@ -71,6 +75,9 @@ class Ctx:
         self.rk = self.tab.rank(ascending=False)
         for k in ("opp_ppg", "opp_ypp", "opp_succ", "opp_ypa", "opp_ypc", "opp_expl", "sack_allowed", "opp_third", "giveaways"):
             self.rk[k] = self.tab[k].rank()
+        teams = sorted(set(self.g.home) | set(self.g.away) | set(d["games"].home) | set(d["games"].away))
+        self.tab = self.tab.reindex(self.tab.index.union(teams))   # FCS opponents: no FBS row, shown as "–"
+        self.rk = self.rk.reindex(self.tab.index)
 
     def line(self, x):
         p = x[x.pass_play == 1]
@@ -97,7 +104,7 @@ class Ctx:
              ("20+ yard play rate", "expl", 3), ("20+ rate allowed", "opp_expl", 3), ("Third-down rate", "third", 3), ("Third-down rate allowed", "opp_third", 3), ("Sack rate made", "sack_made", 3), ("Sack rate allowed", "sack_allowed", 3), ("Takeaways/g", "takeaways", 2), ("Giveaways/g", "giveaways", 2)]
         rows = []
         for lab, k, d in L:
-            rows.append([lab, n(self.tab.at[a, k], d), f"#{self.rk.at[a, k]:.0f}", n(self.tab.at[h, k], d), f"#{self.rk.at[h, k]:.0f}"])
+            rows.append([lab, n(self.tab.at[a, k], d), f"{rk_(self.rk.at[a, k])}", n(self.tab.at[h, k], d), f"{rk_(self.rk.at[h, k])}"])
         return T(["2026 regular season", a, "FBS rank", h, "FBS rank"], rows, f"Raw 2026 results, not opponent-adjusted. Ranks are out of {len(self.tab)} FBS teams, and 1 is always best.")
 
     def recent(self, t):
@@ -144,7 +151,7 @@ class Ctx:
     def front(self, t):
         x = self.pl[self.pl.team == t]
         g_ = self.tab.at[t, "g"]
-        return [t, n(x.sacks.sum() / g_, 1), n(x.tfl.sum() / g_, 1), n(x.hur.sum() / g_, 1), n(x.pd.sum() / g_, 1), pc(self.tab.at[t, "sack_made"], 1), f"#{self.rk.at[t, 'sack_made']:.0f}"]
+        return [t, n(x.sacks.sum() / g_, 1), n(x.tfl.sum() / g_, 1), n(x.hur.sum() / g_, 1), n(x.pd.sum() / g_, 1), pc(self.tab.at[t, "sack_made"], 1), f"{rk_(self.rk.at[t, 'sack_made'])}"]
 
     def exploits(self, off, de):
         out = []
@@ -155,7 +162,7 @@ class Ctx:
             elif ro >= 85 and rd <= 45:
                 out.append(f"<b>{de} defense edge on the {lab}:</b> defense #{rd:.0f} against offense #{ro:.0f}.")
         if self.rk.at[de, "sack_made"] <= 40 and self.rk.at[off, "sack_allowed"] >= 85:
-            out.append(f"<b>Protection mismatch:</b> {de} sack rate #{self.rk.at[de, 'sack_made']:.0f} against {off} protection #{self.rk.at[off, 'sack_allowed']:.0f}.")
+            out.append(f"<b>Protection mismatch:</b> {de} sack rate {rk_(self.rk.at[de, 'sack_made'])} against {off} protection {rk_(self.rk.at[off, 'sack_allowed'])}.")
         z = {r[0]: float(r[5]) for r in self.zones(de)}
         if z:
             k = max(z, key=z.get)
@@ -186,7 +193,7 @@ class Ctx:
         l5 = ", ".join(f"{r.pass_y:.0f}" for r in x.sort_values("wk").tail(5).itertuples()) or "none"
         s_ = gg.side(t)
         rows = [[e(q["name"]), len(x), n(x.att.mean(), 1), pc(x.comp.sum() / max(x.att.sum(), 1)), n(x.pass_y.sum() / max(x.att.sum(), 1), 1), int(x.pass_td.sum()), int(x.ints.sum()), pc(self.tab.at[t, "sack_allowed"], 1), n(s_["att"].mean(), 0)]]
-        return T(["QB", "G", "Att/g", "Comp%", "Y/att", "TD", "INT", "Team sack rate allowed", "Sim att"], rows) + f"<p>Last 5 passing games: {l5}. Against {opp}: dropback yards allowed #{self.rk.at[opp, 'opp_ypa']:.0f}, sack rate #{self.rk.at[opp, 'sack_made']:.0f}. Starter's rushing line in the box score counts sacks as negative carries.</p>"
+        return T(["QB", "G", "Att/g", "Comp%", "Y/att", "TD", "INT", "Team sack rate allowed", "Sim att"], rows) + f"<p>Last 5 passing games: {l5}. Against {opp}: dropback yards allowed {rk_(self.rk.at[opp, 'opp_ypa'])}, sack rate {rk_(self.rk.at[opp, 'sack_made'])}. Starter's rushing line in the box score counts sacks as negative carries.</p>"
 
     def backs(self, gg, t):
         x = self.pl[self.pl.team == t]
