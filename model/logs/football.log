@@ -1,25 +1,17 @@
-football run Sat Nov 21 2026 09:54 AM ET: cfb-run (schedule 10 14 * * 6)
-== cfb-run
-[nflverse refresh] ok in 1s
-[fetch_cfb.py] ok in 17s
-    1756 games on file; 71 fetched
-[parse_cfb.py] ok in 27s
-    1698 games {2025: 934, 2026: 764} 0.5047114252061249 221458 plays 93160 targets 107283 passes 110444 rushes
-    target parse rate 0.9354942653737325 rec tie 0.6820416487762988
-[weather_cfb.py] ok in 9s
-    Week 12: 34 forecasts, 0 indoor, 3 unavailable
-week 12 already has saved forecasts but its simulation cache is not here: sim skipped so games that have started keep their original forecasts
-[season.py] ok in 79s
-    Players: 1057 offensive players, 25256 games, 1.84 MB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/players.json
-    WR/CB: week 11, 13 games, 157 receivers -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/wrcb.json
-    Team vs position: 2026 thru wk 10, 2025 thru wk 18 -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/teampos.json
-    NFL reviews: 151 of 151 finished games (0 fetched) -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/nflrev.json
-    Fantasy: 2026 week 11, 2 slate(s), 234 players, 0.91 MB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/fantasy.json
+football run Sun Nov 22 2026 09:21 AM ET: nfl-today (schedule 30 13 * * 0)
+== nfl-today
+[nflverse refresh] ok in 2s
+[run today] ok in 327s
+    Fantasy: 2026 week 11, 2 slate(s), 235 players, 0.91 MB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/fantasy.json
     CFB leaders: 126 players, 137 FBS defenses, through week 12 -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/cfbl.json 125 KB
     CFB: week 12 current, 488 in-scope games across 14 weeks, 87 with our pick, 188 teams, 252 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/cfb.json
     UCL: 144 fixtures (72 final, 72 box scores), 36 in the table, 2 analysed matchdays
-    Hub: Week 11 is current. 151 final, 11 with a Game Book, 17 with lines, 93 early. 13 reports. 609 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/index.html
+    Team logos: nba 30, nhl 32, cfb 187, ucl 36
+    Hub: Week 11 is current. 151 final, 11 with a Game Book, 17 with lines, 93 early. 13 reports. 674 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/index.html
     Data freshness NFL: OK - games final through week 11; player stats through week 11; weekly rosters through week 11
     Data freshness CFB: OK - games final through week 12; player stats through week 12
-    Data freshness NBA: OK - games final through 2026-11-20; 235/235 with box scores; 235/235 with shot charts
+    Data freshness NBA: OK - games final through 2026-11-21; 241/241 with box scores; 241/241 with shot charts
+       done in 77s
+    Report: output/nfl_20261122_report.html
+    Hub: output/hub/index.html
 hub copied to the site
