@@ -339,6 +339,11 @@ def main():
             files["logos/" + os.path.basename(src)] = dst
     except Exception as e:  # noqa: BLE001  missing logos must not stop the hub from building
         print("Logos skipped:", repr(e))
+    try:  # NBA, NHL, college and Champions League team logos (downloaded once from ESPN, kept in data/logos/<sport>/)
+        import hub_logos
+        hub_logos.build(HUB, files)
+    except Exception as e:  # noqa: BLE001
+        print("Team logos skipped:", repr(e))
     try:  # the site's own logo (data/brand, made from TheBrogramLogo.png): top bar, footer, browser tab icon, share image
         os.makedirs(os.path.join(HUB, "brand"), exist_ok=True)
         for n in ("logo-96.png", "icon-32.png", "apple-touch-icon.png", "icon-512.png"):
