@@ -1,4 +1,4 @@
-<meta charset="utf-8"><title>AllThingsSports · Sports predictions, picks and a free bet tracker</title><meta name="description" content="Win chances for every NFL, college football, NBA, NHL and Champions League game from thousands of simulations, with picks of the day graded in public and a free bet tracker."><meta name="claude:viewport-fit-sides" content="cover">
+<meta charset="utf-8"><title>AllThingsSports · Sports predictions, picks and a free bet tracker</title><meta name="description" content="Win chances for every NFL, college football, NBA, NHL and Champions League game from thousands of simulations, with picks of the day graded in public and a free bet tracker."><meta name="claude:viewport-fit-sides" content="cover"><link rel="icon" type="image/png" sizes="32x32" href="brand/icon-32.png"><link rel="apple-touch-icon" href="brand/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600;700&display=swap">
 <style>
@@ -831,7 +831,7 @@ body.noscroll{overflow:hidden}
 @media (max-width:1100px){.hm2{grid-template-columns:minmax(0,1fr)}}
 /* ===================== Dark refresh (2026-11-21): one neutral interface; green and red carry meaning only ===================== */
 .brand{font:600 15px/1 var(--body);gap:9px;align-items:center;letter-spacing:-.01em;padding-inline:8px}
-.brand::before{content:"";width:22px;height:22px;border-radius:6px;background:linear-gradient(135deg,var(--fg) 0 50%,var(--dim) 50%);flex:none}
+.brand::before{content:"";width:26px;height:26px;background:url(brand/logo-96.png) center/contain no-repeat;flex:none}
 .brand b{color:var(--fg)}
 #side{background:var(--bg)}
 #side button{font:500 13.5px var(--body);border-radius:8px;padding:7px 10px}
@@ -3076,9 +3076,9 @@ function hmboard(){const T=HM.T&&HM.T.games||[],now=Date.now(),up=T.filter(g=>Da
   const L=up.filter(g=>f==='all'||g.s===f).map(g=>({...g,pw:Math.max(g.ph,1-g.ph),fav:g.ph>=.5?g.h:g.a})).sort((a,b)=>b.pw-a.pw).slice(0,8);
   const sp=[...new Set(up.map(g=>g.s))];
   const tm=g=>{const d=new Date(g.t),td=new Date();const same=d.toDateString()===td.toDateString();return(same?'':d.toLocaleDateString('en-US',{weekday:'short'})+' ')+d.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'})+' '+TZL};
-  const rk=(n,r)=>(r?`<small class="hmrk">${r}</small>`:'')+tlg(n)+esc(n);
+  const rk=(n,r,s)=>(r?`<small class="hmrk">${r}</small>`:'')+(s==='nfl'?tlg(n):'')+esc(n);
   const card=g=>`<a class="hmg" href="${g.href}"><div class="hmgt"><span class="hmsp">${HSPN[g.s]}</span><span>${tm(g)}</span></div>
-    <div class="hmgm"><span class="${g.fav===g.a?'f':''}">${rk(g.a,g.ra)}</span><i>at</i><span class="${g.fav===g.h?'f':''}">${rk(g.h,g.rh)}</span></div>
+    <div class="hmgm"><span class="${g.fav===g.a?'f':''}">${rk(g.a,g.ra,g.s)}</span><i>at</i><span class="${g.fav===g.h?'f':''}">${rk(g.h,g.rh,g.s)}</span></div>
     <div class="hmgb"><b>${esc(g.fav)} ${Math.round(g.pw*100)}%</b><span class="bar"><i style="width:${Math.round(g.pw*100)}%"></i></span></div>
     <small>${g.src==='market'?'Market chance · model not run yet':'Model chance to win'}</small></a>`;
   return`<section class="hmboard" id="hmboard"><div class="hmbh"><div><h2>Most likely winners</h2><p class="note">Upcoming games across every sport, sorted by our chance the favorite wins. A likely winner is not the same as a good price: open a game for the market line.</p></div>

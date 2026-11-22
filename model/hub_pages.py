@@ -38,7 +38,7 @@ def build(hub):
         head = (f'<!doctype html><html lang="en"><head><meta charset="utf-8">{VIEWPORT}<base href="../"><title>{t}</title>'
                 f'<meta name="description" content="{d}"><link rel="canonical" href="{url}">'
                 f'<meta property="og:title" content="{t}"><meta property="og:description" content="{d}"><meta property="og:url" content="{url}">'
-                f'<meta property="og:type" content="website">{RESET}<script>window.HUBSTART="{start}"</script>')
+                f'<meta property="og:type" content="website"><meta property="og:image" content="{SITE_URL}brand/icon-512.png">{RESET}<script>window.HUBSTART="{start}"</script>')
         body = page[:t0].replace('<meta charset="utf-8">', "") + rest
         out = os.path.join(hub, folder, "index.html")
         os.makedirs(os.path.dirname(out), exist_ok=True)

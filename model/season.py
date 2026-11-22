@@ -339,6 +339,14 @@ def main():
             files["logos/" + os.path.basename(src)] = dst
     except Exception as e:  # noqa: BLE001  missing logos must not stop the hub from building
         print("Logos skipped:", repr(e))
+    try:  # the site's own logo (data/brand, made from TheBrogramLogo.png): top bar, footer, browser tab icon, share image
+        os.makedirs(os.path.join(HUB, "brand"), exist_ok=True)
+        for n in ("logo-96.png", "icon-32.png", "apple-touch-icon.png", "icon-512.png"):
+            dst = os.path.join(HUB, "brand", n)
+            shutil.copy2(os.path.join(ROOT, "data", "brand", n), dst)
+            files["brand/" + n] = dst
+    except Exception as e:  # noqa: BLE001
+        print("Brand logo skipped:", repr(e))
     try:  # Home page board: upcoming games across every sport with each team's chance (tonight.json)
         import hub_tonight
         files.update(hub_tonight.build(HUB, data))
