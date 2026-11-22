@@ -40,9 +40,9 @@
     "properties": {
         "units": "us",
         "forecastGenerator": "HourlyForecastGenerator",
-        "generatedAt": "2026-11-22T14:15:48+00:00",
-        "updateTime": "2026-11-22T08:56:52+00:00",
-        "validTimes": "2026-11-22T02:00:00+00:00/P7DT23H",
+        "generatedAt": "2026-11-22T17:00:17+00:00",
+        "updateTime": "2026-11-22T16:12:15+00:00",
+        "validTimes": "2026-11-22T10:00:00+00:00/P7DT15H",
         "elevation": {
             "unitCode": "wmoUnit:m",
             "value": 7.9248
@@ -50,87 +50,6 @@
         "periods": [
             {
                 "number": 1,
-                "name": "",
-                "startTime": "2026-11-22T06:00:00-08:00",
-                "endTime": "2026-11-22T07:00:00-08:00",
-                "isDaytime": true,
-                "temperature": 46,
-                "temperatureUnit": "F",
-                "temperatureTrend": null,
-                "probabilityOfPrecipitation": {
-                    "unitCode": "wmoUnit:percent",
-                    "value": 7
-                },
-                "dewpoint": {
-                    "unitCode": "wmoUnit:degC",
-                    "value": 7.777777777777778
-                },
-                "relativeHumidity": {
-                    "unitCode": "wmoUnit:percent",
-                    "value": 100
-                },
-                "windSpeed": "1 mph",
-                "windDirection": "SSE",
-                "icon": "https://api.weather.gov/icons/land/day/fog?size=small",
-                "shortForecast": "Patchy Fog",
-                "detailedForecast": ""
-            },
-            {
-                "number": 2,
-                "name": "",
-                "startTime": "2026-11-22T07:00:00-08:00",
-                "endTime": "2026-11-22T08:00:00-08:00",
-                "isDaytime": true,
-                "temperature": 46,
-                "temperatureUnit": "F",
-                "temperatureTrend": null,
-                "probabilityOfPrecipitation": {
-                    "unitCode": "wmoUnit:percent",
-                    "value": 5
-                },
-                "dewpoint": {
-                    "unitCode": "wmoUnit:degC",
-                    "value": 7.777777777777778
-                },
-                "relativeHumidity": {
-                    "unitCode": "wmoUnit:percent",
-                    "value": 100
-                },
-                "windSpeed": "1 mph",
-                "windDirection": "SW",
-                "icon": "https://api.weather.gov/icons/land/day/fog?size=small",
-                "shortForecast": "Patchy Fog",
-                "detailedForecast": ""
-            },
-            {
-                "number": 3,
-                "name": "",
-                "startTime": "2026-11-22T08:00:00-08:00",
-                "endTime": "2026-11-22T09:00:00-08:00",
-                "isDaytime": true,
-                "temperature": 48,
-                "temperatureUnit": "F",
-                "temperatureTrend": null,
-                "probabilityOfPrecipitation": {
-                    "unitCode": "wmoUnit:percent",
-                    "value": 5
-                },
-                "dewpoint": {
-                    "unitCode": "wmoUnit:degC",
-                    "value": 8.88888888888889
-                },
-                "relativeHumidity": {
-                    "unitCode": "wmoUnit:percent",
-                    "value": 100
-                },
-                "windSpeed": "1 mph",
-                "windDirection": "E",
-                "icon": "https://api.weather.gov/icons/land/day/fog?size=small",
-                "shortForecast": "Areas Of Fog",
-                "detailedForecast": ""
-            },
-            {
-                "number": 4,
                 "name": "",
                 "startTime": "2026-11-22T09:00:00-08:00",
                 "endTime": "2026-11-22T10:00:00-08:00",
@@ -151,13 +70,13 @@
                     "value": 100
                 },
                 "windSpeed": "1 mph",
-                "windDirection": "SE",
+                "windDirection": "N",
                 "icon": "https://api.weather.gov/icons/land/day/fog?size=small",
                 "shortForecast": "Areas Of Fog",
                 "detailedForecast": ""
             },
             {
-                "number": 5,
+                "number": 2,
                 "name": "",
                 "startTime": "2026-11-22T10:00:00-08:00",
                 "endTime": "2026-11-22T11:00:00-08:00",
@@ -178,13 +97,13 @@
                     "value": 95
                 },
                 "windSpeed": "1 mph",
-                "windDirection": "NNW",
+                "windDirection": "NW",
                 "icon": "https://api.weather.gov/icons/land/day/fog?size=small",
                 "shortForecast": "Patchy Fog",
                 "detailedForecast": ""
             },
             {
-                "number": 6,
+                "number": 3,
                 "name": "",
                 "startTime": "2026-11-22T11:00:00-08:00",
                 "endTime": "2026-11-22T12:00:00-08:00",
@@ -204,14 +123,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 92
                 },
-                "windSpeed": "1 mph",
+                "windSpeed": "2 mph",
                 "windDirection": "NNW",
                 "icon": "https://api.weather.gov/icons/land/day/ovc?size=small",
                 "shortForecast": "Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 7,
+                "number": 4,
                 "name": "",
                 "startTime": "2026-11-22T12:00:00-08:00",
                 "endTime": "2026-11-22T13:00:00-08:00",
@@ -238,7 +157,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 8,
+                "number": 5,
                 "name": "",
                 "startTime": "2026-11-22T13:00:00-08:00",
                 "endTime": "2026-11-22T14:00:00-08:00",
@@ -265,7 +184,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 9,
+                "number": 6,
                 "name": "",
                 "startTime": "2026-11-22T14:00:00-08:00",
                 "endTime": "2026-11-22T15:00:00-08:00",
@@ -292,7 +211,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 10,
+                "number": 7,
                 "name": "",
                 "startTime": "2026-11-22T15:00:00-08:00",
                 "endTime": "2026-11-22T16:00:00-08:00",
@@ -312,14 +231,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 84
                 },
-                "windSpeed": "5 mph",
+                "windSpeed": "3 mph",
                 "windDirection": "NW",
                 "icon": "https://api.weather.gov/icons/land/day/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 11,
+                "number": 8,
                 "name": "",
                 "startTime": "2026-11-22T16:00:00-08:00",
                 "endTime": "2026-11-22T17:00:00-08:00",
@@ -340,13 +259,13 @@
                     "value": 84
                 },
                 "windSpeed": "3 mph",
-                "windDirection": "NW",
+                "windDirection": "NNW",
                 "icon": "https://api.weather.gov/icons/land/day/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 12,
+                "number": 9,
                 "name": "",
                 "startTime": "2026-11-22T17:00:00-08:00",
                 "endTime": "2026-11-22T18:00:00-08:00",
@@ -373,7 +292,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 13,
+                "number": 10,
                 "name": "",
                 "startTime": "2026-11-22T18:00:00-08:00",
                 "endTime": "2026-11-22T19:00:00-08:00",
@@ -400,7 +319,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 14,
+                "number": 11,
                 "name": "",
                 "startTime": "2026-11-22T19:00:00-08:00",
                 "endTime": "2026-11-22T20:00:00-08:00",
@@ -421,13 +340,13 @@
                     "value": 95
                 },
                 "windSpeed": "2 mph",
-                "windDirection": "NNW",
+                "windDirection": "NW",
                 "icon": "https://api.weather.gov/icons/land/night/fog?size=small",
                 "shortForecast": "Patchy Fog",
                 "detailedForecast": ""
             },
             {
-                "number": 15,
+                "number": 12,
                 "name": "",
                 "startTime": "2026-11-22T20:00:00-08:00",
                 "endTime": "2026-11-22T21:00:00-08:00",
@@ -448,13 +367,13 @@
                     "value": 97
                 },
                 "windSpeed": "1 mph",
-                "windDirection": "NNW",
+                "windDirection": "WNW",
                 "icon": "https://api.weather.gov/icons/land/night/fog?size=small",
                 "shortForecast": "Patchy Fog",
                 "detailedForecast": ""
             },
             {
-                "number": 16,
+                "number": 13,
                 "name": "",
                 "startTime": "2026-11-22T21:00:00-08:00",
                 "endTime": "2026-11-22T22:00:00-08:00",
@@ -475,13 +394,13 @@
                     "value": 99
                 },
                 "windSpeed": "1 mph",
-                "windDirection": "WSW",
+                "windDirection": "NW",
                 "icon": "https://api.weather.gov/icons/land/night/fog?size=small",
                 "shortForecast": "Patchy Fog",
                 "detailedForecast": ""
             },
             {
-                "number": 17,
+                "number": 14,
                 "name": "",
                 "startTime": "2026-11-22T22:00:00-08:00",
                 "endTime": "2026-11-22T23:00:00-08:00",
@@ -501,14 +420,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 100
                 },
-                "windSpeed": "2 mph",
-                "windDirection": "W",
+                "windSpeed": "1 mph",
+                "windDirection": "S",
                 "icon": "https://api.weather.gov/icons/land/night/fog?size=small",
                 "shortForecast": "Patchy Fog",
                 "detailedForecast": ""
             },
             {
-                "number": 18,
+                "number": 15,
                 "name": "",
                 "startTime": "2026-11-22T23:00:00-08:00",
                 "endTime": "2026-11-23T00:00:00-08:00",
@@ -528,14 +447,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 100
                 },
-                "windSpeed": "2 mph",
-                "windDirection": "SSE",
+                "windSpeed": "1 mph",
+                "windDirection": "SE",
                 "icon": "https://api.weather.gov/icons/land/night/fog?size=small",
                 "shortForecast": "Patchy Fog",
                 "detailedForecast": ""
             },
             {
-                "number": 19,
+                "number": 16,
                 "name": "",
                 "startTime": "2026-11-23T00:00:00-08:00",
                 "endTime": "2026-11-23T01:00:00-08:00",
@@ -556,13 +475,13 @@
                     "value": 100
                 },
                 "windSpeed": "2 mph",
-                "windDirection": "ESE",
+                "windDirection": "S",
                 "icon": "https://api.weather.gov/icons/land/night/fog?size=small",
                 "shortForecast": "Patchy Fog",
                 "detailedForecast": ""
             },
             {
-                "number": 20,
+                "number": 17,
                 "name": "",
                 "startTime": "2026-11-23T01:00:00-08:00",
                 "endTime": "2026-11-23T02:00:00-08:00",
@@ -582,14 +501,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 100
                 },
-                "windSpeed": "2 mph",
-                "windDirection": "SE",
+                "windSpeed": "1 mph",
+                "windDirection": "E",
                 "icon": "https://api.weather.gov/icons/land/night/fog?size=small",
                 "shortForecast": "Patchy Fog",
                 "detailedForecast": ""
             },
             {
-                "number": 21,
+                "number": 18,
                 "name": "",
                 "startTime": "2026-11-23T02:00:00-08:00",
                 "endTime": "2026-11-23T03:00:00-08:00",
@@ -616,7 +535,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 22,
+                "number": 19,
                 "name": "",
                 "startTime": "2026-11-23T03:00:00-08:00",
                 "endTime": "2026-11-23T04:00:00-08:00",
@@ -637,13 +556,13 @@
                     "value": 100
                 },
                 "windSpeed": "1 mph",
-                "windDirection": "E",
+                "windDirection": "SSE",
                 "icon": "https://api.weather.gov/icons/land/night/fog?size=small",
                 "shortForecast": "Patchy Fog",
                 "detailedForecast": ""
             },
             {
-                "number": 23,
+                "number": 20,
                 "name": "",
                 "startTime": "2026-11-23T04:00:00-08:00",
                 "endTime": "2026-11-23T05:00:00-08:00",
@@ -664,13 +583,13 @@
                     "value": 100
                 },
                 "windSpeed": "1 mph",
-                "windDirection": "SE",
+                "windDirection": "S",
                 "icon": "https://api.weather.gov/icons/land/night/fog?size=small",
                 "shortForecast": "Patchy Fog",
                 "detailedForecast": ""
             },
             {
-                "number": 24,
+                "number": 21,
                 "name": "",
                 "startTime": "2026-11-23T05:00:00-08:00",
                 "endTime": "2026-11-23T06:00:00-08:00",
@@ -691,13 +610,13 @@
                     "value": 100
                 },
                 "windSpeed": "1 mph",
-                "windDirection": "SE",
+                "windDirection": "SSE",
                 "icon": "https://api.weather.gov/icons/land/night/fog?size=small",
                 "shortForecast": "Patchy Fog",
                 "detailedForecast": ""
             },
             {
-                "number": 25,
+                "number": 22,
                 "name": "",
                 "startTime": "2026-11-23T06:00:00-08:00",
                 "endTime": "2026-11-23T07:00:00-08:00",
@@ -718,13 +637,13 @@
                     "value": 100
                 },
                 "windSpeed": "1 mph",
-                "windDirection": "SE",
+                "windDirection": "ESE",
                 "icon": "https://api.weather.gov/icons/land/day/fog?size=small",
                 "shortForecast": "Patchy Fog",
                 "detailedForecast": ""
             },
             {
-                "number": 26,
+                "number": 23,
                 "name": "",
                 "startTime": "2026-11-23T07:00:00-08:00",
                 "endTime": "2026-11-23T08:00:00-08:00",
@@ -745,13 +664,13 @@
                     "value": 100
                 },
                 "windSpeed": "1 mph",
-                "windDirection": "E",
+                "windDirection": "SE",
                 "icon": "https://api.weather.gov/icons/land/day/fog?size=small",
                 "shortForecast": "Areas Of Fog",
                 "detailedForecast": ""
             },
             {
-                "number": 27,
+                "number": 24,
                 "name": "",
                 "startTime": "2026-11-23T08:00:00-08:00",
                 "endTime": "2026-11-23T09:00:00-08:00",
@@ -772,13 +691,13 @@
                     "value": 100
                 },
                 "windSpeed": "1 mph",
-                "windDirection": "E",
+                "windDirection": "SSE",
                 "icon": "https://api.weather.gov/icons/land/day/fog?size=small",
                 "shortForecast": "Areas Of Fog",
                 "detailedForecast": ""
             },
             {
-                "number": 28,
+                "number": 25,
                 "name": "",
                 "startTime": "2026-11-23T09:00:00-08:00",
                 "endTime": "2026-11-23T10:00:00-08:00",
@@ -799,13 +718,13 @@
                     "value": 99
                 },
                 "windSpeed": "1 mph",
-                "windDirection": "E",
+                "windDirection": "SE",
                 "icon": "https://api.weather.gov/icons/land/day/fog?size=small",
                 "shortForecast": "Areas Of Fog",
                 "detailedForecast": ""
             },
             {
-                "number": 29,
+                "number": 26,
                 "name": "",
                 "startTime": "2026-11-23T10:00:00-08:00",
                 "endTime": "2026-11-23T11:00:00-08:00",
@@ -826,13 +745,13 @@
                     "value": 89
                 },
                 "windSpeed": "1 mph",
-                "windDirection": "NNE",
+                "windDirection": "SE",
                 "icon": "https://api.weather.gov/icons/land/day/sct?size=small",
                 "shortForecast": "Mostly Sunny",
                 "detailedForecast": ""
             },
             {
-                "number": 30,
+                "number": 27,
                 "name": "",
                 "startTime": "2026-11-23T11:00:00-08:00",
                 "endTime": "2026-11-23T12:00:00-08:00",
@@ -852,14 +771,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 85
                 },
-                "windSpeed": "1 mph",
-                "windDirection": "NNE",
+                "windSpeed": "0 mph",
+                "windDirection": "",
                 "icon": "https://api.weather.gov/icons/land/day/sct?size=small",
                 "shortForecast": "Mostly Sunny",
                 "detailedForecast": ""
             },
             {
-                "number": 31,
+                "number": 28,
                 "name": "",
                 "startTime": "2026-11-23T12:00:00-08:00",
                 "endTime": "2026-11-23T13:00:00-08:00",
@@ -880,13 +799,13 @@
                     "value": 81
                 },
                 "windSpeed": "1 mph",
-                "windDirection": "NNE",
+                "windDirection": "NE",
                 "icon": "https://api.weather.gov/icons/land/day/sct?size=small",
                 "shortForecast": "Mostly Sunny",
                 "detailedForecast": ""
             },
             {
-                "number": 32,
+                "number": 29,
                 "name": "",
                 "startTime": "2026-11-23T13:00:00-08:00",
                 "endTime": "2026-11-23T14:00:00-08:00",
@@ -907,13 +826,13 @@
                     "value": 76
                 },
                 "windSpeed": "1 mph",
-                "windDirection": "N",
+                "windDirection": "NE",
                 "icon": "https://api.weather.gov/icons/land/day/bkn?size=small",
                 "shortForecast": "Partly Sunny",
                 "detailedForecast": ""
             },
             {
-                "number": 33,
+                "number": 30,
                 "name": "",
                 "startTime": "2026-11-23T14:00:00-08:00",
                 "endTime": "2026-11-23T15:00:00-08:00",
@@ -934,13 +853,13 @@
                     "value": 73
                 },
                 "windSpeed": "1 mph",
-                "windDirection": "N",
+                "windDirection": "E",
                 "icon": "https://api.weather.gov/icons/land/day/bkn?size=small",
                 "shortForecast": "Partly Sunny",
                 "detailedForecast": ""
             },
             {
-                "number": 34,
+                "number": 31,
                 "name": "",
                 "startTime": "2026-11-23T15:00:00-08:00",
                 "endTime": "2026-11-23T16:00:00-08:00",
@@ -960,14 +879,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 72
                 },
-                "windSpeed": "1 mph",
-                "windDirection": "N",
+                "windSpeed": "0 mph",
+                "windDirection": "",
                 "icon": "https://api.weather.gov/icons/land/day/bkn?size=small",
                 "shortForecast": "Partly Sunny",
                 "detailedForecast": ""
             },
             {
-                "number": 35,
+                "number": 32,
                 "name": "",
                 "startTime": "2026-11-23T16:00:00-08:00",
                 "endTime": "2026-11-23T17:00:00-08:00",
@@ -994,7 +913,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 36,
+                "number": 33,
                 "name": "",
                 "startTime": "2026-11-23T17:00:00-08:00",
                 "endTime": "2026-11-23T18:00:00-08:00",
@@ -1021,7 +940,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 37,
+                "number": 34,
                 "name": "",
                 "startTime": "2026-11-23T18:00:00-08:00",
                 "endTime": "2026-11-23T19:00:00-08:00",
@@ -1048,7 +967,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 38,
+                "number": 35,
                 "name": "",
                 "startTime": "2026-11-23T19:00:00-08:00",
                 "endTime": "2026-11-23T20:00:00-08:00",
@@ -1068,14 +987,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 89
                 },
-                "windSpeed": "1 mph",
-                "windDirection": "E",
+                "windSpeed": "2 mph",
+                "windDirection": "ESE",
                 "icon": "https://api.weather.gov/icons/land/night/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 39,
+                "number": 36,
                 "name": "",
                 "startTime": "2026-11-23T20:00:00-08:00",
                 "endTime": "2026-11-23T21:00:00-08:00",
@@ -1095,14 +1014,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 91
                 },
-                "windSpeed": "1 mph",
-                "windDirection": "E",
+                "windSpeed": "2 mph",
+                "windDirection": "ESE",
                 "icon": "https://api.weather.gov/icons/land/night/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 40,
+                "number": 37,
                 "name": "",
                 "startTime": "2026-11-23T21:00:00-08:00",
                 "endTime": "2026-11-23T22:00:00-08:00",
@@ -1122,14 +1041,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 93
                 },
-                "windSpeed": "1 mph",
-                "windDirection": "E",
+                "windSpeed": "2 mph",
+                "windDirection": "ESE",
                 "icon": "https://api.weather.gov/icons/land/night/fog?size=small",
                 "shortForecast": "Patchy Fog",
                 "detailedForecast": ""
             },
             {
-                "number": 41,
+                "number": 38,
                 "name": "",
                 "startTime": "2026-11-23T22:00:00-08:00",
                 "endTime": "2026-11-23T23:00:00-08:00",
@@ -1149,14 +1068,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 93
                 },
-                "windSpeed": "6 mph",
-                "windDirection": "SE",
+                "windSpeed": "7 mph",
+                "windDirection": "ESE",
                 "icon": "https://api.weather.gov/icons/land/night/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 42,
+                "number": 39,
                 "name": "",
                 "startTime": "2026-11-23T23:00:00-08:00",
                 "endTime": "2026-11-24T00:00:00-08:00",
@@ -1176,14 +1095,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 94
                 },
-                "windSpeed": "6 mph",
-                "windDirection": "SE",
+                "windSpeed": "7 mph",
+                "windDirection": "ESE",
                 "icon": "https://api.weather.gov/icons/land/night/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 43,
+                "number": 40,
                 "name": "",
                 "startTime": "2026-11-24T00:00:00-08:00",
                 "endTime": "2026-11-24T01:00:00-08:00",
@@ -1203,14 +1122,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 94
                 },
-                "windSpeed": "6 mph",
-                "windDirection": "SE",
+                "windSpeed": "7 mph",
+                "windDirection": "ESE",
                 "icon": "https://api.weather.gov/icons/land/night/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 44,
+                "number": 41,
                 "name": "",
                 "startTime": "2026-11-24T01:00:00-08:00",
                 "endTime": "2026-11-24T02:00:00-08:00",
@@ -1231,13 +1150,13 @@
                     "value": 94
                 },
                 "windSpeed": "6 mph",
-                "windDirection": "ESE",
+                "windDirection": "SE",
                 "icon": "https://api.weather.gov/icons/land/night/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 45,
+                "number": 42,
                 "name": "",
                 "startTime": "2026-11-24T02:00:00-08:00",
                 "endTime": "2026-11-24T03:00:00-08:00",
@@ -1258,13 +1177,13 @@
                     "value": 95
                 },
                 "windSpeed": "6 mph",
-                "windDirection": "ESE",
+                "windDirection": "SE",
                 "icon": "https://api.weather.gov/icons/land/night/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 46,
+                "number": 43,
                 "name": "",
                 "startTime": "2026-11-24T03:00:00-08:00",
                 "endTime": "2026-11-24T04:00:00-08:00",
@@ -1285,13 +1204,13 @@
                     "value": 96
                 },
                 "windSpeed": "6 mph",
-                "windDirection": "ESE",
+                "windDirection": "SE",
                 "icon": "https://api.weather.gov/icons/land/night/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 47,
+                "number": 44,
                 "name": "",
                 "startTime": "2026-11-24T04:00:00-08:00",
                 "endTime": "2026-11-24T05:00:00-08:00",
@@ -1318,7 +1237,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 48,
+                "number": 45,
                 "name": "",
                 "startTime": "2026-11-24T05:00:00-08:00",
                 "endTime": "2026-11-24T06:00:00-08:00",
@@ -1345,7 +1264,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 49,
+                "number": 46,
                 "name": "",
                 "startTime": "2026-11-24T06:00:00-08:00",
                 "endTime": "2026-11-24T07:00:00-08:00",
@@ -1372,7 +1291,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 50,
+                "number": 47,
                 "name": "",
                 "startTime": "2026-11-24T07:00:00-08:00",
                 "endTime": "2026-11-24T08:00:00-08:00",
@@ -1392,14 +1311,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 94
                 },
-                "windSpeed": "8 mph",
+                "windSpeed": "7 mph",
                 "windDirection": "SE",
                 "icon": "https://api.weather.gov/icons/land/day/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 51,
+                "number": 48,
                 "name": "",
                 "startTime": "2026-11-24T08:00:00-08:00",
                 "endTime": "2026-11-24T09:00:00-08:00",
@@ -1419,14 +1338,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 90
                 },
-                "windSpeed": "8 mph",
+                "windSpeed": "7 mph",
                 "windDirection": "SE",
                 "icon": "https://api.weather.gov/icons/land/day/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 52,
+                "number": 49,
                 "name": "",
                 "startTime": "2026-11-24T09:00:00-08:00",
                 "endTime": "2026-11-24T10:00:00-08:00",
@@ -1446,14 +1365,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 85
                 },
-                "windSpeed": "8 mph",
+                "windSpeed": "7 mph",
                 "windDirection": "SE",
                 "icon": "https://api.weather.gov/icons/land/day/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 53,
+                "number": 50,
                 "name": "",
                 "startTime": "2026-11-24T10:00:00-08:00",
                 "endTime": "2026-11-24T11:00:00-08:00",
@@ -1473,14 +1392,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 81
                 },
-                "windSpeed": "12 mph",
-                "windDirection": "SE",
+                "windSpeed": "10 mph",
+                "windDirection": "SSE",
                 "icon": "https://api.weather.gov/icons/land/day/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 54,
+                "number": 51,
                 "name": "",
                 "startTime": "2026-11-24T11:00:00-08:00",
                 "endTime": "2026-11-24T12:00:00-08:00",
@@ -1500,14 +1419,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 79
                 },
-                "windSpeed": "12 mph",
-                "windDirection": "SE",
+                "windSpeed": "10 mph",
+                "windDirection": "SSE",
                 "icon": "https://api.weather.gov/icons/land/day/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 55,
+                "number": 52,
                 "name": "",
                 "startTime": "2026-11-24T12:00:00-08:00",
                 "endTime": "2026-11-24T13:00:00-08:00",
@@ -1527,14 +1446,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 78
                 },
-                "windSpeed": "12 mph",
-                "windDirection": "SE",
+                "windSpeed": "10 mph",
+                "windDirection": "SSE",
                 "icon": "https://api.weather.gov/icons/land/day/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 56,
+                "number": 53,
                 "name": "",
                 "startTime": "2026-11-24T13:00:00-08:00",
                 "endTime": "2026-11-24T14:00:00-08:00",
@@ -1554,14 +1473,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 78
                 },
-                "windSpeed": "12 mph",
+                "windSpeed": "13 mph",
                 "windDirection": "SSE",
                 "icon": "https://api.weather.gov/icons/land/day/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 57,
+                "number": 54,
                 "name": "",
                 "startTime": "2026-11-24T14:00:00-08:00",
                 "endTime": "2026-11-24T15:00:00-08:00",
@@ -1581,14 +1500,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 78
                 },
-                "windSpeed": "12 mph",
+                "windSpeed": "13 mph",
                 "windDirection": "SSE",
                 "icon": "https://api.weather.gov/icons/land/day/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 58,
+                "number": 55,
                 "name": "",
                 "startTime": "2026-11-24T15:00:00-08:00",
                 "endTime": "2026-11-24T16:00:00-08:00",
@@ -1608,14 +1527,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 80
                 },
-                "windSpeed": "12 mph",
+                "windSpeed": "13 mph",
                 "windDirection": "SSE",
                 "icon": "https://api.weather.gov/icons/land/day/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 59,
+                "number": 56,
                 "name": "",
                 "startTime": "2026-11-24T16:00:00-08:00",
                 "endTime": "2026-11-24T17:00:00-08:00",
@@ -1635,14 +1554,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 81
                 },
-                "windSpeed": "12 mph",
+                "windSpeed": "13 mph",
                 "windDirection": "SSE",
                 "icon": "https://api.weather.gov/icons/land/day/rain,80?size=small",
                 "shortForecast": "Light Rain",
                 "detailedForecast": ""
             },
             {
-                "number": 60,
+                "number": 57,
                 "name": "",
                 "startTime": "2026-11-24T17:00:00-08:00",
                 "endTime": "2026-11-24T18:00:00-08:00",
@@ -1662,14 +1581,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 83
                 },
-                "windSpeed": "12 mph",
+                "windSpeed": "13 mph",
                 "windDirection": "SSE",
                 "icon": "https://api.weather.gov/icons/land/day/rain,80?size=small",
                 "shortForecast": "Light Rain",
                 "detailedForecast": ""
             },
             {
-                "number": 61,
+                "number": 58,
                 "name": "",
                 "startTime": "2026-11-24T18:00:00-08:00",
                 "endTime": "2026-11-24T19:00:00-08:00",
@@ -1689,14 +1608,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 86
                 },
-                "windSpeed": "12 mph",
+                "windSpeed": "13 mph",
                 "windDirection": "SSE",
                 "icon": "https://api.weather.gov/icons/land/night/rain,80?size=small",
                 "shortForecast": "Light Rain",
                 "detailedForecast": ""
             },
             {
-                "number": 62,
+                "number": 59,
                 "name": "",
                 "startTime": "2026-11-24T19:00:00-08:00",
                 "endTime": "2026-11-24T20:00:00-08:00",
@@ -1716,14 +1635,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 88
                 },
-                "windSpeed": "21 mph",
+                "windSpeed": "18 mph",
                 "windDirection": "SE",
                 "icon": "https://api.weather.gov/icons/land/night/rain,80?size=small",
                 "shortForecast": "Light Rain",
                 "detailedForecast": ""
             },
             {
-                "number": 63,
+                "number": 60,
                 "name": "",
                 "startTime": "2026-11-24T20:00:00-08:00",
                 "endTime": "2026-11-24T21:00:00-08:00",
@@ -1743,14 +1662,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 90
                 },
-                "windSpeed": "21 mph",
+                "windSpeed": "18 mph",
                 "windDirection": "SE",
                 "icon": "https://api.weather.gov/icons/land/night/rain,80?size=small",
                 "shortForecast": "Light Rain",
                 "detailedForecast": ""
             },
             {
-                "number": 64,
+                "number": 61,
                 "name": "",
                 "startTime": "2026-11-24T21:00:00-08:00",
                 "endTime": "2026-11-24T22:00:00-08:00",
@@ -1770,14 +1689,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 92
                 },
-                "windSpeed": "21 mph",
+                "windSpeed": "18 mph",
                 "windDirection": "SE",
                 "icon": "https://api.weather.gov/icons/land/night/rain,80?size=small",
                 "shortForecast": "Light Rain",
                 "detailedForecast": ""
             },
             {
-                "number": 65,
+                "number": 62,
                 "name": "",
                 "startTime": "2026-11-24T22:00:00-08:00",
                 "endTime": "2026-11-24T23:00:00-08:00",
@@ -1804,7 +1723,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 66,
+                "number": 63,
                 "name": "",
                 "startTime": "2026-11-24T23:00:00-08:00",
                 "endTime": "2026-11-25T00:00:00-08:00",
@@ -1831,7 +1750,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 67,
+                "number": 64,
                 "name": "",
                 "startTime": "2026-11-25T00:00:00-08:00",
                 "endTime": "2026-11-25T01:00:00-08:00",
@@ -1858,7 +1777,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 68,
+                "number": 65,
                 "name": "",
                 "startTime": "2026-11-25T01:00:00-08:00",
                 "endTime": "2026-11-25T02:00:00-08:00",
@@ -1879,13 +1798,13 @@
                     "value": 95
                 },
                 "windSpeed": "13 mph",
-                "windDirection": "SE",
+                "windDirection": "SSE",
                 "icon": "https://api.weather.gov/icons/land/night/rain,90?size=small",
                 "shortForecast": "Light Rain",
                 "detailedForecast": ""
             },
             {
-                "number": 69,
+                "number": 66,
                 "name": "",
                 "startTime": "2026-11-25T02:00:00-08:00",
                 "endTime": "2026-11-25T03:00:00-08:00",
@@ -1906,13 +1825,13 @@
                     "value": 96
                 },
                 "windSpeed": "13 mph",
-                "windDirection": "SE",
+                "windDirection": "SSE",
                 "icon": "https://api.weather.gov/icons/land/night/rain,90?size=small",
                 "shortForecast": "Light Rain",
                 "detailedForecast": ""
             },
             {
-                "number": 70,
+                "number": 67,
                 "name": "",
                 "startTime": "2026-11-25T03:00:00-08:00",
                 "endTime": "2026-11-25T04:00:00-08:00",
@@ -1933,13 +1852,13 @@
                     "value": 97
                 },
                 "windSpeed": "13 mph",
-                "windDirection": "SE",
+                "windDirection": "SSE",
                 "icon": "https://api.weather.gov/icons/land/night/rain,90?size=small",
                 "shortForecast": "Light Rain",
                 "detailedForecast": ""
             },
             {
-                "number": 71,
+                "number": 68,
                 "name": "",
                 "startTime": "2026-11-25T04:00:00-08:00",
                 "endTime": "2026-11-25T05:00:00-08:00",
@@ -1959,14 +1878,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 97
                 },
-                "windSpeed": "9 mph",
-                "windDirection": "SSE",
+                "windSpeed": "7 mph",
+                "windDirection": "SE",
                 "icon": "https://api.weather.gov/icons/land/night/rain,60?size=small",
                 "shortForecast": "Light Rain Likely",
                 "detailedForecast": ""
             },
             {
-                "number": 72,
+                "number": 69,
                 "name": "",
                 "startTime": "2026-11-25T05:00:00-08:00",
                 "endTime": "2026-11-25T06:00:00-08:00",
@@ -1986,14 +1905,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 99
                 },
-                "windSpeed": "9 mph",
-                "windDirection": "SSE",
+                "windSpeed": "7 mph",
+                "windDirection": "SE",
                 "icon": "https://api.weather.gov/icons/land/night/rain,60?size=small",
                 "shortForecast": "Light Rain Likely",
                 "detailedForecast": ""
             },
             {
-                "number": 73,
+                "number": 70,
                 "name": "",
                 "startTime": "2026-11-25T06:00:00-08:00",
                 "endTime": "2026-11-25T07:00:00-08:00",
@@ -2013,14 +1932,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 100
                 },
-                "windSpeed": "9 mph",
-                "windDirection": "SSE",
+                "windSpeed": "7 mph",
+                "windDirection": "SE",
                 "icon": "https://api.weather.gov/icons/land/day/rain,60?size=small",
                 "shortForecast": "Light Rain Likely",
                 "detailedForecast": ""
             },
             {
-                "number": 74,
+                "number": 71,
                 "name": "",
                 "startTime": "2026-11-25T07:00:00-08:00",
                 "endTime": "2026-11-25T08:00:00-08:00",
@@ -2040,14 +1959,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 100
                 },
-                "windSpeed": "9 mph",
-                "windDirection": "SSE",
+                "windSpeed": "5 mph",
+                "windDirection": "SE",
                 "icon": "https://api.weather.gov/icons/land/day/rain,60?size=small",
                 "shortForecast": "Light Rain Likely",
                 "detailedForecast": ""
             },
             {
-                "number": 75,
+                "number": 72,
                 "name": "",
                 "startTime": "2026-11-25T08:00:00-08:00",
                 "endTime": "2026-11-25T09:00:00-08:00",
@@ -2067,14 +1986,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 99
                 },
-                "windSpeed": "9 mph",
-                "windDirection": "SSE",
+                "windSpeed": "5 mph",
+                "windDirection": "SE",
                 "icon": "https://api.weather.gov/icons/land/day/rain,60?size=small",
                 "shortForecast": "Light Rain Likely",
                 "detailedForecast": ""
             },
             {
-                "number": 76,
+                "number": 73,
                 "name": "",
                 "startTime": "2026-11-25T09:00:00-08:00",
                 "endTime": "2026-11-25T10:00:00-08:00",
@@ -2094,14 +2013,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 98
                 },
-                "windSpeed": "9 mph",
-                "windDirection": "SSE",
+                "windSpeed": "5 mph",
+                "windDirection": "SE",
                 "icon": "https://api.weather.gov/icons/land/day/rain,60?size=small",
                 "shortForecast": "Light Rain Likely",
                 "detailedForecast": ""
             },
             {
-                "number": 77,
+                "number": 74,
                 "name": "",
                 "startTime": "2026-11-25T10:00:00-08:00",
                 "endTime": "2026-11-25T11:00:00-08:00",
@@ -2121,14 +2040,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 96
                 },
-                "windSpeed": "6 mph",
+                "windSpeed": "2 mph",
                 "windDirection": "SE",
                 "icon": "https://api.weather.gov/icons/land/day/rain,20?size=small",
                 "shortForecast": "Slight Chance Light Rain",
                 "detailedForecast": ""
             },
             {
-                "number": 78,
+                "number": 75,
                 "name": "",
                 "startTime": "2026-11-25T11:00:00-08:00",
                 "endTime": "2026-11-25T12:00:00-08:00",
@@ -2148,14 +2067,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 94
                 },
-                "windSpeed": "6 mph",
+                "windSpeed": "2 mph",
                 "windDirection": "SE",
                 "icon": "https://api.weather.gov/icons/land/day/rain,20?size=small",
                 "shortForecast": "Slight Chance Light Rain",
                 "detailedForecast": ""
             },
             {
-                "number": 79,
+                "number": 76,
                 "name": "",
                 "startTime": "2026-11-25T12:00:00-08:00",
                 "endTime": "2026-11-25T13:00:00-08:00",
@@ -2175,14 +2094,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 92
                 },
-                "windSpeed": "6 mph",
+                "windSpeed": "2 mph",
                 "windDirection": "SE",
                 "icon": "https://api.weather.gov/icons/land/day/rain,20?size=small",
                 "shortForecast": "Slight Chance Light Rain",
                 "detailedForecast": ""
             },
             {
-                "number": 80,
+                "number": 77,
                 "name": "",
                 "startTime": "2026-11-25T13:00:00-08:00",
                 "endTime": "2026-11-25T14:00:00-08:00",
@@ -2203,13 +2122,13 @@
                     "value": 90
                 },
                 "windSpeed": "2 mph",
-                "windDirection": "SSE",
+                "windDirection": "WNW",
                 "icon": "https://api.weather.gov/icons/land/day/rain,20?size=small",
                 "shortForecast": "Slight Chance Light Rain",
                 "detailedForecast": ""
             },
             {
-                "number": 81,
+                "number": 78,
                 "name": "",
                 "startTime": "2026-11-25T14:00:00-08:00",
                 "endTime": "2026-11-25T15:00:00-08:00",
@@ -2230,13 +2149,13 @@
                     "value": 89
                 },
                 "windSpeed": "2 mph",
-                "windDirection": "SSE",
+                "windDirection": "WNW",
                 "icon": "https://api.weather.gov/icons/land/day/rain,20?size=small",
                 "shortForecast": "Slight Chance Light Rain",
                 "detailedForecast": ""
             },
             {
-                "number": 82,
+                "number": 79,
                 "name": "",
                 "startTime": "2026-11-25T15:00:00-08:00",
                 "endTime": "2026-11-25T16:00:00-08:00",
@@ -2257,13 +2176,13 @@
                     "value": 89
                 },
                 "windSpeed": "2 mph",
-                "windDirection": "SSE",
+                "windDirection": "WNW",
                 "icon": "https://api.weather.gov/icons/land/day/rain,20?size=small",
                 "shortForecast": "Slight Chance Light Rain",
                 "detailedForecast": ""
             },
             {
-                "number": 83,
+                "number": 80,
                 "name": "",
                 "startTime": "2026-11-25T16:00:00-08:00",
                 "endTime": "2026-11-25T17:00:00-08:00",
@@ -2283,14 +2202,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 89
                 },
-                "windSpeed": "2 mph",
-                "windDirection": "NNW",
+                "windSpeed": "0 mph",
+                "windDirection": "",
                 "icon": "https://api.weather.gov/icons/land/day/bkn?size=small",
                 "shortForecast": "Partly Sunny",
                 "detailedForecast": ""
             },
             {
-                "number": 84,
+                "number": 81,
                 "name": "",
                 "startTime": "2026-11-25T17:00:00-08:00",
                 "endTime": "2026-11-25T18:00:00-08:00",
@@ -2310,14 +2229,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 92
                 },
-                "windSpeed": "2 mph",
-                "windDirection": "NNW",
+                "windSpeed": "0 mph",
+                "windDirection": "",
                 "icon": "https://api.weather.gov/icons/land/day/bkn?size=small",
                 "shortForecast": "Partly Sunny",
                 "detailedForecast": ""
             },
             {
-                "number": 85,
+                "number": 82,
                 "name": "",
                 "startTime": "2026-11-25T18:00:00-08:00",
                 "endTime": "2026-11-25T19:00:00-08:00",
@@ -2337,14 +2256,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 94
                 },
-                "windSpeed": "2 mph",
-                "windDirection": "NNW",
+                "windSpeed": "0 mph",
+                "windDirection": "",
                 "icon": "https://api.weather.gov/icons/land/night/fog?size=small",
                 "shortForecast": "Patchy Fog",
                 "detailedForecast": ""
             },
             {
-                "number": 86,
+                "number": 83,
                 "name": "",
                 "startTime": "2026-11-25T19:00:00-08:00",
                 "endTime": "2026-11-25T20:00:00-08:00",
@@ -2364,14 +2283,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 95
                 },
-                "windSpeed": "2 mph",
+                "windSpeed": "1 mph",
                 "windDirection": "N",
                 "icon": "https://api.weather.gov/icons/land/night/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 87,
+                "number": 84,
                 "name": "",
                 "startTime": "2026-11-25T20:00:00-08:00",
                 "endTime": "2026-11-25T21:00:00-08:00",
@@ -2391,14 +2310,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 97
                 },
-                "windSpeed": "2 mph",
+                "windSpeed": "1 mph",
                 "windDirection": "N",
                 "icon": "https://api.weather.gov/icons/land/night/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 88,
+                "number": 85,
                 "name": "",
                 "startTime": "2026-11-25T21:00:00-08:00",
                 "endTime": "2026-11-25T22:00:00-08:00",
@@ -2418,14 +2337,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 98
                 },
-                "windSpeed": "2 mph",
+                "windSpeed": "1 mph",
                 "windDirection": "N",
                 "icon": "https://api.weather.gov/icons/land/night/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 89,
+                "number": 86,
                 "name": "",
                 "startTime": "2026-11-25T22:00:00-08:00",
                 "endTime": "2026-11-25T23:00:00-08:00",
@@ -2445,14 +2364,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 98
                 },
-                "windSpeed": "7 mph",
+                "windSpeed": "3 mph",
                 "windDirection": "NE",
                 "icon": "https://api.weather.gov/icons/land/night/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 90,
+                "number": 87,
                 "name": "",
                 "startTime": "2026-11-25T23:00:00-08:00",
                 "endTime": "2026-11-26T00:00:00-08:00",
@@ -2472,14 +2391,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 99
                 },
-                "windSpeed": "7 mph",
+                "windSpeed": "3 mph",
                 "windDirection": "NE",
                 "icon": "https://api.weather.gov/icons/land/night/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 91,
+                "number": 88,
                 "name": "",
                 "startTime": "2026-11-26T00:00:00-08:00",
                 "endTime": "2026-11-26T01:00:00-08:00",
@@ -2499,14 +2418,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 99
                 },
-                "windSpeed": "7 mph",
+                "windSpeed": "3 mph",
                 "windDirection": "NE",
                 "icon": "https://api.weather.gov/icons/land/night/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 92,
+                "number": 89,
                 "name": "",
                 "startTime": "2026-11-26T01:00:00-08:00",
                 "endTime": "2026-11-26T02:00:00-08:00",
@@ -2526,14 +2445,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 100
                 },
-                "windSpeed": "3 mph",
-                "windDirection": "ENE",
+                "windSpeed": "2 mph",
+                "windDirection": "E",
                 "icon": "https://api.weather.gov/icons/land/night/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 93,
+                "number": 90,
                 "name": "",
                 "startTime": "2026-11-26T02:00:00-08:00",
                 "endTime": "2026-11-26T03:00:00-08:00",
@@ -2553,14 +2472,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 100
                 },
-                "windSpeed": "3 mph",
-                "windDirection": "ENE",
+                "windSpeed": "2 mph",
+                "windDirection": "E",
                 "icon": "https://api.weather.gov/icons/land/night/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 94,
+                "number": 91,
                 "name": "",
                 "startTime": "2026-11-26T03:00:00-08:00",
                 "endTime": "2026-11-26T04:00:00-08:00",
@@ -2580,14 +2499,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 100
                 },
-                "windSpeed": "3 mph",
-                "windDirection": "ENE",
+                "windSpeed": "2 mph",
+                "windDirection": "E",
                 "icon": "https://api.weather.gov/icons/land/night/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 95,
+                "number": 92,
                 "name": "",
                 "startTime": "2026-11-26T04:00:00-08:00",
                 "endTime": "2026-11-26T05:00:00-08:00",
@@ -2608,13 +2527,13 @@
                     "value": 100
                 },
                 "windSpeed": "2 mph",
-                "windDirection": "E",
+                "windDirection": "ENE",
                 "icon": "https://api.weather.gov/icons/land/night/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 96,
+                "number": 93,
                 "name": "",
                 "startTime": "2026-11-26T05:00:00-08:00",
                 "endTime": "2026-11-26T06:00:00-08:00",
@@ -2635,13 +2554,13 @@
                     "value": 100
                 },
                 "windSpeed": "2 mph",
-                "windDirection": "E",
+                "windDirection": "ENE",
                 "icon": "https://api.weather.gov/icons/land/night/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 97,
+                "number": 94,
                 "name": "",
                 "startTime": "2026-11-26T06:00:00-08:00",
                 "endTime": "2026-11-26T07:00:00-08:00",
@@ -2662,13 +2581,13 @@
                     "value": 100
                 },
                 "windSpeed": "2 mph",
-                "windDirection": "E",
+                "windDirection": "ENE",
                 "icon": "https://api.weather.gov/icons/land/day/bkn?size=small",
                 "shortForecast": "Partly Sunny",
                 "detailedForecast": ""
             },
             {
-                "number": 98,
+                "number": 95,
                 "name": "",
                 "startTime": "2026-11-26T07:00:00-08:00",
                 "endTime": "2026-11-26T08:00:00-08:00",
@@ -2688,14 +2607,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 98
                 },
-                "windSpeed": "2 mph",
-                "windDirection": "E",
+                "windSpeed": "1 mph",
+                "windDirection": "ENE",
                 "icon": "https://api.weather.gov/icons/land/day/fog?size=small",
                 "shortForecast": "Patchy Fog",
                 "detailedForecast": ""
             },
             {
-                "number": 99,
+                "number": 96,
                 "name": "",
                 "startTime": "2026-11-26T08:00:00-08:00",
                 "endTime": "2026-11-26T09:00:00-08:00",
@@ -2715,14 +2634,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 97
                 },
-                "windSpeed": "2 mph",
-                "windDirection": "E",
+                "windSpeed": "1 mph",
+                "windDirection": "ENE",
                 "icon": "https://api.weather.gov/icons/land/day/fog?size=small",
                 "shortForecast": "Patchy Fog",
                 "detailedForecast": ""
             },
             {
-                "number": 100,
+                "number": 97,
                 "name": "",
                 "startTime": "2026-11-26T09:00:00-08:00",
                 "endTime": "2026-11-26T10:00:00-08:00",
@@ -2742,14 +2661,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 95
                 },
-                "windSpeed": "2 mph",
-                "windDirection": "E",
+                "windSpeed": "1 mph",
+                "windDirection": "ENE",
                 "icon": "https://api.weather.gov/icons/land/day/fog?size=small",
                 "shortForecast": "Patchy Fog",
                 "detailedForecast": ""
             },
             {
-                "number": 101,
+                "number": 98,
                 "name": "",
                 "startTime": "2026-11-26T10:00:00-08:00",
                 "endTime": "2026-11-26T11:00:00-08:00",
@@ -2776,7 +2695,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 102,
+                "number": 99,
                 "name": "",
                 "startTime": "2026-11-26T11:00:00-08:00",
                 "endTime": "2026-11-26T12:00:00-08:00",
@@ -2803,7 +2722,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 103,
+                "number": 100,
                 "name": "",
                 "startTime": "2026-11-26T12:00:00-08:00",
                 "endTime": "2026-11-26T13:00:00-08:00",
@@ -2830,7 +2749,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 104,
+                "number": 101,
                 "name": "",
                 "startTime": "2026-11-26T13:00:00-08:00",
                 "endTime": "2026-11-26T14:00:00-08:00",
@@ -2857,7 +2776,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 105,
+                "number": 102,
                 "name": "",
                 "startTime": "2026-11-26T14:00:00-08:00",
                 "endTime": "2026-11-26T15:00:00-08:00",
@@ -2884,7 +2803,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 106,
+                "number": 103,
                 "name": "",
                 "startTime": "2026-11-26T15:00:00-08:00",
                 "endTime": "2026-11-26T16:00:00-08:00",
@@ -2911,7 +2830,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 107,
+                "number": 104,
                 "name": "",
                 "startTime": "2026-11-26T16:00:00-08:00",
                 "endTime": "2026-11-26T17:00:00-08:00",
@@ -2931,14 +2850,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 86
                 },
-                "windSpeed": "2 mph",
-                "windDirection": "NNW",
+                "windSpeed": "0 mph",
+                "windDirection": "",
                 "icon": "https://api.weather.gov/icons/land/day/sct?size=small",
                 "shortForecast": "Mostly Sunny",
                 "detailedForecast": ""
             },
             {
-                "number": 108,
+                "number": 105,
                 "name": "",
                 "startTime": "2026-11-26T17:00:00-08:00",
                 "endTime": "2026-11-26T18:00:00-08:00",
@@ -2958,14 +2877,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 88
                 },
-                "windSpeed": "2 mph",
-                "windDirection": "NNW",
+                "windSpeed": "0 mph",
+                "windDirection": "",
                 "icon": "https://api.weather.gov/icons/land/day/sct?size=small",
                 "shortForecast": "Mostly Sunny",
                 "detailedForecast": ""
             },
             {
-                "number": 109,
+                "number": 106,
                 "name": "",
                 "startTime": "2026-11-26T18:00:00-08:00",
                 "endTime": "2026-11-26T19:00:00-08:00",
@@ -2985,14 +2904,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 91
                 },
-                "windSpeed": "2 mph",
-                "windDirection": "NNW",
+                "windSpeed": "0 mph",
+                "windDirection": "",
                 "icon": "https://api.weather.gov/icons/land/night/sct?size=small",
                 "shortForecast": "Partly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 110,
+                "number": 107,
                 "name": "",
                 "startTime": "2026-11-26T19:00:00-08:00",
                 "endTime": "2026-11-26T20:00:00-08:00",
@@ -3019,7 +2938,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 111,
+                "number": 108,
                 "name": "",
                 "startTime": "2026-11-26T20:00:00-08:00",
                 "endTime": "2026-11-26T21:00:00-08:00",
@@ -3046,7 +2965,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 112,
+                "number": 109,
                 "name": "",
                 "startTime": "2026-11-26T21:00:00-08:00",
                 "endTime": "2026-11-26T22:00:00-08:00",
@@ -3073,7 +2992,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 113,
+                "number": 110,
                 "name": "",
                 "startTime": "2026-11-26T22:00:00-08:00",
                 "endTime": "2026-11-26T23:00:00-08:00",
@@ -3094,13 +3013,13 @@
                     "value": 98
                 },
                 "windSpeed": "2 mph",
-                "windDirection": "ENE",
+                "windDirection": "NE",
                 "icon": "https://api.weather.gov/icons/land/night/fog?size=small",
                 "shortForecast": "Patchy Fog",
                 "detailedForecast": ""
             },
             {
-                "number": 114,
+                "number": 111,
                 "name": "",
                 "startTime": "2026-11-26T23:00:00-08:00",
                 "endTime": "2026-11-27T00:00:00-08:00",
@@ -3121,18 +3040,45 @@
                     "value": 99
                 },
                 "windSpeed": "2 mph",
-                "windDirection": "ENE",
+                "windDirection": "NE",
                 "icon": "https://api.weather.gov/icons/land/night/fog?size=small",
                 "shortForecast": "Patchy Fog",
                 "detailedForecast": ""
             },
             {
-                "number": 115,
+                "number": 112,
                 "name": "",
                 "startTime": "2026-11-27T00:00:00-08:00",
                 "endTime": "2026-11-27T01:00:00-08:00",
                 "isDaytime": false,
                 "temperature": 51,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "probabilityOfPrecipitation": {
+                    "unitCode": "wmoUnit:percent",
+                    "value": 0
+                },
+                "dewpoint": {
+                    "unitCode": "wmoUnit:degC",
+                    "value": 10
+                },
+                "relativeHumidity": {
+                    "unitCode": "wmoUnit:percent",
+                    "value": 100
+                },
+                "windSpeed": "2 mph",
+                "windDirection": "NE",
+                "icon": "https://api.weather.gov/icons/land/night/fog?size=small",
+                "shortForecast": "Patchy Fog",
+                "detailedForecast": ""
+            },
+            {
+                "number": 113,
+                "name": "",
+                "startTime": "2026-11-27T01:00:00-08:00",
+                "endTime": "2026-11-27T02:00:00-08:00",
+                "isDaytime": false,
+                "temperature": 50,
                 "temperatureUnit": "F",
                 "temperatureTrend": null,
                 "probabilityOfPrecipitation": {
@@ -3154,34 +3100,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 116,
-                "name": "",
-                "startTime": "2026-11-27T01:00:00-08:00",
-                "endTime": "2026-11-27T02:00:00-08:00",
-                "isDaytime": false,
-                "temperature": 50,
-                "temperatureUnit": "F",
-                "temperatureTrend": null,
-                "probabilityOfPrecipitation": {
-                    "unitCode": "wmoUnit:percent",
-                    "value": 0
-                },
-                "dewpoint": {
-                    "unitCode": "wmoUnit:degC",
-                    "value": 10
-                },
-                "relativeHumidity": {
-                    "unitCode": "wmoUnit:percent",
-                    "value": 100
-                },
-                "windSpeed": "1 mph",
-                "windDirection": "E",
-                "icon": "https://api.weather.gov/icons/land/night/fog?size=small",
-                "shortForecast": "Patchy Fog",
-                "detailedForecast": ""
-            },
-            {
-                "number": 117,
+                "number": 114,
                 "name": "",
                 "startTime": "2026-11-27T02:00:00-08:00",
                 "endTime": "2026-11-27T03:00:00-08:00",
@@ -3201,14 +3120,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 100
                 },
-                "windSpeed": "1 mph",
-                "windDirection": "E",
+                "windSpeed": "2 mph",
+                "windDirection": "ENE",
                 "icon": "https://api.weather.gov/icons/land/night/fog?size=small",
                 "shortForecast": "Patchy Fog",
                 "detailedForecast": ""
             },
             {
-                "number": 118,
+                "number": 115,
                 "name": "",
                 "startTime": "2026-11-27T03:00:00-08:00",
                 "endTime": "2026-11-27T04:00:00-08:00",
@@ -3228,14 +3147,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 100
                 },
-                "windSpeed": "1 mph",
-                "windDirection": "E",
+                "windSpeed": "2 mph",
+                "windDirection": "ENE",
                 "icon": "https://api.weather.gov/icons/land/night/fog?size=small",
                 "shortForecast": "Patchy Fog",
                 "detailedForecast": ""
             },
             {
-                "number": 119,
+                "number": 116,
                 "name": "",
                 "startTime": "2026-11-27T04:00:00-08:00",
                 "endTime": "2026-11-27T05:00:00-08:00",
@@ -3262,7 +3181,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 120,
+                "number": 117,
                 "name": "",
                 "startTime": "2026-11-27T05:00:00-08:00",
                 "endTime": "2026-11-27T06:00:00-08:00",
@@ -3289,7 +3208,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 121,
+                "number": 118,
                 "name": "",
                 "startTime": "2026-11-27T06:00:00-08:00",
                 "endTime": "2026-11-27T07:00:00-08:00",
@@ -3316,7 +3235,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 122,
+                "number": 119,
                 "name": "",
                 "startTime": "2026-11-27T07:00:00-08:00",
                 "endTime": "2026-11-27T08:00:00-08:00",
@@ -3336,14 +3255,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 99
                 },
-                "windSpeed": "0 mph",
-                "windDirection": "",
+                "windSpeed": "1 mph",
+                "windDirection": "E",
                 "icon": "https://api.weather.gov/icons/land/day/fog?size=small",
                 "shortForecast": "Areas Of Fog",
                 "detailedForecast": ""
             },
             {
-                "number": 123,
+                "number": 120,
                 "name": "",
                 "startTime": "2026-11-27T08:00:00-08:00",
                 "endTime": "2026-11-27T09:00:00-08:00",
@@ -3363,14 +3282,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 96
                 },
-                "windSpeed": "0 mph",
-                "windDirection": "",
+                "windSpeed": "1 mph",
+                "windDirection": "E",
                 "icon": "https://api.weather.gov/icons/land/day/fog?size=small",
                 "shortForecast": "Patchy Fog",
                 "detailedForecast": ""
             },
             {
-                "number": 124,
+                "number": 121,
                 "name": "",
                 "startTime": "2026-11-27T09:00:00-08:00",
                 "endTime": "2026-11-27T10:00:00-08:00",
@@ -3390,14 +3309,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 92
                 },
-                "windSpeed": "0 mph",
-                "windDirection": "",
+                "windSpeed": "1 mph",
+                "windDirection": "E",
                 "icon": "https://api.weather.gov/icons/land/day/bkn?size=small",
                 "shortForecast": "Partly Sunny",
                 "detailedForecast": ""
             },
             {
-                "number": 125,
+                "number": 122,
                 "name": "",
                 "startTime": "2026-11-27T10:00:00-08:00",
                 "endTime": "2026-11-27T11:00:00-08:00",
@@ -3418,13 +3337,13 @@
                     "value": 88
                 },
                 "windSpeed": "1 mph",
-                "windDirection": "E",
+                "windDirection": "ENE",
                 "icon": "https://api.weather.gov/icons/land/day/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 126,
+                "number": 123,
                 "name": "",
                 "startTime": "2026-11-27T11:00:00-08:00",
                 "endTime": "2026-11-27T12:00:00-08:00",
@@ -3445,13 +3364,13 @@
                     "value": 84
                 },
                 "windSpeed": "1 mph",
-                "windDirection": "E",
+                "windDirection": "ENE",
                 "icon": "https://api.weather.gov/icons/land/day/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 127,
+                "number": 124,
                 "name": "",
                 "startTime": "2026-11-27T12:00:00-08:00",
                 "endTime": "2026-11-27T13:00:00-08:00",
@@ -3472,13 +3391,13 @@
                     "value": 80
                 },
                 "windSpeed": "1 mph",
-                "windDirection": "E",
+                "windDirection": "ENE",
                 "icon": "https://api.weather.gov/icons/land/day/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 128,
+                "number": 125,
                 "name": "",
                 "startTime": "2026-11-27T13:00:00-08:00",
                 "endTime": "2026-11-27T14:00:00-08:00",
@@ -3499,13 +3418,13 @@
                     "value": 79
                 },
                 "windSpeed": "1 mph",
-                "windDirection": "NE",
+                "windDirection": "N",
                 "icon": "https://api.weather.gov/icons/land/day/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 129,
+                "number": 126,
                 "name": "",
                 "startTime": "2026-11-27T14:00:00-08:00",
                 "endTime": "2026-11-27T15:00:00-08:00",
@@ -3526,13 +3445,13 @@
                     "value": 80
                 },
                 "windSpeed": "1 mph",
-                "windDirection": "NE",
+                "windDirection": "N",
                 "icon": "https://api.weather.gov/icons/land/day/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 130,
+                "number": 127,
                 "name": "",
                 "startTime": "2026-11-27T15:00:00-08:00",
                 "endTime": "2026-11-27T16:00:00-08:00",
@@ -3553,13 +3472,13 @@
                     "value": 83
                 },
                 "windSpeed": "1 mph",
-                "windDirection": "NE",
+                "windDirection": "N",
                 "icon": "https://api.weather.gov/icons/land/day/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 131,
+                "number": 128,
                 "name": "",
                 "startTime": "2026-11-27T16:00:00-08:00",
                 "endTime": "2026-11-27T17:00:00-08:00",
@@ -3579,14 +3498,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 86
                 },
-                "windSpeed": "1 mph",
-                "windDirection": "N",
+                "windSpeed": "0 mph",
+                "windDirection": "",
                 "icon": "https://api.weather.gov/icons/land/day/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 132,
+                "number": 129,
                 "name": "",
                 "startTime": "2026-11-27T17:00:00-08:00",
                 "endTime": "2026-11-27T18:00:00-08:00",
@@ -3606,14 +3525,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 88
                 },
-                "windSpeed": "1 mph",
-                "windDirection": "N",
+                "windSpeed": "0 mph",
+                "windDirection": "",
                 "icon": "https://api.weather.gov/icons/land/day/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 133,
+                "number": 130,
                 "name": "",
                 "startTime": "2026-11-27T18:00:00-08:00",
                 "endTime": "2026-11-27T19:00:00-08:00",
@@ -3633,14 +3552,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 90
                 },
-                "windSpeed": "1 mph",
-                "windDirection": "N",
+                "windSpeed": "0 mph",
+                "windDirection": "",
                 "icon": "https://api.weather.gov/icons/land/night/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 134,
+                "number": 131,
                 "name": "",
                 "startTime": "2026-11-27T19:00:00-08:00",
                 "endTime": "2026-11-27T20:00:00-08:00",
@@ -3661,13 +3580,13 @@
                     "value": 91
                 },
                 "windSpeed": "2 mph",
-                "windDirection": "SE",
+                "windDirection": "ESE",
                 "icon": "https://api.weather.gov/icons/land/night/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 135,
+                "number": 132,
                 "name": "",
                 "startTime": "2026-11-27T20:00:00-08:00",
                 "endTime": "2026-11-27T21:00:00-08:00",
@@ -3688,13 +3607,13 @@
                     "value": 91
                 },
                 "windSpeed": "2 mph",
-                "windDirection": "SE",
+                "windDirection": "ESE",
                 "icon": "https://api.weather.gov/icons/land/night/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 136,
+                "number": 133,
                 "name": "",
                 "startTime": "2026-11-27T21:00:00-08:00",
                 "endTime": "2026-11-27T22:00:00-08:00",
@@ -3715,13 +3634,13 @@
                     "value": 91
                 },
                 "windSpeed": "2 mph",
-                "windDirection": "SE",
+                "windDirection": "ESE",
                 "icon": "https://api.weather.gov/icons/land/night/bkn?size=small",
                 "shortForecast": "Mostly Cloudy",
                 "detailedForecast": ""
             },
             {
-                "number": 137,
+                "number": 134,
                 "name": "",
                 "startTime": "2026-11-27T22:00:00-08:00",
                 "endTime": "2026-11-27T23:00:00-08:00",
@@ -3741,14 +3660,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 91
                 },
-                "windSpeed": "12 mph",
+                "windSpeed": "13 mph",
                 "windDirection": "SE",
                 "icon": "https://api.weather.gov/icons/land/night/rain,20?size=small",
                 "shortForecast": "Slight Chance Light Rain",
                 "detailedForecast": ""
             },
             {
-                "number": 138,
+                "number": 135,
                 "name": "",
                 "startTime": "2026-11-27T23:00:00-08:00",
                 "endTime": "2026-11-28T00:00:00-08:00",
@@ -3768,14 +3687,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 92
                 },
-                "windSpeed": "12 mph",
+                "windSpeed": "13 mph",
                 "windDirection": "SE",
                 "icon": "https://api.weather.gov/icons/land/night/rain,20?size=small",
                 "shortForecast": "Slight Chance Light Rain",
                 "detailedForecast": ""
             },
             {
-                "number": 139,
+                "number": 136,
                 "name": "",
                 "startTime": "2026-11-28T00:00:00-08:00",
                 "endTime": "2026-11-28T01:00:00-08:00",
@@ -3795,14 +3714,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 95
                 },
-                "windSpeed": "12 mph",
+                "windSpeed": "13 mph",
                 "windDirection": "SE",
                 "icon": "https://api.weather.gov/icons/land/night/rain,20?size=small",
                 "shortForecast": "Slight Chance Light Rain",
                 "detailedForecast": ""
             },
             {
-                "number": 140,
+                "number": 137,
                 "name": "",
                 "startTime": "2026-11-28T01:00:00-08:00",
                 "endTime": "2026-11-28T02:00:00-08:00",
@@ -3822,14 +3741,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 96
                 },
-                "windSpeed": "8 mph",
-                "windDirection": "SSE",
+                "windSpeed": "9 mph",
+                "windDirection": "SE",
                 "icon": "https://api.weather.gov/icons/land/night/rain,20?size=small",
                 "shortForecast": "Slight Chance Light Rain",
                 "detailedForecast": ""
             },
             {
-                "number": 141,
+                "number": 138,
                 "name": "",
                 "startTime": "2026-11-28T02:00:00-08:00",
                 "endTime": "2026-11-28T03:00:00-08:00",
@@ -3849,14 +3768,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 97
                 },
-                "windSpeed": "8 mph",
-                "windDirection": "SSE",
+                "windSpeed": "9 mph",
+                "windDirection": "SE",
                 "icon": "https://api.weather.gov/icons/land/night/rain,20?size=small",
                 "shortForecast": "Slight Chance Light Rain",
                 "detailedForecast": ""
             },
             {
-                "number": 142,
+                "number": 139,
                 "name": "",
                 "startTime": "2026-11-28T03:00:00-08:00",
                 "endTime": "2026-11-28T04:00:00-08:00",
@@ -3876,14 +3795,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 97
                 },
-                "windSpeed": "8 mph",
-                "windDirection": "SSE",
+                "windSpeed": "9 mph",
+                "windDirection": "SE",
                 "icon": "https://api.weather.gov/icons/land/night/rain,20?size=small",
                 "shortForecast": "Slight Chance Light Rain",
                 "detailedForecast": ""
             },
             {
-                "number": 143,
+                "number": 140,
                 "name": "",
                 "startTime": "2026-11-28T04:00:00-08:00",
                 "endTime": "2026-11-28T05:00:00-08:00",
@@ -3903,14 +3822,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 97
                 },
-                "windSpeed": "5 mph",
+                "windSpeed": "6 mph",
                 "windDirection": "SSE",
                 "icon": "https://api.weather.gov/icons/land/night/rain,50?size=small",
                 "shortForecast": "Chance Light Rain",
                 "detailedForecast": ""
             },
             {
-                "number": 144,
+                "number": 141,
                 "name": "",
                 "startTime": "2026-11-28T05:00:00-08:00",
                 "endTime": "2026-11-28T06:00:00-08:00",
@@ -3930,14 +3849,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 98
                 },
-                "windSpeed": "5 mph",
+                "windSpeed": "6 mph",
                 "windDirection": "SSE",
                 "icon": "https://api.weather.gov/icons/land/night/rain,50?size=small",
                 "shortForecast": "Chance Light Rain",
                 "detailedForecast": ""
             },
             {
-                "number": 145,
+                "number": 142,
                 "name": "",
                 "startTime": "2026-11-28T06:00:00-08:00",
                 "endTime": "2026-11-28T07:00:00-08:00",
@@ -3957,14 +3876,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 100
                 },
-                "windSpeed": "5 mph",
+                "windSpeed": "6 mph",
                 "windDirection": "SSE",
                 "icon": "https://api.weather.gov/icons/land/day/rain,50?size=small",
                 "shortForecast": "Chance Light Rain",
                 "detailedForecast": ""
             },
             {
-                "number": 146,
+                "number": 143,
                 "name": "",
                 "startTime": "2026-11-28T07:00:00-08:00",
                 "endTime": "2026-11-28T08:00:00-08:00",
@@ -3991,7 +3910,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 147,
+                "number": 144,
                 "name": "",
                 "startTime": "2026-11-28T08:00:00-08:00",
                 "endTime": "2026-11-28T09:00:00-08:00",
@@ -4018,7 +3937,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 148,
+                "number": 145,
                 "name": "",
                 "startTime": "2026-11-28T09:00:00-08:00",
                 "endTime": "2026-11-28T10:00:00-08:00",
@@ -4045,7 +3964,7 @@
                 "detailedForecast": ""
             },
             {
-                "number": 149,
+                "number": 146,
                 "name": "",
                 "startTime": "2026-11-28T10:00:00-08:00",
                 "endTime": "2026-11-28T11:00:00-08:00",
@@ -4065,14 +3984,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 88
                 },
-                "windSpeed": "7 mph",
-                "windDirection": "S",
+                "windSpeed": "8 mph",
+                "windDirection": "SSE",
                 "icon": "https://api.weather.gov/icons/land/day/rain,60?size=small",
                 "shortForecast": "Light Rain Likely",
                 "detailedForecast": ""
             },
             {
-                "number": 150,
+                "number": 147,
                 "name": "",
                 "startTime": "2026-11-28T11:00:00-08:00",
                 "endTime": "2026-11-28T12:00:00-08:00",
@@ -4092,14 +4011,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 86
                 },
-                "windSpeed": "7 mph",
-                "windDirection": "S",
+                "windSpeed": "8 mph",
+                "windDirection": "SSE",
                 "icon": "https://api.weather.gov/icons/land/day/rain,60?size=small",
                 "shortForecast": "Light Rain Likely",
                 "detailedForecast": ""
             },
             {
-                "number": 151,
+                "number": 148,
                 "name": "",
                 "startTime": "2026-11-28T12:00:00-08:00",
                 "endTime": "2026-11-28T13:00:00-08:00",
@@ -4119,14 +4038,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 84
                 },
-                "windSpeed": "7 mph",
-                "windDirection": "S",
+                "windSpeed": "8 mph",
+                "windDirection": "SSE",
                 "icon": "https://api.weather.gov/icons/land/day/rain,60?size=small",
                 "shortForecast": "Light Rain Likely",
                 "detailedForecast": ""
             },
             {
-                "number": 152,
+                "number": 149,
                 "name": "",
                 "startTime": "2026-11-28T13:00:00-08:00",
                 "endTime": "2026-11-28T14:00:00-08:00",
@@ -4146,14 +4065,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 83
                 },
-                "windSpeed": "7 mph",
-                "windDirection": "SSW",
+                "windSpeed": "9 mph",
+                "windDirection": "S",
                 "icon": "https://api.weather.gov/icons/land/day/rain,60?size=small",
                 "shortForecast": "Light Rain Likely",
                 "detailedForecast": ""
             },
             {
-                "number": 153,
+                "number": 150,
                 "name": "",
                 "startTime": "2026-11-28T14:00:00-08:00",
                 "endTime": "2026-11-28T15:00:00-08:00",
@@ -4173,14 +4092,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 84
                 },
-                "windSpeed": "7 mph",
-                "windDirection": "SSW",
+                "windSpeed": "9 mph",
+                "windDirection": "S",
                 "icon": "https://api.weather.gov/icons/land/day/rain,60?size=small",
                 "shortForecast": "Light Rain Likely",
                 "detailedForecast": ""
             },
             {
-                "number": 154,
+                "number": 151,
                 "name": "",
                 "startTime": "2026-11-28T15:00:00-08:00",
                 "endTime": "2026-11-28T16:00:00-08:00",
@@ -4200,14 +4119,14 @@
                     "unitCode": "wmoUnit:percent",
                     "value": 86
                 },
-                "windSpeed": "7 mph",
-                "windDirection": "SSW",
+                "windSpeed": "9 mph",
+                "windDirection": "S",
                 "icon": "https://api.weather.gov/icons/land/day/rain,60?size=small",
                 "shortForecast": "Light Rain Likely",
                 "detailedForecast": ""
             },
             {
-                "number": 155,
+                "number": 152,
                 "name": "",
                 "startTime": "2026-11-28T16:00:00-08:00",
                 "endTime": "2026-11-28T17:00:00-08:00",
@@ -4228,13 +4147,13 @@
                     "value": 88
                 },
                 "windSpeed": "7 mph",
-                "windDirection": "SSW",
+                "windDirection": "S",
                 "icon": "https://api.weather.gov/icons/land/day/rain,50?size=small",
                 "shortForecast": "Chance Light Rain",
                 "detailedForecast": ""
             },
             {
-                "number": 156,
+                "number": 153,
                 "name": "",
                 "startTime": "2026-11-28T17:00:00-08:00",
                 "endTime": "2026-11-28T18:00:00-08:00",
@@ -4255,8 +4174,89 @@
                     "value": 90
                 },
                 "windSpeed": "7 mph",
-                "windDirection": "SSW",
+                "windDirection": "S",
                 "icon": "https://api.weather.gov/icons/land/day/rain,50?size=small",
+                "shortForecast": "Chance Light Rain",
+                "detailedForecast": ""
+            },
+            {
+                "number": 154,
+                "name": "",
+                "startTime": "2026-11-28T18:00:00-08:00",
+                "endTime": "2026-11-28T19:00:00-08:00",
+                "isDaytime": false,
+                "temperature": 59,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "probabilityOfPrecipitation": {
+                    "unitCode": "wmoUnit:percent",
+                    "value": 46
+                },
+                "dewpoint": {
+                    "unitCode": "wmoUnit:degC",
+                    "value": 13.88888888888889
+                },
+                "relativeHumidity": {
+                    "unitCode": "wmoUnit:percent",
+                    "value": 93
+                },
+                "windSpeed": "7 mph",
+                "windDirection": "S",
+                "icon": "https://api.weather.gov/icons/land/night/rain,50?size=small",
+                "shortForecast": "Chance Light Rain",
+                "detailedForecast": ""
+            },
+            {
+                "number": 155,
+                "name": "",
+                "startTime": "2026-11-28T19:00:00-08:00",
+                "endTime": "2026-11-28T20:00:00-08:00",
+                "isDaytime": false,
+                "temperature": 58,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "probabilityOfPrecipitation": {
+                    "unitCode": "wmoUnit:percent",
+                    "value": 46
+                },
+                "dewpoint": {
+                    "unitCode": "wmoUnit:degC",
+                    "value": 13.333333333333334
+                },
+                "relativeHumidity": {
+                    "unitCode": "wmoUnit:percent",
+                    "value": 95
+                },
+                "windSpeed": "15 mph",
+                "windDirection": "SSE",
+                "icon": "https://api.weather.gov/icons/land/night/rain,50?size=small",
+                "shortForecast": "Chance Light Rain",
+                "detailedForecast": ""
+            },
+            {
+                "number": 156,
+                "name": "",
+                "startTime": "2026-11-28T20:00:00-08:00",
+                "endTime": "2026-11-28T21:00:00-08:00",
+                "isDaytime": false,
+                "temperature": 57,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "probabilityOfPrecipitation": {
+                    "unitCode": "wmoUnit:percent",
+                    "value": 46
+                },
+                "dewpoint": {
+                    "unitCode": "wmoUnit:degC",
+                    "value": 12.777777777777779
+                },
+                "relativeHumidity": {
+                    "unitCode": "wmoUnit:percent",
+                    "value": 96
+                },
+                "windSpeed": "15 mph",
+                "windDirection": "SSE",
+                "icon": "https://api.weather.gov/icons/land/night/rain,50?size=small",
                 "shortForecast": "Chance Light Rain",
                 "detailedForecast": ""
             }
