@@ -960,6 +960,7 @@ h2,.phero h2,.cashtop h2,.cfhead h2{font-weight:600;font-size:clamp(24px,3vw,30p
 .tlg{width:18px;height:18px;object-fit:contain;vertical-align:-3px;margin-right:6px;flex:none}
 .top .wrap,.ftin,.ftfine{max-width:calc(1240px - var(--gut) - var(--gutr))}
 @media (max-width:959px){.lgrp{grid-template-columns:minmax(0,1fr)!important}.lgrp>div{min-width:0;max-width:100%}}
+.ustat .nhpendbox b{font:600 11px var(--mono)!important;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin-bottom:4px}
 </style>
 <div class="shell">
 <aside id="side" aria-label="Sections">
@@ -1102,7 +1103,7 @@ function navsync(v){const key=navkey(v);let S=NAV[0],T=null;
   const a=$('#tbs [aria-current=true]');if(a&&a.scrollIntoView&&innerWidth<960)a.scrollIntoView({block:'nearest',inline:'center'});
   const PF={nfl:'nfl/',cfb:'college-football/',nba:'nba/',nhl:'nhl/',ucl:'champions-league/',fantasy:'fantasy/'};
   if(SITEPATH){try{const want=new URL(PF[S.k]||'',ROOTURL).pathname,have=location.pathname.replace(/index\.html$/,'');if(want!==have)history.replaceState(null,'',want+location.search+location.hash)}catch(e){}}
-  document.title=(S.k==='home'?'AllThingsSports · Sports predictions, picks and a free bet tracker':S.n+(T?' '+T.n.toLowerCase():'')+' · AllThingsSports')}
+  document.title=(S.k==='home'?'AllThingsSports · Sports predictions, picks and a free bet tracker':S.n+(T?' '+(T.n===T.n.toUpperCase()?T.n:T.n.toLowerCase()):'')+' · AllThingsSports')}
 document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a||e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey||a.target)return;const h=a.getAttribute('href');if(h.length<2)return;e.preventDefault();if(location.hash===h)route();else location.hash=h.slice(1)});
 /* ---- the slate as a slim list beside an open game (NBA, NHL, college, Champions League; wide screens only) ---- */
 function railrows(h){let m;
@@ -1392,7 +1393,7 @@ function row(g){const A=g.a||{},H=g.h||{},m=g.mk,fin=g.st==='post',live=g.st==='
   const o=g.odds,fav=ok?(m.a>m.h?'a':'h'):null;
   const center=fin||live?`<b>${esc(A.score??'')}<span>–</span>${esc(H.score??'')}</b><small>${live?`<span class="nhlive"><i></i>${esc(g.det)}</span>`:esc(g.det)}${A.sog?` · shots ${esc(A.sog)}–${esc(H.sog)}`:''}</small>`:`<b class="t">${g.t?et(g.t):'TBD'}</b><small>ET${g.venue?' · '+esc(g.venue):''}</small>`;
   const ux=[];
-  if(!ok&&!fin)ux.push('<span>Lines not posted yet · DraftKings posts about a day before puck drop</span>');
+  if(!ok&&!fin)ux.push(g.st==='in'?'<span>No DraftKings line was saved before puck drop</span>':'<span>Lines not posted yet · DraftKings posts about a day before puck drop</span>');
   if(o&&ok&&!fin&&!live){const pl=o.pl&&o.pl[fav==='a'?0:1];if(pl)ux.push(`<span>Puck line <b>${esc(String(pl[0]).replace('-','−'))} ${esc(fav==='a'?A.ab:H.ab)}</b></span>`);if(o.tot&&o.tot[0]!=null)ux.push(`<span>Total <b>${esc(o.tot[0])}</b></span>`)}
   if(fin&&ok&&w){ux.push(`<span>Market favorite ${w===fav?'<b class="hit">won</b>':'<b class="miss">lost</b>'}${x?` (${x})`:''}</span>`)}
   if(hasM(g)){const M=g.m,ms=M.pa>M.ph?'a':'h',e=M.ml?.[ms==='a'?'edge_a':'edge_h'];ux.push(`<span class="nhmod">Model <b>${esc(g[ms].ab)} ${pc(ms==='a'?M.pa:M.ph)}</b>${e!=null?` <em>· edge ${pts(e)}</em>`:''}</span>`)}
@@ -1685,7 +1686,9 @@ function route(h){let m;
 function rail(id){const day=DAYOF[id];if(!day)return null;const L=[...(DAYS()[day]||[])].sort((x,y)=>(x.t||'').localeCompare(y.t||''));
   return{head:new Date(day+'T12:00:00').toLocaleDateString('en-US',{weekday:'long',month:'short',day:'numeric'}),back:'#nhl-day-'+day,rows:L.map(g=>{const A=g.a||{},H=g.h||{},pre=g.st==='pre',ph=g.m&&g.m.ph!=null?g.m.ph:g.mk&&g.mk.h!=null?g.mk.h:null;
    return{id:g.id,href:'#nhl-game-'+g.id,a:A.ab,h:H.ab,sa:pre?'':A.score,sh:pre?'':H.score,meta:g.st==='post'?(g.det||'Final'):g.st==='in'?(g.det||'Live'):et(g.t),live:g.st==='in',ph}})}}
-return{route,rail};
+function live(evs){let n=0;(evs||[]).forEach(e=>{const g=G[e.id];if(!g)return;const c=e.competitions[0],t={};c.competitors.forEach(x=>t[x.homeAway]=x);const st=e.status.type.state,det=e.status.type.shortDetail;
+  if(st==='pre')return;if(g.st==='post')return;const hs=t.home&&t.home.score,as=t.away&&t.away.score;if(g.st!==st||g.det!==det||g.h.score!==hs||g.a.score!==as){g.st=st;g.det=det;g.h.score=hs;g.a.score=as;n++}});return n}
+return{route,rail,live};
 })();
 /* ===================== end NHL ===================== */
 function route(){const h=location.hash.slice(1)||(window.HUBSTART||''),m=h.match(/^week-(\d+)$/),p=h.match(/^player-([\w-]+)$/),gm=h.match(/^game-([\w-]+)$/),gg=gm&&G.find(x=>slug(x.id)===gm[1]);
@@ -1735,10 +1738,24 @@ function revtab(root,key){const r=revget(key);if(!r||root.querySelector('[data-r
 function scoresApply(){const S=SCORES;if(!S)return 0;let n=0;
   for(const s of S.nfl||[]){if(!s.final||s.hs==null)continue;const d=s.date.slice(0,10).replaceAll('-',''),g=G.find(x=>x.home===s.home&&x.away===s.away&&x.status!=='final'&&Math.abs(+x.date-+d)<=1);
     if(g){g.sh=s.hs;g.sa=s.as_;g.status='final';g.right=s.hs===s.as_?null:(g.ph>=.5)===(s.hs>s.as_);g.fast=1;n++}}
-  if(typeof CF!=='undefined'&&CF)for(const s of S.cfb||[]){const g=CF.games.find(x=>x.id===s.id);if(!g||g.done)continue;if(s.final&&s.hs!=null){g.done=true;g.live=false;g.sh=s.hs;g.sa=s.as_;n++}else if(s.state==='in'){g.live=true}}
+  if(typeof CF!=='undefined'&&CF)for(const s of S.cfb||[]){const g=CF.games.find(x=>x.id===s.id);if(!g||g.done)continue;if(s.final&&s.hs!=null){g.done=true;g.live=false;g.sh=s.hs;g.sa=s.as_;if(g.pick&&s.hs!==s.as_)g.right=(s.hs>s.as_?g.h:g.a)===g.pick;n++}else if(s.state==='in'){if(!g.live||g.lsa!==s.as_||g.lsh!==s.hs)n++;g.live=true;g.lsa=s.as_;g.lsh=s.hs;g.ldet=s.detail}}
   if(typeof NB!=='undefined'&&NB&&NB.tonight)for(const s of S.nba||[]){const g=NB.tonight.games.find(x=>x.id===s.id);if(!g||g.state==='post')continue;if(s.hs!=null&&(s.final||s.state==='in')){g.hs=s.hs;g.as_=s.as_;const st=s.final?'post':'in';if(g.state!==st)n++;g.state=st}}
   return n}
-fetch('scores.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(!j)return;SCORES=j;if(scoresApply())route();const u=document.querySelector('#upd');if(u&&j.updated)u.textContent+=' · scores '+new Date(j.updated).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'})}).catch(()=>{});
+/* live scores: straight from ESPN's public scoreboards in the visitor's browser every 2 minutes (ESPN allows this); scores.json (GitHub, a few times a day) is the fallback where ESPN can't be reached, e.g. inside Claude */
+const ESPN='https://site.api.espn.com/apis/site/v2/sports/',NFLFIX={WSH:'WAS',LAR:'LA'};
+function espnconv(d,fix){return(d.events||[]).map(e=>{const c=e.competitions[0],t={};c.competitors.forEach(x=>t[x.homeAway]=x);if(!t.home||!t.away)return null;const st=e.status.type,ab=x=>(fix||{})[x.team.abbreviation]||x.team.abbreviation,sc=x=>/^\d+$/.test(String(x.score??''))?+x.score:null;
+  return{id:e.id,date:e.date,home:ab(t.home),away:ab(t.away),hs:sc(t.home),as_:sc(t.away),state:st.state,final:!!st.completed,detail:st.shortDetail}}).filter(Boolean)}
+let LIVEAT=0;
+function scoreset(j,src){if(!j)return;SCORES=j;let n=scoresApply();const u=document.querySelector('#upd');if(u){u.textContent=u.textContent.replace(/ · scores.*$/,'')+' · scores '+(src==='live'?'live ':'')+new Date(j.updated).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'})}
+  if(n){const h=location.hash.slice(1);if(!/^(cash|home)?$/.test(h)&&!h.startsWith('cash'))route()}}
+function livescores(){if(document.hidden)return;const g=p=>_fetch(ESPN+p,{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({})),et=new Date(Date.now()-5*36e5),ymd=d=>d.toISOString().slice(0,10).replaceAll('-',''),y=new Date(+et-864e5);
+  Promise.all([g('football/nfl/scoreboard'),g('football/college-football/scoreboard?groups=80&limit=300'),g('basketball/nba/scoreboard?dates='+ymd(y)),g('basketball/nba/scoreboard?dates='+ymd(et)),g('hockey/nhl/scoreboard?dates='+ymd(et)),g('hockey/nhl/scoreboard?dates='+ymd(y))]).then(([n,c,b1,b2,h1,h2])=>{
+    const any=[n,c,b1,b2,h1].some(d=>(d.events||[]).length);if(!any)return;LIVEAT=Date.now();
+    const nh=(typeof NHL!=='undefined'&&NHL.live)?NHL.live([...(h1.events||[]),...(h2.events||[])]):0;
+    scoreset({updated:new Date().toISOString(),nfl:espnconv(n,NFLFIX),cfb:espnconv(c),nba:[...espnconv(b1),...espnconv(b2)]},'live');
+    if(nh&&/^nhl/.test(location.hash.slice(1)))route()})}
+fetch('scores.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(j&&!LIVEAT)scoreset(j)}).catch(()=>{});
+livescores();setInterval(livescores,120000);document.addEventListener('visibilitychange',()=>{if(!document.hidden&&Date.now()-LIVEAT>60000)livescores()});
 
 /* ---- week rail ---- */
 $('#wstrip').innerHTML=weeks.map(w=>{const gs=G.filter(g=>g.week===w),done=gs.every(g=>g.status==='final');
@@ -2883,10 +2900,10 @@ function cfdraw(gid){const wk=CS.wk,all=CF.games.filter(g=>g.wk===wk),gs=all.fil
   if(g0&&g0.report)book(g0,$('#cfbhost'))}
 function cfcard(g){const s=cfst(g),A=cft(g.a),H=cft(g.h),pk=g.pick,fin=g.done;
   const row=(ab,T,r,pts,side)=>{const won=fin&&(side==='a'?g.sa>g.sh:g.sh>g.sa),lost=fin&&!won;
-    return`<div class="tr ${!fin&&pk===ab?'fav':''} ${won?'won':''} ${lost?'lost':''}"><b>${cfrk(r)}${ab}</b><span class="nm">${esc(T.short||T.name)}<small>${esc(T.rec||'')}</small></span><span class="pt">${pts==null?'':fin?pts:pts.toFixed(1)}</span></div>`};
-  const pw=g.pw,pa=fin?g.sa:g.pa,ph=fin?g.sh:g.ph;
+    return`<div class="tr ${!fin&&pk===ab?'fav':''} ${won?'won':''} ${lost?'lost':''}"><b>${cfrk(r)}${ab}</b><span class="nm">${esc(T.short||T.name)}<small>${esc(T.rec||'')}</small></span><span class="pt">${pts==null?'':fin||lv?pts:pts.toFixed(1)}</span></div>`};
+  const pw=g.pw,lv=!fin&&g.live&&g.lsa!=null,pa=fin?g.sa:lv?g.lsa:g.pa,ph=fin?g.sh:lv?g.lsh:g.ph;
   const res=fin&&'right' in g?`<span class="tag ${g.right?'good':'bad'}">${g.right?'Pick right':'Pick wrong'}</span>`:'';
-  return`<article class="gc s-${s==='book'?'book':''}"><div class="gm"><span>${cftime(g)} ${TZL}${g.tv?' · '+esc(g.tv):''}</span><span class="sd ${s==='live'?'early':s}">${CFST[s]}</span></div>
+  return`<article class="gc s-${s==='book'?'book':''}"><div class="gm"><span>${cftime(g)} ${TZL}${g.tv?' · '+esc(g.tv):''}</span><span class="sd ${s==='live'?'early':s}">${s==='live'&&g.ldet?esc(g.ldet):CFST[s]}</span></div>
   <div class="teams">${row(g.a,A,g.ra,pa,'a')}${row(g.h,H,g.rh,ph,'h')}</div>
   ${pw!=null?`<div class="wb"><span class="${pk===g.a?'on':''}">${g.a} ${pc(pk===g.a?pw:1-pw)}</span><span class="wtrack"><i class="${pk===g.a?'f':''}" style="flex:${(pk===g.a?pw:1-pw).toFixed(3)}"></i><i class="${pk===g.h?'f':''}" style="flex:${(pk===g.h?pw:1-pw).toFixed(3)}"></i></span><span class="${pk===g.h?'on':''}">${pc(pk===g.h?pw:1-pw)} ${g.h}</span></div>`:''}
   <dl class="ln"><div><dt>Market</dt><dd>${g.line?esc(g.line)+(g.total?` · O/U ${g.total}`:''):'<span class="nl">No line</span>'}</dd></div><div><dt>${fin?'Result':'Model'}</dt><dd>${fin?(res||'<span class="nl">No pick made</span>'):pw!=null?`${pk} ${pc(pw)}`:'<span class="nl">Built game week</span>'}</dd></div></dl>

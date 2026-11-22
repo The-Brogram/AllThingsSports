@@ -325,6 +325,14 @@ def build(hub):
                 for s_ in ("h", "a"):
                     if (sl.get("goalies") or {}).get(s_) and g["st"] == "pre":
                         g[s_]["g"] = sl["goalies"][s_]
+                o = sl.get("odds") or {}
+                if not g.get("odds") and o.get("ml_a") and o.get("ml_h"):
+                    # ESPN drops the line once a game starts: use the DraftKings line saved at the model's pre-game run
+                    g["odds"] = {"src": "DraftKings (line at the model's pre-game run)", "ml": [o["ml_a"], o["ml_h"]],
+                                 "pl": [[o.get("pl_a"), o.get("pl_a_p")], [o.get("pl_h"), o.get("pl_h_p")]],
+                                 "tot": [o.get("total"), o.get("over"), o.get("under")]}
+                    pa, ph = novig(o["ml_a"], o["ml_h"])
+                    g["mk"] = {"a": pa, "h": ph}
                 if sl.get("m"):
                     g["m"] = shown_model(sl["m"])
                 if sl.get("props"):
