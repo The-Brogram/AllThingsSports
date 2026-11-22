@@ -1,17 +1,8 @@
-football run Sun Nov 22 2026 10:50 AM ET: cfb-review (schedule 10 15 * * 0)
-== cfb-review
+football run Sun Nov 22 2026 12:25 PM ET: nfl-today (schedule 45 16 * * 0)
+== nfl-today
 [nflverse refresh] ok in 2s
-[fetch_cfb.py] ok in 16s
-    1756 games on file; 58 fetched
-[parse_cfb.py] ok in 28s
-    1756 games {2025: 934, 2026: 822} 0.5210706150341685 228998 plays 96421 targets 110974 passes 114193 rushes
-    target parse rate 0.9358933177592836 rec tie 0.6818016822061584
-[review_cfb.py] ok in 2s
-[season.py] ok in 80s
-    WR/CB: week 11, 13 games, 157 receivers -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/wrcb.json
-    Team vs position: 2026 thru wk 10, 2025 thru wk 18 -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/teampos.json
-    NFL reviews: 151 of 151 finished games (0 fetched) -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/nflrev.json
-    Fantasy: 2026 week 11, 2 slate(s), 235 players, 0.91 MB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/fantasy.json
+[run today] ok in 297s
+    Fantasy: 2026 week 11, 2 slate(s), 228 players, 0.89 MB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/fantasy.json
     CFB leaders: 132 players, 137 FBS defenses, through week 12 -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/cfbl.json 132 KB
     CFB: week 12 current, 491 in-scope games across 14 weeks, 87 with our pick, 188 teams, 257 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/cfb.json
     UCL: 144 fixtures (72 final, 72 box scores), 36 in the table, 2 analysed matchdays
@@ -20,4 +11,7 @@ football run Sun Nov 22 2026 10:50 AM ET: cfb-review (schedule 10 15 * * 0)
     Data freshness NFL: OK - games final through week 11; player stats through week 11; weekly rosters through week 11
     Data freshness CFB: OK - games final through week 12; player stats through week 12
     Data freshness NBA: OK - games final through 2026-11-21; 241/241 with box scores; 241/241 with shot charts
+       done in 69s
+    Report: output/nfl_20261122_report.html
+    Hub: output/hub/index.html
 hub copied to the site
