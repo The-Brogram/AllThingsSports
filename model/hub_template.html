@@ -1763,9 +1763,12 @@ function revtab(root,key){const r=revget(key);if(!r||root.querySelector('[data-r
   if(!bar||!art){const d=document.createElement('div');d.dataset.rev=1;d.innerHTML=revhtml(r);root.insertBefore(d,root.querySelector('article')||root.firstChild);return} /* older Game Books have no tab bar: the review goes on top */
   const id='rev-'+r.id,b=document.createElement('button');b.className='gt';b.dataset.p=id;b.dataset.rev=1;b.textContent='Post-game review';bar.prepend(b);
   const p=document.createElement('div');p.id=id;p.className='pane';p.innerHTML=revhtml(r);bar.after(p);wire(root)}
+const etparts=iso=>{try{const p={};new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hourCycle:'h23',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',weekday:'short'}).formatToParts(new Date(iso)).forEach(x=>p[x.type]=x.value);return{ymd:p.year+p.month+p.day,hm:p.hour+':'+p.minute,wd:p.weekday}}catch(e){return null}};
 function scoresApply(){const S=SCORES;if(!S)return 0;let n=0;
-  for(const s of S.nfl||[]){if(!s.final||s.hs==null)continue;const d=s.date.slice(0,10).replaceAll('-',''),g=G.find(x=>x.home===s.home&&x.away===s.away&&x.status!=='final'&&Math.abs(+x.date-+d)<=1);
-    if(g){g.sh=s.hs;g.sa=s.as_;g.status='final';g.right=s.hs===s.as_?null:(g.ph>=.5)===(s.hs>s.as_);g.fast=1;n++}}
+  for(const s of S.nfl||[]){const k=s.date&&etparts(s.date),d=k?k.ymd:s.date.slice(0,10).replaceAll('-',''),g=G.find(x=>x.home===s.home&&x.away===s.away&&x.status!=='final'&&Math.abs(+x.date-+d)<=1);if(!g)continue;
+    if(k&&(String(g.date)!==k.ymd||g.time!==k.hm)){g.date=k.ymd;g.time=k.hm;g.day=k.wd;n++}
+    if(s.final&&s.hs!=null){g.sh=s.hs;g.sa=s.as_;g.status='final';g.live=0;g.right=s.hs===s.as_?null:(g.ph>=.5)===(s.hs>s.as_);g.fast=1;n++}
+    else if(s.state==='in'&&s.hs!=null){if(!g.live||g.lsh!==s.hs||g.lsa!==s.as_||g.ldet!==s.detail)n++;g.live=1;g.lsh=s.hs;g.lsa=s.as_;g.ldet=s.detail}}
   if(typeof CF!=='undefined'&&CF)for(const s of S.cfb||[]){const g=CF.games.find(x=>x.id===s.id);if(!g||g.done)continue;if(s.final&&s.hs!=null){g.done=true;g.live=false;g.sh=s.hs;g.sa=s.as_;if(g.pick&&s.hs!==s.as_)g.right=(s.hs>s.as_?g.h:g.a)===g.pick;n++}else if(s.state==='in'){if(!g.live||g.lsa!==s.as_||g.lsh!==s.hs)n++;g.live=true;g.lsa=s.as_;g.lsh=s.hs;g.ldet=s.detail}}
   if(typeof NB!=='undefined'&&NB&&NB.tonight)for(const s of S.nba||[]){const g=NB.tonight.games.find(x=>x.id===s.id);if(!g||g.state==='post')continue;if(s.hs!=null&&(s.final||s.state==='in')){g.hs=s.hs;g.as_=s.as_;const st=s.final?'post':'in';if(g.state!==st)n++;g.state=st}}
   return n}
@@ -1791,27 +1794,27 @@ $('#wstrip').innerHTML=weeks.map(w=>{const gs=G.filter(g=>g.week===w),done=gs.ev
 document.querySelectorAll('#wstrip button').forEach(b=>b.onclick=()=>{location.hash='week-'+b.dataset.w});
 
 function card(g){
-  const fin=g.status==='final',wa=fin&&g.sa>g.sh,wh=fin&&g.sh>g.sa,A=T[g.away],H=T[g.home];
-  const pa=fin?g.sa:f1(g.ba),ph=fin?g.sh:f1(g.bh),homeFav=g.ph>=.5,fav=homeFav?g.home:g.away,fp=Math.max(g.ph,1-g.ph);
+  const fin=g.status==='final',lv=!fin&&g.live,wa=fin&&g.sa>g.sh,wh=fin&&g.sh>g.sa,A=T[g.away],H=T[g.home];
+  const pa=fin?g.sa:lv?g.lsa:f1(g.ba),ph=fin?g.sh:lv?g.lsh:f1(g.bh),homeFav=g.ph>=.5,fav=homeFav?g.home:g.away,fp=Math.max(g.ph,1-g.ph);
   const ca=fin?(wa?'won':'lost'):(homeFav?'':'fav'),ch=fin?(wh?'won':'lost'):(homeFav?'fav':'');
   const row=(t,X,p,c)=>`<div class="tr ${c}"><b>${tlg(t)}${t}</b><span class="nm">${esc(X.name)}<small>${X.rec}</small></span><span class="pt">${p}</span></div>`;
   const mid=fin?(g.right!=null?`<div class="fres"><span class="tag ${g.right?'good':'bad'}">${g.right?'Pick right':'Pick wrong'}</span><span>picked ${esc(fav)} ${pc(fp)} · proj ${f1(g.ba)}–${f1(g.bh)}</span></div>`:'')
     :`<div class="wb" title="Win chance"><span class="${homeFav?'':'on'}">${g.away} ${pc(1-g.ph)}</span><span class="wtrack"><i class="${homeFav?'':'f'}" style="flex:${(1-g.ph).toFixed(3)}"></i><i class="${homeFav?'f':''}" style="flex:${g.ph.toFixed(3)}"></i></span><span class="${homeFav?'on':''}">${pc(g.ph)} ${g.home}</span></div>`;
   let lk='';if(g.likely&&g.likely.length&&!fin)lk=`<ul class="lkl"><li class="h">Most likely · 70%+</li>${g.likely.slice(0,3).map(r=>`<li><span>${esc(r.player)} <em>${esc(r.outcome)}</em></span><b>${pc(r.prob)}</b></li>`).join('')}</ul>`;
   return`<article class="gc s-${g.status}" id="g-${g.id}">
-  <div class="gm" title="${esc(g.stadium||'')}"><span>${nflwhen(g)}</span><span class="sd ${g.status}" title="${esc(STN[g.status])}">${ST[g.status]}</span></div>
+  <div class="gm" title="${esc(g.stadium||'')}"><span>${nflwhen(g)}</span>${lv?`<span class="sd early">${esc(g.ldet||'Live')}</span>`:`<span class="sd ${g.status}" title="${esc(STN[g.status])}">${ST[g.status]}</span>`}</div>
   <div class="teams">${row(g.away,A,pa,ca)}${row(g.home,H,ph,ch)}</div>${mid}
   <dl class="ln"><div><dt>Market</dt><dd>${g.spread==null?'<span class="nl">No line yet</span>':spread(g)+(g.total!=null?` · ${g.total}`:'')}</dd></div><div><dt>Our line</dt><dd>${ourline(g)} · ${f1(g.mh+g.ma)}</dd></div></dl>
   ${lk}
   <div class="ft"><button class="lk" data-sbs="${g.id}" aria-expanded="false">Side by side</button>${g.report?`<a class="lk go" href="${esc(g.report)}">Game Book <span aria-hidden="true">→</span></a>`:''}</div></article>`}
 
 const slug=id=>String(id).replace(/_/g,'-').toLowerCase();
-function tile(g){const fin=g.status==='final',homeFav=g.ph>=.5;
+function tile(g){const fin=g.status==='final',lv=!fin&&g.live,homeFav=g.ph>=.5;
   const sc=(t,v,on,lost)=>`<span class="tr2${lost?' lost':''}"><b>${tlg(t)}${t}</b><em class="${on?'on':''}">${v}</em></span>`;
-  const pa=fin?g.sa:f1(g.ba),ph=fin?g.sh:f1(g.bh);
+  const pa=fin?g.sa:lv?g.lsa:f1(g.ba),ph=fin?g.sh:lv?g.lsh:f1(g.bh);
   const foot=fin?(g.right!=null?`<span class="tf ${g.right?'good':'bad'}">${g.right?'✓ pick right':'✗ pick wrong'}</span>`:'<span class="tf">Final</span>')
     :`<span class="wtrack"><i class="${homeFav?'':'f'}" style="flex:${(1-g.ph).toFixed(3)}"></i><i class="${homeFav?'f':''}" style="flex:${g.ph.toFixed(3)}"></i></span><span class="tf">${homeFav?g.home:g.away} ${pc(Math.max(g.ph,1-g.ph))}</span>`;
-  return`<button class="gt2 s-${g.status}" data-g="${slug(g.id)}" aria-pressed="false"><span class="th"><span>${nfltime(g)}</span><span class="sd ${g.status}" title="${esc(STN[g.status])}">${fin?'Final':g.report?'Book':ST[g.status].split(' ')[0]}</span></span>
+  return`<button class="gt2 s-${g.status}" data-g="${slug(g.id)}" aria-pressed="false"><span class="th"><span>${nfltime(g)}</span><span class="sd ${lv?'early':g.status}" title="${esc(lv?g.ldet||'Live':STN[g.status])}">${fin?'Final':lv?'Live':g.report?'Book':ST[g.status].split(' ')[0]}</span></span>
   ${sc(g.away,pa,!fin&&!homeFav,fin&&g.sa<g.sh)}${sc(g.home,ph,!fin&&homeFav,fin&&g.sh<g.sa)}<span class="tfoot">${foot}</span></button>`}
 
 

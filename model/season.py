@@ -81,9 +81,37 @@ def summaries():
     return out
 
 
+def espn_kicks(weeks):
+    """ESPN's kickoff times (ET) by ESPN game id for the given regular-season weeks. nflverse's file can lag a flexed or swapped game by hours."""
+    import subprocess
+    from zoneinfo import ZoneInfo
+    out = {}
+    for w in weeks:
+        try:
+            raw = subprocess.run(["curl", "-s", "--compressed", "--max-time", "20",
+                                  f"https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates={SEASON}&seasontype=2&week={int(w)}"],
+                                 capture_output=True, text=True, timeout=30).stdout
+            for e in json.loads(raw).get("events", []):
+                t = datetime.fromisoformat(e["date"].replace("Z", "+00:00")).astimezone(ZoneInfo("America/New_York"))
+                out[str(e["id"])] = (t.strftime("%Y-%m-%d"), t.strftime("%H:%M"), t.strftime("%A"))
+        except Exception as ex:  # noqa: BLE001  no ESPN: keep nflverse's times
+            print(f"ESPN kickoffs week {w} skipped:", repr(ex))
+    return out
+
+
 def games(d, rep, summ):
     g = pd.read_csv(os.path.join(ROOT, "data", "games.csv"))
     g = g[g.season == SEASON].copy()
+    todo = g.result.isna()
+    kicks = espn_kicks(sorted(g[todo].week.unique())[:2]) if todo.any() else {}
+    moved = []
+    for i, r in g[todo].iterrows():
+        k = kicks.get(str(int(r.espn))) if pd.notna(r.espn) else None
+        if k and (k[0], k[1]) != (r.gameday, r.gametime):
+            moved.append(f"{r.away_team}@{r.home_team} {r.gameday} {r.gametime} -> {k[0]} {k[1]}")
+            g.at[i, "gameday"], g.at[i, "gametime"], g.at[i, "weekday"] = k
+    if moved:
+        print("NFL kickoffs corrected from ESPN:", "; ".join(moved))
     g["date"] = g.gameday.str.replace("-", "")
     tg = d["team_games"]
     rcache = {}
