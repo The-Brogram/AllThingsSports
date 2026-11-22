@@ -331,6 +331,24 @@ def main():
             files["picks.json"] = os.path.join(HUB, "picks.json")
     except Exception as e:  # noqa: BLE001  a picks problem must not stop the hub from building
         print("Picks skipped:", repr(e))
+    try:  # NFL team logos for the hub's game tiles (the Game Books embed their own copies)
+        os.makedirs(os.path.join(HUB, "logos"), exist_ok=True)
+        for src in glob.glob(os.path.join(ROOT, "data", "logos", "*.png")):
+            dst = os.path.join(HUB, "logos", os.path.basename(src))
+            shutil.copy2(src, dst)
+            files["logos/" + os.path.basename(src)] = dst
+    except Exception as e:  # noqa: BLE001  missing logos must not stop the hub from building
+        print("Logos skipped:", repr(e))
+    try:  # Home page board: upcoming games across every sport with each team's chance (tonight.json)
+        import hub_tonight
+        files.update(hub_tonight.build(HUB, data))
+    except Exception as e:  # noqa: BLE001  a board problem must not stop the hub from building
+        print("Tonight board skipped:", repr(e))
+    try:  # one page per sport (nfl/, nba/, …) plus sitemap.xml and robots.txt
+        import hub_pages
+        files.update(hub_pages.build(HUB))
+    except Exception as e:  # noqa: BLE001  the sport pages must not stop the hub from building
+        print("Sport pages skipped:", repr(e))
     json.dump(files, open(os.path.join(HUB, "files.json"), "w"), indent=1)
     n = {k: sum(1 for x in rows if x["status"] == k) for k in ("final", "book", "lines", "early")}
     print(f"Hub: Week {wk} is current. {n['final']} final, {n['book']} with a Game Book, {n['lines']} with lines, {n['early']} early. "
