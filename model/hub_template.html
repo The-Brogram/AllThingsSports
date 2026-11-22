@@ -827,6 +827,29 @@ body.noscroll{overflow:hidden}
 .hmopen .acts{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
 .hmopen .acts button{font:600 12px var(--body);border:1px solid var(--line2);background:var(--bg);color:var(--fg);border-radius:999px;padding:5px 11px;cursor:pointer}
 .hmopen .acts button[data-hs="won"]{border-color:var(--grn);color:var(--grn)}.hmopen .acts button[data-hs="lost"]{border-color:var(--red);color:var(--red)}
+.trtop{margin-bottom:6px}.trtop h2{margin:8px 0 6px}
+.hmtease b.up{color:var(--grn)}.hmtease b.dn{color:var(--red)}
+.tcal{background:var(--pan);border:1px solid var(--line);border-radius:18px;padding:18px 20px}
+.tcalh{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px;margin-bottom:14px}
+.tcalh b{font:600 24px/1.15 var(--disp);letter-spacing:-.01em;display:block}
+.tcsum{font:500 13px var(--mono);color:var(--mut)}.tcsum .up{color:var(--grn)}.tcsum .dn{color:var(--red)}
+.tcnav{display:flex;gap:6px}.tcnav button{height:36px;min-width:36px;padding:0 13px;border-radius:999px;border:1px solid var(--line2);background:var(--bg);color:var(--fg);cursor:pointer;font:600 14px var(--body)}
+.tcnav button:hover{border-color:var(--mut)}
+.tcg{display:grid;grid-template-columns:repeat(7,minmax(0,1fr)) minmax(0,.85fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.tcg .tch{background:var(--pan2);font:600 11.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--dim);padding:9px 10px}
+.tcd{background:var(--bg);min-height:104px;padding:9px 10px;display:flex;flex-direction:column;align-items:flex-start;gap:3px;min-width:0}
+.tcd i{font:500 13px var(--mono);font-style:normal;color:var(--mut);line-height:22px}
+.tcd em{font:700 16px var(--mono);font-style:normal;white-space:nowrap;margin-top:auto;letter-spacing:-.02em}
+.tcd em.up{color:var(--grn)}.tcd em.dn{color:var(--red)}.tcd em .c{display:none}
+.tcd small{font:500 12px var(--mono);color:var(--mut)}
+.tcd.up{background:var(--grn-d)}.tcd.dn{background:var(--red-d)}
+.tcd.out{background:var(--pan)}.tcd.out i{color:var(--line2)}
+.tcd.now i{background:var(--fg);color:var(--bg);border-radius:999px;padding:0 8px}
+.tco{font:600 11px var(--body);color:var(--fg);border:1px solid var(--line2);border-radius:999px;padding:1px 7px}
+.tcd.tcw{background:var(--pan2);justify-content:flex-end}.tcd.tcw.up{background:var(--grn-d)}.tcd.tcw.dn{background:var(--red-d)}
+.tcnote{margin:12px 0 0}
+@media (max-width:640px){.tcal{padding:14px 12px}.tcg{grid-template-columns:repeat(7,minmax(0,1fr))}.tcg .tw,.tcd.tcw{display:none}.tcg .tch{padding:7px 0;text-align:center;font-size:10px;letter-spacing:.02em}
+ .tcd{min-height:62px;padding:5px 3px;align-items:center}.tcd i{font-size:12px;line-height:18px}.tcd em{font-size:10.5px;letter-spacing:-.04em}.tcd em .f{display:none}.tcd em .c{display:inline}.tcd small,.tco{display:none}.tcalh b{font-size:20px}}
 .hm2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
 @media (max-width:1100px){.hm2{grid-template-columns:minmax(0,1fr)}}
 /* ===================== Dark refresh (2026-11-21): one neutral interface; green and red carry meaning only ===================== */
@@ -881,7 +904,7 @@ h2,.phero h2,.cashtop h2,.cfhead h2{font-weight:600;font-size:clamp(24px,3vw,30p
 .tbs a i{width:7px;height:7px;border-radius:50%;background:var(--dim)}
 .tbs a.nfl i{background:#2fd27a}.tbs a.cfb i{background:#e0a043}.tbs a.nba i{background:#6b8cff}.tbs a.nhl i{background:#4cc3d9}.tbs a.ucl i{background:#9b8cff}.tbs a.fantasy i{background:#e3b341}
 .tbs .sp{margin-left:auto}
-.tbs a.cash{border:1px solid var(--line2)}
+.tbs a.tracker{border:1px solid var(--line2)}
 .tbt{height:44px;gap:4px;overflow-x:auto;scrollbar-width:none}
 .tbt a{position:relative;padding:0 10px;height:44px;border-radius:0;font-size:13.5px}
 .tbt a:hover{background:none}
@@ -1014,6 +1037,7 @@ h2,.phero h2,.cashtop h2,.cfhead h2{font-weight:600;font-size:clamp(24px,3vw,30p
 <section id="v-home" hidden></section>
 <section id="v-weeks" hidden><div id="week"></div></section>
 <section id="v-cash" hidden></section>
+<section id="v-tracker" hidden></section>
 <section id="v-compare" hidden></section>
 <section id="v-record" hidden></section>
 <section id="v-players" hidden></section>
@@ -1077,8 +1101,8 @@ $('#live').lastChild.textContent=`${wname(D.week)} · now`;
 $('#upd').textContent=`Updated ${D.built} ET`;
 
 /* ---- views ---- */
-const VIEWS=['home','weeks','cash','compare','record','players','wrcb','teampos','fantasy','cfb-weeks','cfb-record','cfb-teampos','cfb-leaders','nba','nba-record','nba-weeks','nba-leaders','nhl','nhl-standings','nhl-teams','nhl-leaders','nhl-record','ucl','ucl-md','ucl-record','about'];let cur=D.week;
-const VNAME={home:'Home',about:'About','nba-weeks':'Previous weeks',weeks:'Weeks',cash:'Cash Center',compare:'Compare teams',record:'Track record',players:'Player lookup',wrcb:'WR / CB matchups',teampos:'Team vs position',fantasy:'Fantasy','cfb-weeks':'Weeks','cfb-record':'Track record','cfb-teampos':'Team vs position','cfb-leaders':'Season leaders',nba:'Tonight','nba-record':'Track record','nba-leaders':'Season leaders',nhl:'Games','nhl-standings':'Standings','nhl-teams':'Teams','nhl-leaders':'Stat leaders','nhl-record':'Track record',ucl:'Overview','ucl-md':'Matchdays','ucl-record':'Track record'};
+const VIEWS=['home','weeks','cash','tracker','compare','record','players','wrcb','teampos','fantasy','cfb-weeks','cfb-record','cfb-teampos','cfb-leaders','nba','nba-record','nba-weeks','nba-leaders','nhl','nhl-standings','nhl-teams','nhl-leaders','nhl-record','ucl','ucl-md','ucl-record','about'];let cur=D.week;
+const VNAME={home:'Home',about:'About','nba-weeks':'Previous weeks',weeks:'Weeks',cash:'Picks',tracker:'Bet Tracker',compare:'Compare teams',record:'Track record',players:'Player lookup',wrcb:'WR / CB matchups',teampos:'Team vs position',fantasy:'Fantasy','cfb-weeks':'Weeks','cfb-record':'Track record','cfb-teampos':'Team vs position','cfb-leaders':'Season leaders',nba:'Tonight','nba-record':'Track record','nba-leaders':'Season leaders',nhl:'Games','nhl-standings':'Standings','nhl-teams':'Teams','nhl-leaders':'Stat leaders','nhl-record':'Track record',ucl:'Overview','ucl-md':'Matchdays','ucl-record':'Track record'};
 function menu(o){document.body.classList.toggle('menu',o);$('#menu').setAttribute('aria-expanded',String(o))}
 /* ---- Top navigation: sports across the top; inside every sport the same tabs in the same order (Games · Picks · Teams · Players · Track record), shown when that sport has them ---- */
 const NAV=[
@@ -1090,17 +1114,17 @@ const NAV=[
  {k:'ucl',n:'Champions League',tabs:[{n:'Games',v:['ucl-md']},{n:'Teams',v:['ucl']},{n:'Track record',v:['ucl-record']}]},
  {k:'fantasy',n:'Fantasy',tabs:[{n:'NFL',v:['fantasy']}],soon:'More sports are on the way.'},
  {k:'about',n:'About',v:['about'],hide:true},
- {k:'cash',n:'Cash Center',v:['cash','cash-bets','cash-build'],right:true}];
+ {k:'tracker',n:'Bet Tracker',right:true,tabs:[{n:'Overview',v:['tracker']},{n:'All bets',v:['tracker-bets']},{n:'Parlay builder',v:['tracker-build']}]}];
 const navto=v=>v==='weeks'?'week-'+cur:v==='cfb-weeks'?(typeof CS!=='undefined'&&CS.wk?'cfb-week-'+CS.wk:'cfb'):v;
 const navfirst=s=>s.tabs?navto(s.tabs[0].v[0]):navto(s.v[0]);
-function navkey(v){if(v!=='cash')return v;const m=location.hash.slice(1).match(/^cash-(nfl|cfb|nba|bets|build)$/);return m?'cash-'+m[1]:'cash'}
+function navkey(v){const h=location.hash.slice(1);if(v==='tracker'){const m=h.match(/^tracker-(bets|build)$/);return m?'tracker-'+m[1]:'tracker'}if(v!=='cash')return v;const m=h.match(/^cash-(nfl|cfb|nba)$/);return m?'cash-'+m[1]:'cash-nfl'}
 function navsync(v){const key=navkey(v);let S=NAV[0],T=null;
   for(const s of NAV){if(s.v&&s.v.includes(key)){S=s;break}const t=(s.tabs||[]).find(t=>t.v.includes(key));if(t){S=s;T=t;break}}
-  $('#tbs').innerHTML=NAV.filter(s=>!s.hide).map(s=>`${s.right?'<span class="sp"></span>':''}<a href="#${navfirst(s)}" class="${s.k}" aria-current="${s===S}">${s.k!=='home'&&s.k!=='cash'?'<i></i>':''}${s.n}</a>`).join('');
+  $('#tbs').innerHTML=NAV.filter(s=>!s.hide).map(s=>`${s.right?'<span class="sp"></span>':''}<a href="#${navfirst(s)}" class="${s.k}" aria-current="${s===S}">${s.k!=='home'&&s.k!=='tracker'?'<i></i>':''}${s.n}</a>`).join('');
   const tb=$('#tbt');tb.hidden=!S.tabs;tb.innerHTML=S.tabs?S.tabs.map(t=>`<a href="#${navto(t.v[0])}" aria-current="${t===T}">${t.n}</a>`).join('')+(S.soon?`<span class="note" style="margin-left:auto;font-size:12.5px">${S.soon}</span>`:''):'';
   document.documentElement.style.setProperty('--tbh',S.tabs?'101px':'57px');
   document.querySelectorAll('.tbsub').forEach(x=>x.remove());
-  if(T&&T.subs){const box=$('#v-'+(key.startsWith('cash')?'cash':key));if(box){const d=document.createElement('div');d.className='tbsub';d.setAttribute('role','group');d.setAttribute('aria-label',T.n);
+  if(T&&T.subs){const box=$('#v-'+(key.startsWith('cash')?'cash':key.startsWith('tracker')?'tracker':key));if(box){const d=document.createElement('div');d.className='tbsub';d.setAttribute('role','group');d.setAttribute('aria-label',T.n);
     d.innerHTML=T.subs.map(([n,x])=>`<a href="#${navto(x)}" aria-current="${x===key}">${n}</a>`).join('');box.before(d)}}
   const a=$('#tbs [aria-current=true]');if(a&&a.scrollIntoView&&innerWidth<960)a.scrollIntoView({block:'nearest',inline:'center'});
   const PF={nfl:'nfl/',cfb:'college-football/',nba:'nba/',nhl:'nhl/',ucl:'champions-league/',fantasy:'fantasy/'};
@@ -1140,10 +1164,10 @@ function about(){$('#v-about').innerHTML=`<div class="ab"><div class="eyebrow"><
  <li><b>Graded in public.</b> Every posted pick is graded after the game at the price it was posted, wins and losses alike.</li>
  <li><b>No edge until it is proven.</b> An edge only counts once it has beaten real prices on games the model had not seen. Until then we call it a lead.</li>
  <li><b>Nothing is guaranteed.</b> A 90% chance still loses one time in ten.</li></ul>
- <p class="note">AllThingsSports is for information. Nothing on this site places a bet; the bet tracker and Cash Center only record bets you place yourself.</p></div>`}
+ <p class="note">AllThingsSports is for information. Nothing on this site places a bet; the bet tracker only records bets you place yourself.</p></div>`}
 function foot(){const b=D.built?`Updated ${esc(D.built)} ET`:'';$('#foot').innerHTML=`<div class="ftin"><div class="ftb"><a class="brand" href="#home" aria-label="AllThingsSports home"><span>AllThings</span><b>Sports</b></a><p>Sports predictions you can check: chances first, every pick graded.</p><small>${b}</small></div>
  <div><h4>Sports</h4><a href="#week-${cur}">NFL</a><a href="#cfb">College football</a><a href="#nba">NBA</a><a href="#nhl">NHL</a><a href="#ucl-md">Champions League</a></div>
- <div><h4>Tools</h4><a href="#home">Picks of the day</a><a href="#cash">Cash Center</a><a href="#cash-bets">Bet tracker</a><a href="#fantasy">Fantasy</a></div>
+ <div><h4>Tools</h4><a href="#home">Picks of the day</a><a href="#tracker">Bet Tracker</a><a href="#tracker-build">Parlay builder</a><a href="#fantasy">Fantasy</a></div>
  <div><h4>Track records</h4><a href="#record">NFL</a><a href="#cfb-record">College</a><a href="#nba-record">NBA</a><a href="#nhl-record">NHL</a><a href="#ucl-record">Champions League</a></div>
  <div><h4>AllThingsSports</h4><a href="#about">How it works</a></div></div><p class="ftfine">For information only. Nothing here places a bet, and nothing is guaranteed.</p>`}
 /* ---- filters as one row of choices: short dropdowns in filter bars become tap buttons (the dropdown stays underneath for the existing code) ---- */
@@ -1154,7 +1178,7 @@ function chipify(){document.querySelectorAll('.nbctl select:not([data-chipped])'
 new MutationObserver(chipify).observe(document.body,{childList:true,subtree:true});
 function show(v){const was=VIEWS.find(x=>!$('#v-'+x).hidden);VIEWS.forEach(x=>$('#v-'+x).hidden=x!==v);
   document.querySelectorAll('#side [data-v]').forEach(b=>{b.setAttribute('aria-pressed',b.dataset.v===v);if(b.dataset.v===v){const d=b.closest('details');if(d&&!d.open)d.open=true}});
-  $('.top').hidden=v!=='weeks';$('#mtitle').textContent=v==='home'?'AllThingsSports':v==='cash'?'Cash Center':(v.startsWith('cfb')?'College Football · ':v.startsWith('nba')?'NBA · ':v.startsWith('nhl')?'NHL · ':v.startsWith('ucl')?'Champions League · ':'NFL · ')+VNAME[v];menu(false);navsync(v);if(was&&was!==v)scrollTo(0,0)}
+  $('.top').hidden=v!=='weeks';$('#mtitle').textContent=v==='home'?'AllThingsSports':v==='cash'?'Picks':v==='tracker'?'Bet Tracker':(v.startsWith('cfb')?'College Football · ':v.startsWith('nba')?'NBA · ':v.startsWith('nhl')?'NHL · ':v.startsWith('ucl')?'Champions League · ':'NFL · ')+VNAME[v];menu(false);navsync(v);if(was&&was!==v)scrollTo(0,0)}
 /* ---- Champions League: ucl.json (ESPN season data, refreshed on every hub build, plus the soccer model's analysed matchdays) and uclh.json (every UCL result since 2003) ---- */
 let UCL=null,UCLP=null,UCLH=null,UCLHP=null,UTAB='over';const UDAY={};
 function uclload(box,fn){if(UCL)return fn();if(!box.innerHTML)box.innerHTML='<p class="note">Loading…</p>';
@@ -1697,7 +1721,9 @@ function route(){const h=location.hash.slice(1)||(window.HUBSTART||''),m=h.match
   if(h===''||h==='home'){show('home');home()}
   else if(h==='about'){show('about');about()}
   else if(gg){cur=gg.week;show('weeks');week(cur,gg.id)}
-  else if(/^cash(-nfl|-cfb|-nba|-bets|-build)?$/.test(h)){show('cash');cash(h.slice(5)||null)}
+  else if(/^cash(-bets|-build)?$/.test(h)){location.replace('#tracker'+h.slice(4));return}
+  else if(/^cash-(nfl|cfb|nba)$/.test(h)){show('cash');cash(h.slice(5))}
+  else if(/^tracker(-bets|-build)?$/.test(h)){show('tracker');tracker(h.slice(7))}
   else if(m&&weeks.includes(+m[1])){cur=+m[1];show('weeks');week(cur)}else if(h==='compare'){show('compare')}else if(h==='record'){show('record')}
   else if(h==='players'||p){show('players');players(p?p[1]:null)}
   else if(/^wrcb(-[\w-]+)?$/.test(h)){show('wrcb');wrcb(h.slice(5)||null)}
@@ -1749,7 +1775,7 @@ function espnconv(d,fix){return(d.events||[]).map(e=>{const c=e.competitions[0],
   return{id:e.id,date:e.date,home:ab(t.home),away:ab(t.away),hs:sc(t.home),as_:sc(t.away),state:st.state,final:!!st.completed,detail:st.shortDetail}}).filter(Boolean)}
 let LIVEAT=0;
 function scoreset(j,src){if(!j)return;SCORES=j;let n=scoresApply();const u=document.querySelector('#upd');if(u){u.textContent=u.textContent.replace(/ · scores.*$/,'')+' · scores '+(src==='live'?'live ':'')+new Date(j.updated).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'})}
-  if(n){const h=location.hash.slice(1);if(!/^(cash|home)?$/.test(h)&&!h.startsWith('cash'))route()}}
+  if(n){const h=location.hash.slice(1);if(!/^(cash|home)?$/.test(h)&&!h.startsWith('cash')&&!h.startsWith('tracker'))route()}}
 function livescores(){if(document.hidden)return;const g=p=>_fetch(ESPN+p,{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({})),et=new Date(Date.now()-5*36e5),ymd=d=>d.toISOString().slice(0,10).replaceAll('-',''),y=new Date(+et-864e5);
   Promise.all([g('football/nfl/scoreboard'),g('football/college-football/scoreboard?groups=80&limit=300'),g('basketball/nba/scoreboard?dates='+ymd(y)),g('basketball/nba/scoreboard?dates='+ymd(et)),g('hockey/nhl/scoreboard?dates='+ymd(et)),g('hockey/nhl/scoreboard?dates='+ymd(y))]).then(([n,c,b1,b2,h1,h2])=>{
     const any=[n,c,b1,b2,h1].some(d=>(d.events||[]).length);if(!any)return;LIVEAT=Date.now();
@@ -1804,16 +1830,14 @@ function cashrows(sp){
   const tn=NB.tonight;return{slate:tn?new Date(tn.date+'T12:00:00').toLocaleDateString('en-US',{weekday:'long',month:'short',day:'numeric'}):'Tonight',rows:(tn?tn.games:[]).filter(g=>g.spread!=null&&Math.abs(g.spread)>=3).map(g=>{const hf=g.spread>0;
     return{id:'nba-'+g.id,fav:hf?g.home:g.away,dog:hf?g.away:g.home,home:hf,sp:Math.abs(g.spread),ml:null,model:hf?g.ph:1-g.ph,when:new Date(g.t).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'})+' '+TZL,
     won:g.state==='post'&&g.hs!=null&&+g.hs!==+g.as_?(+g.hs>+g.as_)===hf:null,live:g.state==='in',link:'nba-game-'+g.id,fname:(NB.teams[hf?g.home:g.away]||{}).short}})}}
-function cash(sp){if(sp)CASH.sp=sp;if(!CSP[CASH.sp]&&CASH.sp!=='bets'&&CASH.sp!=='build')CASH.sp='nfl';cashsave();const box=$('#v-cash'),cur=CASH.sp;
-  box.innerHTML=`<div class="cashtop"><div><div class="eyebrow"><span>Your betting desk</span></div><h2>Cash Center</h2><p class="note">Pick a sport to see its confident winners. Save the ones you like to your card, and follow your money in the bet tracker.</p></div>
+function cash(sp){if(CSP[sp])CASH.sp=sp;if(!CSP[CASH.sp])CASH.sp='nfl';cashsave();const box=$('#v-cash'),cur=CASH.sp;
+  box.innerHTML=`<div class="cashtop"><div><div class="eyebrow"><span>Confident winners</span></div><h2>${CSP[cur][0]} picks</h2><p class="note">Favorites of 3 points or more, with how often that size of favorite has won. Save the ones you like to your card, and log the bets you place in the <a class="lk" href="#tracker">Bet Tracker</a>.</p></div>
    <a class="cashcard" href="#cash-${cur}" id="cashjump"><small>My card</small><b>${CASH.slip.length}</b><span>pick${CASH.slip.length===1?'':'s'} saved</span></a></div>
-  <div class="cashgrid"><aside class="cashrail"><div class="cashsp" role="tablist" aria-label="Sport">${Object.keys(CSP).map(k=>`<button role="tab" data-csp="${k}" aria-selected="${k===cur}"><i class="sd ${k}"></i>${CSP[k][0]}</button>`).join('')}<hr><button role="tab" data-csp="bets" aria-selected="${cur==='bets'}"><i class="sd bets"></i>Bet tracker<em>${CASH.bets.filter(b=>b.status==='open').length||''}</em></button><button role="tab" data-csp="build" aria-selected="${cur==='build'}"><i class="sd bets"></i>Parlay builder</button></div><div id="cashslip"></div></aside>
-  <div class="cashmain">${cur==='bets'?'<div id="cashbets"></div>':cur==='build'?'<div id="cashbuild"></div>':`<div id="cashbody"><p class="note">Loading ${CSP[cur][0]}…</p></div>`}</div></div>`;
+  <div class="cashgrid"><aside class="cashrail"><div id="cashslip"></div></aside>
+  <div class="cashmain"><div id="cashbody"><p class="note">Loading ${CSP[cur][0]}…</p></div></div></div>`;
   box.querySelectorAll('[data-csp]').forEach(b=>b.onclick=()=>{location.hash='cash-'+b.dataset.csp});
   $('#cashjump').onclick=e=>{e.preventDefault();$('#cashslip').scrollIntoView({behavior:'smooth',block:'start'})};
-  if(cur==='bets'){cashslip();cashbets();return}
-  if(cur==='build'){cashslip();cashbuild();return}
-  (cur==='nba'?nbload():cur==='cfb'?cfload():Promise.resolve()).then(()=>{if(CASH.sp===cur&&!$('#v-cash').hidden)cashdraw()}).catch(e=>{$('#cashbody').innerHTML=`<p class="empty">${CSP[cur][0]} data did not load (${esc(e.message)}). Reload the page to try again.</p>`});cashslip();cashbets()}
+  (cur==='nba'?nbload():cur==='cfb'?cfload():Promise.resolve()).then(()=>{if(CASH.sp===cur&&!$('#v-cash').hidden)cashdraw()}).catch(e=>{$('#cashbody').innerHTML=`<p class="empty">${CSP[cur][0]} data did not load (${esc(e.message)}). Reload the page to try again.</p>`});cashslip()}
 function cashdraw(){const sp=CASH.sp,C=D.rules&&D.rules[CSP[sp][1]],{slate,rows}=cashrows(sp),host=$('#cashbody');
   if(!C){host.innerHTML='<p class="empty">Win-rate history is not available yet for this sport.</p>';return}
   rows.forEach(r=>{r.b=C.bands.find(b=>r.sp>=b.lo&&r.sp<b.hi);r.rate=r.b&&r.b.hist.n?r.b.hist.pct:null;r.top=r.rate!=null&&r.rate>=.7});
@@ -1842,11 +1866,11 @@ function cashslip(){const host=$('#cashslip');if(!host)return;const S=CASH.slip,
     <p class="note">The chance multiplies each pick's historical win rate, which assumes the games do not affect each other.${same?' <b>Two of these picks are from the same game, so that assumption is wrong here.</b>':''} Take a parlay only if the price offered pays more than the fair price; sportsbooks usually pay less, and every added leg lowers the chance.</p></div>`})():''}<p><button class="btn" id="cashclear">Clear my card</button></p>`:'<p class="note">Nothing saved yet. Use "Add to my card" on any confident winner.</p>'}
    <p class="note">Your card is saved in this browser only. It is a notepad, not a bet slip: nothing here places a bet, and finished games stay until you remove them.</p></section>`;
   host.querySelectorAll('[data-crm]').forEach(b=>b.onclick=()=>{CASH.slip=CASH.slip.filter(x=>x.id!==b.dataset.crm);cashsave();cash()});const c=$('#cashclear');if(c)c.onclick=()=>{CASH.slip=[];cashsave();cash()};
-  host.querySelectorAll('[data-cbet]').forEach(b=>b.onclick=()=>{const x=S.find(y=>y.id===b.dataset.cbet);CASH.draft={desc:`${x.team} to win (${x.line})`,sp:x.sp,price:x.ml??'',legs:[{id:x.id,res:null}],link:x.link};location.hash='cash-bets'});
+  host.querySelectorAll('[data-cbet]').forEach(b=>b.onclick=()=>{const x=S.find(y=>y.id===b.dataset.cbet);CASH.draft={desc:`${x.team} to win (${x.line})`,sp:x.sp,price:x.ml??'',legs:[{id:x.id,res:null}],link:x.link};location.hash='tracker-bets'});
   const pp=$('#pprice');if(pp){const upd=()=>{const a=+pp.value;if(!a||Math.abs(a)<100){$('#pneed').textContent='–';$('#pverd').textContent='–';return}const need=1/(1+cpay(a));$('#pneed').textContent=pc(need,1);
     $('#pverd').textContent=rates.length===S.length?(all>need?'Pays enough':'Pays too little'):'–';$('#pverd').className=all>need?'w':'l'};pp.oninput=upd;
     $('#plog').onclick=()=>{const a=+pp.value,st=+$('#pstake').value;if(!a||Math.abs(a)<100||!(st>0)){$('#pmsg').textContent='Enter the price offered (like +264 or -120) and a stake above zero.';return}
-      CASH.bets.unshift({id:'b'+Date.now(),date:new Date().toISOString().slice(0,10),sp:'parlay',desc:`Parlay: ${S.map(x=>x.team).join(' + ')}`,price:a,stake:st,status:'open',legs:S.map(x=>({id:x.id,res:null}))});cashsave();location.hash='cash-bets'}}}
+      CASH.bets.unshift({id:'b'+Date.now(),date:new Date().toISOString().slice(0,10),sp:'parlay',desc:`Parlay: ${S.map(x=>x.team).join(' + ')}`,price:a,stake:st,status:'open',legs:S.map(x=>({id:x.id,res:null}))});cashsave();location.hash='tracker-bets'}}}
 
 /* build any bet by hand: one leg is a single bet, two or more is a parlay */
 CASH.build=CASH.build||{legs:[{d:'',p:''},{d:'',p:''}],stake:'',price:''};
@@ -1867,7 +1891,7 @@ function cashbuild(){const host=$('#cashbuild');if(!host)return;const U=CASH.bui
   $('#buclear').onclick=()=>{CASH.build={legs:[{d:'',p:''},{d:'',p:''}],stake:'',price:''};cashbuild()};
   $('#bulog').onclick=()=>{const{L,use,st}=calc();if(!L.length){$('#bumsg').textContent='Describe at least one leg.';return}if(!use){$('#bumsg').textContent='Enter odds for every leg (like -110 or +150), or the parlay odds you got.';return}if(!(st>0)){$('#bumsg').textContent='Enter the money you staked.';return}
     CASH.bets.unshift({id:'b'+Date.now(),date:new Date().toISOString().slice(0,10),sp:L.length>1?'parlay':'other',desc:L.length>1?`${L.length}-leg parlay`:L[0].d.trim(),price:use,stake:st,status:'open',legs:[],parts:L.map(l=>({d:l.d.trim(),p:ok(+l.p)?+l.p:null}))});
-    CASH.build={legs:[{d:'',p:''},{d:'',p:''}],stake:'',price:''};cashsave();location.hash='cash-bets'};calc()}
+    CASH.build={legs:[{d:'',p:''},{d:'',p:''}],stake:'',price:''};cashsave();location.hash='tracker-bets'};calc()}
 function cashsettle(rows){let ch=0;const R=new Map(rows.filter(r=>r.won!=null).map(r=>[r.id,r.won]));
   CASH.bets.forEach(b=>{if(b.status!=='open'||!b.legs||!b.legs.length)return;b.legs.forEach(l=>{if(l.res==null&&R.has(l.id)){l.res=R.get(l.id);ch=1}});
     if(b.legs.some(l=>l.res===false)){b.status='lost';ch=1}else if(b.legs.every(l=>l.res===true)){b.status='won';ch=1}});if(ch){cashsave();cashbets()}}
@@ -3099,21 +3123,31 @@ function hmchart(B){const d=B.filter(hmsett).slice().sort((a,b)=>a.date<b.date?-
    <circle cx="${x(pts.length-1)}" cy="${y(end)}" r="5" fill="${col}"/>
    ${days.map((k,i)=>`<circle cx="${x(i+1)}" cy="${y(pts[i+1])}" r="9" fill="transparent"><title>${fmt(k)}: ${hmv(by.get(k))} (total ${hmv(pts[i+1])})</title></circle>`).join('')}
    <text x="${L}" y="${H-6}">${fmt(days[0])}</text><text x="${W-R}" y="${H-6}" text-anchor="end">${fmt(days[days.length-1])}</text></svg>`}
-function hmcalendar(){const n=new Date(),key=HM.cal||hmiso(n).slice(0,7),[Y,M]=key.split('-').map(Number),first=new Date(Y,M-1,1),dim=new Date(Y,M,0).getDate(),lead=first.getDay(),t=hmiso(n),by=new Map();
-  CASH.bets.filter(b=>hmsett(b)&&b.date&&b.date.startsWith(key)).forEach(b=>by.set(b.date,(by.get(b.date)||0)+hmpl(b)));
-  const cells=[];for(let i=0;i<lead;i++)cells.push('<div class="hmd out"></div>');
-  for(let d=1;d<=dim;d++){const k=`${key}-${String(d).padStart(2,'0')}`,v=by.get(k);cells.push(`<div class="hmd ${v!=null?hmcls(v):''} ${k===t?'now':''}"${v!=null?` title="${k}: ${hmv(v)}"`:''}><i>${d}</i>${v!=null?`<em>${hmv(v,1)}</em>`:''}</div>`)}
-  while(cells.length%7)cells.push('<div class="hmd out"></div>');
-  const tot=[...by.values()].reduce((a,b)=>a+b,0);
-  return`<div class="hmcal"><div class="hmcalh"><b>${first.toLocaleDateString('en-US',{month:'long',year:'numeric'})}</b><span class="hmres ${hmcls(tot)?(tot>0?'won':'lost'):'push'}" style="margin-right:6px">${by.size?hmv(tot):'No bets'}</span><button data-hmcal="-1" aria-label="Previous month">‹</button><button data-hmcal="1" aria-label="Next month">›</button></div>
-   <div class="hmgrid">${['S','M','T','W','T','F','S'].map(x=>`<span>${x}</span>`).join('')}${cells.join('')}</div></div>`}
+function hmcalendar(){const n=new Date(),t=hmiso(n),key=HM.cal||t.slice(0,7),[Y,M]=key.split('-').map(Number),first=new Date(Y,M-1,1),dim=new Date(Y,M,0).getDate(),lead=first.getDay();
+  const day=new Map(),add=(k,b)=>{const d=day.get(k)||{pl:0,w:0,l:0,p:0,o:0,n:0};d.n++;if(b.status==='won')d.w++;else if(b.status==='lost')d.l++;else if(b.status==='open')d.o++;else d.p++;if(hmsett(b))d.pl+=hmpl(b);day.set(k,d)};
+  CASH.bets.forEach(b=>{if(b&&b.date)add(b.date,b)});
+  const rec=d=>d.w+d.l+d.p?`${d.w}-${d.l}${d.p?'-'+d.p:''}`:'',set=d=>d&&d.w+d.l>0;
+  const money=v=>`<em class="${hmcls(v)}"><span class="f">${hmv(v)}</span><span class="c">${hmv(v,1)}</span></em>`;
+  const cell=(dt,out)=>{const k=hmiso(dt),d=day.get(k),now=k===t;
+    return`<div class="tcd ${out?'out':''} ${!out&&set(d)?hmcls(d.pl)||'ev':''} ${now?'now':''}"${d?` title="${k}: ${d.n} bet${d.n===1?'':'s'}${set(d)?', '+hmv(d.pl):''}"`:''}><i>${dt.getDate()}</i>${!out&&d?`${set(d)?money(d.pl):''}${rec(d)?`<small>${rec(d)}</small>`:''}${d.o?`<span class="tco">${d.o} open</span>`:''}`:''}</div>`};
+  const start=new Date(Y,M-1,1-lead),rows=Math.ceil((lead+dim)/7),mt={pl:0,w:0,l:0,p:0};let body='';
+  for(let r=0;r<rows;r++){const wk={pl:0,w:0,l:0,p:0,any:0};
+    for(let c=0;c<7;c++){const dt=new Date(start.getFullYear(),start.getMonth(),start.getDate()+r*7+c),out=dt.getMonth()!==M-1;body+=cell(dt,out);
+      const d=!out&&day.get(hmiso(dt));if(d){wk.pl+=d.pl;wk.w+=d.w;wk.l+=d.l;wk.p+=d.p;wk.any+=d.w+d.l}}
+    mt.pl+=wk.pl;mt.w+=wk.w;mt.l+=wk.l;mt.p+=wk.p;
+    body+=`<div class="tcd tcw ${wk.any?hmcls(wk.pl)||'ev':''}">${wk.any?`${money(wk.pl)}<small>${rec(wk)}</small>`:'<small>–</small>'}</div>`}
+  const has=mt.w+mt.l>0,cur=key===t.slice(0,7);
+  return`<div class="tcal"><div class="tcalh"><div><b>${first.toLocaleDateString('en-US',{month:'long',year:'numeric'})}</b><span class="tcsum">${has?`Month <span class="${hmcls(mt.pl)}">${hmv(mt.pl)}</span> · ${rec(mt)}`:'No settled bets this month'}</span></div>
+   <div class="tcnav"><button data-hmcal="-1" aria-label="Previous month">‹</button>${cur?'':'<button data-hmcal="0">This month</button>'}<button data-hmcal="1" aria-label="Next month">›</button></div></div>
+   <div class="tcwrap"><div class="tcg">${['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map(x=>`<span class="tch">${x}</span>`).join('')}<span class="tch tw">Week</span>${body}</div></div>
+   <p class="note tcnote">Each day shows its profit and record (won-lost-push) from bets you have settled. Open bets show until you mark them.</p></div>`}
 function hmtrack(){const us=hmusd(),tg=k=>`<button class="hmtg" data-hmusd aria-pressed="${us}" title="${us?'Showing dollars: switch to units':'Showing units: switch to dollars'}">$</button><button class="hmcp" data-hmcopy="${k}">Copy</button>`;
   const hist=[['today','Today'],['yest','Yesterday'],['week','This Week'],['month','This Month']].map(([k,l])=>{const s=hmsum(hmin(hmspan(k)));return`<div class="hmrow"><div><b>${l}</b><small>${s.rec}</small></div><span class="hmpl ${hmcls(s.pr)}">${hmv(s.pr)}</span></div>`}).join('');
   const PB=hmin(hmspan(HM.per)),S=hmsum(PB),open=CASH.bets.filter(b=>b&&b.status==='open');
   const pct=S.w+S.l?Math.round(100*S.w/(S.w+S.l))+'% won':'';
   const unitL=us?'Stake ($)':'Stake (units)';
-  return`<section class="hmsec" id="hmtrack-top"><div class="hmhd"><h2>Your bet tracker</h2></div>
-   <div class="hmset"><label>1 unit = $ <input id="hmunit" inputmode="decimal" value="${hmunit()}"></label><span>Showing <b>${us?'dollars':'units'}</b>. Tap <b>$</b> to switch.</span><a class="lk" href="#cash-bets">Full tracker and backup →</a></div>
+  return`<section class="hmsec" id="hmtrack-top"><div class="trtop"><div><div class="eyebrow"><span>Your bets, your record</span></div><h2>Bet Tracker</h2></div></div>
+   <div class="hmset"><label>1 unit = $ <input id="hmunit" inputmode="decimal" value="${hmunit()}"></label><span>Showing <b>${us?'dollars':'units'}</b>. Tap <b>$</b> to switch.</span><a class="lk" href="#tracker-bets">All bets and backup →</a></div>
    <div class="hm2">
     <div class="hmsec"><div class="hmhd"><h2 style="font-size:22px">History</h2>${tg('hist')}</div><div class="hmbox">${hist}</div></div>
     <div class="hmsec"><div class="hmhd"><h2 style="font-size:22px">Performance</h2>${tg('perf')}</div>
@@ -3121,18 +3155,19 @@ function hmtrack(){const us=hmusd(),tg=k=>`<button class="hmtg" data-hmusd aria-
       <div class="hmchart">${hmchart(PB)}</div>
       <div class="hmper" role="group" aria-label="Period">${[['week','Week'],['month','Month'],['year','Year'],['all','All']].map(([k,l])=>`<button data-hmper="${k}" aria-pressed="${HM.per===k}">${l}</button>`).join('')}</div></div></div>
    </div>
+   <div class="hmsec"><div class="hmhd"><h2 style="font-size:22px">Calendar</h2>${tg('cal')}</div>${hmcalendar()}</div>
    <div class="hm2">
-    <div class="hmsec"><div class="hmhd"><h2 style="font-size:22px">Calendar</h2>${tg('cal')}</div>${hmcalendar()}</div>
     <div class="hmsec"><div class="hmhd"><h2 style="font-size:22px">Log a bet</h2></div>
      <div class="hmform"><label class="wide">Bet<input id="hmbet" placeholder="e.g. Lakers -4.5, or a 3-leg parlay"></label>
       <label>Sport<select id="hmsp">${Object.entries(HSP).map(([k,v])=>`<option value="${k}">${v}</option>`).join('')}</select></label>
       <label>Odds <span class="hmoddw"><input id="hmodds" inputmode="decimal" placeholder="${HM.fmt==='x'?'2.53':'-110'}"><span class="hmfmt" role="group" aria-label="Odds format"><button type="button" data-hmfmt="us" aria-pressed="${HM.fmt==='us'}" title="Sportsbook odds, like -110">−110</button><button type="button" data-hmfmt="x" aria-pressed="${HM.fmt==='x'}" title="Multiplier odds, like Polymarket's 2.53x">2.53x</button></span></span></label>
       <label>${unitL}<input id="hmstake" inputmode="decimal" placeholder="${us?'25':'1'}"></label>
       <label>Date<input id="hmdate" type="date" value="${hmiso(Date.now())}"></label>
-      <button class="btn fill" id="hmadd">Log bet</button><p class="note wide" id="hmmsg" style="margin:0">${esc(HM.msg)}</p></div>
-     ${open.length?`<div class="hmbox hmopen">${open.slice(0,8).map(b=>`<div class="hmrow"><div><b>${esc(b.desc)}</b><small>${esc(b.date)} · ${b.fmt==='x'?(+b.dec).toFixed(2)+'x':camer(b.price)} · ${hmv(b.stake).replace('+','')}</small></div><div class="acts"><button data-hs="won" data-hi="${b.id}">Won</button><button data-hs="lost" data-hi="${b.id}">Lost</button><button data-hs="push" data-hi="${b.id}">Push</button></div></div>`).join('')}</div>${open.length>8?`<a class="lk" href="#cash-bets">${open.length-8} more open bets →</a>`:''}`:'<p class="note">No open bets. Mark each bet Won, Lost or Push here when it settles.</p>'}
+      <button class="btn fill" id="hmadd">Log bet</button><p class="note wide" id="hmmsg" style="margin:0">${esc(HM.msg)}</p></div></div>
+    <div class="hmsec"><div class="hmhd"><h2 style="font-size:22px">Open bets${open.length?` <small class="note">${open.length}</small>`:''}</h2></div>
+     ${open.length?`<div class="hmbox hmopen">${open.slice(0,8).map(b=>`<div class="hmrow"><div><b>${esc(b.desc)}</b><small>${esc(b.date)} · ${b.fmt==='x'?(+b.dec).toFixed(2)+'x':camer(b.price)} · ${hmv(b.stake).replace('+','')}</small></div><div class="acts"><button data-hs="won" data-hi="${b.id}">Won</button><button data-hs="lost" data-hi="${b.id}">Lost</button><button data-hs="push" data-hi="${b.id}">Push</button></div></div>`).join('')}</div>${open.length>8?`<a class="lk" href="#tracker-bets">${open.length-8} more open bets →</a>`:''}`:'<p class="note">No open bets. Mark each bet Won, Lost or Push here when it settles.</p>'}
     </div></div>
-   <p class="note">Your bets are saved in this browser only, and nobody else can see them. Use "Full tracker and backup" to copy them to another device. This tracker records bets you place yourself: nothing here places a bet.</p></section>`}
+   <p class="note">Your bets are saved in this browser only, and nobody else can see them. Use "All bets and backup" to copy them to another device. This tracker records bets you place yourself: nothing here places a bet.</p></section>`}
 function hmcopytext(k){const u=hmusd()?'':` (1u = $${hmunit()})`,s=x=>hmsum(hmin(hmspan(x)));
   if(k==='hist')return[['today','Today'],['yest','Yesterday'],['week','This week'],['month','This month']].map(([x,l])=>{const q=s(x);return`${l}: ${q.rec}, ${hmv(q.pr)}`}).join('\n')+u;
   if(k==='cal'){const t=[...CASH.bets.filter(b=>hmsett(b)&&b.date.startsWith(HM.cal||hmiso(Date.now()).slice(0,7)))].reduce((a,b)=>a+hmpl(b),0);return`${HM.cal||hmiso(Date.now()).slice(0,7)}: ${hmv(t)}${u}`}
@@ -3141,7 +3176,7 @@ function hmredraw(){const h=$('#hmtrack');if(!h)return;h.innerHTML=hmtrack();hmb
 function hmbind(){const host=$('#hmtrack');if(!host)return;
   host.querySelectorAll('[data-hmusd]').forEach(b=>b.onclick=()=>{hmput('cash-show',hmusd()?'u':'$');hmredraw()});
   host.querySelectorAll('[data-hmper]').forEach(b=>b.onclick=()=>{HM.per=b.dataset.hmper;hmredraw()});
-  host.querySelectorAll('[data-hmcal]').forEach(b=>b.onclick=()=>{const[Y,M]=(HM.cal||hmiso(Date.now()).slice(0,7)).split('-').map(Number),d=new Date(Y,M-1+ +b.dataset.hmcal,1);HM.cal=hmiso(d).slice(0,7);hmredraw()});
+  host.querySelectorAll('[data-hmcal]').forEach(b=>b.onclick=()=>{if(b.dataset.hmcal==='0'){HM.cal=null;hmredraw();return}const[Y,M]=(HM.cal||hmiso(Date.now()).slice(0,7)).split('-').map(Number),d=new Date(Y,M-1+ +b.dataset.hmcal,1);HM.cal=hmiso(d).slice(0,7);hmredraw()});
   host.querySelectorAll('[data-hmfmt]').forEach(b=>b.onclick=()=>{HM.fmt=b.dataset.hmfmt;const keep=['hmbet','hmsp','hmodds','hmstake','hmdate'].map(i=>$('#'+i).value);hmredraw();['hmbet','hmsp','hmodds','hmstake','hmdate'].forEach((i,j)=>$('#'+i).value=keep[j])});
   host.querySelectorAll('[data-hmcopy]').forEach(b=>b.onclick=()=>{const t=hmcopytext(b.dataset.hmcopy),done=()=>{b.textContent='Copied';setTimeout(()=>b.textContent='Copy',1600)};
     try{navigator.clipboard.writeText(t).then(done,()=>{HM.msg='Copy is blocked here. Your summary: '+t.replace(/\n/g,' · ');hmredraw()})}catch(e){HM.msg='Copy is blocked here. Your summary: '+t.replace(/\n/g,' · ');hmredraw()}});
@@ -3151,11 +3186,15 @@ function hmbind(){const host=$('#hmtrack');if(!host)return;
     if(!desc||!d||!(st>0)){$('#hmmsg').textContent=HM.fmt==='x'?'Enter the bet, a multiplier above 1 (like 2.53) and a stake above zero.':'Enter the bet, American odds (like -110 or +150) and a stake above zero.';return}
     const b={id:'b'+Date.now(),date,sp:$('#hmsp').value,desc,price:HM.fmt==='x'?hmamer(d):hmnum($('#hmodds').value),stake:hmusd()?st:st*hmunit(),status:'open',legs:[]};
     if(HM.fmt==='x'){b.fmt='x';b.dec=d}CASH.bets.unshift(b);cashsave();HM.msg='Logged. Mark it Won, Lost or Push when it settles.';hmredraw();HM.msg=''}}
+function hmmini(){const w=hmsum(hmin(hmspan('week'))),open=CASH.bets.filter(b=>b&&b.status==='open').length;
+  return`<section class="hmtease"><div><h2>Your bet tracker</h2><p class="note">${CASH.bets.length?`This week <b class="${hmcls(w.pr)}">${hmv(w.pr)}</b> · ${w.rec} · ${open} open bet${open===1?'':'s'}`:'Log the bets you place and see your record, ROI chart and a month calendar of wins and losses, in units or dollars. Saved in this browser only; nothing here places a bet.'}</p></div><a class="btn fill" href="#tracker">Open Bet Tracker</a></section>`}
+function tracker(sub){const box=$('#v-tracker');
+  if(sub==='-bets'){box.innerHTML=`<div class="trtop"><div><div class="eyebrow"><span>Bet Tracker</span></div><h2>All bets</h2><p class="note">Every bet you have logged, your money over time, and a backup code to move them to another device.</p></div></div><div id="cashbets"></div>`;cashbets();return}
+  if(sub==='-build'){box.innerHTML=`<div class="trtop"><div><div class="eyebrow"><span>Bet Tracker</span></div><h2>Parlay builder</h2></div></div><div id="cashbuild"></div>`;cashbuild();return}
+  box.innerHTML=`<div id="hmtrack">${hmtrack()}</div>`;hmbind()}
 function home(){const box=$('#v-home');
   if(!HM.P){box.innerHTML='<p class="note">Loading…</p>';Promise.all([fetch('picks.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),fetch('tonight.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null)]).then(([j,t])=>{HM.P=j&&typeof j==='object'?j:{days:[]};HM.T=t||{games:[]};if(!$('#v-home').hidden)home()});return}
-  const has=CASH.bets.length>0||HM.open;
-  box.innerHTML=`<div class="hm">${hmdoor()}${hmhero()}${hmboard()}<div id="hmtrack">${has?hmtrack():`<section class="hmtease"><div><h2>Your bet tracker</h2><p class="note">Log the bets you place and see your record, ROI chart and a calendar of wins and losses, in units or dollars. Saved in this browser only; nothing here places a bet.</p></div><button class="btn fill" id="hmopen">Open the bet tracker</button></section>`}</div></div>`;
-  if(has)hmbind();else $('#hmopen').onclick=()=>{HM.open=true;hmredraw()};
+  box.innerHTML=`<div class="hm">${hmdoor()}${hmhero()}${hmboard()}${hmmini()}</div>`;
   box.querySelectorAll('[data-hmbf]').forEach(b=>b.onclick=()=>{HM.bf=b.dataset.hmbf;const x=$('#hmboard');x.outerHTML=hmboard();home()});
   const cta=box.querySelector('.hmcta a[href="#hmboard"]');if(cta)cta.onclick=e=>{e.preventDefault();$('#hmboard').scrollIntoView({behavior:'smooth',block:'start'})}}
 /* ===================== end Home ===================== */
