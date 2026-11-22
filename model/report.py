@@ -995,7 +995,7 @@ def render_game(gm, c, R, cal):
                             [(nm, tm, "anytime touchdown", p_) for nm, tm, p_ in summ["td"]], watch,
                             [("All picks", "p", 0), ("Touchdown detail", "p", 1), ("Injuries", "pl", 1)],
                             "Most likely means likely to hit, not good value: the free feed has lines but no prices. From 20,000 simulated games.")
-    overview = best_strip + board + warn + winp + sosb + bars + cond
+    overview = best_strip + board + warn + sosb + winp + bars + cond
 
     # Odds
     odds = (board + move + sec("Line movement", CTX, mtable) + sec("Game markets", PRED, t1 + t2 + t3) + sec("Game picks", PRED, Gp))
