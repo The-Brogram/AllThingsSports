@@ -1,17 +1,7 @@
-football run Sun Nov 22 2026 12:25 PM ET: nfl-today (schedule 45 16 * * 0)
-== nfl-today
-[nflverse refresh] ok in 2s
-[run today] ok in 297s
-    Fantasy: 2026 week 11, 2 slate(s), 228 players, 0.89 MB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/fantasy.json
-    CFB leaders: 132 players, 137 FBS defenses, through week 12 -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/cfbl.json 132 KB
-    CFB: week 12 current, 491 in-scope games across 14 weeks, 87 with our pick, 188 teams, 257 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/cfb.json
-    UCL: 144 fixtures (72 final, 72 box scores), 36 in the table, 2 analysed matchdays
-    Team logos: nba 30, nhl 32, cfb 187, ucl 36
-    Hub: Week 11 is current. 151 final, 11 with a Game Book, 17 with lines, 93 early. 13 reports. 674 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/index.html
-    Data freshness NFL: OK - games final through week 11; player stats through week 11; weekly rosters through week 11
-    Data freshness CFB: OK - games final through week 12; player stats through week 12
-    Data freshness NBA: OK - games final through 2026-11-21; 241/241 with box scores; 241/241 with shot charts
-       done in 69s
-    Report: output/nfl_20261122_report.html
-    Hub: output/hub/index.html
-hub copied to the site
+football run Sun Nov 22 2026 04:25 PM ET: nfl-odds (schedule 45 20 * * 0)
+== nfl-odds
+[odds] ok in 11s
+    sync: no site repository
+    -> odds.py [20261122]
+    odds snapshot 2026-11-22T21:25Z: 17626 lines logged to /home/runner/work/AllThingsSports/AllThingsSports/model/output/odds_log.csv
+       done in 11s
