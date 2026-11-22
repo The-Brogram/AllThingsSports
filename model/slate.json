@@ -281,20 +281,53 @@
   },
   "20261122": {
    "notes": {
-    "CHI": "Kyle Monangai (turf toe/thumb) returns after missing five straight games: full participant on Wednesday's estimated report and he says he expects to play (SI Bears On SI; NBC Sports citing ESPN's Courtney Cronin, Nov 16). SI expects D'Andre Swift to stay the lead back with Monangai's snaps limited in his first game back, and the two split work almost evenly before his injury. Chicago's usage history cannot see this, so Bears rushing lines are held.",
-    "KC": "Kenneth Walker III (groin) missed Week 10 and did not practice Wednesday or Thursday (Arizona Sports injury table, Nov 19; NBC Sports, Nov 19). Andy Reid: 'We just don't want to do something stupid' (CBS, Nov 18). Rookie Emmett Johnson started Week 10 (22-101 rushing, 6-70 receiving, 2 TD) and starts again if Walker sits; Friday's designation is not yet known, so Chiefs rushing lines are held either way.",
-    "TB": "Baker Mayfield (foot/right thumb) did not practice Wednesday and was limited Thursday; the team will not name its Week 11 starter until at least Friday (Buccaneers.com injury report, Nov 19). Rookie Jalon Daniels took first-team reps Wednesday and would start if Mayfield cannot. Unconfirmed: confirm the Tampa Bay starter before using any Buccaneers prop.",
-    "ARI": "Carson Beck makes his second start (Gardner Minshew on IR, season-ending elbow surgery), but Beck was added to Thursday's report with a back injury and was limited (Arizona Sports, Nov 19; SI Cardinals On SI). 40-year-old Josh Johnson is the backup. Beck's Friday status is unconfirmed.",
-    "NYJ": "Geno Smith (left ankle, imaging found no major injury) was limited Wednesday; asked if he will start Sunday he said 'Yes. For sure.' and Aaron Glenn said 'He's our starter' (NewYorkJets.com, Nov 18). Rookie Cade Klubnik starts if Smith is not cleared. WRs Omar Cooper Jr. (ankle/hip) and Isaiah Williams (ribs) did not practice Wednesday.",
-    "SF": "Mike Evans (Achilles) has missed three straight games; he did not practice Wednesday and was limited Thursday, and Kyle Shanahan sounded optimistic he can play (Vikings.com injury report, Nov 19; USA Today via Yahoo, Nov 18). If he plays his role is uncertain, so 49ers receiving lines are low confidence. Christian McCaffrey's Wednesday absence was a rest day; he practiced fully Thursday.",
-    "PHI": "Joe Milton III starts again (named by Nick Sirianni, BVM Sports, Nov 18); Jalen Hurts is out for the season. DeVonta Smith (hamstring, five of the last six games missed) and Dontayvion Wicks (ankle, out since Week 6) were limited Wednesday and are on track to return (CBS, Nov 18; USA Today via Yahoo, Nov 18), so their roles are uncertain and Eagles receiving lines are low confidence.",
-    "MIN_": "Kirk Cousins starts in Mexico City; Kyler Murray (hamstring) and Jordan Addison (thumb) did not practice Wednesday or Thursday, and T.J. Hockenson (wrist) was limited both days (Vikings.com, Nov 19).",
-    "LV_": "Fernando Mendoza makes his second start (first on the road). Brock Bowers (ankle) did not practice Wednesday; Klint Kubiak said 'If he's ready to go, we'll get him out there' and that he need not practice to play (USA Today via Yahoo, Nov 18). His status is unconfirmed."
+    "CHI": "Kyle Monangai (turf toe/thumb) carries no designation on the final report and returns after missing five straight games (NFL Network's Mike Garafolo via Yahoo Sports, Nov 20-21). D'Andre Swift is expected to stay the lead back with Monangai eased in, and the two split work almost evenly before his injury. Chicago's usage history cannot see this, so Bears rushing lines are held. WR Zavion Thomas (ankle) is Questionable.",
+    "KC": "Kenneth Walker III (groin) is officially Out after missing practice all week (NFL.com final injury report; ESPN, Nov 21). Rookie Emmett Johnson starts again, as he did in Week 10 (22-101 rushing, 6-70 receiving, 2 TD). Chiefs rushing lines are held because usage history still reflects Walker.",
+    "TB": "Baker Mayfield (foot, plantar fasciitis per NFL Network's Ian Rapoport; right thumb) is Questionable after limited practices Thursday and Friday; Todd Bowles said Friday he is 'trending in the right direction' (NBC Sports PFT, Nov 20), and ESPN's Lindsey Thiry reported Sunday he will start barring a setback in warmups (Yahoo Sports live blog, Nov 22). Rookie Jalon Daniels starts if he cannot. Not official until inactives.",
+    "ARI": "Carson Beck (back spasms, no practice Friday) was ruled out Saturday; 40-year-old Josh Johnson starts, Arizona's fourth starting QB in four weeks, with Joey Aguilar backing up (CBS Sports / Darren Urban of azcardinals.com, Nov 21; NFL.com Saturday roundup, Nov 21). Cardinals passing and receiving lines rest on a QB with little recent history, so treat them as low confidence.",
+    "SF": "Mike Evans (Achilles tendinitis, out since Week 6) is Questionable after limited practices Thursday and Friday, and NFL Network reports he is set to play (NFL.com; NBC Sports PFT, Nov 21). After several missed games his role is uncertain, so 49ers receiving lines are low confidence. RB Isaac Guerendo (pectoral) is Out and RB Jordan James (calf) is Questionable; WR Brandin Cooks was waived Saturday (NFL.com Saturday roundup, Nov 21). Christian McCaffrey has no designation.",
+    "PHI": "Joe Milton III starts again (Jalen Hurts on IR). DeVonta Smith (hamstring) practiced fully Thursday and Friday, has no designation and returns after missing five of the last six games (NBC Sports PFT, Nov 20), so his role is uncertain. Dontayvion Wicks (ankle/foot) was placed on IR Saturday; RB Will Shipley was activated from IR but is Questionable (foot/illness) (NFL.com Saturday roundup; Yahoo Sports, Nov 21). Eagles receiving lines are low confidence.",
+    "MIN_": "Kirk Cousins starts in Mexico City; Kyler Murray (hamstring) and Jordan Addison (thumb) are Out (NFL.com final injury report; ESPN, Nov 21). T.J. Hockenson (wrist/chest) practiced fully Friday and has no designation after missing Week 10 (Vikings.com final injury report, Nov 20).",
+    "NYJ_": "Geno Smith (ankle) practiced fully Friday, has no injury designation and starts (NBC Sports PFT, Nov 20). WRs Omar Cooper Jr. (ankle/hip) and Isaiah Williams (ribs) are Out; WR Sterling Shepard was elevated from the practice squad (NFL.com Saturday roundup, Nov 21).",
+    "LV": "Brock Bowers (ankle/quad) is Questionable after missing Wednesday and practicing limited Thursday and Friday; he said he does not know whether he will play and the decision may come close to the 4:25 kickoff (NBC Sports PFT; CBS Sports, Nov 21). TE Carter Runyon was elevated from the practice squad; Michael Mayer leads the tight ends if Bowers sits. Fernando Mendoza makes his second start. Raiders receiving lines depend on Bowers, so they are flagged until inactives.",
+    "PIT": "WR Roman Wilson (hand) was activated from IR Saturday after missing every game since Week 5 and practicing fully all week; Michael Pittman Jr. (foot) was not activated and stays on IR (ESPN; NBC Sports, Nov 21). Wilson's role on return is uncertain, so Steelers receiving lines are low confidence. WR Max Hurleman was elevated.",
+    "TEN_": "RB Tyjae Spears (knee) was placed on IR Saturday; RB Michael Carter was elevated from the practice squad and Tony Pollard (full practice Friday, no designation) stays the lead back (NFL.com Saturday roundup; Titans final injury report, Nov 20-21). WR Carnell Tate (shoulder) is Questionable after a full practice Friday.",
+    "BUF_": "TE Dalton Kincaid (thumb/ankle) is Doubtful after missing practice all week, though Joe Brady said he could still play; TE Jackson Hawes (shoulder) is Questionable and Dawson Knox leads the tight ends if Kincaid sits (Buffalo Bills final injury report; SI Bills On SI, Nov 20). DL Ed Oliver (oblique) was added as Questionable Saturday (NFL.com, Nov 21).",
+    "CAR_": "TEs Darren Waller and Tommy Tremble (knee) are Questionable after limited practices Thursday and Friday; Dave Canales is hopeful both play (Yahoo Sports; CBS Sports, Nov 20). RB Jonathon Brooks stays on IR and was downgraded to Out (ESPN's Adam Schefter via FantasyPros, Nov 21).",
+    "DAL_": "TE Jake Ferguson (knee/ankle) and WR Jonathan Mingo (ankle) are Out; TE Luke Schoonmaker (illness) is Questionable after missing practice Thursday and Friday, leaving the tight end room thin (Titans/Cowboys final injury report, Nov 20).",
+    "LAC_": "WR Ladd McConkey (back) is Questionable after limited practices all week and is more likely than not to play (SI, Nov 21); TE Charlie Kolar (concussion) is Questionable; WR Brenen Thompson (hamstring) is Doubtful on the league report, though a Chargers post listed him Out. Unconfirmed until inactives.",
+    "DET_": "RB Sione Vaki (ankle) is Questionable; C Cade Mays (ankle) was placed on IR (Lions final injury report, Nov 20; NFL.com Saturday roundup, Nov 21).",
+    "JAX_": "RB Bhayshul Tuten (ankle/foot) missed Thursday, returned limited Friday and has no designation; LeQuint Allen Jr. and Jakobi Meyers also have no designation (Giants.com Week 11 injury report; Big Cat Country, Nov 20). Tuten's workload is the open question.",
+    "MIA_": "Kyle McCord starts (Malik Willis on IR). WRs Caleb Douglas (shoulder) and Chris Bell (knee) were removed from the final report; WR Jared Wayne (quad) is Out (Miami Dolphins final injury report, Nov 20)."
    },
    "hold_rushing": [
     "CHI",
     "KC"
-   ]
+   ],
+   "qb": {
+    "ARI": "00-0026300"
+   },
+   "out": {
+    "ARI": [
+     "00-0041561"
+    ],
+    "KC": [
+     "00-0038134"
+    ],
+    "PHI": [
+     "00-0038393"
+    ],
+    "TEN": [
+     "00-0039032"
+    ],
+    "MIN": [
+     "00-0035228",
+     "00-0038994"
+    ],
+    "SF": [
+     "00-0031236"
+    ]
+   }
   }
  }
 }
