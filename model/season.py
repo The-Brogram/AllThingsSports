@@ -12,6 +12,7 @@ output/hub/files.json to the URL in output/artifacts.json under "hub", so the li
 """
 import glob
 import json
+import shutil
 import sys
 import math
 import os
@@ -323,6 +324,13 @@ def main():
         files.update(hub_ucl.build(HUB))
     except Exception as e:  # noqa: BLE001  a soccer data problem must not stop the hub from building
         print("UCL hub data skipped:", repr(e))
+    try:  # Home page: parlay and picks of the day, typed in on this computer with picks_desk.py
+        src = os.path.join(ROOT, "picks", "picks.json")
+        if os.path.exists(src):
+            shutil.copy2(src, os.path.join(HUB, "picks.json"))
+            files["picks.json"] = os.path.join(HUB, "picks.json")
+    except Exception as e:  # noqa: BLE001  a picks problem must not stop the hub from building
+        print("Picks skipped:", repr(e))
     json.dump(files, open(os.path.join(HUB, "files.json"), "w"), indent=1)
     n = {k: sum(1 for x in rows if x["status"] == k) for k in ("final", "book", "lines", "early")}
     print(f"Hub: Week {wk} is current. {n['final']} final, {n['book']} with a Game Book, {n['lines']} with lines, {n['early']} early. "
