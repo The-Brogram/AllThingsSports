@@ -1,0 +1,16 @@
+date,event,game,kind,player,athlete,market,side,line,price,prob,edge,flagged
+20261123,401873078,CIN@WAS,prop,Mike Gesicki,3116164.0,Total Receiving Yards (incl. overtime),under,26.5,,0.5603357881902614,0.03652626438073758,True
+20261123,401873078,CIN@WAS,prop,Jayden Daniels,4426348.0,Total Passing Yards (incl. overtime),over,224.5,,0.5513229793396178,0.02751345553009399,False
+20261123,401873078,CIN@WAS,prop,Antonio Williams,5081432.0,Total Receiving Yards (incl. overtime),under,35.5,,0.5489061098958459,0.025096586086322037,True
+20261123,401873078,CIN@WAS,prop,Samaje Perine,3116389.0,Total Rushing Yards (incl. overtime),over,20.5,,0.5463318354697111,0.022522311660187255,False
+20261123,401873078,CIN@WAS,prop,Joe Burrow,3915511.0,Total Passing Yards (incl. overtime),over,303.5,,0.529370925198245,0.005561401388721188,False
+20261123,401873078,CIN@WAS,prop,Chig Okonkwo,4360635.0,Total Receiving Yards (incl. overtime),under,43.5,,0.5284272562380328,0.004617732428508936,False
+20261123,401873078,CIN@WAS,prop,Chase Brown,4362238.0,Total Rushing Yards (incl. overtime),over,44.5,,0.5276687398125554,0.003859216003031518,False
+20261123,401873078,CIN@WAS,prop,Dohnte Meyers,4384852.0,Total Receiving Yards (incl. overtime),under,20.5,,0.5237155579577975,-9.396585172638527e-05,False
+20261123,401873078,CIN@WAS,prop,Ja'Marr Chase,4362628.0,Total Receiving Yards (incl. overtime),under,99.5,,0.5122490237775127,-0.011560500032011145,False
+20261123,401873078,CIN@WAS,prop,Stefon Diggs,2976212.0,Total Receiving Yards (incl. overtime),over,45.5,,0.5118461070671815,-0.011963416742342359,False
+20261123,401873078,CIN@WAS,prop,Chase Brown,4362238.0,Total Receiving Yards (incl. overtime),over,25.5,,0.5091530720651614,-0.014656451744362475,False
+20261123,401873078,CIN@WAS,prop,Jayden Daniels,4426348.0,Total Rushing Yards (incl. overtime),over,41.5,,0.5091127936476764,-0.014696730161847471,False
+20261123,401873078,CIN@WAS,prop,Tee Higgins,4239993.0,Total Receiving Yards (incl. overtime),under,74.5,,0.508217077895573,-0.015592445913950814,False
+20261123,401873078,CIN@WAS,prop,Treylon Burks,4567156.0,Total Receiving Yards (incl. overtime),over,28.5,,0.5,-0.023809523809523836,False
+20261123,401873078,CIN@WAS,game,,,WAS moneyline,,,246.0,,0.03903800000000002,False

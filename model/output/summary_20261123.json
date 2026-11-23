@@ -1,0 +1,99 @@
+{
+ "date": "20261123",
+ "week": 11,
+ "built": "2026-11-23 09:49",
+ "games": [
+  {
+   "id": "cin-was",
+   "a": "CIN",
+   "h": "WAS",
+   "win": "CIN",
+   "pw": 0.6997,
+   "pa": 30.342600982321205,
+   "ph": 24.298173681222302,
+   "ma": 29.720439969585417,
+   "mh": 22.387916958596392,
+   "line": "CIN -6",
+   "total": 54.5,
+   "likely": [
+    {
+     "player": "Treylon Burks",
+     "team": "WAS",
+     "outcome": "10+ receiving yds",
+     "prob": 0.770474500592116
+    },
+    {
+     "player": "Chig Okonkwo",
+     "team": "WAS",
+     "outcome": "20+ receiving yds",
+     "prob": 0.7697383224354822
+    },
+    {
+     "player": "Tee Higgins",
+     "team": "CIN",
+     "outcome": "40+ receiving yds",
+     "prob": 0.7619695439905855
+    },
+    {
+     "player": "Chase Brown",
+     "team": "CIN",
+     "outcome": "30+ rushing yds",
+     "prob": 0.7610796744021585
+    },
+    {
+     "player": "Ja'Marr Chase",
+     "team": "CIN",
+     "outcome": "60+ receiving yds",
+     "prob": 0.7575146488248229
+    },
+    {
+     "player": "Van Jefferson",
+     "team": "WAS",
+     "outcome": "10+ receiving yds",
+     "prob": 0.7547913245932648
+    },
+    {
+     "player": "Jayden Daniels",
+     "team": "WAS",
+     "outcome": "25+ rushing yds",
+     "prob": 0.7476126558232259
+    },
+    {
+     "player": "Jayden Daniels",
+     "team": "WAS",
+     "outcome": "200+ passing yds",
+     "prob": 0.7313256033615704
+    },
+    {
+     "player": "Samaje Perine",
+     "team": "CIN",
+     "outcome": "15+ rushing yds",
+     "prob": 0.7106253823066351
+    },
+    {
+     "player": "Chase Brown",
+     "team": "CIN",
+     "outcome": "15+ receiving yds",
+     "prob": 0.7084906907907043
+    }
+   ],
+   "td": [
+    {
+     "player": "Chase Brown",
+     "team": "CIN",
+     "prob": 0.4857316140753309
+    },
+    {
+     "player": "Ja'Marr Chase",
+     "team": "CIN",
+     "prob": 0.4597738987364863
+    },
+    {
+     "player": "Tee Higgins",
+     "team": "CIN",
+     "prob": 0.3566154928325557
+    }
+   ]
+  }
+ ]
+}
