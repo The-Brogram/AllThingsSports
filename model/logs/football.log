@@ -1,7 +1,7 @@
-football run Sun Nov 22 2026 04:25 PM ET: nfl-odds (schedule 45 20 * * 0)
+football run Sun Nov 22 2026 09:11 PM ET: nfl-odds (schedule 5 1 * * 1)
 == nfl-odds
-[odds] ok in 11s
+[odds] ok in 5s
     sync: no site repository
     -> odds.py [20261122]
-    odds snapshot 2026-11-22T21:25Z: 17626 lines logged to /home/runner/work/AllThingsSports/AllThingsSports/model/output/odds_log.csv
-       done in 11s
+    odds snapshot 2026-11-23T02:11Z: 17626 lines logged to /home/runner/work/AllThingsSports/AllThingsSports/model/output/odds_log.csv
+       done in 4s
