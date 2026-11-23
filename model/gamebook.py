@@ -191,8 +191,23 @@ SOS_CSS = """<style>
 .sost{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}.sost th{font:600 10px var(--m);text-transform:uppercase;letter-spacing:.06em;color:var(--mut);text-align:left;padding:4px}
 .sost td{padding:5px 4px;border-top:1px solid var(--line);vertical-align:middle}.sost td.n{text-align:right;font-family:var(--m);white-space:nowrap}.sost th.n{text-align:right}
 .sost .op{display:flex;align-items:center;gap:7px}.rkp{display:inline-block;min-width:34px;text-align:center;font:700 11.5px var(--m);border-radius:6px;padding:2px 4px;border:1px solid currentColor}
+.sosme{display:flex;align-items:center;gap:8px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:8px;font-size:13px}.sosme b{font-weight:700;margin-right:auto}.sosme .ur{display:inline-flex;align-items:center;gap:5px;font:500 11.5px var(--m);color:var(--mut)}.sosme .ur em{font-style:normal;color:var(--fg)}
 @media(max-width:520px){.sosr{grid-template-columns:78px minmax(0,1fr) auto}.sost .hid{display:none}}
 </style>"""
+
+
+def sos_unit_ranks(rt, teams):
+    """League rank (1 = best unit) of every team's offense and defense from the adjusted ratings."""
+    off = pd.Series({t: rt["off"].get(t, 0) for t in teams}).rank(ascending=False, method="min").astype(int)
+    de = pd.Series({t: rt["def"].get(t, 0) for t in teams}).rank(ascending=False, method="min").astype(int)
+    return off, de
+
+
+def sos_team_row(t, rt, off, de):
+    """The team's own offense and defense: rank pill plus the rating (points per game against an average team)."""
+    pill = lambda lab, r, v: f'<span class="ur">{lab} <span class="rkp">#{r}</span><em>{v:+.1f}</em></span>'
+    return (f'<div class="sosme">{tl(t, 22)}<b>{NICK.get(t, t)}</b>{pill("Off", int(off[t]), rt["off"].get(t, 0))}'
+            f'{pill("Def", int(de[t]), rt["def"].get(t, 0))}</div>')
 
 
 def sos_cards(c, rt, a, h):
@@ -202,8 +217,7 @@ def sos_cards(c, rt, a, h):
     g = c.g26
     teams = sorted(set(g.home_team) | set(g.away_team))
     N = len(teams)
-    off = pd.Series({t: rt["off"].get(t, 0) for t in teams}).rank(ascending=False, method="min").astype(int)
-    de = pd.Series({t: rt["def"].get(t, 0) for t in teams}).rank(ascending=False, method="min").astype(int)
+    off, de = sos_unit_ranks(rt, teams)
     tone = lambda r: "hard" if r <= round(N / 3) else ("mid" if r <= round(2 * N / 3) else "easy")
     word = lambda r: {"hard": "tough", "mid": "average", "easy": "soft"}[tone(r)]
     def bar(lab, v, r, n):
@@ -234,7 +248,7 @@ def sos_cards(c, rt, a, h):
                                     if len(y) else "")
         cards.append(f'<div class="sosc"><div class="sosh">{tl(t, 40)}<div><b>{NICK.get(t, t)}</b><small>{t} · 2026 schedule</small></div></div>'
                      f'{bar("Played so far", SO[t]["played"], SO[t]["played_rk"], len(played))}{bar("Still to play", SO[t]["left"], SO[t]["left_rk"], SO[t]["n_left"])}'
-                     f'{tab(played, True, "Who they played")}{tab(left, False, "Still to play")}</div>')
+                     f'{sos_team_row(t, rt, off, de)}{tab(played, True, "Who they played")}{tab(left, False, "Still to play")}</div>')
     return SOS_CSS + f'<div class="sosg">{"".join(cards)}</div>'
 
 
