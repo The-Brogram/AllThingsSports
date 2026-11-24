@@ -356,6 +356,32 @@
      "00-0041511"
     ]
    }
+  },
+  "20261123": {
+   "notes": {
+    "WAS": "Jacory Croskey-Merritt (groin) was activated from injured reserve Monday afternoon and is cleared to play after missing four games; he practiced fully all week (CBS Sports/RotoWire, Nov 23; PFT, Nov 23). Rachaad White (heel; limited Friday, did not practice Saturday) is questionable but ACTIVE (PFT inactives, Nov 23). Roles between White, Croskey-Merritt and Austin Ekeler are unsettled, so Commanders rushing lines are held. Inactives: CB Amik Robertson, RB Robert Henry Jr., QB Athan Kaliakmanis, DT Ricky Barber, G Tanoa Togiai. C Lucas Patrick (concussion, cleared) starts per Dan Quinn (Commanders On SI, Nov 21).",
+    "CIN_": "Bengals inactives: S Kyle Dugger, G Dalton Risner, OL Myles Hinton, Cam Grandy, DT Landon Robinson (PFT, Nov 23). CB Dax Hill (illness) and G Dylan Fairchild (oblique), both questionable, are active. Joe Burrow had no game designation and practiced fully; no report of a QB change."
+   },
+   "hold_rushing": [
+    "WAS"
+   ],
+   "out": {
+    "CIN": [
+     "00-0036231",
+     "00-0039631",
+     "00-0040015",
+     "00-0041118"
+    ],
+    "WAS": [
+     "00-0036375",
+     "00-0041178"
+    ]
+   },
+   "play": {
+    "WAS": {
+     "00-0040242": 0.95
+    }
+   }
   }
  }
 }
