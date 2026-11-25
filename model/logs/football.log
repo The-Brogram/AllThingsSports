@@ -1,36 +1,22 @@
-football run Tue Nov 24 2026 06:28 PM ET: nfl-review (schedule 15 14 * * 1,2)
-== nfl-review
-[review] FAILED in 2s
+football run Wed Nov 25 2026 11:25 AM ET: nfl-hub (schedule 15 15 * * 3)
+== nfl-hub
+[review] FAILED in 1s
     sync: no site repository
     -> fetch_data.py results
-       done in 2s
+       done in 1s
     
     No finished slate with saved forecasts to review.
-nothing to review (or stats not posted): refreshing the hub instead
-[hub refresh] ok in 53s
+[hub refresh] ok in 69s
     Team vs position: 2026 thru wk 11, 2025 thru wk 18 -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/teampos.json
     NFL reviews: 163 of 163 finished games (0 fetched) -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/nflrev.json
     Fantasy: 2026 week 11, 3 slate(s), 249 players, 0.97 MB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/fantasy.json
     CFB leaders: 132 players, 137 FBS defenses, through week 12 -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/cfbl.json 132 KB
     CFB: week 12 current, 491 in-scope games across 14 weeks, 87 with our pick, 188 teams, 257 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/cfb.json
-    UCL: 144 fixtures (72 final, 72 box scores), 36 in the table, 2 analysed matchdays
+    UCL: 144 fixtures (72 final, 72 box scores), 36 in the table, 3 analysed matchdays
     Team logos: nba 30, nhl 32, cfb 187, ucl 36
     Hub: Week 12 is current. 163 final, 0 with a Game Book, 30 with lines, 79 early. 14 reports. 677 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/index.html
     Data freshness NFL: OK - games final through week 11; player stats through week 11; weekly rosters through week 12
     Data freshness CFB: OK - games final through week 12; player stats through week 12
-    Data freshness NBA: OK - games final through 2026-11-23; 258/258 with box scores; 258/258 with shot charts
-       done in 51s
-[checkpoint] ok in 3s
-    Most likely tier (highest 70%+ line per player): 420 calls, predicted 75.7%, hit 76.2% (±3.4%, 90%).
-    
-    Closing line value, first-run picks (positive = market moved toward us):
-                    n   mean  share_positive
-    kind flagged                            
-    game False     19 -0.024           0.316
-         True      23 -0.086           0.217
-    prop False    267 -0.105           0.300
-         True     250 -0.072           0.260
-    
-    Value-tier props: mean CLV -0.10 on 267 picks, 30% moved our way. That does not yet support trusting the Value tier.
-       done in 3s
+    Data freshness NBA: OK - games final through 2026-11-24; 261/261 with box scores; 261/261 with shot charts
+       done in 67s
 hub copied to the site
