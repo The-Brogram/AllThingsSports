@@ -1,0 +1,1780 @@
+{
+"week": 13,
+"built": "2026-11-26 11:25",
+"games": [
+{
+"id": "tcu-ttu",
+"espn": "401856879",
+"kick_utc": "2026-11-27T01:00Z",
+"conf_a": "Big 12",
+"conf_h": "Big 12",
+"spread_home": 15.5,
+"ml_a": 500,
+"ml_h": -700,
+"name_a": "TCU Horned Frogs",
+"name_h": "Texas Tech Red Raiders",
+"rec_a": "5-6",
+"rec_h": "10-1",
+"venue": "Galaxy Stadium",
+"neutral": false,
+"a": "TCU",
+"h": "TTU",
+"ra": null,
+"rh": 11,
+"line": "TTU -15.5",
+"total": 46.5,
+"ma": 17.396055107310932,
+"mh": 29.856947144983497,
+"pa": 15.5171875,
+"ph": 32.0673125,
+"win": "TTU",
+"pw": 0.888225,
+"script": [
+0.6879,
+0.04765,
+0.26445
+],
+"td": [
+[
+"J'Koby Williams",
+"TTU",
+0.4367545601252502
+],
+[
+"Cameron Dickey",
+"TTU",
+0.35168017908495564
+],
+[
+"Thomas Castellanos",
+"TTU",
+0.34929952382856266
+]
+],
+"notes": [
+"TCU",
+"TTU"
+]
+},
+{
+"id": "neb-iowa",
+"espn": "401858536",
+"kick_utc": "2026-11-27T17:00Z",
+"conf_a": "Big Ten",
+"conf_h": "Big Ten",
+"spread_home": 4.5,
+"ml_a": 170,
+"ml_h": -205,
+"name_a": "Nebraska Cornhuskers",
+"name_h": "Iowa Hawkeyes",
+"rec_a": "7-4",
+"rec_h": "9-2",
+"venue": "Kinnick Stadium",
+"neutral": false,
+"a": "NEB",
+"h": "IOWA",
+"ra": 25,
+"rh": 13,
+"line": "IOWA -4.5",
+"total": 40.5,
+"ma": 16.161210380898176,
+"mh": 23.547768266493975,
+"pa": 18.0855625,
+"ph": 22.5177125,
+"win": "IOWA",
+"pw": 0.6255000000000001,
+"script": [
+0.39295,
+0.19465,
+0.4124
+],
+"td": [
+[
+"L.J. Phillips Jr.",
+"IOWA",
+0.382636025563313
+],
+[
+"Anthony Colandrea",
+"NEB",
+0.2553550159039175
+],
+[
+"Jamal Rule",
+"NEB",
+0.2535403968013125
+]
+],
+"notes": []
+},
+{
+"id": "msst-miss",
+"espn": "401856762",
+"kick_utc": "2026-11-27T17:00Z",
+"conf_a": "SEC",
+"conf_h": "SEC",
+"spread_home": 18.5,
+"ml_a": 675,
+"ml_h": -1050,
+"name_a": "Mississippi State Bulldogs",
+"name_h": "Ole Miss Rebels",
+"rec_a": "5-6",
+"rec_h": "7-4",
+"venue": "Vaught-Hemingway Stadium",
+"neutral": false,
+"a": "MSST",
+"h": "MISS",
+"ra": null,
+"rh": 22,
+"line": "MISS -18.5",
+"total": 56.5,
+"ma": 19.862569546871114,
+"mh": 37.35735729247628,
+"pa": 19.358425,
+"ph": 38.688125,
+"win": "MISS",
+"pw": 0.9024,
+"script": [
+0.7441,
+0.0426,
+0.2133
+],
+"td": [
+[
+"Makhi Frazier",
+"MISS",
+0.40448252631069687
+],
+[
+"Shekai Mills-Knight",
+"MISS",
+0.37442140451342976
+],
+[
+"Deuce Alexander",
+"MISS",
+0.30804957535642086
+]
+],
+"notes": [
+"MSST"
+]
+},
+{
+"id": "fla-fsu",
+"espn": "401856759",
+"kick_utc": "2026-11-27T20:30Z",
+"conf_a": "SEC",
+"conf_h": "ACC",
+"spread_home": -6.5,
+"ml_a": -238,
+"ml_h": 195,
+"name_a": "Florida Gators",
+"name_h": "Florida State Seminoles",
+"rec_a": "7-4",
+"rec_h": "5-6",
+"venue": "Doak Campbell Stadium",
+"neutral": false,
+"a": "FLA",
+"h": "FSU",
+"ra": 20,
+"rh": null,
+"line": "FLA -6.5",
+"total": 53.5,
+"ma": 25.808994204479866,
+"mh": 27.916377362400837,
+"pa": 30.0319375,
+"ph": 23.5404375,
+"win": "FLA",
+"pw": 0.670725,
+"script": [
+0.1632,
+0.44195,
+0.39485
+],
+"td": [
+[
+"Jadan Baugh",
+"FLA",
+0.643846800738723
+],
+[
+"Aaron Philo",
+"FLA",
+0.4928707115508926
+],
+[
+"Ashton Daniels",
+"FSU",
+0.4542908365288917
+]
+],
+"notes": []
+},
+{
+"id": "tex-ta&m",
+"espn": "401856756",
+"kick_utc": "2026-11-28T00:30Z",
+"conf_a": "SEC",
+"conf_h": "SEC",
+"spread_home": -11.5,
+"ml_a": -455,
+"ml_h": 350,
+"name_a": "Texas Longhorns",
+"name_h": "Texas A&M Aggies",
+"rec_a": "9-2",
+"rec_h": "4-7",
+"venue": "Kyle Field",
+"neutral": false,
+"a": "TEX",
+"h": "TA&M",
+"ra": 3,
+"rh": null,
+"line": "TEX -11.5",
+"total": 40.5,
+"ma": 25.115707936659593,
+"mh": 17.420082665491538,
+"pa": 26.2812375,
+"ph": 14.0771125,
+"win": "TEX",
+"pw": 0.79385,
+"script": [
+0.0883,
+0.62355,
+0.28815
+],
+"td": [
+[
+"Raleek Brown",
+"TEX",
+0.4460981986361068
+],
+[
+"Arch Manning",
+"TEX",
+0.2914220429632275
+],
+[
+"Ryan Wingo",
+"TEX",
+0.2769170178469454
+]
+],
+"notes": [
+"TA&M"
+]
+},
+{
+"id": "minn-wis",
+"espn": "401858544",
+"kick_utc": "2026-11-28T00:30Z",
+"conf_a": "Big Ten",
+"conf_h": "Big Ten",
+"spread_home": 8.5,
+"ml_a": 245,
+"ml_h": -305,
+"name_a": "Minnesota Golden Gophers",
+"name_h": "Wisconsin Badgers",
+"rec_a": "6-5",
+"rec_h": "7-4",
+"venue": "Camp Randall Stadium",
+"neutral": false,
+"a": "MINN",
+"h": "WIS",
+"ra": null,
+"rh": null,
+"line": "WIS -8.5",
+"total": 37.5,
+"ma": 14.05128167457092,
+"mh": 26.03347540140851,
+"pa": 14.24245,
+"ph": 23.4547,
+"win": "WIS",
+"pw": 0.739275,
+"script": [
+0.5202,
+0.1117,
+0.3681
+],
+"td": [
+[
+"Darrion Dupree",
+"WIS",
+0.38138199934770145
+],
+[
+"Colton Joseph",
+"WIS",
+0.3324651873469494
+],
+[
+"Bryan Jackson II",
+"WIS",
+0.2733183076423105
+]
+],
+"notes": [
+"WIS"
+]
+},
+{
+"id": "wvu-utah",
+"espn": "401856880",
+"kick_utc": "2026-11-28T02:00Z",
+"conf_a": "Big 12",
+"conf_h": "Big 12",
+"spread_home": 26.5,
+"ml_a": 1300,
+"ml_h": -2800,
+"name_a": "West Virginia Mountaineers",
+"name_h": "Utah Utes",
+"rec_a": "5-6",
+"rec_h": "11-0",
+"venue": "Rice-Eccles Stadium",
+"neutral": false,
+"a": "WVU",
+"h": "UTAH",
+"ra": null,
+"rh": 2,
+"line": "UTAH -26.5",
+"total": 66.5,
+"ma": 24.100395541229055,
+"mh": 43.2135361817347,
+"pa": 21.2250625,
+"ph": 45.5058375,
+"win": "UTAH",
+"pw": 0.94155,
+"script": [
+0.87195,
+0.02435,
+0.1037
+],
+"td": [
+[
+"Devon Dampier",
+"UTAH",
+0.6680152263362997
+],
+[
+"Wayshawn Parker",
+"UTAH",
+0.6012600571341137
+],
+[
+"Daniel Bray",
+"UTAH",
+0.49667262805295465
+]
+],
+"notes": []
+},
+{
+"id": "nd-syr",
+"espn": "401858314",
+"kick_utc": "2026-11-28T17:00Z",
+"conf_a": null,
+"conf_h": "ACC",
+"spread_home": -25.5,
+"ml_a": -2800,
+"ml_h": 1300,
+"name_a": "Notre Dame Fighting Irish",
+"name_h": "Syracuse Orange",
+"rec_a": "10-1",
+"rec_h": "5-6",
+"venue": "JMA Wireless Dome",
+"neutral": false,
+"a": "ND",
+"h": "SYR",
+"ra": 4,
+"rh": null,
+"line": "ND -25.5",
+"total": 52.5,
+"ma": 33.63106642689811,
+"mh": 17.74138924535926,
+"pa": 38.3469875,
+"ph": 14.7522625,
+"win": "ND",
+"pw": 0.934775,
+"script": [
+0.0249,
+0.8683,
+0.1068
+],
+"td": [
+[
+"Jonaz Walton",
+"ND",
+0.5496753883068076
+],
+[
+"Nolan James Jr.",
+"ND",
+0.49802198605197745
+],
+[
+"Micah Gilbert",
+"ND",
+0.31476619755110485
+]
+],
+"notes": [
+"ND",
+"SYR"
+]
+},
+{
+"id": "bc-mia",
+"espn": "401858311",
+"kick_utc": "2026-11-28T17:00Z",
+"conf_a": "ACC",
+"conf_h": "ACC",
+"spread_home": 24.5,
+"ml_a": 1300,
+"ml_h": -2800,
+"name_a": "Boston College Eagles",
+"name_h": "Miami Hurricanes",
+"rec_a": "5-6",
+"rec_h": "10-1",
+"venue": "Hard Rock Stadium",
+"neutral": false,
+"a": "BC",
+"h": "MIA",
+"ra": null,
+"rh": 7,
+"line": "MIA -24.5",
+"total": 53.5,
+"ma": 16.28232730699049,
+"mh": 39.234472204955075,
+"pa": 15.6352,
+"ph": 38.5201,
+"win": "MIA",
+"pw": 0.9285,
+"script": [
+0.8475,
+0.03155,
+0.12095
+],
+"td": [
+[
+"Mark Fletcher Jr.",
+"MIA",
+0.6216588953240586
+],
+[
+"Javian Mallory",
+"MIA",
+0.4873581702200424
+],
+[
+"Bo MacCormack III",
+"BC",
+0.36749428151466834
+]
+],
+"notes": []
+},
+{
+"id": "lou-uk",
+"espn": "401856761",
+"kick_utc": "2026-11-28T17:00Z",
+"conf_a": "ACC",
+"conf_h": "SEC",
+"spread_home": -3.0,
+"ml_a": -142,
+"ml_h": 120,
+"name_a": "Louisville Cardinals",
+"name_h": "Kentucky Wildcats",
+"rec_a": "8-3",
+"rec_h": "7-4",
+"venue": "Kroger Field",
+"neutral": false,
+"a": "LOU",
+"h": "UK",
+"ra": 19,
+"rh": null,
+"line": "LOU -3",
+"total": 54.5,
+"ma": 30.808128399375086,
+"mh": 24.193638456922013,
+"pa": 28.4242,
+"ph": 25.70765,
+"win": "LOU",
+"pw": 0.5729,
+"script": [
+0.2113,
+0.31735,
+0.47135
+],
+"td": [
+[
+"Keyjuan Brown",
+"LOU",
+0.4309681151171609
+],
+[
+"CJ Baxter",
+"UK",
+0.3975846082058026
+],
+[
+"Isaac Brown",
+"LOU",
+0.34129466546199966
+]
+],
+"notes": []
+},
+{
+"id": "mich-osu",
+"espn": "401858540",
+"kick_utc": "2026-11-28T17:00Z",
+"conf_a": "Big Ten",
+"conf_h": "Big Ten",
+"spread_home": 10.5,
+"ml_a": 330,
+"ml_h": -425,
+"name_a": "Michigan Wolverines",
+"name_h": "Ohio State Buckeyes",
+"rec_a": "6-5",
+"rec_h": "7-4",
+"venue": "Ohio Stadium",
+"neutral": false,
+"a": "MICH",
+"h": "OSU",
+"ra": null,
+"rh": 21,
+"line": "OSU -10.5",
+"total": 37.5,
+"ma": 15.131222945245248,
+"mh": 29.26135382522195,
+"pa": 13.0963875,
+"ph": 24.2226875,
+"win": "OSU",
+"pw": 0.7676,
+"script": [
+0.57605,
+0.08855,
+0.3354
+],
+"td": [
+[
+"Bo Jackson",
+"OSU",
+0.5412343863935463
+],
+[
+"Jeremiah Smith",
+"OSU",
+0.36412886982068443
+],
+[
+"Savion Hiter",
+"MICH",
+0.3071885402092064
+]
+],
+"notes": [
+"OSU"
+]
+},
+{
+"id": "ncsu-unc",
+"espn": "401858313",
+"kick_utc": "2026-11-28T17:00Z",
+"conf_a": "ACC",
+"conf_h": "ACC",
+"spread_home": 6.0,
+"ml_a": 185,
+"ml_h": -225,
+"name_a": "NC State Wolfpack",
+"name_h": "North Carolina Tar Heels",
+"rec_a": "5-6",
+"rec_h": "5-6",
+"venue": "Kenan Stadium",
+"neutral": false,
+"a": "NCSU",
+"h": "UNC",
+"ra": null,
+"rh": null,
+"line": "UNC -6",
+"total": 54.5,
+"ma": 22.836357707907247,
+"mh": 29.104577780805936,
+"pa": 24.117575,
+"ph": 30.195175,
+"win": "UNC",
+"pw": 0.6653,
+"script": [
+0.40985,
+0.1626,
+0.42755
+],
+"td": [
+[
+"Davion Gause",
+"NCSU",
+0.4188927095043128
+],
+[
+"Demon June",
+"UNC",
+0.3871245685121331
+],
+[
+"Jordan Shipp",
+"UNC",
+0.3309728183944321
+]
+],
+"notes": [
+"UNC"
+]
+},
+{
+"id": "ill-nu",
+"espn": "401858537",
+"kick_utc": "2026-11-28T17:30Z",
+"conf_a": "Big Ten",
+"conf_h": "Big Ten",
+"spread_home": 2.5,
+"ml_a": 120,
+"ml_h": -142,
+"name_a": "Illinois Fighting Illini",
+"name_h": "Northwestern Wildcats",
+"rec_a": "6-5",
+"rec_h": "6-5",
+"venue": "Ryan Field",
+"neutral": false,
+"a": "ILL",
+"h": "NU",
+"ra": null,
+"rh": null,
+"line": "NU -2.5",
+"total": 50.5,
+"ma": 20.172817256063556,
+"mh": 27.601938702633102,
+"pa": 24.083625,
+"ph": 26.204775,
+"win": "NU",
+"pw": 0.56395,
+"script": [
+0.3016,
+0.2329,
+0.4655
+],
+"td": [
+[
+"Caleb Komolafe",
+"NU",
+0.42840360420089146
+],
+[
+"Nicco Marchiol",
+"NU",
+0.41440786314933126
+],
+[
+"Collin Dixon",
+"ILL",
+0.37662154143342097
+]
+],
+"notes": [
+"NU"
+]
+},
+{
+"id": "lsu-ark",
+"espn": "401856758",
+"kick_utc": "2026-11-28T17:45Z",
+"conf_a": "SEC",
+"conf_h": "SEC",
+"spread_home": -14.5,
+"ml_a": -625,
+"ml_h": 455,
+"name_a": "LSU Tigers",
+"name_h": "Arkansas Razorbacks",
+"rec_a": "6-5",
+"rec_h": "4-7",
+"venue": "Donald W. Reynolds Razorback Stadium",
+"neutral": false,
+"a": "LSU",
+"h": "ARK",
+"ra": null,
+"rh": null,
+"line": "LSU -14.5",
+"total": 49.5,
+"ma": 27.625522584127893,
+"mh": 20.808106119684616,
+"pa": 32.9763375,
+"ph": 17.2378375,
+"win": "LSU",
+"pw": 0.8718,
+"script": [
+0.0659,
+0.69245,
+0.24165
+],
+"td": [
+[
+"Dilin Jones",
+"LSU",
+0.6086520021637599
+],
+[
+"Sam Leavitt",
+"LSU",
+0.48419576241912066
+],
+[
+"Trey'Dez Green",
+"LSU",
+0.3207154553749725
+]
+],
+"notes": []
+},
+{
+"id": "ucf-colo",
+"espn": "401856875",
+"kick_utc": "2026-11-28T19:00Z",
+"conf_a": "Big 12",
+"conf_h": "Big 12",
+"spread_home": 2.5,
+"ml_a": 105,
+"ml_h": -125,
+"name_a": "UCF Knights",
+"name_h": "Colorado Buffaloes",
+"rec_a": "6-5",
+"rec_h": "4-7",
+"venue": "Folsom Field",
+"neutral": false,
+"a": "UCF",
+"h": "COLO",
+"ra": null,
+"rh": null,
+"line": "COLO -2.5",
+"total": 49.5,
+"ma": 26.840718529459448,
+"mh": 25.688739228951103,
+"pa": 23.545325,
+"ph": 25.751425,
+"win": "COLO",
+"pw": 0.564375,
+"script": [
+0.30405,
+0.23415,
+0.4618
+],
+"td": [
+[
+"Richard Young",
+"COLO",
+0.4784635896262191
+],
+[
+"Landen Chambers",
+"UCF",
+0.31787658426654775
+],
+[
+"Joseph Williams",
+"COLO",
+0.3054655764494925
+]
+],
+"notes": []
+},
+{
+"id": "ksu-isu",
+"espn": "401856878",
+"kick_utc": "2026-11-28T19:00Z",
+"conf_a": "Big 12",
+"conf_h": "Big 12",
+"spread_home": 3.5,
+"ml_a": 154,
+"ml_h": -185,
+"name_a": "Kansas State Wildcats",
+"name_h": "Iowa State Cyclones",
+"rec_a": "4-7",
+"rec_h": "5-6",
+"venue": "Jack Trice Stadium",
+"neutral": false,
+"a": "KSU",
+"h": "ISU",
+"ra": null,
+"rh": null,
+"line": "ISU -3.5",
+"total": 53.5,
+"ma": 25.707420382061276,
+"mh": 31.473437977515804,
+"pa": 24.923125,
+"ph": 28.567025,
+"win": "ISU",
+"pw": 0.598375,
+"script": [
+0.36265,
+0.19995,
+0.4374
+],
+"td": [
+[
+"Aiden Flora",
+"ISU",
+0.6387789384610385
+],
+[
+"Rodney Fields Jr.",
+"KSU",
+0.46706253683842275
+],
+[
+"Jaylen Raynor",
+"ISU",
+0.40432713839031964
+]
+],
+"notes": [
+"KSU"
+]
+},
+{
+"id": "sc-clem",
+"espn": "401856764",
+"kick_utc": "2026-11-28T20:00Z",
+"conf_a": "SEC",
+"conf_h": "ACC",
+"spread_home": -6.0,
+"ml_a": -230,
+"ml_h": 190,
+"name_a": "South Carolina Gamecocks",
+"name_h": "Clemson Tigers",
+"rec_a": "6-5",
+"rec_h": "7-4",
+"venue": "Memorial Stadium (Clemson, SC)",
+"neutral": false,
+"a": "SC",
+"h": "CLEM",
+"ra": null,
+"rh": null,
+"line": "SC -6",
+"total": 41.5,
+"ma": 18.897165810792753,
+"mh": 24.279459124859017,
+"pa": 23.84685,
+"ph": 17.827,
+"win": "SC",
+"pw": 0.66185,
+"script": [
+0.16,
+0.4044,
+0.4356
+],
+"td": [
+[
+"LaNorris Sellers",
+"SC",
+0.44308944467894157
+],
+[
+"Gideon Davidson",
+"CLEM",
+0.35368876647122466
+],
+[
+"Jabree Coleman",
+"SC",
+0.3019621299973456
+]
+],
+"notes": [
+"SC",
+"CLEM"
+]
+},
+{
+"id": "uva-vt",
+"espn": "401858317",
+"kick_utc": "2026-11-28T20:00Z",
+"conf_a": "ACC",
+"conf_h": "ACC",
+"spread_home": 3.0,
+"ml_a": 130,
+"ml_h": -155,
+"name_a": "Virginia Cavaliers",
+"name_h": "Virginia Tech Hokies",
+"rec_a": "6-5",
+"rec_h": "6-5",
+"venue": "Lane Stadium",
+"neutral": false,
+"a": "UVA",
+"h": "VT",
+"ra": null,
+"rh": null,
+"line": "VT -3",
+"total": 50.5,
+"ma": 25.97213575967228,
+"mh": 25.060195030537987,
+"pa": 23.7718875,
+"ph": 26.4919625,
+"win": "VT",
+"pw": 0.575175,
+"script": [
+0.3188,
+0.20905,
+0.47215
+],
+"td": [
+[
+"Ethan Grunkemeyer",
+"VT",
+0.3914490716182461
+],
+[
+"Jekail Middlebrook",
+"UVA",
+0.3666007788104075
+],
+[
+"Jeffrey Overton Jr.",
+"VT",
+0.3479759680343792
+]
+],
+"notes": []
+},
+{
+"id": "gt-uga",
+"espn": "401856760",
+"kick_utc": "2026-11-28T20:30Z",
+"conf_a": "ACC",
+"conf_h": "SEC",
+"spread_home": 35.5,
+"ml_a": 2200,
+"ml_h": -8000,
+"name_a": "Georgia Tech Yellow Jackets",
+"name_h": "Georgia Bulldogs",
+"rec_a": "3-8",
+"rec_h": "10-1",
+"venue": "Sanford Stadium",
+"neutral": false,
+"a": "GT",
+"h": "UGA",
+"ra": null,
+"rh": 1,
+"line": "UGA -35.5",
+"total": 55.5,
+"ma": 14.49825950405377,
+"mh": 40.989412448231235,
+"pa": 10.8444625,
+"ph": 46.6133375,
+"win": "UGA",
+"pw": 0.9887,
+"script": [
+0.9655,
+0.0046,
+0.0299
+],
+"td": [
+[
+"Nate Frazier",
+"UGA",
+0.6794368077135596
+],
+[
+"Gunner Stockton",
+"UGA",
+0.36639049720863165
+],
+[
+"Chauncey Bowens",
+"UGA",
+0.3171797650688955
+]
+],
+"notes": []
+},
+{
+"id": "duke-wake",
+"espn": "401858312",
+"kick_utc": "2026-11-28T20:30Z",
+"conf_a": "ACC",
+"conf_h": "ACC",
+"spread_home": 14.5,
+"ml_a": 470,
+"ml_h": -650,
+"name_a": "Duke Blue Devils",
+"name_h": "Wake Forest Demon Deacons",
+"rec_a": "7-4",
+"rec_h": "10-1",
+"venue": "Allegacy Federal Credit Union Stadium",
+"neutral": false,
+"a": "DUKE",
+"h": "WAKE",
+"ra": null,
+"rh": 8,
+"line": "WAKE -14.5",
+"total": 55.5,
+"ma": 19.665412579695108,
+"mh": 33.44878644330663,
+"pa": 20.0887,
+"ph": 35.9577,
+"win": "WAKE",
+"pw": 0.8723,
+"script": [
+0.6982,
+0.0654,
+0.2364
+],
+"td": [
+[
+"Nate Sheppard",
+"DUKE",
+0.5878164504236363
+],
+[
+"Ty Clark III",
+"WAKE",
+0.5460470744316093
+],
+[
+"Deuce Lawrence",
+"WAKE",
+0.4001799867392028
+]
+],
+"notes": []
+},
+{
+"id": "usc-ucla",
+"espn": "401858543",
+"kick_utc": "2026-11-28T20:30Z",
+"conf_a": "Big Ten",
+"conf_h": "Big Ten",
+"spread_home": -6.5,
+"ml_a": -250,
+"ml_h": 205,
+"name_a": "USC Trojans",
+"name_h": "UCLA Bruins",
+"rec_a": "8-3",
+"rec_h": "10-1",
+"venue": "Rose Bowl",
+"neutral": false,
+"a": "USC",
+"h": "UCLA",
+"ra": 15,
+"rh": 9,
+"line": "USC -6.5",
+"total": 45.5,
+"ma": 21.44462201900645,
+"mh": 28.1556526330608,
+"pa": 26.0478125,
+"ph": 19.6756375,
+"win": "USC",
+"pw": 0.663225,
+"script": [
+0.1615,
+0.4337,
+0.4048
+],
+"td": [
+[
+"Waymond Jordan",
+"USC",
+0.4889630132803791
+],
+[
+"Wayne Knight",
+"UCLA",
+0.3850378552762978
+],
+[
+"King Miller",
+"USC",
+0.35812315435386877
+]
+],
+"notes": [
+"UCLA"
+]
+},
+{
+"id": "cin-byu",
+"espn": "401856876",
+"kick_utc": "2026-11-28T20:30Z",
+"conf_a": "Big 12",
+"conf_h": "Big 12",
+"spread_home": 15.5,
+"ml_a": 500,
+"ml_h": -700,
+"name_a": "Cincinnati Bearcats",
+"name_h": "BYU Cougars",
+"rec_a": "6-5",
+"rec_h": "9-2",
+"venue": "LaVell Edwards Stadium",
+"neutral": false,
+"a": "CIN",
+"h": "BYU",
+"ra": null,
+"rh": 10,
+"line": "BYU -15.5",
+"total": 56.5,
+"ma": 20.088477173618227,
+"mh": 33.67980307591575,
+"pa": 20.3710375,
+"ph": 37.0593625,
+"win": "BYU",
+"pw": 0.89575,
+"script": [
+0.6932,
+0.04435,
+0.26245
+],
+"td": [
+[
+"Bear Bachmeier",
+"BYU",
+0.6294237740243182
+],
+[
+"LJ Martin",
+"BYU",
+0.4233697664863372
+],
+[
+"Sione Moa",
+"BYU",
+0.41094868386408834
+]
+],
+"notes": []
+},
+{
+"id": "smu-stan",
+"espn": "401858316",
+"kick_utc": "2026-11-28T20:30Z",
+"conf_a": "ACC",
+"conf_h": "ACC",
+"spread_home": -7.0,
+"ml_a": -298,
+"ml_h": 240,
+"name_a": "SMU Mustangs",
+"name_h": "Stanford Cardinal",
+"rec_a": "7-4",
+"rec_h": "6-5",
+"venue": "Stanford Stadium",
+"neutral": false,
+"a": "SMU",
+"h": "STAN",
+"ra": null,
+"rh": null,
+"line": "SMU -7",
+"total": 61.5,
+"ma": 31.175918278980298,
+"mh": 27.42209845315884,
+"pa": 34.2043125,
+"ph": 27.0853375,
+"win": "SMU",
+"pw": 0.6891,
+"script": [
+0.1483,
+0.4578,
+0.3939
+],
+"td": [
+[
+"Kendrick Raphael",
+"SMU",
+0.6091313018686275
+],
+[
+"Micah Ford",
+"STAN",
+0.5940406357955991
+],
+[
+"Yamir Knight",
+"SMU",
+0.3205548505160523
+]
+],
+"notes": []
+},
+{
+"id": "psu-md",
+"espn": "401858539",
+"kick_utc": "2026-11-28T20:30Z",
+"conf_a": "Big Ten",
+"conf_h": "Big Ten",
+"spread_home": -7.0,
+"ml_a": -278,
+"ml_h": 225,
+"name_a": "Penn State Nittany Lions",
+"name_h": "Maryland Terrapins",
+"rec_a": "6-5",
+"rec_h": "4-7",
+"venue": "SECU Stadium",
+"neutral": false,
+"a": "PSU",
+"h": "MD",
+"ra": null,
+"rh": null,
+"line": "PSU -7",
+"total": 48.5,
+"ma": 30.25106645709439,
+"mh": 24.28624208530116,
+"pa": 27.908275,
+"ph": 20.7402,
+"win": "PSU",
+"pw": 0.6899500000000001,
+"script": [
+0.14765,
+0.4571,
+0.39525
+],
+"td": [
+[
+"DeJuan Williams",
+"MD",
+0.49136843898063687
+],
+[
+"Carson Hansen",
+"PSU",
+0.3968054819832318
+],
+[
+"Rocco Becht",
+"PSU",
+0.3760978716361491
+]
+],
+"notes": []
+},
+{
+"id": "ou-miz",
+"espn": "401856763",
+"kick_utc": "2026-11-28T21:15Z",
+"conf_a": "SEC",
+"conf_h": "SEC",
+"spread_home": 2.5,
+"ml_a": 102,
+"ml_h": -122,
+"name_a": "Oklahoma Sooners",
+"name_h": "Missouri Tigers",
+"rec_a": "7-4",
+"rec_h": "7-4",
+"venue": "Memorial Stadium",
+"neutral": false,
+"a": "OU",
+"h": "MIZ",
+"ra": 17,
+"rh": 23,
+"line": "MIZ -2.5",
+"total": 41.5,
+"ma": 20.164414280460566,
+"mh": 23.431560051022416,
+"pa": 19.587025,
+"ph": 21.8419,
+"win": "MIZ",
+"pw": 0.5631,
+"script": [
+0.30955,
+0.2377,
+0.45275
+],
+"td": [
+[
+"Jamal Roberts",
+"MIZ",
+0.49427205775199845
+],
+[
+"Isaiah Sategna III",
+"OU",
+0.27942210047027544
+],
+[
+"Donovan Olugbode",
+"MIZ",
+0.279367669242345
+]
+],
+"notes": []
+},
+{
+"id": "msu-rutg",
+"espn": "401858542",
+"kick_utc": "2026-11-28T21:15Z",
+"conf_a": "Big Ten",
+"conf_h": "Big Ten",
+"spread_home": -3.0,
+"ml_a": -155,
+"ml_h": 130,
+"name_a": "Michigan State Spartans",
+"name_h": "Rutgers Scarlet Knights",
+"rec_a": "3-8",
+"rec_h": "3-8",
+"venue": "SHI Stadium",
+"neutral": false,
+"a": "MSU",
+"h": "RUTG",
+"ra": null,
+"rh": null,
+"line": "MSU -3",
+"total": 46.5,
+"ma": 24.76848093949959,
+"mh": 26.22886631357846,
+"pa": 24.566025,
+"ph": 21.742875,
+"win": "MSU",
+"pw": 0.5809500000000001,
+"script": [
+0.20725,
+0.3202,
+0.47255
+],
+"td": [
+[
+"Antwan Raymond",
+"RUTG",
+0.49822183206280857
+],
+[
+"Jaziun Patterson",
+"MSU",
+0.46766915507477347
+],
+[
+"Clay Thevenin",
+"RUTG",
+0.3279854178018524
+]
+],
+"notes": [
+"MSU"
+]
+},
+{
+"id": "ku-okst",
+"espn": "401856877",
+"kick_utc": "2026-11-28T23:15Z",
+"conf_a": "Big 12",
+"conf_h": "Big 12",
+"spread_home": 6.5,
+"ml_a": 190,
+"ml_h": -230,
+"name_a": "Kansas Jayhawks",
+"name_h": "Oklahoma State Cowboys",
+"rec_a": "4-7",
+"rec_h": "7-4",
+"venue": "Boone Pickens Stadium",
+"neutral": false,
+"a": "KU",
+"h": "OKST",
+"ra": null,
+"rh": null,
+"line": "OKST -6.5",
+"total": 64.5,
+"ma": 29.404003194470423,
+"mh": 35.780718449654664,
+"pa": 29.10085,
+"ph": 35.6656,
+"win": "OKST",
+"pw": 0.6698999999999999,
+"script": [
+0.4399,
+0.1606,
+0.3995
+],
+"td": [
+[
+"Caleb Hawkins",
+"OKST",
+0.6667015388514561
+],
+[
+"Dylan Edwards",
+"KU",
+0.45124069785471627
+],
+[
+"Isaiah Marshall",
+"KU",
+0.438135249660005
+]
+],
+"notes": [
+"KU"
+]
+},
+{
+"id": "tenn-van",
+"espn": "401856765",
+"kick_utc": "2026-11-29T00:00Z",
+"conf_a": "SEC",
+"conf_h": "SEC",
+"spread_home": -13.5,
+"ml_a": -550,
+"ml_h": 410,
+"name_a": "Tennessee Volunteers",
+"name_h": "Vanderbilt Commodores",
+"rec_a": "9-2",
+"rec_h": "4-7",
+"venue": "FirstBank Stadium",
+"neutral": false,
+"a": "TENN",
+"h": "VAN",
+"ra": 5,
+"rh": null,
+"line": "TENN -13.5",
+"total": 42.5,
+"ma": 28.986366411926372,
+"mh": 18.023248562862868,
+"pa": 28.9808625,
+"ph": 14.3311125,
+"win": "TENN",
+"pw": 0.8465750000000001,
+"script": [
+0.0771,
+0.6702,
+0.2527
+],
+"td": [
+[
+"DeSean Bishop",
+"TENN",
+0.7076028468782636
+],
+[
+"Sedrick Alexander",
+"VAN",
+0.3171797650688955
+],
+[
+"DaSaahn Brame",
+"TENN",
+0.26172297882302314
+]
+],
+"notes": []
+},
+{
+"id": "pur-iu",
+"espn": "401858538",
+"kick_utc": "2026-11-29T00:00Z",
+"conf_a": "Big Ten",
+"conf_h": "Big Ten",
+"spread_home": 23.5,
+"ml_a": 1100,
+"ml_h": -2100,
+"name_a": "Purdue Boilermakers",
+"name_h": "Indiana Hoosiers",
+"rec_a": "3-8",
+"rec_h": "9-2",
+"venue": "Memorial Stadium (Bloomington, IN)",
+"neutral": false,
+"a": "PUR",
+"h": "IU",
+"ra": null,
+"rh": 14,
+"line": "IU -23.5",
+"total": 52.5,
+"ma": 14.861371938046291,
+"mh": 36.30029809222007,
+"pa": 15.6522875,
+"ph": 38.1666875,
+"win": "IU",
+"pw": 0.916,
+"script": [
+0.84035,
+0.03575,
+0.1239
+],
+"td": [
+[
+"Lee Beebe Jr.",
+"IU",
+0.5882511626237381
+],
+[
+"Nick Marsh",
+"IU",
+0.46686029941931306
+],
+[
+"Charlie Becker",
+"IU",
+0.46422978532385945
+]
+],
+"notes": [
+"IU"
+]
+},
+{
+"id": "aub-ala",
+"espn": "401856757",
+"kick_utc": "2026-11-29T00:30Z",
+"conf_a": "SEC",
+"conf_h": "SEC",
+"spread_home": 15.5,
+"ml_a": 525,
+"ml_h": -750,
+"name_a": "Auburn Tigers",
+"name_h": "Alabama Crimson Tide",
+"rec_a": "7-4",
+"rec_h": "9-2",
+"venue": "Bryant-Denny Stadium",
+"neutral": false,
+"a": "AUB",
+"h": "ALA",
+"ra": null,
+"rh": 6,
+"line": "ALA -15.5",
+"total": 49.5,
+"ma": 19.887826473532584,
+"mh": 33.10828057853864,
+"pa": 16.8072375,
+"ph": 33.4982125,
+"win": "ALA",
+"pw": 0.8964,
+"script": [
+0.6945,
+0.04355,
+0.26195
+],
+"td": [
+[
+"Daniel Hill",
+"ALA",
+0.5046089032505297
+],
+[
+"Ryan Coleman-Williams",
+"ALA",
+0.29661660497311604
+],
+[
+"Jeremiah Cobb",
+"AUB",
+0.2850763965351026
+]
+],
+"notes": [
+"AUB",
+"ALA"
+]
+},
+{
+"id": "wash-ore",
+"espn": "401858541",
+"kick_utc": "2026-11-29T00:30Z",
+"conf_a": "Big Ten",
+"conf_h": "Big Ten",
+"spread_home": 13.5,
+"ml_a": 455,
+"ml_h": -625,
+"name_a": "Washington Huskies",
+"name_h": "Oregon Ducks",
+"rec_a": "7-4",
+"rec_h": "8-3",
+"venue": "Autzen Stadium",
+"neutral": false,
+"a": "WASH",
+"h": "ORE",
+"ra": 24,
+"rh": 12,
+"line": "ORE -13.5",
+"total": 51.5,
+"ma": 19.307849189317672,
+"mh": 31.636007363083877,
+"pa": 18.609075,
+"ph": 33.3191,
+"win": "ORE",
+"pw": 0.844925,
+"script": [
+0.66735,
+0.07475,
+0.2579
+],
+"td": [
+[
+"Dierre Hill Jr.",
+"ORE",
+0.4441607570487578
+],
+[
+"Brandon Smith",
+"ORE",
+0.35368876647122466
+],
+[
+"Da'Jaun Riggs",
+"ORE",
+0.3436298295606153
+]
+],
+"notes": []
+},
+{
+"id": "pitt-cal",
+"espn": "401858315",
+"kick_utc": "2026-11-29T00:30Z",
+"conf_a": "ACC",
+"conf_h": "ACC",
+"spread_home": -9.5,
+"ml_a": -355,
+"ml_h": 280,
+"name_a": "Pittsburgh Panthers",
+"name_h": "California Golden Bears",
+"rec_a": "6-5",
+"rec_h": "3-8",
+"venue": "California Memorial Stadium",
+"neutral": false,
+"a": "PITT",
+"h": "CAL",
+"ra": null,
+"rh": null,
+"line": "PITT -9.5",
+"total": 47.5,
+"ma": 27.839848594815503,
+"mh": 21.57957073714443,
+"pa": 28.2502375,
+"ph": 18.0949375,
+"win": "PITT",
+"pw": 0.7453000000000001,
+"script": [
+0.09715,
+0.55375,
+0.3491
+],
+"td": [
+[
+"Damon Ferguson Jr.",
+"PITT",
+0.48790994577189695
+],
+[
+"La'Vell Wright",
+"PITT",
+0.4257338102715793
+],
+[
+"Ja'Kyrian Turner",
+"PITT",
+0.34532677398251593
+]
+],
+"notes": [
+"PITT"
+]
+},
+{
+"id": "asu-ariz",
+"espn": "401856873",
+"kick_utc": "2026-11-29T02:00Z",
+"conf_a": "Big 12",
+"conf_h": "Big 12",
+"spread_home": 8.5,
+"ml_a": 260,
+"ml_h": -325,
+"name_a": "Arizona State Sun Devils",
+"name_h": "Arizona Wildcats",
+"rec_a": "6-5",
+"rec_h": "8-3",
+"venue": "Casino Del Sol Stadium",
+"neutral": false,
+"a": "ASU",
+"h": "ARIZ",
+"ra": null,
+"rh": 16,
+"line": "ARIZ -8.5",
+"total": 53.5,
+"ma": 21.288942107636682,
+"mh": 33.3338974210025,
+"pa": 22.0029,
+"ph": 31.29185,
+"win": "ARIZ",
+"pw": 0.735725,
+"script": [
+0.5232,
+0.1134,
+0.3634
+],
+"td": [
+[
+"Cardae Mack",
+"ASU",
+0.48615389318012364
+],
+[
+"Kedrick Reescano",
+"ARIZ",
+0.48429621497445735
+],
+[
+"Noah Fifita",
+"ARIZ",
+0.41094868386408834
+]
+],
+"notes": [
+"ASU"
+]
+},
+{
+"id": "bay-hou",
+"espn": "401856874",
+"kick_utc": "2026-11-29T02:30Z",
+"conf_a": "Big 12",
+"conf_h": "Big 12",
+"spread_home": 4.5,
+"ml_a": 164,
+"ml_h": -198,
+"name_a": "Baylor Bears",
+"name_h": "Houston Cougars",
+"rec_a": "6-5",
+"rec_h": "8-3",
+"venue": "TDECU Stadium",
+"neutral": false,
+"a": "BAY",
+"h": "HOU",
+"ra": null,
+"rh": 18,
+"line": "HOU -4.5",
+"total": 55.5,
+"ma": 22.864083476094642,
+"mh": 26.712032646157258,
+"pa": 25.5459625,
+"ph": 29.9531375,
+"win": "HOU",
+"pw": 0.625825,
+"script": [
+0.39085,
+0.18355,
+0.4256
+],
+"td": [
+[
+"Makhi Hughes",
+"HOU",
+0.586995135907564
+],
+[
+"Patrick Overmyer",
+"HOU",
+0.38691597385842397
+],
+[
+"Re'Shaun Sanford II",
+"HOU",
+0.2971570798378958
+]
+],
+"notes": [
+"HOU"
+]
+}
+]
+}
