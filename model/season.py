@@ -322,6 +322,11 @@ def main():
     files["wrcb.json"] = wrcb.build(os.path.join(HUB, "wrcb.json"))
     import teampos  # Team vs Position tables, loaded by the hub on demand
     files["teampos.json"] = teampos.build(os.path.join(HUB, "teampos.json"))
+    try:  # Standings tab: divisions, playoff race with tiebreakers, season leaders (loaded by the hub on demand)
+        import hub_standings
+        files["nflst.json"] = hub_standings.build(os.path.join(HUB, "nflst.json"))
+    except Exception as e:  # noqa: BLE001  standings must not stop the hub from building
+        print("NFL standings skipped:", repr(e))
     try:  # post-game review for every finished game (ESPN, fetched once per game)
         import nfl_reviews
         files["nflrev.json"] = nfl_reviews.build(os.path.join(HUB, "nflrev.json"))

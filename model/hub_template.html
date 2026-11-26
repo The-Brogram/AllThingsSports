@@ -716,6 +716,19 @@ body.noscroll{overflow:hidden}
 .nhtb tr.cut td{border-bottom:2px dashed var(--fg)}
 .nhzl{display:inline-block;font:700 9.5px var(--mono);border-radius:3px;padding:0 4px;margin-left:4px;vertical-align:1px}.nhzl.z1{color:var(--grn);border:1px solid color-mix(in srgb,var(--grn) 45%,var(--bg))}.nhzl.z2{color:#e3b341;border:1px solid color-mix(in srgb,#e3a008 50%,var(--bg))}
 @media(max-width:640px){.nhtb .lh{display:none}}
+/* NFL standings tab (nflst.json, built by hub_standings.py) */
+.nfst .nhtb td.tm,.nfst .nhtb th.tm{text-align:left}.nfst .nhtb td.tm{min-width:170px}.nfst .nhtb td.tm .why{display:block;font:500 11px var(--mono);color:var(--mut)}
+.nfst .nhtb td.pts{font-weight:700}.nfst .nhtb td.dpos{color:var(--grn)}.nfst .nhtb td.dneg{color:var(--red)}
+.nfst .nhtb tr.wc7 td{border-bottom:2px dashed var(--fg)}.nfst .nhzl.z3{color:var(--mut);border:1px solid var(--line2)}
+.nfst .nfseed{display:inline-block;min-width:22px;font:700 13px var(--mono)}
+.nfst .l5{font:600 11.5px var(--mono);letter-spacing:.06em}.nfst .l5 b{color:var(--grn)}.nfst .l5 s{color:var(--red);text-decoration:none}
+.nfst .lgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px;margin-top:12px}
+.nfst .lcard{border:1px solid var(--line);border-radius:12px;padding:10px 12px;min-width:0}.nfst .lcard h4{margin:2px 2px 6px;font:600 16px var(--disp);display:flex;justify-content:space-between;gap:8px;align-items:baseline}.nfst .lcard h4 small{font:500 11px var(--mono);color:var(--mut)}
+.nfst .lcard ol{list-style:none;margin:0;padding:0}.nfst .lcard li{display:grid;grid-template-columns:22px minmax(0,1fr) auto;gap:6px;align-items:baseline;padding:5px 2px;border-bottom:1px solid var(--line);font-size:13.5px}.nfst .lcard li:last-child{border-bottom:0}
+.nfst .lcard li i{font:600 11.5px var(--mono);color:var(--mut);font-style:normal}.nfst .lcard li b{font:700 13.5px var(--mono);text-align:right}.nfst .lcard li span small{display:block;font:500 11px var(--mono);color:var(--mut)}
+.nfst .lcard li span{overflow:hidden;text-overflow:ellipsis}
+.nfst .lcard.more li:nth-child(n+6){display:none}.nfst .lcard.more.open li{display:grid}.nfst .lcard button.lk{margin-top:6px}
+@media(max-width:640px){.nfst .nhtb .lh{display:none}}
 /* teams + leaders */
 .nhteams{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px;margin-top:12px}
 .nhdiv{border:1px solid var(--line);border-radius:12px;padding:10px 12px;min-width:0}.nhdiv h4{font:600 16px var(--disp);margin:2px 2px 6px}
@@ -993,6 +1006,7 @@ h2,.phero h2,.cashtop h2,.cfhead h2{font-weight:600;font-size:clamp(24px,3vw,30p
   <details class="sport" id="sp-nfl" open><summary class="sh"><i></i>NFL<small>2026 season</small><span class="chev" aria-hidden="true"></span></summary>
     <div class="spl"><button data-v="weeks"><span class="ic">▦</span>Weeks</button>
     <button data-v="compare"><span class="ic">⇄</span>Compare teams</button>
+    <button data-v="nfl-standings"><span class="ic">▤</span>Standings</button>
     <button data-v="record"><span class="ic">✓</span>Track record</button>
     <button data-v="players"><span class="ic">◎</span>Player lookup</button>
     <button data-v="wrcb"><span class="ic">⇅</span>WR / CB matchups</button>
@@ -1040,6 +1054,9 @@ h2,.phero h2,.cashtop h2,.cfhead h2{font-weight:600;font-size:clamp(24px,3vw,30p
 <section id="v-cash" hidden></section>
 <section id="v-tracker" hidden></section>
 <section id="v-compare" hidden></section>
+<section id="v-nfl-standings" class="nfst" hidden></section>
+<section id="v-nfl-race" class="nfst" hidden></section>
+<section id="v-nfl-leaders" class="nfst" hidden></section>
 <section id="v-record" hidden></section>
 <section id="v-players" hidden></section>
 <section id="v-wrcb" hidden></section>
@@ -1102,13 +1119,13 @@ $('#live').lastChild.textContent=`${wname(D.week)} · now`;
 $('#upd').textContent=`Updated ${D.built} ET`;
 
 /* ---- views ---- */
-const VIEWS=['home','weeks','cash','tracker','compare','record','players','wrcb','teampos','fantasy','cfb-weeks','cfb-record','cfb-teampos','cfb-leaders','nba','nba-record','nba-weeks','nba-leaders','nhl','nhl-standings','nhl-teams','nhl-leaders','nhl-record','ucl','ucl-md','ucl-record','about'];let cur=D.week;
-const VNAME={home:'Home',about:'About','nba-weeks':'Previous weeks',weeks:'Weeks',cash:'Picks',tracker:'Bet Tracker',compare:'Compare teams',record:'Track record',players:'Player lookup',wrcb:'WR / CB matchups',teampos:'Team vs position',fantasy:'Fantasy','cfb-weeks':'Weeks','cfb-record':'Track record','cfb-teampos':'Team vs position','cfb-leaders':'Season leaders',nba:'Tonight','nba-record':'Track record','nba-leaders':'Season leaders',nhl:'Games','nhl-standings':'Standings','nhl-teams':'Teams','nhl-leaders':'Stat leaders','nhl-record':'Track record',ucl:'Overview','ucl-md':'Matchdays','ucl-record':'Track record'};
+const VIEWS=['home','weeks','cash','tracker','compare','nfl-standings','nfl-race','nfl-leaders','record','players','wrcb','teampos','fantasy','cfb-weeks','cfb-record','cfb-teampos','cfb-leaders','nba','nba-record','nba-weeks','nba-leaders','nhl','nhl-standings','nhl-teams','nhl-leaders','nhl-record','ucl','ucl-md','ucl-record','about'];let cur=D.week;
+const VNAME={home:'Home',about:'About','nba-weeks':'Previous weeks',weeks:'Weeks',cash:'Picks',tracker:'Bet Tracker',compare:'Compare teams','nfl-standings':'Standings','nfl-race':'Playoff race','nfl-leaders':'Leaders',record:'Track record',players:'Player lookup',wrcb:'WR / CB matchups',teampos:'Team vs position',fantasy:'Fantasy','cfb-weeks':'Weeks','cfb-record':'Track record','cfb-teampos':'Team vs position','cfb-leaders':'Season leaders',nba:'Tonight','nba-record':'Track record','nba-leaders':'Season leaders',nhl:'Games','nhl-standings':'Standings','nhl-teams':'Teams','nhl-leaders':'Stat leaders','nhl-record':'Track record',ucl:'Overview','ucl-md':'Matchdays','ucl-record':'Track record'};
 function menu(o){document.body.classList.toggle('menu',o);$('#menu').setAttribute('aria-expanded',String(o))}
 /* ---- Top navigation: sports across the top; inside every sport the same tabs in the same order (Games · Picks · Teams · Players · Track record), shown when that sport has them ---- */
 const NAV=[
  {k:'home',n:'Home',v:['home']},
- {k:'nfl',n:'NFL',tabs:[{n:'Games',v:['weeks']},{n:'Picks',v:['cash-nfl']},{n:'Teams',v:['compare']},{n:'Players',v:['players','wrcb','teampos'],subs:[['Player lookup','players'],['WR / CB matchups','wrcb'],['Team vs position','teampos']]},{n:'Track record',v:['record']}]},
+ {k:'nfl',n:'NFL',tabs:[{n:'Games',v:['weeks']},{n:'Picks',v:['cash-nfl']},{n:'Teams',v:['compare']},{n:'Standings',v:['nfl-standings','nfl-race','nfl-leaders'],subs:[['Divisions','nfl-standings'],['Playoff race','nfl-race'],['Leaders','nfl-leaders']]},{n:'Players',v:['players','wrcb','teampos'],subs:[['Player lookup','players'],['WR / CB matchups','wrcb'],['Team vs position','teampos']]},{n:'Track record',v:['record']}]},
  {k:'cfb',n:'College',tabs:[{n:'Games',v:['cfb-weeks']},{n:'Picks',v:['cash-cfb']},{n:'Players',v:['cfb-leaders','cfb-teampos'],subs:[['Season leaders','cfb-leaders'],['Team vs position','cfb-teampos']]},{n:'Track record',v:['cfb-record']}]},
  {k:'nba',n:'NBA',tabs:[{n:'Games',v:['nba','nba-weeks'],subs:[['Tonight','nba'],['Previous weeks','nba-weeks']]},{n:'Picks',v:['cash-nba']},{n:'Players',v:['nba-leaders']},{n:'Track record',v:['nba-record']}]},
  {k:'nhl',n:'NHL',tabs:[{n:'Games',v:['nhl']},{n:'Teams',v:['nhl-standings','nhl-teams'],subs:[['Standings','nhl-standings'],['Teams','nhl-teams']]},{n:'Players',v:['nhl-leaders']},{n:'Track record',v:['nhl-record']}]},
@@ -1725,7 +1742,7 @@ function route(){const h=location.hash.slice(1)||(window.HUBSTART||''),m=h.match
   else if(/^cash(-bets|-build)?$/.test(h)){location.replace('#tracker'+h.slice(4));return}
   else if(/^cash-(nfl|cfb|nba)$/.test(h)){show('cash');cash(h.slice(5))}
   else if(/^tracker(-bets|-build)?$/.test(h)){show('tracker');tracker(h.slice(7))}
-  else if(m&&weeks.includes(+m[1])){cur=+m[1];show('weeks');week(cur)}else if(h==='compare'){show('compare')}else if(h==='record'){show('record')}
+  else if(m&&weeks.includes(+m[1])){cur=+m[1];show('weeks');week(cur)}else if(h==='compare'){show('compare')}else if(/^nfl-(standings|race|leaders)(-[a-z]+)?$/.test(h)){const v=h.split('-').slice(0,2).join('-');show(v);nflst(v,h.split('-')[2]||null)}else if(h==='record'){show('record')}
   else if(h==='players'||p){show('players');players(p?p[1]:null)}
   else if(/^wrcb(-[\w-]+)?$/.test(h)){show('wrcb');wrcb(h.slice(5)||null)}
   else if(h==='teampos'){show('teampos');teampos()}
@@ -2038,6 +2055,58 @@ function matchup(a,h,g){
   if(gr.length){h+=`<section class="mblock"><h4>Game picks by week</h4><div class="tw"><table><thead><tr><th>Week</th><th>Games</th><th>Right</th><th>Wrong</th><th>Right %</th><th>Margin miss (pts)</th></tr></thead><tbody>${gr.map(x=>`<tr><td>${esc(wname(x.week))}</td><td>${x.n}</td><td>${x.right}</td><td>${x.n-x.right}</td><td>${pc(x.right/x.n)}</td><td>${x.mae.toFixed(1)}</td></tr>`).join('')}</tbody></table></div><p class="note">Weeks before Week 8 are rebuilt from the ratings and lines as they stood before each week; live tracking started in Week 8. Ties are left out. Margin miss is the average gap between projected and actual margin.</p></section>`}
   $('#v-record').innerHTML=h})();
 
+
+/* ---- NFL Standings tab: nflst.json (hub_standings.py) · Divisions, Playoff race, Leaders ---- */
+let NST=null,NSTP=null,NLGT='pl';
+function nflst(v,sub){const box=$('#v-'+v);if(sub&&v==='nfl-leaders')NLGT=sub==='teams'?'tm':'pl';
+  if(NST)return nfdraw(v);if(!box.innerHTML)box.innerHTML='<p class="note">Loading standings…</p>';
+  NSTP=NSTP||fetch('nflst.json').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()});
+  NSTP.then(j=>{NST=j;nfdraw(v)}).catch(e=>{NSTP=null;box.innerHTML=`<p class="empty">The standings did not load (${esc(e.message)}). Reload the page to try again.</p>`})}
+const nfrec=x=>`${x.w}-${x.l}${x.t?'-'+x.t:''}`,nfpct=p=>p.toFixed(3).replace(/^0/,''),nfdf=v=>v>0?'+'+v:v<0?'−'+Math.abs(v):'0';
+const nfgb=v=>v==null?'–':v===0?'–':(v%1?v.toFixed(1):v);
+const nfl5=s=>`<span class="l5" aria-label="Last five: ${esc(s)}">${[...(s||'')].map(c=>c==='W'?'<b>W</b>':c==='L'?'<s>L</s>':c).join('')}</span>`;
+const CLX={x:'clinched a playoff spot',y:'clinched the division',z:'clinched a first-round bye','*':'clinched home field',e:'eliminated'};
+function nfhead(title,sub){const S=NST;return`<div class="cfhead"><div><div class="eyebrow"><span>NFL · ${S.season} regular season</span><span class="upd">Updated ${esc(D.built)} ET</span></div><h2>${title}</h2><p class="note">${sub}</p></div></div>`}
+function nfdraw(v){const box=$('#v-'+v),S=NST,X=S.teams,thru=`${S.finals} games final, through ${new Date(S.last+'T12:00:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'})}`;
+  const nm=t=>`${tlg(t)}${esc(T[t]?T[t].name:t)}`,cl=t=>X[t].clinch?` <span class="nhzl z3" title="${esc(CLX[X[t].clinch]||X[t].clinch)}">${esc(X[t].clinch)}</span>`:'';
+  if(v==='nfl-standings'){
+    const cols=`<th class="n">#</th><th class="tm">Team</th><th class="n">W</th><th class="n">L</th><th class="n">T</th><th class="n">Pct</th><th class="n">GB</th><th class="n">Div</th><th class="n lh">Conf</th><th class="n lh">Home</th><th class="n lh">Away</th><th class="n">PF</th><th class="n">PA</th><th class="n">Diff</th><th class="n">Strk</th><th class="n lh">Last 5</th>`;
+    const row=(t,i)=>{const x=X[t];return`<tr><td class="n">${i+1}</td><td class="tm">${nm(t)}${cl(t)}${x.dwhy?`<span class="why">ahead on ${esc(x.dwhy)}</span>`:''}</td><td class="n">${x.w}</td><td class="n">${x.l}</td><td class="n">${x.t}</td><td class="n pts">${nfpct(x.pct)}</td><td class="n">${nfgb(x.gb)}</td><td class="n">${x.dr}</td><td class="n lh">${x.cr}</td><td class="n lh">${x.home}</td><td class="n lh">${x.away}</td><td class="n">${x.pf}</td><td class="n">${x.pa}</td><td class="n ${x.diff>0?'dpos':x.diff<0?'dneg':''}">${nfdf(x.diff)}</td><td class="n">${esc(x.strk)}</td><td class="n lh">${nfl5(x.last5)}</td></tr>`};
+    box.innerHTML=nfhead('Division standings',`All 32 teams by division · ${thru}`)+
+     `<div class="nhst">${S.divs.map(d=>`<div class="utb"><h4>${esc(d.name)}</h4><table class="nhtb utbl"><thead><tr>${cols}</tr></thead><tbody>${d.teams.map(row).join('')}</tbody></table></div>`).join('')}</div>
+     <p class="note">Pct counts a tie as half a win. GB = games behind the division leader. Div and Conf are records against division and conference opponents. Where two teams have the same record, the line under the name says which NFL tiebreaker puts the higher team ahead (head-to-head, division record, common games, conference record, strength of victory, strength of schedule). On a phone the table scrolls sideways and the team column stays put. Results: nflverse.${S.espn?' Clinch marks: ESPN.':''}</p>`;return}
+  if(v==='nfl-race'){
+    const cols=`<th class="n">Seed</th><th class="tm">Team</th><th class="n">W-L-T</th><th class="n">Pct</th><th class="n">Div</th><th class="n">Conf</th><th class="n lh">SOV</th><th class="n lh">SOS</th><th class="n">Diff</th><th class="n">Strk</th><th class="n">Back</th>`;
+    const row=x=>{const t=x.ab,y=X[t],tag=x.kind==='div'?'<span class="nhzl z1">DIV</span>':x.kind==='wc'?'<span class="nhzl z2">WC</span>':'';
+      return`<tr class="${x.kind==='div'?'z1':x.kind==='wc'?'z2':''} ${x.seed===7?'wc7':''}"><td class="n"><span class="nfseed">${x.seed<=7?x.seed:''}</span></td><td class="tm">${nm(t)}${tag}${cl(t)}<span class="why">${esc(y.div)}${x.why?' · ahead on '+esc(x.why):''}</span></td><td class="n">${nfrec(y)}</td><td class="n pts">${nfpct(y.pct)}</td><td class="n">${y.dr}</td><td class="n">${y.cr}</td><td class="n lh">${nfpct(y.sov)}</td><td class="n lh">${nfpct(y.sos)}</td><td class="n ${y.diff>0?'dpos':y.diff<0?'dneg':''}">${nfdf(y.diff)}</td><td class="n">${esc(y.strk)}</td><td class="n">${x.back!=null?nfgb(x.back):'–'}</td></tr>`};
+    box.innerHTML=nfhead('Playoff race',`Seven teams per conference make it · ${thru}`)+
+     `<p class="note"><span class="uzk z1"></span>Division leaders, seeds 1–4 <span class="uzk z2"></span>Wild cards, seeds 5–7 · the dashed line is the cut. Back = games behind the 7th seed. If the season ended today, seed 1 gets the only bye.</p>
+     <div class="nhst">${S.race.map(c=>{const r=c.rows;return`<div class="utb"><h4>${c.conf}<small>if the season ended today</small></h4><table class="nhtb utbl"><thead><tr>${cols}</tr></thead><tbody>
+      <tr class="usub"><td colspan="11">Division leaders</td></tr>${r.slice(0,4).map(row).join('')}<tr class="usub"><td colspan="11">Wild cards</td></tr>${r.slice(4,7).map(row).join('')}<tr class="usub"><td colspan="11">In the hunt</td></tr>${r.slice(7).map(row).join('')}</tbody></table></div>`}).join('')}</div>
+     <p class="note"><b>How ties are broken.</b> Teams are ranked by win percentage. Teams with the same record are separated with the NFL's own tiebreaker order, and the line under the name names the step that decided it. Division ties: head-to-head, division record, common games, conference record, strength of victory (SOV), strength of schedule (SOS). Wild-card ties: only the best team from each division stays in, then head-to-head (for three or more teams only if one swept the others), conference record, common games (at least four), SOV, SOS. Division leaders are seeded among themselves the same way. Two simplifications: SOS here uses games played so far (the NFL's uses the full schedule), and the rare ties still level after SOS are ordered by point differential instead of the NFL's points-ranking steps.${S.espn?' Every seed was checked against ESPN’s standings on this build.':''}</p>`;return}
+  /* leaders */
+  const PL=[['Passing',[['pyd','Passing yards','yd'],['ptd','Passing TDs','TD'],['ypa','Yards per attempt','Y/A','14+ attempts a game'],['cmp','Completion %','%','14+ attempts a game'],['pepa','Passing EPA','EPA','14+ attempts a game']]],
+    ['Rushing',[['ryd','Rushing yards','yd'],['rtd','Rushing TDs','TD'],['ypc','Yards per carry','Y/C','6.25+ carries a game']]],
+    ['Receiving',[['recyd','Receiving yards','yd'],['rec','Receptions','rec'],['rectd','Receiving TDs','TD'],['tgt','Targets','tgt']]],
+    ['All-purpose',[['scrim','Scrimmage yards','yd'],['tds','Rushing + receiving TDs','TD'],['ppr','Fantasy points (PPR)','pts']]],
+    ['Defense',[['sk','Sacks','sk'],['dint','Interceptions','INT'],['tkl','Tackles','tkl'],['tfl','Tackles for loss','TFL'],['qbh','QB hits','hits'],['pd','Passes defended','PD'],['ff','Forced fumbles','FF']]],
+    ['Kicking',[['fg','Field goals made','FG']]]];
+  const fmt=(k,v)=>k==='pepa'?(v>0?'+':'')+(+v).toFixed(1):k==='cmp'?(+v).toFixed(1)+'%':k==='ypa'||k==='ypc'||k==='ppr'?(+v).toFixed(1):v%1?(+v).toFixed(1):v;
+  const card=(k,l,u,q)=>{const L=S.players[k]||[];return`<div class="lcard more"><h4>${l}<small>${q?esc(q):''}</small></h4>${L.length?`<ol>${L.slice(0,10).map((p,i)=>`<li><i>${i&&p.v===L[i-1].v?'=':i+1}</i><span>${tlg(p.tm)}${esc(p.n)}<small>${esc(p.tm)} · ${esc(p.pos||'')} · ${p.gp} g</small></span><b>${fmt(k,p.v)}</b></li>`).join('')}</ol><button class="lk" type="button" data-more>Show top 10</button>`:'<p class="empty">Nothing on file yet.</p>'}</div>`};
+  const TL=[['Scoring',[['ppg','Points scored per game',0],['papg','Points allowed per game',1],['diff','Point differential',0]]],
+    ['Offense',[['ypp','Yards per play',0],['epa','EPA per play',0],['sr','Success rate',0],['pepa','Pass EPA per play',0],['repa','Rush EPA per play',0],['ypg','Yards per game',0],['d3','Third-down conversion %',0],['rz','Red-zone TD %',0]]],
+    ['Defense',[['dypp','Yards per play allowed',1],['depa','EPA per play allowed',1],['dsr','Success rate allowed',1],['dpepa','Pass EPA allowed',1],['drepa','Rush EPA allowed',1],['dypg','Yards allowed per game',1],['dd3','Third-down % allowed',1],['sacks','Sacks',0]]],
+    ['Turnovers and discipline',[['take','Takeaways',0],['give','Giveaways',1],['to','Turnover margin',0]]]];
+  const tf=(k,v)=>v==null?'–':/epa/.test(k)?(v>0?'+':'')+v.toFixed(3):['sr','dsr','d3','dd3','rz'].includes(k)?v.toFixed(1)+'%':['diff','to'].includes(k)?nfdf(v):k==='ypp'||k==='dypp'?v.toFixed(2):v%1?v.toFixed(1):v;
+  const tcard=(k,l,lo)=>{const L=S.tl.filter(x=>x[k]!=null).sort((a,b)=>lo?a[k]-b[k]:b[k]-a[k]);return`<div class="lcard more"><h4>${l}<small>${lo?'lowest first':''}</small></h4><ol>${L.slice(0,10).map((x,i)=>`<li><i>${i&&x[k]===L[i-1][k]?'=':i+1}</i><span>${nm(x.ab)}<small>${nfrec(X[x.ab])}</small></span><b>${tf(k,x[k])}</b></li>`).join('')}</ol><button class="lk" type="button" data-more>Show top 10</button></div>`};
+  box.innerHTML=nfhead('Season leaders',`Regular season · player stats through Week ${S.stats_through} · ${thru}`)+
+   `<div class="utabs" role="tablist" aria-label="Leader type">${[['pl','Players'],['tm','Teams']].map(([k,l])=>`<button role="tab" data-lt="${k}" aria-selected="${k===NLGT}">${l}</button>`).join('')}</div>`+
+   (NLGT==='pl'?PL.map(([g,cs])=>`<h3 class="ush">${g}</h3><div class="lgrid">${cs.map(c=>card(...c)).join('')}</div>`).join('')+
+     `<p class="note">Totals add up every regular-season game. Rate stats need a minimum workload (shown on each card) so one big game can't top the list. = marks a tie. Tackles are solo plus assisted. Passing EPA is expected points added on the player's dropbacks, summed over the season. Stats: nflverse.</p>`
+    :TL.map(([g,cs])=>`<h3 class="ush">${g}</h3><div class="lgrid">${cs.map(c=>tcard(...c)).join('')}</div>`).join('')+
+     `<p class="note">Per-play numbers use every run and pass (sacks and scrambles count as passes); special teams, kneels and spikes are left out. EPA = expected points added per play; success rate = share of plays with positive EPA. Red-zone TD % = drives that reached the opponent's 20 and ended in an offensive touchdown. Lower is better for every defensive rate and for giveaways. Points come from final scores; everything else from nflverse play-by-play.</p>`);
+  box.querySelectorAll('[data-lt]').forEach(b=>b.onclick=()=>{NLGT=b.dataset.lt;nfdraw(v)});
+  box.querySelectorAll('[data-more]').forEach(b=>b.onclick=()=>{const c=b.closest('.lcard');c.classList.toggle('open');b.textContent=c.classList.contains('open')?'Show top 5':'Show top 10'})}
 
 /* ---- team vs position: loads teampos.json the first time it opens ---- */
 let TP=null;const TS={tf:null,pos:'QB',type:'std',ptd:4,sort:'fp',asc:false};

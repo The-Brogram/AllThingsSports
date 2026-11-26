@@ -11,6 +11,7 @@ import engine as E
 import scheme as S
 import gamebook as GB
 import lines as LN
+import splits as SP
 from backtest import apply_cal, cal_key
 
 from config import CACHE, COORD, DATE, DAY, HOLD_RUSH, NOTES, OUT, PICKS, TITLE, WEEK
@@ -1019,10 +1020,20 @@ def render_game(gm, c, R, cal):
     except Exception as ex:  # a missing column should not sink the whole book
         stt = f"<p class='note'>Special teams could not be built: {e(ex)}</p>"
 
-    # Splits
-    splits = (sec("Against the spread and over/under", CTX, GB.splits_table(GS, a) + GB.splits_table(GS, h), "Closing lines from nflverse. Avg cover margin is how far the team beat (+) or missed (−) the spread on average.")
-              + sec("Form by split", CTX, T(["Split", "G", "PPG", "Off EPA", "Off success", "Y/play", "Opp PPG", "Def EPA", "Def success", "Opp Y/play"], trends(c, a) + trends(c, h)), "Last-3 samples are small, so treat them as hints.")
-              + sec("Unit by unit", CTX, team_compare(c, a, h, R)))
+    # Splits: one tab per team (WR/CB, run defense, pass defense, unit by unit), betting record folded at the bottom
+    H = dict(mrow=mrow, side_head=side_head, better=_better, fmt=_fmt, SUBLAB=SUBLAB)
+
+    def record(t):
+        body = (GB.splits_table(GS, t) + T(["Split", "G", "PPG", "Off EPA", "Off success", "Y/play", "Opp PPG", "Def EPA", "Def success", "Opp Y/play"], trends(c, t))
+                + "<p class='note'>Closing lines from nflverse. Avg cover margin is how far the team beat (+) or missed (−) the spread on average. Last-3 samples are small, so treat them as hints.</p>")
+        return sec(f"{t} betting record and form", CTX, fold("Against the spread, over/under and form by split", body))
+
+    def team_split(t, o):
+        try:
+            return SP.team_tab(c, R, gid, WEEK, a, h, t, o, R["L26"], R["L25"], H, record(t))
+        except Exception as ex:  # one missing column should not sink the whole book
+            return f"<p class='note'>{t} splits could not be built: {e(ex)}</p>" + record(t)
+    split_tabs = [(f"{GB.NICK.get(t, t)} Splits", team_split(t, o)) for t, o in ((a, h), (h, a))]
 
     # Lineups
     lineups = sec("Projected lineups", CTX, f"<div class='pcols'>{GB.lineup(c, a, s['inj'].get(a, []))}{GB.lineup(c, h, s['inj'].get(h, []))}</div>",
@@ -1043,7 +1054,7 @@ def render_game(gm, c, R, cal):
     model = sec("Executive summary", PRED, A) + sec("Final ranked recommendations", PRED, I) + sec("Scenarios", PRED, f"<p><b>A, {h} wins by 8+:</b> {pc(probs[0])}. <b>B, {a} wins by 8+:</b> {pc(probs[1])}. <b>C, one-score game:</b> {pc(probs[2])}.</p>" + sc_v + sc_t)
 
     tabs = [("o", "Overview", overview),
-            ("m", "Matchup", subtabs(gid, "m", [("Offense & Defense", offdef), ("O-Line / D-Line", lnt), ("Special Teams", stt), ("Splits", splits), ("History", h2b + l10)])),
+            ("m", "Matchup", subtabs(gid, "m", [("Offense & Defense", offdef), ("O-Line / D-Line", lnt), ("Special Teams", stt), *split_tabs, ("History", h2b + l10)])),
             ("pl", "Players", subtabs(gid, "pl", [("Lineups", lineups), ("Injuries", injuries)])),
             ("p", "Picks", subtabs(gid, "p", [("Picks", picks), ("Touchdowns", tds), ("All props", allprops)])),
             ("md", "Model", subtabs(gid, "md", [("Summary", model), ("Odds & lines", odds)]))]
@@ -1254,6 +1265,7 @@ def main():
     d = E.load()
     c = S.Ctx(d)
     R = build_ranks(c)
+    R["L26"], R["L25"] = SP.league(c.p26), SP.league(c.p25)  # run / pass defense ranks for the Splits tabs
     R["rt"] = data["ratings"]
     arts, sums = [], []
     shifts = find_shifts(c)
@@ -1272,7 +1284,7 @@ def main():
         sums.append(b)
         print("rendered", b["id"], flush=True)
     btn = '<button data-t="slate">Slate</button>' + "".join(f'<button data-t="{x["id"]}">{x["a"]} at {x["h"]}</button>' for x in sums)
-    page = f"""<meta charset="utf-8"><title>{TITLE}</title><meta name="claude:viewport-fit-sides" content="cover"><link rel="preconnect" href="https://fonts.googleapis.com">{FONTS}<style>{CSS}</style><style>{GB.logo_css()}</style>
+    page = f"""<meta charset="utf-8"><title>{TITLE}</title><meta name="claude:viewport-fit-sides" content="cover"><link rel="preconnect" href="https://fonts.googleapis.com">{FONTS}<style>{CSS}</style><style>{SP.CSS}</style><style>{GB.logo_css()}</style>
     <div class="top"><h1>{TITLE}</h1><p>Full matchup report, 20,000-game simulation, and calibrated player forecasts for {DAY:%A, %B %-d, %Y}.</p></div><nav>{btn}</nav><main>{slate_page(sums, data['bt'], c, R['shifts'])}{''.join(arts)}</main><script>{JS}</script>"""
     with open(OUT, "w") as f:
         f.write(page)
