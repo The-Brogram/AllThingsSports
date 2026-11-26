@@ -41,7 +41,10 @@ def pc(x, d=0):
 
 
 def sg(x, d=2):
-    return f"{x:+.{d}f}" if _ok(x) else "–"
+    if not _ok(x):
+        return "–"
+    v = round(x, d)
+    return f"{0.0 if v == 0 else v:+.{d}f}"
 
 
 # ---------- play selection ----------
@@ -156,7 +159,7 @@ def run_strip(dm, lg, om, opp, show_off=True):
         thin = " thin" if d["n"] < MIN_ZONE else ""
         cells.append(f'<div class="rz{thin}" style="{_heat(diff, 2.0, True, d["n"])}" title="{e(lab)}: {d["n"]} carries, {n(d["ypc"])} YPC allowed (league {n(L["ypc"])})">'
                      f'<small>{k}</small><b>{n(d["ypc"])}</b><span>{d["n"]} car</span><em>{sg(diff, 1)}</em></div>')
-    line = '<div class="rline">' + "".join(f"<i>{x}</i>" for x in ("", "T", "G", "C", "G", "T", "")) + "</div>"
+    line = '<div class="los rlos">line of scrimmage · LE / RE = outside the tackle, LT / RT = off tackle, LG / RG = inside, MID = up the middle</div>'
     off = ""
     if show_off and om:
         mx = max(v["share"] for v in om.values()) or 1
@@ -452,6 +455,7 @@ CSS = """
 .pgr>small{font:600 10.5px var(--m);color:var(--mut);align-self:center}
 .pz{border-radius:8px;padding:9px 4px;text-align:center;display:grid;gap:1px;border:1px solid var(--line);min-width:0}
 .pz b{font:700 17px/1.2 var(--m);font-variant-numeric:tabular-nums}.pz span{font:500 10.5px var(--m);color:var(--mut)}.pz em{font:600 10.5px var(--m);font-style:normal;opacity:.85}
+.rlos{margin-left:0!important;text-transform:none!important;letter-spacing:.02em!important;margin-top:4px}
 .los{margin-left:56px;border-top:2px dashed var(--line2);padding-top:3px;font:600 9.5px var(--m);text-transform:uppercase;letter-spacing:.1em;color:var(--dim);text-align:center}
 ul.read{margin:12px 0 4px;padding-left:18px;font-size:14px}ul.read li{margin-block:4px}ul.read:empty{display:none}
 .wcg{display:grid;gap:8px}
