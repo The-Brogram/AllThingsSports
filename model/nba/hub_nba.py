@@ -32,13 +32,23 @@ def teams():
     return t
 
 
+def read_preds(f):
+    """A day's forecast file; a day with no games leaves an empty file, read as an empty table with the usual columns."""
+    try:
+        return pd.read_csv(f, dtype={"pid": str, "game_id": str})
+    except pd.errors.EmptyDataError:
+        fs = [x for x in sorted(glob.glob(f"{OUT}/predictions_*.csv")) if os.path.getsize(x) > 1]
+        cols = pd.read_csv(fs[-1], nrows=0).columns if fs else ["game_id", "pid"]
+        return pd.DataFrame(columns=cols).astype({"pid": str, "game_id": str})
+
+
 def tonight():
     fs = sorted(glob.glob(f"{OUT}/nba_*.pkl"))
     if not fs:
         return None
     m = pickle.load(open(fs[-1], "rb"))
     date = m["date"]
-    pr = pd.read_csv(f"{OUT}/predictions_{date}.csv", dtype={"pid": str, "game_id": str})
+    pr = read_preds(f"{OUT}/predictions_{date}.csv")
     try:  # forecasts made before the parser learned to reject wrong-market rebound prices (Nov 12, 2026) may still carry them: hide those
         ok = pd.read_csv(f"{D}/props.csv.gz", dtype={"pid": str, "game_id": str})
         ok = ok[(ok.kind == "milestone") & (ok.market == "reb")][["game_id", "pid", "line"]].drop_duplicates().assign(_ok=1)
@@ -158,7 +168,7 @@ def profiles(hub):
     if not fs:
         return {}
     m = pickle.load(open(fs[-1], "rb"))
-    pr = pd.read_csv(f"{OUT}/predictions_{m['date']}.csv", dtype={"pid": str, "game_id": str})
+    pr = read_preds(f"{OUT}/predictions_{m['date']}.csv")
     tp = pr.drop_duplicates("pid").set_index("pid")
     p = pd.read_csv(f"{D}/players.csv.gz", dtype={"pid": str, "game_id": str})
     g = pd.read_csv(f"{D}/games.csv", dtype={"game_id": str})
@@ -303,7 +313,7 @@ def matchups(hub):
                 rows[t][zk].append(i + 1)
         tz = rows
         fs = sorted(glob.glob(f"{OUT}/predictions_*.csv"))
-        tonight = set(pd.read_csv(fs[-1], dtype={"pid": str}).pid) if fs else set()
+        tonight = set(read_preds(fs[-1]).pid) if fs else set()
         q = sh[sh.pid.isin(tonight)]
         for pid, y in q.groupby("pid"):
             d = {r.zone: [int(r.a), int(r.m), int(r.pts)] for r in y.groupby("zone").agg(a=("made", "size"), m=("made", "sum"), pts=("pts", "sum")).reset_index().itertuples()}
