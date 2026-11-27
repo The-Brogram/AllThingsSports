@@ -1,17 +1,17 @@
-football run Fri Nov 27 2026 03:51 AM ET: nfl-today (schedule 30 0 * * 5,2)
-== nfl-today
-[nflverse refresh] ok in 2s
-[run today] ok in 142s
+football run Fri Nov 27 2026 06:33 PM ET: nfl-next (schedule 20 15 * * 5)
+== nfl-next
+[nflverse refresh] ok in 1s
+[run] ok in 364s
+    Fantasy: 2026 week 12, 2 slate(s), 209 players, 0.82 MB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/fantasy.json
     CFB leaders: 133 players, 138 FBS defenses, through week 13 -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/cfbl.json 133 KB
     CFB: week 13 current, 489 in-scope games across 14 weeks, 121 with our pick, 187 teams, 260 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/cfb.json
-    NBA matchup history skipped: EmptyDataError('No columns to parse from file')
     UCL: 144 fixtures (72 final, 72 box scores), 36 in the table, 3 analysed matchdays
     Team logos: nba 30, nhl 32, cfb 187, ucl 36
-    Hub: Week 12 is current. 167 final, 1 with a Game Book, 25 with lines, 79 early. 17 reports. 694 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/index.html
+    Hub: Week 12 is current. 168 final, 10 with a Game Book, 12 with lines, 82 early. 18 reports. 702 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/index.html
     Data freshness NFL: OK - games final through week 12; player stats through week 12; weekly rosters through week 12
     Data freshness CFB: OK - games final through week 13; player stats through week 13
-    Data freshness NBA: OK - games final through 2026-11-25; 270/270 with box scores; 270/270 with shot charts
-       done in 78s
-    Report: output/nfl_20261127_report.html
+    Data freshness NBA: STALE - games final through 2026-11-25; 270/270 with box scores; 270/270 with shot charts; forecasts never graded: 2026-11-26
+       done in 84s
+    Report: output/nfl_20261129_report.html
     Hub: output/hub/index.html
 hub copied to the site
