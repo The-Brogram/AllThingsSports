@@ -1,25 +1,17 @@
-football run Thu Nov 26 2026 07:35 PM ET: cfb-run (schedule 15 16 * * 4)
-== cfb-run
-[nflverse refresh] ok in 1s
-[fetch_cfb.py] ok in 22s
-    1825 games on file; 69 fetched
-[parse_cfb.py] ok in 28s
-    1758 games {2025: 934, 2026: 824} 0.5216154721274175 229247 plays 96515 targets 111083 passes 114331 rushes
-    target parse rate 0.9359064122760955 rec tie 0.6816557011863441
-[weather_cfb.py] ok in 6s
-    Week 13: 33 forecasts, 1 indoor, 0 unavailable
-week 13 already has saved forecasts but its simulation cache is not here: sim skipped so games that have started keep their original forecasts
-[season.py] ok in 87s
-    Team vs position: 2026 thru wk 11, 2025 thru wk 18 -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/teampos.json
-    NFL reviews: 165 of 165 finished games (1 fetched) -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/nflrev.json
-    Fantasy: 2026 week 11, 3 slate(s), 249 players, 0.97 MB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/fantasy.json
+football run Fri Nov 27 2026 03:51 AM ET: nfl-today (schedule 30 0 * * 5,2)
+== nfl-today
+[nflverse refresh] ok in 2s
+[run today] ok in 142s
     CFB leaders: 133 players, 138 FBS defenses, through week 13 -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/cfbl.json 133 KB
     CFB: week 13 current, 489 in-scope games across 14 weeks, 121 with our pick, 187 teams, 260 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/cfb.json
     NBA matchup history skipped: EmptyDataError('No columns to parse from file')
     UCL: 144 fixtures (72 final, 72 box scores), 36 in the table, 3 analysed matchdays
     Team logos: nba 30, nhl 32, cfb 187, ucl 36
-    Hub: Week 12 is current. 165 final, 2 with a Game Book, 22 with lines, 83 early. 16 reports. 693 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/index.html
+    Hub: Week 12 is current. 167 final, 1 with a Game Book, 25 with lines, 79 early. 17 reports. 694 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/index.html
     Data freshness NFL: OK - games final through week 12; player stats through week 12; weekly rosters through week 12
     Data freshness CFB: OK - games final through week 13; player stats through week 13
     Data freshness NBA: OK - games final through 2026-11-25; 270/270 with box scores; 270/270 with shot charts
+       done in 78s
+    Report: output/nfl_20261127_report.html
+    Hub: output/hub/index.html
 hub copied to the site

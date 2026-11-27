@@ -1,0 +1,17 @@
+date,event,game,kind,player,athlete,market,side,line,price,prob,edge,flagged
+20261127,401873083,DEN@PIT,prop,Rico Dowdle,4038815.0,Total Rushing Yards (incl. overtime),under,31.5,,0.5751971348345283,0.05138761102500444,True
+20261127,401873083,DEN@PIT,prop,Germie Bernard,4685261.0,Total Receiving Yards (incl. overtime),over,22.5,,0.5718579265769235,0.048048402767399634,True
+20261127,401873083,DEN@PIT,prop,Jonah Coleman,4702555.0,Total Receiving Yards (incl. overtime),under,22.5,,0.5650030766598403,0.04119355285031645,True
+20261127,401873083,DEN@PIT,prop,Jaylen Warren,4569987.0,Total Rushing Yards (incl. overtime),under,63.5,,0.5543028851826484,0.030493361373124528,False
+20261127,401873083,DEN@PIT,prop,Jaylen Waddle,4372016.0,Total Receiving Yards (incl. overtime),under,44.5,,0.5534205769082259,0.029611053098702045,True
+20261127,401873083,DEN@PIT,prop,DK Metcalf,4047650.0,Total Receiving Yards (incl. overtime),over,28.5,,0.545720146199144,0.02191062238962016,False
+20261127,401873083,DEN@PIT,prop,Pat Freiermuth,4361411.0,Total Receiving Yards (incl. overtime),under,22.5,,0.5424080965149988,0.018598572705474936,False
+20261127,401873083,DEN@PIT,prop,Jonah Coleman,4702555.0,Total Rushing Yards (incl. overtime),under,73.5,,0.538695803841016,0.014886280031492172,True
+20261127,401873083,DEN@PIT,prop,Pat Bryant,4600981.0,Total Receiving Yards (incl. overtime),under,27.5,,0.5329479416549685,0.009138417845444669,False
+20261127,401873083,DEN@PIT,prop,Mason Rudolph,3116407.0,Total Passing Yards (incl. overtime),over,173.5,,0.5267065469062939,0.0028970230967700905,False
+20261127,401873083,DEN@PIT,prop,Jaylen Warren,4569987.0,Total Receiving Yards (incl. overtime),under,18.5,,0.5122501779249543,-0.011559345884569527,False
+20261127,401873083,DEN@PIT,prop,Bo Nix,4426338.0,Total Passing Yards (incl. overtime),under,203.5,,0.5117960803389742,-0.012013443470549667,False
+20261127,401873083,DEN@PIT,prop,Courtland Sutton,3128429.0,Total Receiving Yards (incl. overtime),over,26.5,,0.5114054057082498,-0.012404118101274064,False
+20261127,401873083,DEN@PIT,prop,Darnell Washington,4430802.0,Total Receiving Yards (incl. overtime),over,15.5,,0.5007632354080848,-0.023046288401439075,False
+20261127,401873083,DEN@PIT,prop,Evan Engram,3051876.0,Total Receiving Yards (incl. overtime),over,22.5,,0.5,-0.023809523809523836,False
+20261127,401873083,DEN@PIT,game,,,PIT moneyline,,,205.0,,0.04050750000000003,False

@@ -1,0 +1,87 @@
+{
+ "date": "20261127",
+ "week": 12,
+ "built": "2026-11-27 03:52",
+ "games": [
+  {
+   "id": "den-pit",
+   "a": "DEN",
+   "h": "PIT",
+   "win": "DEN",
+   "pw": 0.6588499999999999,
+   "pa": 21.528001601612704,
+   "ph": 17.160372315608026,
+   "ma": 23.608021024230926,
+   "mh": 20.847728164184215,
+   "line": "DEN -4.5",
+   "total": 37.5,
+   "likely": [
+    {
+     "player": "Jaylen Warren",
+     "team": "PIT",
+     "outcome": "30+ rushing yds",
+     "prob": 0.790423285182977
+    },
+    {
+     "player": "Bo Nix",
+     "team": "DEN",
+     "outcome": "160+ passing yds",
+     "prob": 0.7452565325027298
+    },
+    {
+     "player": "Evan Engram",
+     "team": "DEN",
+     "outcome": "10+ receiving yds",
+     "prob": 0.7374688990360823
+    },
+    {
+     "player": "Jaylen Waddle",
+     "team": "DEN",
+     "outcome": "20+ receiving yds",
+     "prob": 0.7298405449907357
+    },
+    {
+     "player": "Pat Bryant",
+     "team": "DEN",
+     "outcome": "10+ receiving yds",
+     "prob": 0.7279200901348006
+    },
+    {
+     "player": "Mason Rudolph",
+     "team": "PIT",
+     "outcome": "150+ passing yds",
+     "prob": 0.7240603815605129
+    },
+    {
+     "player": "Courtland Sutton",
+     "team": "DEN",
+     "outcome": "15+ receiving yds",
+     "prob": 0.7073849712919
+    },
+    {
+     "player": "DK Metcalf",
+     "team": "PIT",
+     "outcome": "20+ receiving yds",
+     "prob": 0.7058349865781067
+    }
+   ],
+   "td": [
+    {
+     "player": "Jonah Coleman",
+     "team": "DEN",
+     "prob": 0.5734570118570894
+    },
+    {
+     "player": "Jaylen Warren",
+     "team": "PIT",
+     "prob": 0.2799111100189728
+    },
+    {
+     "player": "Bo Nix",
+     "team": "DEN",
+     "prob": 0.24424839186123307
+    }
+   ]
+  }
+ ]
+}
