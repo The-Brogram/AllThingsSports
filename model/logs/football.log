@@ -1,22 +1,25 @@
-football run Wed Nov 25 2026 11:25 AM ET: nfl-hub (schedule 15 15 * * 3)
-== nfl-hub
-[review] FAILED in 1s
-    sync: no site repository
-    -> fetch_data.py results
-       done in 1s
-    
-    No finished slate with saved forecasts to review.
-[hub refresh] ok in 69s
+football run Thu Nov 26 2026 07:35 PM ET: cfb-run (schedule 15 16 * * 4)
+== cfb-run
+[nflverse refresh] ok in 1s
+[fetch_cfb.py] ok in 22s
+    1825 games on file; 69 fetched
+[parse_cfb.py] ok in 28s
+    1758 games {2025: 934, 2026: 824} 0.5216154721274175 229247 plays 96515 targets 111083 passes 114331 rushes
+    target parse rate 0.9359064122760955 rec tie 0.6816557011863441
+[weather_cfb.py] ok in 6s
+    Week 13: 33 forecasts, 1 indoor, 0 unavailable
+week 13 already has saved forecasts but its simulation cache is not here: sim skipped so games that have started keep their original forecasts
+[season.py] ok in 87s
     Team vs position: 2026 thru wk 11, 2025 thru wk 18 -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/teampos.json
-    NFL reviews: 163 of 163 finished games (0 fetched) -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/nflrev.json
+    NFL reviews: 165 of 165 finished games (1 fetched) -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/nflrev.json
     Fantasy: 2026 week 11, 3 slate(s), 249 players, 0.97 MB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/fantasy.json
-    CFB leaders: 132 players, 137 FBS defenses, through week 12 -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/cfbl.json 132 KB
-    CFB: week 12 current, 491 in-scope games across 14 weeks, 87 with our pick, 188 teams, 257 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/cfb.json
+    CFB leaders: 133 players, 138 FBS defenses, through week 13 -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/cfbl.json 133 KB
+    CFB: week 13 current, 489 in-scope games across 14 weeks, 121 with our pick, 187 teams, 260 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/cfb.json
+    NBA matchup history skipped: EmptyDataError('No columns to parse from file')
     UCL: 144 fixtures (72 final, 72 box scores), 36 in the table, 3 analysed matchdays
     Team logos: nba 30, nhl 32, cfb 187, ucl 36
-    Hub: Week 12 is current. 163 final, 0 with a Game Book, 30 with lines, 79 early. 14 reports. 677 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/index.html
-    Data freshness NFL: OK - games final through week 11; player stats through week 11; weekly rosters through week 12
-    Data freshness CFB: OK - games final through week 12; player stats through week 12
-    Data freshness NBA: OK - games final through 2026-11-24; 261/261 with box scores; 261/261 with shot charts
-       done in 67s
+    Hub: Week 12 is current. 165 final, 2 with a Game Book, 22 with lines, 83 early. 16 reports. 693 KB -> /home/runner/work/AllThingsSports/AllThingsSports/model/output/hub/index.html
+    Data freshness NFL: OK - games final through week 12; player stats through week 12; weekly rosters through week 12
+    Data freshness CFB: OK - games final through week 13; player stats through week 13
+    Data freshness NBA: OK - games final through 2026-11-25; 270/270 with box scores; 270/270 with shot charts
 hub copied to the site

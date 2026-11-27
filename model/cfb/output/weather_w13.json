@@ -1,22 +1,22 @@
 {
  "TTU": {
-  "temp": 44,
+  "temp": 49,
   "wind": "5 mph",
   "dir": "S",
   "rain": 0,
   "short": "Mostly Clear",
-  "temp_end": 39,
+  "temp_end": 43,
   "wind_end": "5 mph",
   "rain_end": 0
  },
  "IOWA": {
   "temp": 39,
-  "wind": "5 mph",
+  "wind": "10 mph",
   "dir": "NW",
   "rain": 0,
   "short": "Mostly Sunny",
   "temp_end": 44,
-  "wind_end": "5 mph",
+  "wind_end": "10 mph",
   "rain_end": 0
  },
  "MISS": {
@@ -27,15 +27,15 @@
   "short": "Sunny",
   "temp_end": 52,
   "wind_end": "10 mph",
-  "rain_end": 0
+  "rain_end": 1
  },
  "FSU": {
-  "temp": 55,
+  "temp": 56,
   "wind": "10 mph",
   "dir": "W",
   "rain": 0,
   "short": "Partly Sunny",
-  "temp_end": 53,
+  "temp_end": 54,
   "wind_end": "5 mph",
   "rain_end": 0
  },
@@ -45,61 +45,61 @@
   "dir": "S",
   "rain": 0,
   "short": "Mostly Clear",
-  "temp_end": 50,
+  "temp_end": 51,
   "wind_end": "5 mph",
   "rain_end": 0
  },
  "WIS": {
-  "temp": 40,
-  "wind": "5 mph",
+  "temp": 39,
+  "wind": "10 mph",
   "dir": "W",
-  "rain": 1,
-  "short": "Partly Cloudy",
+  "rain": 0,
+  "short": "Mostly Clear",
   "temp_end": 35,
   "wind_end": "5 mph",
-  "rain_end": 1
+  "rain_end": 0
  },
  "UTAH": {
-  "temp": 49,
+  "temp": 48,
   "wind": "2 mph",
-  "dir": "SSE",
-  "rain": 8,
+  "dir": "SE",
+  "rain": 6,
   "short": "Mostly Cloudy",
-  "temp_end": 47,
+  "temp_end": 46,
   "wind_end": "3 mph",
-  "rain_end": 8
+  "rain_end": 6
  },
  "SYR": {
   "indoor": true
  },
  "MIA": {
-  "temp": 70,
+  "temp": 71,
   "wind": "5 mph",
   "dir": "N",
   "rain": 0,
   "short": "Mostly Cloudy",
-  "temp_end": 73,
+  "temp_end": 72,
   "wind_end": "5 mph",
   "rain_end": 0
  },
  "UK": {
-  "temp": 48,
-  "wind": "12 mph",
+  "temp": 46,
+  "wind": "10 mph",
   "dir": "SW",
   "rain": 0,
   "short": "Mostly Sunny",
-  "temp_end": 53,
+  "temp_end": 50,
   "wind_end": "10 mph",
   "rain_end": 0
  },
  "OSU": {
-  "temp": 43,
+  "temp": 42,
   "wind": "12 mph",
   "dir": "SW",
   "rain": 0,
   "short": "Mostly Sunny",
-  "temp_end": 48,
-  "wind_end": "12 mph",
+  "temp_end": 45,
+  "wind_end": "10 mph",
   "rain_end": 0
  },
  "UNC": {
@@ -113,44 +113,44 @@
   "rain_end": 0
  },
  "NU": {
-  "temp": 45,
+  "temp": 47,
   "wind": "10 mph",
   "dir": "SW",
-  "rain": 10,
-  "short": "Slight Chance Snow Showers",
+  "rain": 2,
+  "short": "Mostly Sunny",
   "temp_end": 51,
   "wind_end": "10 mph",
   "rain_end": 0
  },
  "ARK": {
-  "temp": 57,
-  "wind": "10 mph",
+  "temp": 58,
+  "wind": "5 mph",
   "dir": "S",
   "rain": 0,
   "short": "Partly Sunny",
-  "temp_end": 60,
-  "wind_end": "15 mph",
+  "temp_end": 61,
+  "wind_end": "10 mph",
   "rain_end": 0
  },
  "COLO": {
-  "temp": 46,
-  "wind": "22 mph",
-  "dir": "WNW",
-  "rain": 74,
+  "temp": 44,
+  "wind": "24 mph",
+  "dir": "NNW",
+  "rain": 70,
   "short": "Rain Showers Likely",
-  "temp_end": 43,
+  "temp_end": 37,
   "wind_end": "20 mph",
-  "rain_end": 74
+  "rain_end": 70
  },
  "ISU": {
-  "temp": 50,
+  "temp": 51,
   "wind": "5 mph",
   "dir": "W",
-  "rain": 18,
-  "short": "Slight Chance Light Rain",
+  "rain": 8,
+  "short": "Mostly Sunny",
   "temp_end": 50,
-  "wind_end": "5 mph",
-  "rain_end": 18
+  "wind_end": "3 mph",
+  "rain_end": 8
  },
  "CLEM": {
   "temp": 62,
@@ -163,12 +163,12 @@
   "rain_end": 0
  },
  "VT": {
-  "temp": 54,
-  "wind": "7 mph",
+  "temp": 53,
+  "wind": "8 mph",
   "dir": "W",
   "rain": 0,
   "short": "Sunny",
-  "temp_end": 48,
+  "temp_end": 49,
   "wind_end": "6 mph",
   "rain_end": 0
  },
@@ -178,7 +178,7 @@
   "dir": "W",
   "rain": 0,
   "short": "Sunny",
-  "temp_end": 55,
+  "temp_end": 54,
   "wind_end": "5 mph",
   "rain_end": 0
  },
@@ -193,42 +193,42 @@
   "rain_end": 0
  },
  "UCLA": {
-  "temp": 74,
-  "wind": "0 mph",
-  "dir": "",
+  "temp": 73,
+  "wind": "5 mph",
+  "dir": "S",
   "rain": 0,
   "short": "Partly Sunny",
-  "temp_end": 75,
+  "temp_end": 74,
   "wind_end": "5 mph",
   "rain_end": 0
  },
  "BYU": {
-  "temp": 49,
-  "wind": "7 mph",
+  "temp": 50,
+  "wind": "5 mph",
   "dir": "WNW",
-  "rain": 17,
+  "rain": 15,
   "short": "Slight Chance Light Rain",
-  "temp_end": 48,
-  "wind_end": "5 mph",
-  "rain_end": 17
+  "temp_end": 49,
+  "wind_end": "6 mph",
+  "rain_end": 15
  },
  "STAN": {
-  "temp": 66,
+  "temp": 67,
   "wind": "2 mph",
   "dir": "ENE",
   "rain": 0,
   "short": "Partly Sunny",
-  "temp_end": 68,
-  "wind_end": "2 mph",
+  "temp_end": 69,
+  "wind_end": "3 mph",
   "rain_end": 0
  },
  "MD": {
-  "temp": 58,
+  "temp": 57,
   "wind": "7 mph",
   "dir": "W",
   "rain": 0,
   "short": "Sunny",
-  "temp_end": 53,
+  "temp_end": 52,
   "wind_end": "1 mph",
   "rain_end": 0
  },
@@ -236,54 +236,54 @@
   "temp": 53,
   "wind": "2 mph",
   "dir": "S",
-  "rain": 4,
-  "short": "Mostly Cloudy",
-  "temp_end": 50,
+  "rain": 2,
+  "short": "Partly Sunny",
+  "temp_end": 48,
   "wind_end": "3 mph",
-  "rain_end": 18
+  "rain_end": 19
  },
  "RUTG": {
-  "temp": 55,
+  "temp": 54,
   "wind": "10 mph",
   "dir": "W",
   "rain": 0,
   "short": "Mostly Sunny",
-  "temp_end": 48,
-  "wind_end": "5 mph",
+  "temp_end": 49,
+  "wind_end": "10 mph",
   "rain_end": 0
  },
  "OKST": {
   "temp": 58,
-  "wind": "9 mph",
+  "wind": "8 mph",
   "dir": "SSE",
   "rain": 0,
-  "short": "Partly Sunny",
+  "short": "Mostly Cloudy",
   "temp_end": 51,
-  "wind_end": "5 mph",
-  "rain_end": 4
+  "wind_end": "3 mph",
+  "rain_end": 1
  },
  "VAN": {
-  "temp": 53,
+  "temp": 52,
   "wind": "5 mph",
-  "dir": "S",
+  "dir": "SSW",
   "rain": 0,
-  "short": "Partly Cloudy",
+  "short": "Mostly Cloudy",
   "temp_end": 47,
   "wind_end": "5 mph",
   "rain_end": 0
  },
  "IU": {
-  "temp": 46,
+  "temp": 44,
   "wind": "5 mph",
   "dir": "SSW",
-  "rain": 3,
+  "rain": 2,
   "short": "Partly Cloudy",
-  "temp_end": 41,
+  "temp_end": 40,
   "wind_end": "3 mph",
-  "rain_end": 3
+  "rain_end": 2
  },
  "ALA": {
-  "temp": 54,
+  "temp": 53,
   "wind": "5 mph",
   "dir": "S",
   "rain": 0,
@@ -296,25 +296,25 @@
   "temp": 49,
   "wind": "3 mph",
   "dir": "N",
-  "rain": 4,
+  "rain": 14,
   "short": "Cloudy",
-  "temp_end": 47,
+  "temp_end": 48,
   "wind_end": "2 mph",
-  "rain_end": 4
+  "rain_end": 14
  },
  "CAL": {
-  "temp": 62,
+  "temp": 63,
   "wind": "2 mph",
   "dir": "ENE",
-  "rain": 1,
+  "rain": 0,
   "short": "Mostly Sunny",
   "temp_end": 56,
   "wind_end": "2 mph",
-  "rain_end": 1
+  "rain_end": 0
  },
  "ARIZ": {
   "temp": 64,
-  "wind": "2 mph",
+  "wind": "3 mph",
   "dir": "WNW",
   "rain": 0,
   "short": "Partly Cloudy",
@@ -323,13 +323,13 @@
   "rain_end": 0
  },
  "HOU": {
-  "temp": 66,
+  "temp": 68,
   "wind": "10 mph",
   "dir": "S",
-  "rain": 4,
-  "short": "Partly Cloudy",
-  "temp_end": 66,
-  "wind_end": "15 mph",
-  "rain_end": 4
+  "rain": 0,
+  "short": "Mostly Cloudy",
+  "temp_end": 67,
+  "wind_end": "10 mph",
+  "rain_end": 0
  }
 }
